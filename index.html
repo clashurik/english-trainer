@@ -43,10 +43,26 @@
       <p class="hint" id="start-hint"></p>
     </div>
 
+    <div class="actions">
+      <button class="action" id="practice-btn" type="button">
+        <span class="action-title">Свободная тренировка</span>
+        <span class="action-sub">Повторить любые слова и фразы, когда захочется</span>
+      </button>
+      <button class="action" id="lessons-btn" type="button">
+        <span class="action-title">Слова из уроков</span>
+        <span class="action-sub" id="lessons-sub">Добавить слова из занятий с репетитором</span>
+      </button>
+    </div>
+
     <div class="block">
       <div class="eyebrow">Прогресс по уровням</div>
       <div id="level-rows" class="level-rows"></div>
-      <p class="hint">Слово считается выученным, когда следующий показ назначен не раньше чем через 21 день.</p>
+      <div class="legend">
+        <span><i class="sw sw-learned"></i>выучено</span>
+        <span><i class="sw sw-seen"></i>в изучении</span>
+        <span class="legend-note">Число справа — сколько слов уже начато из всего уровня</span>
+      </div>
+      <p class="hint">Выучено — значит, следующий повтор назначен не раньше чем через 21 день. Обычно до этого 4–5 удачных повторений.</p>
     </div>
 
     <details class="block settings" id="settings">
@@ -110,7 +126,88 @@
         <button class="grade g3" data-g="3" type="button"><span>Хорошо</span><small id="p3"></small></button>
         <button class="grade g4" data-g="4" type="button"><span>Легко</span><small id="p4"></small></button>
       </div>
-      <p class="keys">Пробел — показать, 1–4 — оценка</p>
+      <div class="grades two" id="practice-grades" hidden>
+        <button class="grade g1" data-p="0" type="button"><span>Не помню</span><small>в ежедневное</small></button>
+        <button class="grade g3" data-p="1" type="button"><span>Помню</span><small>дальше</small></button>
+      </div>
+      <p class="keys" id="keys-hint">Пробел — показать, 1–4 — оценка</p>
+    </div>
+  </section>
+
+  <!-- ===== Настройка свободной тренировки ===== -->
+  <section id="practice" class="screen" hidden>
+    <div class="screen-top">
+      <button class="ghost small-btn" type="button" data-home>Назад</button>
+      <h2 class="screen-title">Свободная тренировка</h2>
+    </div>
+    <p class="muted lead">Тренировка не сдвигает расписание повторений. Слова, которые вы не вспомнили, попадут в ближайшее ежедневное задание.</p>
+
+    <div class="setting">
+      <div class="setting-label">Какие слова</div>
+      <div class="options" id="pr-set" role="radiogroup" aria-label="Какие слова">
+        <button type="button" role="radio" data-v="studied">Изученные</button>
+        <button type="button" role="radio" data-v="hard">Трудные</button>
+        <button type="button" role="radio" data-v="lessons">Из уроков</button>
+        <button type="button" role="radio" data-v="all">Весь словарь</button>
+      </div>
+      <p class="hint" id="pr-set-hint"></p>
+    </div>
+    <div class="setting" id="pr-levels-row">
+      <div class="setting-label">Уровни</div>
+      <div class="chips" id="pr-levels"></div>
+    </div>
+    <div class="setting">
+      <div class="setting-label">Что тренировать</div>
+      <div class="segmented three" id="pr-kind" role="radiogroup" aria-label="Что тренировать">
+        <button type="button" role="radio" data-v="all">Всё</button>
+        <button type="button" role="radio" data-v="words">Слова</button>
+        <button type="button" role="radio" data-v="phrases">Фразы</button>
+      </div>
+    </div>
+    <div class="setting">
+      <div class="setting-label">Направление</div>
+      <div class="segmented two" id="pr-dir" role="radiogroup" aria-label="Направление">
+        <button type="button" role="radio" data-v="en">EN → RU</button>
+        <button type="button" role="radio" data-v="ru">RU → EN</button>
+      </div>
+    </div>
+    <div class="setting">
+      <div class="setting-label">Сколько карточек</div>
+      <div class="segmented three" id="pr-count" role="radiogroup" aria-label="Сколько карточек">
+        <button type="button" role="radio" data-v="10">10</button>
+        <button type="button" role="radio" data-v="20">20</button>
+        <button type="button" role="radio" data-v="0">Все</button>
+      </div>
+    </div>
+    <button class="primary" id="pr-start" type="button">Начать</button>
+    <p class="hint" id="pr-found"></p>
+  </section>
+
+  <!-- ===== Слова из уроков ===== -->
+  <section id="lessons" class="screen" hidden>
+    <div class="screen-top">
+      <button class="ghost small-btn" type="button" data-home>Назад</button>
+      <h2 class="screen-title">Слова из уроков</h2>
+    </div>
+    <p class="muted lead">Вставьте список слов из урока. Каждое слово с новой строки, части разделены вертикальной чертой. Пример и его перевод можно не писать.</p>
+    <pre class="format">commute | ездить на работу | I commute by metro. | Я езжу на работу на метро.
+run out of | закончиться (о запасах)</pre>
+    <label class="setting-label" for="import-text">Список слов</label>
+    <textarea id="import-text" rows="7" spellcheck="false" placeholder="слово | перевод | пример | перевод примера"></textarea>
+    <button class="primary" id="import-btn" type="button">Добавить слова</button>
+    <p class="import-result" id="import-result" role="status"></p>
+
+    <div class="panel tip">
+      <div class="eyebrow">Как получить список</div>
+      <p>В конце урока напишите репетитору в топике с занятиями:</p>
+      <p class="quote" id="ask-text">Дай слова этого урока для тренажёра</p>
+      <button class="ghost small-btn" id="copy-ask" type="button">Скопировать</button>
+      <p class="hint">Формат описан в документе проекта, поэтому репетитор пришлёт список, который можно сразу вставить сюда.</p>
+    </div>
+
+    <div class="block">
+      <div class="eyebrow" id="my-count">Ваши слова</div>
+      <ul class="my-words" id="my-words"></ul>
     </div>
   </section>
 
@@ -120,9 +217,9 @@
       <div class="eyebrow">Занятие завершено</div>
       <h2 class="done-title" id="done-title">Отличная работа</h2>
       <dl class="done-stats">
-        <div><dt>Повторено</dt><dd id="d-reviewed">0</dd></div>
-        <div><dt>Новых слов</dt><dd id="d-new">0</dd></div>
-        <div><dt>Ошибок</dt><dd id="d-errors">0</dd></div>
+        <div><dt id="d-l1">Повторено</dt><dd id="d-reviewed">0</dd></div>
+        <div><dt id="d-l2">Новых слов</dt><dd id="d-new">0</dd></div>
+        <div><dt id="d-l3">Ошибок</dt><dd id="d-errors">0</dd></div>
       </dl>
       <p class="muted" id="done-streak"></p>
       <button class="primary" id="home-btn" type="button">На главную</button>

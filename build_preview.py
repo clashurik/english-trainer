@@ -22,7 +22,7 @@ head = block("HEAD").replace(
 )
 body = block("BODY")
 scripts = "\n".join(
-    "<script>\n" + (ROOT / "js" / f).read_text(encoding="utf-8") + "\n</script>"
+    "<script>\n" + (ROOT / f).read_text(encoding="utf-8") + "\n</script>"
     for f in ["words.js", "core.js", "storage.js", "app.js"]
 )
 

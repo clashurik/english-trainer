@@ -54,8 +54,11 @@
           var keys = [];
           for (var k = 0; k < n; k++) keys.push('c' + k);
           var parts = await cloudGet(cs, keys);
-          var json = keys.map(function (key) { return parts[key] || ''; }).join('');
-          return { cards: JSON.parse(json), meta: JSON.parse(head.meta) };
+          var data = JSON.parse(keys.map(function (key) { return parts[key] || ''; }).join(''));
+          var meta = JSON.parse(head.meta);
+          // Новый формат: { c: прогресс, w: слова из уроков }. Старый (v1): просто прогресс.
+          if (data && data.c) return { cards: data.c, custom: data.w || [], meta: meta };
+          return { cards: data, custom: [], meta: meta };
         }
       } catch (e) {
         console.warn('CloudStorage недоступен, берём локальную копию', e);
@@ -76,7 +79,7 @@
     var cs = tgCloud();
     if (!cs) return;
     try {
-      var json = JSON.stringify(state.cards);
+      var json = JSON.stringify({ c: state.cards, w: state.custom || [] });
       var n = Math.max(1, Math.ceil(json.length / CHUNK));
       for (var k = 0; k < n; k++) await cloudSet(cs, 'c' + k, json.slice(k * CHUNK, (k + 1) * CHUNK));
       await cloudSet(cs, 'meta', JSON.stringify(state.meta));

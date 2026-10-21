@@ -144,7 +144,71 @@
     return { total: words.length, learned: learned, learning: learning, byLevel: byLevel };
   }
 
+  /*
+   * Свободная тренировка: какие слова в неё попадут.
+   *   set:    'studied' — уже встречались, 'hard' — были ошибки или слово даётся тяжело,
+   *           'lessons' — слова из уроков, 'all' — весь словарь
+   *   levels: какие уровни брать (для 'lessons' не учитывается)
+   *   kind:   'all' | 'words' (без фраз) | 'phrases' (только фразы)
+   */
+  function practicePool(words, cards, opts) {
+    var out = [];
+    for (var k = 0; k < words.length; k++) {
+      var w = words[k];
+      var c = cards[w.id];
+      if (opts.set === 'studied' && !c) continue;
+      if (opts.set === 'hard' && !(c && (c.l > 0 || c.e < 250))) continue;
+      if (opts.set === 'lessons' && w.lvl !== 'MY') continue;
+      if (opts.set !== 'lessons' && opts.levels && opts.levels.indexOf(w.lvl) === -1) continue;
+      if (opts.kind === 'words' && w.pos === 'ph') continue;
+      if (opts.kind === 'phrases' && w.pos !== 'ph') continue;
+      out.push(w.id);
+    }
+    return out;
+  }
+
+  // Перемешивание (алгоритм Фишера — Йетса). rnd можно подменить в тестах.
+  function shuffle(arr, rnd) {
+    rnd = rnd || Math.random;
+    var a = arr.slice();
+    for (var k = a.length - 1; k > 0; k--) {
+      var j = Math.floor(rnd() * (k + 1));
+      var t = a[k]; a[k] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  /*
+   * Разбор списка слов из урока. Одна строка — одно слово:
+   *   слово | перевод | пример | перевод примера
+   * Пример и его перевод необязательны. Вместо | можно использовать табуляцию.
+   * Строки, начинающиеся с #, пропускаются (это комментарии).
+   */
+  function parseImport(text, existingIds) {
+    var seen = {};
+    var result = { words: [], skipped: [], bad: [] };
+    String(text).split(/\r?\n/).forEach(function (line) {
+      var s = line.trim();
+      if (!s || s.charAt(0) === '#') return;
+      s = s.replace(/^[-*•\d.)\s]+(?=[A-Za-z])/, ''); // убираем маркеры списка: «- », «1. »
+      var parts = s.split(/\s*[|\t]\s*/);
+      if (parts.length < 2 || !parts[0] || !parts[1]) { result.bad.push(line.trim()); return; }
+      var en = parts[0].trim();
+      var id = en.toLowerCase();
+      if ((existingIds && existingIds[id]) || seen[id]) { result.skipped.push(en); return; }
+      seen[id] = true;
+      result.words.push({
+        id: id, en: en, ru: parts[1].trim(), pos: /\s/.test(en) ? 'ph' : '', lvl: 'MY',
+        ex: (parts[2] || '').trim(), exRu: (parts[3] || '').trim()
+      });
+    });
+    return result;
+  }
+
   var Core = {
+    practicePool: practicePool,
+    shuffle: shuffle,
+    parseImport: parseImport,
     dayNumber: dayNumber,
     newCard: newCard,
     schedule: schedule,

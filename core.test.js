@@ -1,7 +1,7 @@
 // Автотесты логики. Запуск: node tests/core.test.js
 const assert = require('node:assert/strict');
-const Core = require('../js/core.js');
-const WORDS = require('../js/words.js');
+const Core = require('../core.js');
+const WORDS = require('../words.js');
 
 let passed = 0;
 function test(name, fn) { fn(); passed++; console.log('  ok  ' + name); }
@@ -96,6 +96,57 @@ test('статистика: выученным считается слово с 
   assert.equal(s.learned, 1);
   assert.equal(s.learning, 1);
   assert.equal(s.byLevel.A1.seen, 2);
+});
+
+test('тренировка: «изученные» — только слова с прогрессом', () => {
+  const cards = { time: { r: 1, i: 1, e: 250, d: 0, l: 0 }, 'by the way': { r: 1, i: 1, e: 250, d: 0, l: 0 } };
+  assert.deepEqual(Core.practicePool(WORDS, cards, { set: 'studied', kind: 'all' }).sort(), ['by the way', 'time']);
+});
+
+test('тренировка: фильтры «трудные», «только фразы», уровни', () => {
+  const cards = {
+    time: { r: 1, i: 1, e: 250, d: 0, l: 1 },        // была ошибка
+    friend: { r: 3, i: 8, e: 250, d: 0, l: 0 },      // всё хорошо
+    'by the way': { r: 1, i: 1, e: 235, d: 0, l: 0 } // даётся тяжело
+  };
+  assert.deepEqual(Core.practicePool(WORDS, cards, { set: 'hard', kind: 'all' }).sort(), ['by the way', 'time']);
+  assert.deepEqual(Core.practicePool(WORDS, cards, { set: 'studied', kind: 'phrases' }), ['by the way']);
+  assert.deepEqual(Core.practicePool(WORDS, cards, { set: 'studied', kind: 'all', levels: ['A1'] }).sort(), ['friend', 'time']);
+});
+
+test('тренировка: «из уроков» берёт только свои слова, даже не изученные', () => {
+  const mine = [{ id: 'commute', en: 'commute', ru: 'ездить на работу', pos: '', lvl: 'MY', ex: '', exRu: '' }];
+  assert.deepEqual(Core.practicePool(mine.concat(WORDS), {}, { set: 'lessons', kind: 'all', levels: ['A1'] }), ['commute']);
+});
+
+test('перемешивание не теряет и не дублирует слова', () => {
+  const a = ['a', 'b', 'c', 'd', 'e'];
+  const s = Core.shuffle(a);
+  assert.deepEqual(s.slice().sort(), a);
+  assert.deepEqual(a, ['a', 'b', 'c', 'd', 'e'], 'исходный массив не меняется');
+});
+
+test('импорт: разбирает строки, примеры необязательны, маркеры списка убираются', () => {
+  const r = Core.parseImport([
+    '# слова урока 3',
+    'commute | ездить на работу | I commute by train. | Я езжу на работу на поезде.',
+    '- run out of | закончиться (о запасах)',
+    '2. errand\tпоручение, дело',
+    '',
+    'просто строка без разделителя'
+  ].join('\n'), {});
+  assert.equal(r.words.length, 3);
+  assert.deepEqual(r.words.map(w => w.en), ['commute', 'run out of', 'errand']);
+  assert.equal(r.words[0].exRu, 'Я езжу на работу на поезде.');
+  assert.equal(r.words[1].pos, 'ph', 'выражение из нескольких слов — фраза');
+  assert.ok(r.words.every(w => w.lvl === 'MY'));
+  assert.equal(r.bad.length, 1);
+});
+
+test('импорт: повторы и уже существующие слова пропускаются', () => {
+  const r = Core.parseImport('Borrow | одалживать\ncommute | ездить\ncommute | ездить', { borrow: true });
+  assert.deepEqual(r.words.map(w => w.id), ['commute']);
+  assert.deepEqual(r.skipped, ['Borrow', 'commute']);
 });
 
 console.log(`\nВсе тесты пройдены: ${passed}`);

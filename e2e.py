@@ -13,6 +13,10 @@ OUT = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else ROOT / "dist" / "shots"
 OUT.mkdir(parents=True, exist_ok=True)
 URL = (ROOT / "index.html").as_uri()
 
+def re_cyr(s):
+    return any("а" <= ch.lower() <= "я" or ch.lower() == "ё" for ch in s)
+
+
 errors = []
 with sync_playwright() as p:
     browser = p.chromium.launch()
@@ -55,7 +59,53 @@ with sync_playwright() as p:
             page.wait_for_timeout(300)
             assert page.inner_text("#streak-num") == "1"
             assert page.inner_text("#new-count") == "0", "дневной лимит новых слов исчерпан"
+            assert "10 / 50" in page.inner_text("#level-rows"), "у A1 должно быть 10 начатых слов"
             page.screenshot(path=str(OUT / "5-home-after.png"), full_page=True)
+
+            # --- Свободная тренировка: 10 изученных слов, RU → EN ---
+            page.click("#practice-btn")
+            assert "Подходит 10" in page.inner_text("#pr-found")
+            page.click("#pr-dir [data-v='ru']")
+            page.screenshot(path=str(OUT / "6-practice-setup.png"), full_page=True)
+            before = json.loads(page.evaluate("localStorage.getItem('english-trainer-v1')"))["cards"]
+            page.click("#pr-start")
+            first_word = page.inner_text("#c-word")
+            assert re_cyr(first_word), f"в режиме RU→EN сначала показывается русский перевод, а не «{first_word}»"
+            assert page.is_hidden("#speak-btn"), "озвучка до ответа выдала бы перевод"
+            page.click("#reveal-btn")
+            page.screenshot(path=str(OUT / "7-practice-card.png"))
+            page.click("#practice-grades [data-p='0']")  # не помню
+            steps = 0
+            while page.is_visible("#session") and steps < 30:
+                page.click("#reveal-btn")
+                page.click("#practice-grades [data-p='1']")
+                steps += 1
+            assert steps == 10, f"ожидали 10 карточек после ошибки, было {steps}"
+            assert page.inner_text("#d-errors") == "1"
+            after = json.loads(page.evaluate("localStorage.getItem('english-trainer-v1')"))["cards"]
+            changed = [k for k in after if after[k] != before[k]]
+            assert len(changed) == 1, f"тренировка должна изменить только забытое слово, изменено: {changed}"
+            k = changed[0]
+            assert after[k]["d"] < before[k]["d"] and after[k]["i"] == before[k]["i"], "забытое слово — в ближайшее задание, интервал тот же"
+            page.click("#home-btn")
+            assert page.inner_text("#due-count") == "1", "забытое на тренировке слово должно появиться в задании"
+
+            # --- Импорт слов из урока ---
+            page.click("#lessons-btn")
+            page.fill("#import-text", "commute | ездить на работу | I commute by metro. | Я езжу на работу на метро.\n"
+                                      "- run out of | закончиться (о запасах)\nborrow | одалживать\nбез разделителя")
+            page.click("#import-btn")
+            res = page.inner_text("#import-result")
+            assert "Добавлено: 2" in res and "borrow" in res and "Не распознано строк: 1" in res, res
+            page.screenshot(path=str(OUT / "8-lessons.png"), full_page=True)
+            page.reload()
+            page.wait_for_timeout(300)
+            assert "2 слова из уроков" in page.inner_text("#lessons-sub"), "свои слова должны пережить перезагрузку"
+            assert "Урок" in page.inner_text("#level-rows")
+            page.click("#practice-btn")
+            page.click("#pr-set [data-v='lessons']")
+            assert "Подходит 2" in page.inner_text("#pr-found")
+            page.screenshot(path=str(OUT / "9-home-final.png"), full_page=True)
         page.close()
     browser.close()
 
