@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Literata:opsz,wght@7..72,500;7..72,650&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=1.2.0">
 <!--/BUILD:HEAD-->
 <!-- Скрипт Telegram: даёт доступ к теме, кнопке «Назад», вибрации и облачному хранилищу -->
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -76,6 +76,21 @@
         <div class="chips" id="level-toggles"></div>
       </div>
       <div class="setting">
+        <div class="setting-label">Как считаются интервалы</div>
+        <p class="small">Через сколько дней слово вернётся, зависит от кнопки и от того, какой раз подряд вы его вспомнили:</p>
+        <div class="table-wrap">
+          <table class="intervals">
+            <thead><tr><th>Показ</th><th>Трудно</th><th>Хорошо</th><th>Легко</th></tr></thead>
+            <tbody>
+              <tr><td>Новое слово</td><td>1 д</td><td>1 д</td><td>4 д</td></tr>
+              <tr><td>Второй</td><td>2 д</td><td>3 д</td><td>6 д</td></tr>
+              <tr><td>Дальше</td><td>×1,2</td><td>×2,5</td><td>×3,25</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small">«Дальше» — прошлый интервал умножается на число из таблицы. 2,5 — это лёгкость слова: «Легко» её повышает на 0,15, «Трудно» снижает на 0,15. «Забыл» снижает на 0,2, и слово начинается заново в том же занятии. Поэтому трудные слова возвращаются чаще. Точный срок всегда подписан под кнопкой.</p>
+      </div>
+      <div class="setting">
         <div class="setting-label">Где хранится прогресс</div>
         <p class="muted" id="storage-note"></p>
       </div>
@@ -90,6 +105,19 @@
         </div>
       </div>
     </details>
+
+    <footer class="foot">
+      <button class="link-btn" id="history-btn" type="button">Версия <span id="app-version"></span> · История изменений</button>
+    </footer>
+  </section>
+
+  <!-- ===== История версий ===== -->
+  <section id="history" class="screen" hidden>
+    <div class="screen-top">
+      <button class="ghost small-btn" type="button" data-home>Назад</button>
+      <h2 class="screen-title">История изменений</h2>
+    </div>
+    <div class="releases" id="releases"></div>
   </section>
 
   <!-- ===== Экран занятия ===== -->
@@ -113,8 +141,14 @@
       </button>
       <div class="answer" id="c-answer" hidden>
         <div class="translation" id="c-ru"></div>
-        <p class="example" id="c-ex"></p>
-        <p class="example-ru" id="c-exru"></p>
+        <p class="irr" id="c-irr" hidden></p>
+        <div class="example-box" id="c-exbox">
+          <p class="example" id="c-ex"></p>
+          <p class="example-ru" id="c-exru"></p>
+          <button class="link-btn" id="ex-next" type="button" hidden>Ещё пример <span id="ex-pos"></span></button>
+        </div>
+        <p class="note" id="c-note" hidden></p>
+        <button class="forms-btn" id="forms-btn" type="button" hidden>Формы слова <span aria-hidden="true">›</span></button>
       </div>
     </article>
 
@@ -228,10 +262,24 @@ run out of | закончиться (о запасах)</pre>
   </section>
 
 </div>
+
+<!-- ===== Нижняя панель: формы слова и «Что нового» ===== -->
+<div class="sheet-backdrop" id="sheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-head">
+      <h2 class="sheet-title" id="sheet-title"></h2>
+      <button class="ghost small-btn" id="sheet-close" type="button">Закрыть</button>
+    </div>
+    <div class="sheet-body" id="sheet-body"></div>
+    <button class="primary" id="sheet-ok" type="button" hidden>Понятно</button>
+  </div>
+</div>
 <!--/BUILD:BODY-->
-<script src="words.js"></script>
-<script src="core.js"></script>
-<script src="storage.js"></script>
-<script src="app.js"></script>
+<!-- ?v=… — номер версии: заставляет Telegram и браузер скачать свежие файлы после обновления -->
+<script src="changelog.js?v=1.2.0"></script>
+<script src="words.js?v=1.2.0"></script>
+<script src="core.js?v=1.2.0"></script>
+<script src="storage.js?v=1.2.0"></script>
+<script src="app.js?v=1.2.0"></script>
 </body>
 </html>

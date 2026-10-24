@@ -197,15 +197,66 @@
       var id = en.toLowerCase();
       if ((existingIds && existingIds[id]) || seen[id]) { result.skipped.push(en); return; }
       seen[id] = true;
+      var ex = (parts[2] || '').trim();
       result.words.push({
         id: id, en: en, ru: parts[1].trim(), pos: /\s/.test(en) ? 'ph' : '', lvl: 'MY',
-        ex: (parts[2] || '').trim(), exRu: (parts[3] || '').trim()
+        ex: ex ? [[ex, (parts[3] || '').trim()]] : [], forms: [], irr: null, note: ''
       });
     });
     return result;
   }
 
+  /*
+   * Слова из уроков, сохранённые версией 1.1.0, хранили один пример строкой (ex + exRu).
+   * Приводим их к новому виду: ex — список пар [пример, перевод].
+   */
+  function normalizeCustom(w) {
+    if (Array.isArray(w.ex)) return Object.assign({ forms: [], irr: null, note: '' }, w);
+    var ex = w.ex ? [[w.ex, w.exRu || '']] : [];
+    return { id: w.id, en: w.en, ru: w.ru, pos: w.pos || '', lvl: 'MY', ex: ex, forms: [], irr: null, note: '' };
+  }
+
+  // Общий список слов: сначала свои из уроков, потом словарь. Если слово есть и там и там, берём своё.
+  function mergeWords(custom, base) {
+    var mine = {};
+    custom.forEach(function (w) { mine[w.id] = true; });
+    return custom.concat(base.filter(function (w) { return !mine[w.id]; }));
+  }
+
+  // Какой пример показать: при каждом новом удачном повторе или ошибке — следующий по кругу
+  function exampleIndex(card, count) {
+    if (!count) return -1;
+    return card ? (card.r + card.l) % count : 0;
+  }
+
+  // Сравнение версий вида 1.2.0: −1, 0 или 1
+  function compareVersions(a, b) {
+    var x = String(a).split('.'), y = String(b).split('.');
+    for (var k = 0; k < 3; k++) {
+      var d = (parseInt(x[k], 10) || 0) - (parseInt(y[k], 10) || 0);
+      if (d) return d < 0 ? -1 : 1;
+    }
+    return 0;
+  }
+
+  /*
+   * Что показать в окне «Что нового»:
+   *   новый пользователь (нет прогресса) — ничего;
+   *   знаем, какую версию человек видел, — всё, что вышло после неё;
+   *   прогресс есть, а версия неизвестна (заходил до 1.2.0) — только последнюю версию.
+   */
+  function whatsNew(changelog, seenVersion, hasProgress) {
+    if (!changelog.length) return [];
+    if (seenVersion) return changelog.filter(function (e) { return compareVersions(e.v, seenVersion) > 0; });
+    return hasProgress ? [changelog[0]] : [];
+  }
+
   var Core = {
+    normalizeCustom: normalizeCustom,
+    mergeWords: mergeWords,
+    exampleIndex: exampleIndex,
+    compareVersions: compareVersions,
+    whatsNew: whatsNew,
     practicePool: practicePool,
     shuffle: shuffle,
     parseImport: parseImport,

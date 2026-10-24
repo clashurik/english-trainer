@@ -33,7 +33,7 @@
   var $ = function (id) { return document.getElementById(id); };
 
   function indexWords() {
-    words = state.custom.concat(BASE_WORDS);
+    words = Core.mergeWords(state.custom, BASE_WORDS);
     byId = {};
     words.forEach(function (w) { byId[w.id] = w; });
   }
@@ -54,7 +54,11 @@
     var applyTheme = function () { document.documentElement.setAttribute('data-theme', tg.colorScheme === 'dark' ? 'dark' : 'light'); };
     applyTheme();
     tg.onEvent('themeChanged', applyTheme);
-    tg.BackButton.onClick(function () { session ? quitSession() : goHome(); });
+    tg.BackButton.onClick(function () {
+      if (!$('sheet').hidden) closeSheet();
+      else if (session) quitSession();
+      else goHome();
+    });
   }
   function haptic(kind) {
     try { if (inTelegram) tg.HapticFeedback.impactOccurred(kind || 'light'); } catch (e) { /* не поддерживается */ }
@@ -91,6 +95,7 @@
       ? n + ' ' + plural(n, 'слово', 'слова', 'слов') + ' из уроков. Добавить ещё'
       : 'Добавить слова из занятий с репетитором';
 
+    $('app-version').textContent = window.APP_VERSION || '';
     renderLevels();
     renderSettings();
   }
@@ -225,11 +230,23 @@
     $('c-pos').textContent = POS[w.pos] || '';
     $('c-new').hidden = !(session.mode === 'daily' && !state.cards[w.id]);
     $('c-word').textContent = ruFirst ? w.ru : w.en;
+    $('c-word').className = 'headword';
+    $('c-word').removeAttribute('role');
+    $('c-word').removeAttribute('tabindex');
     $('c-ru').textContent = ruFirst ? w.en : w.ru;
-    $('c-ex').innerHTML = w.ex ? highlight(w.ex, w.en) : '';
-    $('c-ex').hidden = !w.ex;
-    $('c-exru').textContent = w.exRu || '';
-    $('c-exru').hidden = !w.exRu;
+    $('c-irr').hidden = !w.irr;
+    $('c-irr').innerHTML = w.irr ? irrLine(w) : '';
+    $('c-note').hidden = !w.note;
+    $('c-note').textContent = w.note || '';
+    $('forms-btn').hidden = !hasForms(w);
+
+    // Пример: в ежедневном занятии — следующий по кругу при каждом новом показе, в тренировке — случайный
+    var n = w.ex.length;
+    session.exIdx = session.mode === 'daily'
+      ? Core.exampleIndex(state.cards[w.id], n)
+      : (n ? Math.floor(Math.random() * n) : -1);
+    renderExample(w);
+
     $('speak-btn').hidden = ruFirst; // в режиме RU→EN озвучка выдала бы ответ
     $('c-answer').hidden = true;
     $('reveal-btn').hidden = false;
@@ -254,6 +271,121 @@
     $('speak-btn').hidden = false;
     $('c-answer').hidden = false;
     $('reveal-btn').hidden = true;
+
+    // После ответа на английское слово можно нажать, чтобы увидеть его формы
+    var w2 = byId[session.queue[0]];
+    if (session.dir !== 'ru' && hasForms(w2)) {
+      $('c-word').className = 'headword tappable';
+      $('c-word').setAttribute('role', 'button');
+      $('c-word').setAttribute('tabindex', '0');
+      $('c-word').setAttribute('aria-label', w2.en + ': показать формы слова');
+    }
+  }
+
+  // ---------- Примеры ----------
+  function renderExample(w) {
+    var n = w.ex.length, i = session.exIdx;
+    $('c-exbox').hidden = n === 0;
+    if (!n) return;
+    $('c-ex').innerHTML = highlight(w.ex[i][0], w.en);
+    $('c-exru').textContent = w.ex[i][1] || '';
+    $('c-exru').hidden = !w.ex[i][1];
+    $('ex-next').hidden = n < 2;
+    $('ex-pos').textContent = (i + 1) + '/' + n;
+  }
+
+  function nextExample() {
+    if (!session) return;
+    var w = byId[session.queue[0]];
+    if (w.ex.length < 2) return;
+    session.exIdx = (session.exIdx + 1) % w.ex.length;
+    renderExample(w);
+  }
+
+  // ---------- Формы слова ----------
+  function hasForms(w) { return !!(w.irr || (w.forms && w.forms.length)); }
+
+  function irrLine(w) {
+    var p = w.irr.split('|');
+    return escapeHtml(w.en) + ' → <b>' + escapeHtml(p[0]) + '</b> → <b>' + escapeHtml(p[1]) + '</b>';
+  }
+
+  function openForms() {
+    if (!session || !session.revealed) return;
+    var w = byId[session.queue[0]];
+    if (!hasForms(w)) return;
+    var html = '';
+    if (w.irr) {
+      var p = w.irr.split('|');
+      html += '<div class="group-label">Неправильный глагол</div><div class="irr-row">' +
+        irrChip(w.en, 'начальная форма') + '<span class="irr-arrow">→</span>' +
+        irrChip(p[0], 'прошедшее (V2)') + '<span class="irr-arrow">→</span>' +
+        irrChip(p[1], 'причастие (V3)') + '</div>';
+    }
+    if (w.forms.length) {
+      html += '<div class="group-label">Однокоренные слова</div><ul class="form-list">' +
+        w.forms.map(function (f) {
+          return '<li><button class="form-row" type="button" data-say="' + escapeHtml(f[0]) + '">' +
+            '<span class="f-en">' + escapeHtml(f[0]) + '</span><span class="f-pos">' + escapeHtml(POS[f[1]] || f[1]) + '</span>' +
+            '<span class="f-ru">' + escapeHtml(f[2]) + '</span></button></li>';
+        }).join('') + '</ul>';
+    }
+    html += '<p class="small">Нажмите на слово, чтобы услышать произношение.</p>';
+    openSheet(w.en + ' · ' + w.ru, html, false);
+  }
+
+  function irrChip(word, label) {
+    return '<button class="irr-chip" type="button" data-say="' + escapeHtml(word) + '"><b>' + escapeHtml(word) + '</b><small>' + label + '</small></button>';
+  }
+
+  // ---------- Нижняя панель ----------
+  var sheetOnOk = null;
+  function openSheet(title, html, withOk, onOk) {
+    $('sheet-title').textContent = title;
+    $('sheet-body').innerHTML = html;
+    $('sheet-ok').hidden = !withOk;
+    sheetOnOk = onOk || null;
+    $('sheet').hidden = false;
+    if (inTelegram) tg.BackButton.show();
+    (withOk ? $('sheet-ok') : $('sheet-close')).focus();
+  }
+  function closeSheet() {
+    if ($('sheet').hidden) return;
+    $('sheet').hidden = true;
+    if (sheetOnOk) { var f = sheetOnOk; sheetOnOk = null; f(); }
+    var current = ['home', 'session', 'done', 'practice', 'lessons', 'history'].filter(function (s) { return !$(s).hidden; })[0];
+    if (inTelegram && (current === 'home' || current === 'done')) tg.BackButton.hide();
+  }
+
+  // ---------- Версии ----------
+  function releaseHtml(e, current) {
+    return '<article class="release' + (current ? ' current' : '') + '">' +
+      '<div class="release-meta"><span class="release-v">' + e.v + '</span><span class="release-date">' + formatDate(e.date) + '</span></div>' +
+      '<h3>' + escapeHtml(e.title) + '</h3><ul>' +
+      e.items.map(function (i) { return '<li>' + escapeHtml(i) + '</li>'; }).join('') + '</ul></article>';
+  }
+
+  function renderHistory() {
+    $('releases').innerHTML = (window.CHANGELOG || []).map(function (e, k) { return releaseHtml(e, k === 0); }).join('');
+  }
+
+  function maybeShowWhatsNew(hadProgress) {
+    var list = Core.whatsNew(window.CHANGELOG || [], state.meta.seenVersion, hadProgress);
+    var markSeen = function () { state.meta.seenVersion = window.APP_VERSION; save(); };
+    if (!list.length) {
+      if (state.meta.seenVersion !== window.APP_VERSION) markSeen();
+      return;
+    }
+    var html = list.map(function (e) {
+      return '<div><div class="group-label">' + e.v + ' · ' + escapeHtml(e.title) + '</div><ul>' +
+        e.items.map(function (i) { return '<li>' + escapeHtml(i) + '</li>'; }).join('') + '</ul></div>';
+    }).join('');
+    openSheet('Что нового', html, true, markSeen);
+  }
+
+  function formatDate(iso) {
+    var p = iso.split('-');
+    return new Date(+p[0], +p[1] - 1, +p[2]).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
   }
 
   // Оценка в ежедневном занятии: двигает слово по расписанию SRS
@@ -432,7 +564,7 @@
 
   // ---------- Вспомогательное ----------
   function show(name) {
-    ['home', 'session', 'done', 'practice', 'lessons'].forEach(function (s) { $(s).hidden = s !== name; });
+    ['home', 'session', 'done', 'practice', 'lessons', 'history'].forEach(function (s) { $(s).hidden = s !== name; });
     if (inTelegram) { name === 'home' || name === 'done' ? tg.BackButton.hide() : tg.BackButton.show(); }
     window.scrollTo(0, 0);
   }
@@ -508,8 +640,25 @@
   $('copy-ask').onclick = copyAsk;
   Array.prototype.forEach.call(document.querySelectorAll('[data-home]'), function (b) { b.onclick = goHome; });
 
+  $('history-btn').onclick = function () { show('history'); renderHistory(); };
   $('reveal-btn').onclick = reveal;
-  $('card').onclick = function (e) { if (!e.target.closest('.speak')) reveal(); };
+  $('card').onclick = function (e) {
+    if (e.target.closest('.speak, .link-btn, .forms-btn')) return;
+    if (session && session.revealed && e.target.closest('.headword.tappable')) { openForms(); return; }
+    reveal();
+  };
+  $('c-word').addEventListener('keydown', function (e) {
+    if ((e.key === 'Enter' || e.key === ' ') && $('c-word').classList.contains('tappable')) { e.preventDefault(); e.stopPropagation(); openForms(); }
+  });
+  $('ex-next').onclick = nextExample;
+  $('forms-btn').onclick = openForms;
+  $('sheet-close').onclick = closeSheet;
+  $('sheet-ok').onclick = closeSheet;
+  $('sheet').onclick = function (e) {
+    if (e.target === $('sheet')) { closeSheet(); return; }
+    var say = e.target.closest('[data-say]');
+    if (say) speak(say.getAttribute('data-say'));
+  };
   $('speak-btn').onclick = function () { if (session) speak(byId[session.queue[0]].en); };
   $('quit-btn').onclick = quitSession;
   Array.prototype.forEach.call(document.querySelectorAll('#grades .grade'), function (b) {
@@ -530,13 +679,16 @@
   $('reset-yes').onclick = async function () {
     await AppStorage.reset();
     state = { cards: {}, custom: state.custom, meta: freshMeta() }; // слова из уроков сохраняем
+    state.meta.seenVersion = window.APP_VERSION;
     save();
     $('reset-confirm').hidden = true; $('reset-btn').hidden = false;
     renderHome();
   };
 
   document.addEventListener('keydown', function (e) {
+    if (!$('sheet').hidden) { if (e.key === 'Escape') closeSheet(); return; }
     if (!session) return;
+    if (e.target === $('c-word') && (e.key === 'Enter' || e.key === ' ')) return;
     if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); reveal(); return; }
     if (session.mode === 'daily' && /^[1-4]$/.test(e.key)) grade(Number(e.key));
     if (session.mode === 'practice' && (e.key === '1' || e.key === '2')) practiceAnswer(e.key === '2');
@@ -545,15 +697,27 @@
   // ---------- Запуск ----------
   indexWords();
   AppStorage.load().then(function (saved) {
+    var hadProgress = false;
     if (saved && saved.cards && saved.meta) {
       state.cards = saved.cards;
-      state.custom = saved.custom || [];
+      state.custom = (saved.custom || []).map(Core.normalizeCustom);
       state.meta = Object.assign(freshMeta(), saved.meta);
       state.meta.settings = Object.assign(freshMeta().settings, saved.meta.settings);
       state.meta.practice = Object.assign(freshMeta().practice, saved.meta.practice);
+      hadProgress = Object.keys(state.cards).length > 0 || state.custom.length > 0;
+
+      // До 1.2.0 уровня B2 не было. Кто не трогал уровни (выбраны все старые), тому включаем B2.
+      if (!saved.meta.seenVersion) {
+        [state.meta.settings, state.meta.practice].forEach(function (s) {
+          if (['A1', 'A2', 'B1'].every(function (lv) { return s.levels.indexOf(lv) !== -1; }) && s.levels.indexOf('B2') === -1 && LEVELS.indexOf('B2') !== -1) {
+            s.levels = s.levels.concat('B2');
+          }
+        });
+      }
     }
     indexWords();
     renderHome();
+    maybeShowWhatsNew(hadProgress);
   });
   renderHome();
 })();
