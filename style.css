@@ -300,7 +300,7 @@ textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; 
 .sheet-title { margin: 0; font-family: var(--font-head); font-weight: 650; font-size: 22px; overflow-wrap: anywhere; }
 .sheet-body { display: flex; flex-direction: column; gap: 14px; }
 .sheet-body .group-label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.form-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.sheet-body .form-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
 .form-row {
   display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; align-items: center;
   width: 100%; text-align: left; border: 0; border-bottom: 1px solid var(--line); background: transparent; padding: 10px 0; min-height: 52px;
@@ -308,14 +308,16 @@ textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; 
 .form-row .f-en { font-family: var(--font-head); font-weight: 650; font-size: 18px; }
 .form-row .f-pos { font-size: 12px; color: var(--muted); text-align: right; }
 .form-row .f-ru { grid-column: 1 / -1; color: var(--muted); font-size: 14px; }
-.irr-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.sheet-sub { margin: -8px 0 0; color: var(--muted); font-size: 15px; }
+.irr-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .irr-chip {
-  border: 1px solid var(--line); background: var(--card); border-radius: 10px; padding: 8px 12px; min-height: 44px;
-  display: flex; flex-direction: column; align-items: flex-start; gap: 0;
+  border: 1px solid var(--line); background: var(--card); border-radius: 10px; padding: 8px 10px; min-height: 56px; min-width: 0;
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; text-align: left;
 }
-.irr-chip b { font-family: var(--font-head); font-weight: 650; font-size: 18px; }
-.irr-chip small { font-size: 11px; color: var(--muted); }
-.irr-arrow { color: var(--muted); }
+.irr-chip b { font-family: var(--font-head); font-weight: 650; font-size: 18px; overflow-wrap: anywhere; }
+.irr-chip small { font-size: 11px; color: var(--muted); line-height: 1.25; }
+.form-row.static { cursor: default; }
+.form-row .f-en.muted { color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) { .sheet { animation: none; } }
 @media (prefers-reduced-motion: reduce) { .bar span { transition: none; } }

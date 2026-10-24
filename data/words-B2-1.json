@@ -25,7 +25,8 @@
         "особенно"
       ]
     ],
-    "note": "in particular — в частности; be particular about — быть разборчивым в чём-то"
+    "note": "in particular — в частности; be particular about — быть разборчивым в чём-то",
+    "gram": []
   },
   {
     "en": "actual",
@@ -53,7 +54,8 @@
         "на самом деле"
       ]
     ],
-    "note": "Ложный друг: actual ≠ «актуальный» (это relevant, current)."
+    "note": "Ложный друг: actual ≠ «актуальный» (это relevant, current).",
+    "gram": []
   },
   {
     "en": "data",
@@ -74,7 +76,13 @@
         "Вчера у меня закончился мобильный интернет."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "community",
@@ -95,7 +103,13 @@
         "Здесь поблизости есть общественный центр?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "communities",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "though",
@@ -117,7 +131,8 @@
       ]
     ],
     "forms": [],
-    "note": "В конце фразы though = «впрочем, всё же». even though — «несмотря на то что»."
+    "note": "В конце фразы though = «впрочем, всё же». even though — «несмотря на то что».",
+    "gram": []
   },
   {
     "en": "media",
@@ -138,7 +153,13 @@
         "Не верь всему, что пишут в СМИ."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "client",
@@ -159,7 +180,13 @@
         "Клиент одобрил дизайн?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "clients",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "decade",
@@ -180,7 +207,13 @@
         "Это самое жаркое лето за последние десятилетия."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "decades",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "factor",
@@ -201,7 +234,13 @@
         "Какие факторы ты учитывал перед переездом?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "factors",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "version",
@@ -222,7 +261,13 @@
         "Фильм лучше, чем книга."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "versions",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "overall",
@@ -243,7 +288,8 @@
         "Кто стал абсолютным победителем соревнования?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "outcome",
@@ -264,7 +310,13 @@
         "Для вашей команды это был хороший результат?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "outcomes",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "perspective",
@@ -286,7 +338,13 @@
       ]
     ],
     "forms": [],
-    "note": "Обычно perspective = «точка зрения». «Перспективы на будущее» — prospects."
+    "note": "Обычно perspective = «точка зрения». «Перспективы на будущее» — prospects.",
+    "gram": [
+      [
+        "perspectives",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "relevant",
@@ -318,6 +376,16 @@
         "adj",
         "не относящийся к делу"
       ]
+    ],
+    "gram": [
+      [
+        "more relevant",
+        "comp"
+      ],
+      [
+        "the most relevant",
+        "sup"
+      ]
     ]
   },
   {
@@ -345,7 +413,8 @@
         "adv",
         "что крайне важно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "employee",
@@ -383,7 +452,13 @@
         "работа, занятость"
       ]
     ],
-    "note": "employee — работник, employer — работодатель."
+    "note": "employee — работник, employer — работодатель.",
+    "gram": [
+      [
+        "employees",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "colleague",
@@ -404,7 +479,13 @@
         "Ты хорошо ладишь с коллегами?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "colleagues",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "identify",
@@ -436,6 +517,20 @@
         "n",
         "опознание; удостоверение личности"
       ]
+    ],
+    "gram": [
+      [
+        "identifies",
+        "s3"
+      ],
+      [
+        "identifying",
+        "ing"
+      ],
+      [
+        "identified",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -463,7 +558,8 @@
         "adj",
         "предыдущий"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "ultimately",
@@ -490,7 +586,8 @@
         "adj",
         "конечный, окончательный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "essentially",
@@ -522,7 +619,8 @@
         "n",
         "суть"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "significantly",
@@ -554,6 +652,16 @@
         "n",
         "значение, важность"
       ]
+    ],
+    "gram": [
+      [
+        "more significantly",
+        "comp"
+      ],
+      [
+        "the most significantly",
+        "sup"
+      ]
     ]
   },
   {
@@ -581,7 +689,8 @@
         "adj",
         "буквальный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "practically",
@@ -608,7 +717,8 @@
         "adj",
         "практичный, практический"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "virtually",
@@ -635,7 +745,8 @@
         "adj",
         "виртуальный; фактический"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "precisely",
@@ -667,7 +778,8 @@
         "n",
         "точность"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "specifically",
@@ -699,7 +811,8 @@
         "v",
         "уточнять, указывать"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "genuinely",
@@ -726,7 +839,8 @@
         "adj",
         "подлинный, искренний"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "frankly",
@@ -753,7 +867,8 @@
         "adj",
         "откровенный, прямой"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "presumably",
@@ -780,7 +895,8 @@
         "v",
         "предполагать"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "regardless",
@@ -802,7 +918,8 @@
       ]
     ],
     "forms": [],
-    "note": "regardless of (не regardless from) — независимо от."
+    "note": "regardless of (не regardless from) — независимо от.",
+    "gram": []
   },
   {
     "en": "decent",
@@ -828,6 +945,16 @@
         "decently",
         "adv",
         "прилично, достойно"
+      ]
+    ],
+    "gram": [
+      [
+        "more decent",
+        "comp"
+      ],
+      [
+        "the most decent",
+        "sup"
       ]
     ]
   },
@@ -856,6 +983,16 @@
         "n",
         "твёрдость, стойкость"
       ]
+    ],
+    "gram": [
+      [
+        "tougher",
+        "comp"
+      ],
+      [
+        "the toughest",
+        "sup"
+      ]
     ]
   },
   {
@@ -883,7 +1020,8 @@
         "adv",
         "жизненно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "fundamental",
@@ -915,7 +1053,8 @@
         "n",
         "основы"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "consistent",
@@ -952,6 +1091,16 @@
         "adj",
         "непоследовательный"
       ]
+    ],
+    "gram": [
+      [
+        "more consistent",
+        "comp"
+      ],
+      [
+        "the most consistent",
+        "sup"
+      ]
     ]
   },
   {
@@ -979,7 +1128,8 @@
         "adv",
         "постоянно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "sensitive",
@@ -1012,7 +1162,17 @@
         "бестактный, нечуткий"
       ]
     ],
-    "note": "sensitive — чувствительный; sensible — разумный. Не путать!"
+    "note": "sensitive — чувствительный; sensible — разумный. Не путать!",
+    "gram": [
+      [
+        "more sensitive",
+        "comp"
+      ],
+      [
+        "the most sensitive",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "sensible",
@@ -1038,6 +1198,16 @@
         "sensibly",
         "adv",
         "разумно"
+      ]
+    ],
+    "gram": [
+      [
+        "more sensible",
+        "comp"
+      ],
+      [
+        "the most sensible",
+        "sup"
       ]
     ]
   },
@@ -1071,7 +1241,8 @@
         "n",
         "причина; разум"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "willing",
@@ -1108,6 +1279,16 @@
         "adj",
         "не желающий"
       ]
+    ],
+    "gram": [
+      [
+        "more willing",
+        "comp"
+      ],
+      [
+        "the most willing",
+        "sup"
+      ]
     ]
   },
   {
@@ -1140,6 +1321,16 @@
         "n",
         "нежелание"
       ]
+    ],
+    "gram": [
+      [
+        "more reluctant",
+        "comp"
+      ],
+      [
+        "the most reluctant",
+        "sup"
+      ]
     ]
   },
   {
@@ -1162,7 +1353,17 @@
       ]
     ],
     "forms": [],
-    "note": "be keen on smth — увлекаться; be keen to do smth — очень хотеть что-то сделать."
+    "note": "be keen on smth — увлекаться; be keen to do smth — очень хотеть что-то сделать.",
+    "gram": [
+      [
+        "keener",
+        "comp"
+      ],
+      [
+        "the keenest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "determined",
@@ -1193,6 +1394,16 @@
         "determination",
         "n",
         "решимость"
+      ]
+    ],
+    "gram": [
+      [
+        "more determined",
+        "comp"
+      ],
+      [
+        "the most determined",
+        "sup"
       ]
     ]
   },
@@ -1226,6 +1437,16 @@
         "adj",
         "убедительный"
       ]
+    ],
+    "gram": [
+      [
+        "more convinced",
+        "comp"
+      ],
+      [
+        "the most convinced",
+        "sup"
+      ]
     ]
   },
   {
@@ -1252,6 +1473,16 @@
         "oddly",
         "adv",
         "странно"
+      ]
+    ],
+    "gram": [
+      [
+        "odder",
+        "comp"
+      ],
+      [
+        "the oddest",
+        "sup"
       ]
     ]
   },
@@ -1280,6 +1511,16 @@
         "n",
         "трюк, хитрость"
       ]
+    ],
+    "gram": [
+      [
+        "trickier",
+        "comp"
+      ],
+      [
+        "the trickiest",
+        "sup"
+      ]
     ]
   },
   {
@@ -1301,7 +1542,17 @@
         "Она мне нравится — она очень прямолинейная."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "more straightforward",
+        "comp"
+      ],
+      [
+        "the most straightforward",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "priority",
@@ -1328,6 +1579,12 @@
         "v",
         "расставлять приоритеты"
       ]
+    ],
+    "gram": [
+      [
+        "priorities",
+        "pl"
+      ]
     ]
   },
   {
@@ -1350,7 +1607,13 @@
       ]
     ],
     "forms": [],
-    "note": "feedback — неисчисляемое: some feedback, a piece of feedback (не a feedback)."
+    "note": "feedback — неисчисляемое: some feedback, a piece of feedback (не a feedback).",
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "salary",
@@ -1371,7 +1634,13 @@
         "Моей зарплаты не хватает на все расходы."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "salaries",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "deliberately",
@@ -1398,7 +1667,8 @@
         "adj",
         "намеренный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "dramatically",
@@ -1430,7 +1700,8 @@
         "n",
         "драма"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "considerably",
@@ -1457,7 +1728,8 @@
         "adj",
         "значительный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "somewhat",
@@ -1478,7 +1750,8 @@
         "Это несколько отличалось от того, что ты ожидал?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "effectively",
@@ -1509,6 +1782,16 @@
         "effect",
         "n",
         "эффект, результат"
+      ]
+    ],
+    "gram": [
+      [
+        "more effectively",
+        "comp"
+      ],
+      [
+        "the most effectively",
+        "sup"
       ]
     ]
   },
@@ -1548,7 +1831,14 @@
         "критический"
       ]
     ],
-    "note": "criticism — критика; critic — критик (человек)."
+    "note": "criticism — критика; critic — критик (человек).",
+    "gram": [
+      [
+        "criticisms",
+        "pl",
+        "= критические замечания; критика вообще — неисчисл."
+      ]
+    ]
   },
   {
     "en": "investment",
@@ -1580,6 +1870,13 @@
         "n",
         "инвестор"
       ]
+    ],
+    "gram": [
+      [
+        "investments",
+        "pl",
+        "= вложения; вложение денег вообще — неисчисл."
+      ]
     ]
   },
   {
@@ -1602,7 +1899,13 @@
       ]
     ],
     "forms": [],
-    "note": "Обычно во мн. ч.: under the circumstances — в данных обстоятельствах."
+    "note": "Обычно во мн. ч.: under the circumstances — в данных обстоятельствах.",
+    "gram": [
+      [
+        "circumstances",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "expectation",
@@ -1629,6 +1932,12 @@
         "v",
         "ожидать"
       ]
+    ],
+    "gram": [
+      [
+        "expectations",
+        "pl"
+      ]
     ]
   },
   {
@@ -1650,7 +1959,8 @@
         "Ты учёл её точку зрения?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "cope",
@@ -1672,7 +1982,21 @@
       ]
     ],
     "forms": [],
-    "note": "cope with smth — справляться с чем-то (предлог with обязателен)."
+    "note": "cope with smth — справляться с чем-то (предлог with обязателен).",
+    "gram": [
+      [
+        "copes",
+        "s3"
+      ],
+      [
+        "coping",
+        "ing"
+      ],
+      [
+        "coped",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "tackle",
@@ -1693,7 +2017,21 @@
         "Город пока не решил проблему с пробками."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "tackles",
+        "s3"
+      ],
+      [
+        "tackling",
+        "ing"
+      ],
+      [
+        "tackled",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "clarify",
@@ -1725,6 +2063,20 @@
         "adj",
         "ясный"
       ]
+    ],
+    "gram": [
+      [
+        "clarifies",
+        "s3"
+      ],
+      [
+        "clarifying",
+        "ing"
+      ],
+      [
+        "clarified",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1751,6 +2103,20 @@
         "assessment",
         "n",
         "оценка"
+      ]
+    ],
+    "gram": [
+      [
+        "assesses",
+        "s3"
+      ],
+      [
+        "assessing",
+        "ing"
+      ],
+      [
+        "assessed",
+        "pastpp"
       ]
     ]
   },
@@ -1784,6 +2150,20 @@
         "n",
         "устный переводчик"
       ]
+    ],
+    "gram": [
+      [
+        "interprets",
+        "s3"
+      ],
+      [
+        "interpreting",
+        "ing"
+      ],
+      [
+        "interpreted",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1816,6 +2196,20 @@
         "adj",
         "оправданный"
       ]
+    ],
+    "gram": [
+      [
+        "justifies",
+        "s3"
+      ],
+      [
+        "justifying",
+        "ing"
+      ],
+      [
+        "justified",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1842,6 +2236,20 @@
         "implementation",
         "n",
         "внедрение, выполнение"
+      ]
+    ],
+    "gram": [
+      [
+        "implements",
+        "s3"
+      ],
+      [
+        "implementing",
+        "ing"
+      ],
+      [
+        "implemented",
+        "pastpp"
       ]
     ]
   },
@@ -1870,6 +2278,20 @@
         "n",
         "последствие; скрытый смысл"
       ]
+    ],
+    "gram": [
+      [
+        "implies",
+        "s3"
+      ],
+      [
+        "implying",
+        "ing"
+      ],
+      [
+        "implied",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1896,6 +2318,20 @@
         "exaggeration",
         "n",
         "преувеличение"
+      ]
+    ],
+    "gram": [
+      [
+        "exaggerates",
+        "s3"
+      ],
+      [
+        "exaggerating",
+        "ing"
+      ],
+      [
+        "exaggerated",
+        "pastpp"
       ]
     ]
   },
@@ -1924,6 +2360,16 @@
         "misunderstanding",
         "n",
         "недоразумение"
+      ]
+    ],
+    "gram": [
+      [
+        "misunderstands",
+        "s3"
+      ],
+      [
+        "misunderstanding",
+        "ing"
       ]
     ]
   },
@@ -1957,6 +2403,20 @@
         "n",
         "оценка, прикидка"
       ]
+    ],
+    "gram": [
+      [
+        "underestimates",
+        "s3"
+      ],
+      [
+        "underestimating",
+        "ing"
+      ],
+      [
+        "underestimated",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1979,7 +2439,21 @@
       ]
     ],
     "forms": [],
-    "note": "Разговорное (особенно британское) = think: I reckon… — я думаю…"
+    "note": "Разговорное (особенно британское) = think: I reckon… — я думаю…",
+    "gram": [
+      [
+        "reckons",
+        "s3"
+      ],
+      [
+        "reckoning",
+        "ing"
+      ],
+      [
+        "reckoned",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "postpone",
@@ -2000,7 +2474,27 @@
         "Можем перенести звонок на завтра?"
       ]
     ],
-    "forms": []
+    "forms": [
+      [
+        "postponement",
+        "n",
+        "перенос, отсрочка"
+      ]
+    ],
+    "gram": [
+      [
+        "postpones",
+        "s3"
+      ],
+      [
+        "postponing",
+        "ing"
+      ],
+      [
+        "postponed",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "interfere",
@@ -2028,7 +2522,21 @@
         "вмешательство; помехи"
       ]
     ],
-    "note": "interfere in — вмешиваться в; interfere with — мешать чему-то."
+    "note": "interfere in — вмешиваться в; interfere with — мешать чему-то.",
+    "gram": [
+      [
+        "interferes",
+        "s3"
+      ],
+      [
+        "interfering",
+        "ing"
+      ],
+      [
+        "interfered",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "neglect",
@@ -2054,6 +2562,20 @@
         "neglect",
         "n",
         "пренебрежение, запущенность"
+      ]
+    ],
+    "gram": [
+      [
+        "neglects",
+        "s3"
+      ],
+      [
+        "neglecting",
+        "ing"
+      ],
+      [
+        "neglected",
+        "pastpp"
       ]
     ]
   },
@@ -2081,6 +2603,20 @@
         "dismissive",
         "adj",
         "пренебрежительный"
+      ]
+    ],
+    "gram": [
+      [
+        "dismisses",
+        "s3"
+      ],
+      [
+        "dismissing",
+        "ing"
+      ],
+      [
+        "dismissed",
+        "pastpp"
       ]
     ]
   },
@@ -2114,6 +2650,20 @@
         "n",
         "терпимость"
       ]
+    ],
+    "gram": [
+      [
+        "tolerates",
+        "s3"
+      ],
+      [
+        "tolerating",
+        "ing"
+      ],
+      [
+        "tolerated",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2140,6 +2690,20 @@
         "confrontation",
         "n",
         "конфронтация, столкновение"
+      ]
+    ],
+    "gram": [
+      [
+        "confronts",
+        "s3"
+      ],
+      [
+        "confronting",
+        "ing"
+      ],
+      [
+        "confronted",
+        "pastpp"
       ]
     ]
   },
@@ -2173,6 +2737,20 @@
         "adj",
         "оскорбительный"
       ]
+    ],
+    "gram": [
+      [
+        "offends",
+        "s3"
+      ],
+      [
+        "offending",
+        "ing"
+      ],
+      [
+        "offended",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2194,7 +2772,13 @@
         "Как ты решил свою дилемму?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "dilemmas",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "setback",
@@ -2220,6 +2804,12 @@
         "set back",
         "ph",
         "задерживать, отбрасывать назад"
+      ]
+    ],
+    "gram": [
+      [
+        "setbacks",
+        "pl"
       ]
     ]
   },
@@ -2253,6 +2843,12 @@
         "adj",
         "испытывающий облегчение"
       ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
     ]
   },
   {
@@ -2285,6 +2881,12 @@
         "adj",
         "обязательный"
       ]
+    ],
+    "gram": [
+      [
+        "obligations",
+        "pl"
+      ]
     ]
   },
   {
@@ -2311,6 +2913,16 @@
         "flexibility",
         "n",
         "гибкость"
+      ]
+    ],
+    "gram": [
+      [
+        "more flexible",
+        "comp"
+      ],
+      [
+        "the most flexible",
+        "sup"
       ]
     ]
   },
@@ -2344,6 +2956,16 @@
         "n",
         "реальность"
       ]
+    ],
+    "gram": [
+      [
+        "more unrealistic",
+        "comp"
+      ],
+      [
+        "the most unrealistic",
+        "sup"
+      ]
     ]
   },
   {
@@ -2370,6 +2992,16 @@
         "reasonable",
         "adj",
         "разумный"
+      ]
+    ],
+    "gram": [
+      [
+        "more unreasonable",
+        "comp"
+      ],
+      [
+        "the most unreasonable",
+        "sup"
       ]
     ]
   },
@@ -2403,6 +3035,16 @@
         "v",
         "полагаться"
       ]
+    ],
+    "gram": [
+      [
+        "more unreliable",
+        "comp"
+      ],
+      [
+        "the most unreliable",
+        "sup"
+      ]
     ]
   },
   {
@@ -2429,6 +3071,16 @@
         "understandably",
         "adv",
         "по понятным причинам"
+      ]
+    ],
+    "gram": [
+      [
+        "more understandable",
+        "comp"
+      ],
+      [
+        "the most understandable",
+        "sup"
       ]
     ]
   },
@@ -2462,6 +3114,16 @@
         "adj",
         "необдуманный, невнимательный"
       ]
+    ],
+    "gram": [
+      [
+        "more thoughtful",
+        "comp"
+      ],
+      [
+        "the most thoughtful",
+        "sup"
+      ]
     ]
   },
   {
@@ -2493,6 +3155,16 @@
         "demand",
         "n",
         "требование; спрос"
+      ]
+    ],
+    "gram": [
+      [
+        "more demanding",
+        "comp"
+      ],
+      [
+        "the most demanding",
+        "sup"
       ]
     ]
   },
@@ -2532,7 +3204,17 @@
         "изнеможение"
       ]
     ],
-    "note": "exhausting — утомительный (о деле); exhausted — измотанный (о человеке)."
+    "note": "exhausting — утомительный (о деле); exhausted — измотанный (о человеке).",
+    "gram": [
+      [
+        "more exhausting",
+        "comp"
+      ],
+      [
+        "the most exhausting",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "long-term",
@@ -2559,7 +3241,8 @@
         "adj",
         "краткосрочный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "nightmare",
@@ -2580,7 +3263,13 @@
         "Переезд с двумя детьми был сущим кошмаром."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "nightmares",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "fed up",
@@ -2602,7 +3291,8 @@
       ]
     ],
     "forms": [],
-    "note": "be fed up with smth — надоело что-то; часто с -ing: fed up with waiting."
+    "note": "be fed up with smth — надоело что-то; часто с -ing: fed up with waiting.",
+    "gram": []
   },
   {
     "en": "undoubtedly",
@@ -2634,7 +3324,8 @@
         "adj",
         "сомнительный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "admittedly",
@@ -2661,7 +3352,8 @@
         "v",
         "признавать"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "commute",
@@ -2687,6 +3379,20 @@
         "commuter",
         "n",
         "человек, ежедневно ездящий на работу"
+      ]
+    ],
+    "gram": [
+      [
+        "commutes",
+        "s3"
+      ],
+      [
+        "commuting",
+        "ing"
+      ],
+      [
+        "commuted",
+        "pastpp"
       ]
     ]
   },
@@ -2720,6 +3426,12 @@
         "adj",
         "рассеянный, отвлёкшийся"
       ]
+    ],
+    "gram": [
+      [
+        "distractions",
+        "pl"
+      ]
     ]
   },
   {
@@ -2746,6 +3458,12 @@
         "bring up",
         "ph",
         "воспитывать"
+      ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
       ]
     ]
   }

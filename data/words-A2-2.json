@@ -19,7 +19,13 @@
       ]
     ],
     "forms": [],
-    "note": "a couple of days — пара дней, несколько дней (не обязательно ровно два)"
+    "note": "a couple of days — пара дней, несколько дней (не обязательно ровно два)",
+    "gram": [
+      [
+        "couples",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "adult",
@@ -45,6 +51,12 @@
         "adulthood",
         "n",
         "взрослая жизнь, зрелость"
+      ]
+    ],
+    "gram": [
+      [
+        "adults",
+        "pl"
       ]
     ]
   },
@@ -79,7 +91,13 @@
         "странно"
       ]
     ],
-    "note": "stranger — незнакомый человек, а не «странный человек» (это strange person)"
+    "note": "stranger — незнакомый человек, а не «странный человек» (это strange person)",
+    "gram": [
+      [
+        "strangers",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "visitor",
@@ -110,6 +128,12 @@
         "visit",
         "n",
         "визит, посещение"
+      ]
+    ],
+    "gram": [
+      [
+        "visitors",
+        "pl"
       ]
     ]
   },
@@ -143,6 +167,12 @@
         "n",
         "тур, экскурсия"
       ]
+    ],
+    "gram": [
+      [
+        "tourists",
+        "pl"
+      ]
     ]
   },
   {
@@ -164,7 +194,13 @@
         "Сколько пассажиров было в автобусе?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "passengers",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "boss",
@@ -190,6 +226,12 @@
         "bossy",
         "adj",
         "любящий командовать"
+      ]
+    ],
+    "gram": [
+      [
+        "bosses",
+        "pl"
       ]
     ]
   },
@@ -223,6 +265,12 @@
         "n",
         "управление; руководство"
       ]
+    ],
+    "gram": [
+      [
+        "managers",
+        "pl"
+      ]
     ]
   },
   {
@@ -245,7 +293,13 @@
       ]
     ],
     "forms": [],
-    "note": "staff — собирательное: не говорят a staff или staffs; один сотрудник — a member of staff"
+    "note": "staff — собирательное: не говорят a staff или staffs; один сотрудник — a member of staff",
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "appointment",
@@ -273,7 +327,13 @@
         "назначать (на должность)"
       ]
     ],
-    "note": "make an appointment — записаться; встреча с друзьями — не appointment, а plans/meeting"
+    "note": "make an appointment — записаться; встреча с друзьями — не appointment, а plans/meeting",
+    "gram": [
+      [
+        "appointments",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "bill",
@@ -294,7 +354,13 @@
         "Не забудь оплатить счёт за телефон."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "bills",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "cash",
@@ -320,6 +386,12 @@
         "cash",
         "v",
         "обналичивать"
+      ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
       ]
     ]
   },
@@ -348,6 +420,12 @@
         "n",
         "бухгалтер"
       ]
+    ],
+    "gram": [
+      [
+        "accounts",
+        "pl"
+      ]
     ]
   },
   {
@@ -374,6 +452,12 @@
         "budget",
         "v",
         "планировать расходы"
+      ]
+    ],
+    "gram": [
+      [
+        "budgets",
+        "pl"
       ]
     ]
   },
@@ -402,6 +486,12 @@
         "v",
         "летать, лететь"
       ]
+    ],
+    "gram": [
+      [
+        "flights",
+        "pl"
+      ]
     ]
   },
   {
@@ -424,7 +514,13 @@
       ]
     ],
     "forms": [],
-    "note": "traffic — неисчисляемое: a lot of traffic, не many traffics; пробка — traffic jam"
+    "note": "traffic — неисчисляемое: a lot of traffic, не many traffics; пробка — traffic jam",
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "road",
@@ -445,7 +541,13 @@
         "Утром на дорогах был гололёд."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "roads",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "abroad",
@@ -467,7 +569,8 @@
       ]
     ],
     "forms": [],
-    "note": "go abroad, без предлога: не go to abroad"
+    "note": "go abroad, без предлога: не go to abroad",
+    "gram": []
   },
   {
     "en": "ahead",
@@ -488,7 +591,8 @@
         "Летом лучше бронировать заранее."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "apart",
@@ -509,7 +613,8 @@
         "Нам тяжело надолго расставаться."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "anywhere",
@@ -530,7 +635,8 @@
         "Садитесь, куда хотите."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "somewhere",
@@ -551,7 +657,8 @@
         "Здесь поблизости есть где припарковаться?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "anymore",
@@ -572,7 +679,8 @@
         "Ты ещё играешь в теннис или уже нет?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "nowadays",
@@ -593,7 +701,8 @@
         "Чем ты сейчас развлекаешься?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "forever",
@@ -614,7 +723,8 @@
         "Говорят, ничто не вечно."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "twice",
@@ -635,7 +745,8 @@
         "Ты правда звонил ему дважды?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "upstairs",
@@ -656,7 +767,8 @@
         "Соседи сверху очень шумные."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "downstairs",
@@ -677,7 +789,8 @@
         "Внизу есть туалет?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "certainly",
@@ -709,7 +822,8 @@
         "n",
         "уверенность"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "clearly",
@@ -735,6 +849,12 @@
         "clear",
         "adj",
         "ясный, понятный; чистый"
+      ]
+    ],
+    "gram": [
+      [
+        "more clearly",
+        "comp"
       ]
     ]
   },
@@ -764,7 +884,8 @@
         "очевидный, явный"
       ]
     ],
-    "note": "apparently — «по слухам, судя по всему», а не «очевидно» (это obviously)"
+    "note": "apparently — «по слухам, судя по всему», а не «очевидно» (это obviously)",
+    "gram": []
   },
   {
     "en": "basically",
@@ -796,7 +917,8 @@
         "n",
         "основа"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "hardly",
@@ -824,7 +946,8 @@
         "трудный; твёрдый"
       ]
     ],
-    "note": "hardly — «едва, почти не», а не «упорно» (это hard): I work hard ≠ I hardly work"
+    "note": "hardly — «едва, почти не», а не «упорно» (это hard): I work hard ≠ I hardly work",
+    "gram": []
   },
   {
     "en": "mostly",
@@ -851,7 +974,8 @@
         "adj",
         "большинство; самый"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "mainly",
@@ -878,7 +1002,8 @@
         "adj",
         "главный, основной"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "simply",
@@ -905,7 +1030,8 @@
         "adj",
         "простой"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "seriously",
@@ -931,6 +1057,12 @@
         "serious",
         "adj",
         "серьёзный"
+      ]
+    ],
+    "gram": [
+      [
+        "more seriously",
+        "comp"
       ]
     ]
   },
@@ -959,7 +1091,8 @@
         "adj",
         "неудачный, несчастный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "luckily",
@@ -991,7 +1124,8 @@
         "n",
         "удача"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "fortunately",
@@ -1023,7 +1157,8 @@
         "n",
         "удача; состояние (деньги)"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "easily",
@@ -1055,6 +1190,12 @@
         "n",
         "лёгкость"
       ]
+    ],
+    "gram": [
+      [
+        "more easily",
+        "comp"
+      ]
     ]
   },
   {
@@ -1081,6 +1222,12 @@
         "slow",
         "adj",
         "медленный"
+      ]
+    ],
+    "gram": [
+      [
+        "more slowly",
+        "comp"
       ]
     ]
   },
@@ -1109,6 +1256,12 @@
         "adj",
         "тихий, спокойный"
       ]
+    ],
+    "gram": [
+      [
+        "more quietly",
+        "comp"
+      ]
     ]
   },
   {
@@ -1135,6 +1288,16 @@
         "bad",
         "adj",
         "плохой"
+      ]
+    ],
+    "gram": [
+      [
+        "worse",
+        "comp"
+      ],
+      [
+        "the worst",
+        "sup"
       ]
     ]
   },
@@ -1163,7 +1326,8 @@
         "adj",
         "крайний, экстремальный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "perfectly",
@@ -1190,7 +1354,8 @@
         "adj",
         "идеальный, отличный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "regularly",
@@ -1216,6 +1381,12 @@
         "regular",
         "adj",
         "регулярный; обычный"
+      ]
+    ],
+    "gram": [
+      [
+        "more regularly",
+        "comp"
       ]
     ]
   },
@@ -1248,6 +1419,12 @@
         "strength",
         "n",
         "сила"
+      ]
+    ],
+    "gram": [
+      [
+        "more strongly",
+        "comp"
       ]
     ]
   },
@@ -1282,7 +1459,17 @@
         "тревожный"
       ]
     ],
-    "note": "worried about something/someone — волноваться о чём-то/ком-то"
+    "note": "worried about something/someone — волноваться о чём-то/ком-то",
+    "gram": [
+      [
+        "more worried",
+        "comp"
+      ],
+      [
+        "the most worried",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "upset",
@@ -1308,6 +1495,16 @@
         "upset",
         "v",
         "расстраивать"
+      ]
+    ],
+    "gram": [
+      [
+        "more upset",
+        "comp"
+      ],
+      [
+        "the most upset",
+        "sup"
       ]
     ]
   },
@@ -1341,6 +1538,16 @@
         "n",
         "нерв"
       ]
+    ],
+    "gram": [
+      [
+        "more nervous",
+        "comp"
+      ],
+      [
+        "the most nervous",
+        "sup"
+      ]
     ]
   },
   {
@@ -1367,6 +1574,16 @@
         "anxiety",
         "n",
         "тревога, беспокойство"
+      ]
+    ],
+    "gram": [
+      [
+        "more anxious",
+        "comp"
+      ],
+      [
+        "the most anxious",
+        "sup"
       ]
     ]
   },
@@ -1401,7 +1618,17 @@
         "скука"
       ]
     ],
-    "note": "I'm bored — мне скучно; I'm boring — я скучный человек"
+    "note": "I'm bored — мне скучно; I'm boring — я скучный человек",
+    "gram": [
+      [
+        "more bored",
+        "comp"
+      ],
+      [
+        "the most bored",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "confused",
@@ -1437,6 +1664,16 @@
         "confusion",
         "n",
         "путаница"
+      ]
+    ],
+    "gram": [
+      [
+        "more confused",
+        "comp"
+      ],
+      [
+        "the most confused",
+        "sup"
       ]
     ]
   },
@@ -1475,6 +1712,16 @@
         "n",
         "разочарование"
       ]
+    ],
+    "gram": [
+      [
+        "more disappointed",
+        "comp"
+      ],
+      [
+        "the most disappointed",
+        "sup"
+      ]
     ]
   },
   {
@@ -1506,6 +1753,16 @@
         "surprising",
         "adj",
         "удивительный, неожиданный"
+      ]
+    ],
+    "gram": [
+      [
+        "more surprised",
+        "comp"
+      ],
+      [
+        "the most surprised",
+        "sup"
       ]
     ]
   },
@@ -1544,6 +1801,16 @@
         "adj",
         "приятный"
       ]
+    ],
+    "gram": [
+      [
+        "more pleased",
+        "comp"
+      ],
+      [
+        "the most pleased",
+        "sup"
+      ]
     ]
   },
   {
@@ -1576,6 +1843,16 @@
         "adj",
         "расслабляющий"
       ]
+    ],
+    "gram": [
+      [
+        "more relaxed",
+        "comp"
+      ],
+      [
+        "the most relaxed",
+        "sup"
+      ]
     ]
   },
   {
@@ -1604,7 +1881,17 @@
         "благодарность"
       ]
     ],
-    "note": "grateful to someone for something — благодарен кому-то за что-то"
+    "note": "grateful to someone for something — благодарен кому-то за что-то",
+    "gram": [
+      [
+        "more grateful",
+        "comp"
+      ],
+      [
+        "the most grateful",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "married",
@@ -1637,7 +1924,8 @@
         "брак"
       ]
     ],
-    "note": "married to someone (не with); пожениться — get married"
+    "note": "married to someone (не with); пожениться — get married",
+    "gram": []
   },
   {
     "en": "retired",
@@ -1669,7 +1957,8 @@
         "n",
         "выход на пенсию; пенсия"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "awful",
@@ -1695,6 +1984,16 @@
         "awfully",
         "adv",
         "ужасно, очень"
+      ]
+    ],
+    "gram": [
+      [
+        "more awful",
+        "comp"
+      ],
+      [
+        "the most awful",
+        "sup"
       ]
     ]
   },
@@ -1723,6 +2022,16 @@
         "adv",
         "блестяще"
       ]
+    ],
+    "gram": [
+      [
+        "more brilliant",
+        "comp"
+      ],
+      [
+        "the most brilliant",
+        "sup"
+      ]
     ]
   },
   {
@@ -1744,7 +2053,8 @@
         "Еда была не ахти, зато дешёвая."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "crazy",
@@ -1765,7 +2075,17 @@
         "Мой муж без ума от футбола."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "crazier",
+        "comp"
+      ],
+      [
+        "the craziest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "silly",
@@ -1786,7 +2106,17 @@
         "Я чувствую себя глупо в этой шляпе."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "sillier",
+        "comp"
+      ],
+      [
+        "the silliest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "annoying",
@@ -1817,6 +2147,16 @@
         "annoyed",
         "adj",
         "раздражённый"
+      ]
+    ],
+    "gram": [
+      [
+        "more annoying",
+        "comp"
+      ],
+      [
+        "the most annoying",
+        "sup"
       ]
     ]
   },
@@ -1850,6 +2190,16 @@
         "v",
         "смущать, ставить в неловкое положение"
       ]
+    ],
+    "gram": [
+      [
+        "more embarrassing",
+        "comp"
+      ],
+      [
+        "the most embarrassing",
+        "sup"
+      ]
     ]
   },
   {
@@ -1878,7 +2228,17 @@
         "знакомство, осведомлённость"
       ]
     ],
-    "note": "familiar — «знакомый» о вещах и лицах; знакомый человек — an acquaintance, a friend"
+    "note": "familiar — «знакомый» о вещах и лицах; знакомый человек — an acquaintance, a friend",
+    "gram": [
+      [
+        "more familiar",
+        "comp"
+      ],
+      [
+        "the most familiar",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "polite",
@@ -1909,6 +2269,16 @@
         "impolite",
         "adj",
         "невежливый"
+      ]
+    ],
+    "gram": [
+      [
+        "more polite",
+        "comp"
+      ],
+      [
+        "the most polite",
+        "sup"
       ]
     ]
   },
@@ -1941,6 +2311,16 @@
         "helpless",
         "adj",
         "беспомощный"
+      ]
+    ],
+    "gram": [
+      [
+        "more helpful",
+        "comp"
+      ],
+      [
+        "the most helpful",
+        "sup"
       ]
     ]
   },
@@ -1979,6 +2359,16 @@
         "adv",
         "с пользой"
       ]
+    ],
+    "gram": [
+      [
+        "more useful",
+        "comp"
+      ],
+      [
+        "the most useful",
+        "sup"
+      ]
     ]
   },
   {
@@ -2011,6 +2401,16 @@
         "n",
         "достопримечательность; притяжение"
       ]
+    ],
+    "gram": [
+      [
+        "more attractive",
+        "comp"
+      ],
+      [
+        "the most attractive",
+        "sup"
+      ]
     ]
   },
   {
@@ -2033,7 +2433,17 @@
       ]
     ],
     "forms": [],
-    "note": "good-looking — обычно о людях; о вещах и местах говорят beautiful, nice"
+    "note": "good-looking — обычно о людях; о вещах и местах говорят beautiful, nice",
+    "gram": [
+      [
+        "better-looking",
+        "comp"
+      ],
+      [
+        "the best-looking",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "unhappy",
@@ -2064,6 +2474,16 @@
         "unhappiness",
         "n",
         "несчастье, недовольство"
+      ]
+    ],
+    "gram": [
+      [
+        "unhappier",
+        "comp"
+      ],
+      [
+        "the unhappiest",
+        "sup"
       ]
     ]
   },
@@ -2097,6 +2517,16 @@
         "adv",
         "необычно"
       ]
+    ],
+    "gram": [
+      [
+        "more unusual",
+        "comp"
+      ],
+      [
+        "the most unusual",
+        "sup"
+      ]
     ]
   },
   {
@@ -2128,6 +2558,16 @@
         "unfairly",
         "adv",
         "несправедливо"
+      ]
+    ],
+    "gram": [
+      [
+        "more unfair",
+        "comp"
+      ],
+      [
+        "the most unfair",
+        "sup"
       ]
     ]
   },
@@ -2161,7 +2601,8 @@
         "n",
         "невозможность"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "convenient",
@@ -2194,7 +2635,17 @@
         "неудобный"
       ]
     ],
-    "note": "convenient — об удобстве по времени/месту; удобный диван — comfortable"
+    "note": "convenient — об удобстве по времени/месту; удобный диван — comfortable",
+    "gram": [
+      [
+        "more convenient",
+        "comp"
+      ],
+      [
+        "the most convenient",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "suitable",
@@ -2220,6 +2671,16 @@
         "suit",
         "v",
         "подходить, устраивать"
+      ]
+    ],
+    "gram": [
+      [
+        "more suitable",
+        "comp"
+      ],
+      [
+        "the most suitable",
+        "sup"
       ]
     ]
   },
@@ -2248,7 +2709,8 @@
         "adv",
         "регулярно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "usual",
@@ -2280,7 +2742,8 @@
         "adj",
         "необычный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "extra",
@@ -2301,7 +2764,8 @@
         "В этом месяце я работаю сверхурочно."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "basic",
@@ -2333,6 +2797,16 @@
         "n",
         "основы"
       ]
+    ],
+    "gram": [
+      [
+        "more basic",
+        "comp"
+      ],
+      [
+        "the most basic",
+        "sup"
+      ]
     ]
   },
   {
@@ -2361,7 +2835,8 @@
         "среднее (значение)"
       ]
     ],
-    "note": "on average — в среднем"
+    "note": "on average — в среднем",
+    "gram": []
   },
   {
     "en": "professional",
@@ -2398,6 +2873,16 @@
         "adv",
         "профессионально"
       ]
+    ],
+    "gram": [
+      [
+        "more professional",
+        "comp"
+      ],
+      [
+        "the most professional",
+        "sup"
+      ]
     ]
   },
   {
@@ -2425,7 +2910,8 @@
         "n",
         "лекарство; медицина"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "peaceful",
@@ -2456,6 +2942,16 @@
         "peacefully",
         "adv",
         "мирно, спокойно"
+      ]
+    ],
+    "gram": [
+      [
+        "more peaceful",
+        "comp"
+      ],
+      [
+        "the most peaceful",
+        "sup"
       ]
     ]
   },
@@ -2494,6 +2990,16 @@
         "adj",
         "неприятный"
       ]
+    ],
+    "gram": [
+      [
+        "more pleasant",
+        "comp"
+      ],
+      [
+        "the most pleasant",
+        "sup"
+      ]
     ]
   },
   {
@@ -2526,6 +3032,16 @@
         "adv",
         "шумно"
       ]
+    ],
+    "gram": [
+      [
+        "noisier",
+        "comp"
+      ],
+      [
+        "the noisiest",
+        "sup"
+      ]
     ]
   },
   {
@@ -2552,6 +3068,16 @@
         "crowd",
         "n",
         "толпа"
+      ]
+    ],
+    "gram": [
+      [
+        "more crowded",
+        "comp"
+      ],
+      [
+        "the most crowded",
+        "sup"
       ]
     ]
   },
@@ -2581,7 +3107,17 @@
         "жажда"
       ]
     ],
-    "note": "I'm thirsty — я хочу пить (так естественнее, чем I want to drink)"
+    "note": "I'm thirsty — я хочу пить (так естественнее, чем I want to drink)",
+    "gram": [
+      [
+        "thirstier",
+        "comp"
+      ],
+      [
+        "the thirstiest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "ill",
@@ -2609,7 +3145,8 @@
         "болезнь"
       ]
     ],
-    "note": "ill обычно не ставится перед существительным: she's ill, но a sick child"
+    "note": "ill обычно не ставится перед существительным: she's ill, но a sick child",
+    "gram": []
   },
   {
     "en": "alive",
@@ -2641,7 +3178,8 @@
         "n",
         "жизнь"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "dead",
@@ -2673,7 +3211,8 @@
         "n",
         "смерть"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "asleep",
@@ -2706,7 +3245,8 @@
         "сонный"
       ]
     ],
-    "note": "fall asleep — заснуть; asleep не ставится перед существительным"
+    "note": "fall asleep — заснуть; asleep не ставится перед существительным",
+    "gram": []
   },
   {
     "en": "empty",
@@ -2733,6 +3273,16 @@
         "v",
         "опустошать, освобождать"
       ]
+    ],
+    "gram": [
+      [
+        "emptier",
+        "comp"
+      ],
+      [
+        "the emptiest",
+        "sup"
+      ]
     ]
   },
   {
@@ -2754,7 +3304,17 @@
         "Выходные были холодные и дождливые."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "wetter",
+        "comp"
+      ],
+      [
+        "the wettest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "soft",
@@ -2780,6 +3340,16 @@
         "softly",
         "adv",
         "мягко, тихо"
+      ]
+    ],
+    "gram": [
+      [
+        "softer",
+        "comp"
+      ],
+      [
+        "the softest",
+        "sup"
       ]
     ]
   },
@@ -2808,6 +3378,16 @@
         "n",
         "дикая природа"
       ]
+    ],
+    "gram": [
+      [
+        "wilder",
+        "comp"
+      ],
+      [
+        "the wildest",
+        "sup"
+      ]
     ]
   },
   {
@@ -2835,7 +3415,8 @@
         "n",
         "день"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "online",
@@ -2856,7 +3437,8 @@
         "Курс проходит онлайн или очно?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "ability",
@@ -2888,6 +3470,12 @@
         "adj",
         "неспособный"
       ]
+    ],
+    "gram": [
+      [
+        "abilities",
+        "pl"
+      ]
     ]
   },
   {
@@ -2916,6 +3504,12 @@
         "недостаток"
       ]
     ],
-    "note": "take advantage of — воспользоваться (возможностью)"
+    "note": "take advantage of — воспользоваться (возможностью)",
+    "gram": [
+      [
+        "advantages",
+        "pl"
+      ]
+    ]
   }
 ]

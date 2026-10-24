@@ -18,7 +18,13 @@
         "Некоторые фрукты, например яблоки, осенью дешёвые."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "examples",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "information",
@@ -46,7 +52,13 @@
         "сообщать, информировать"
       ]
     ],
-    "note": "Неисчисляемое: information (не informations), a piece of information — одно сведение"
+    "note": "Неисчисляемое: information (не informations), a piece of information — одно сведение",
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "home",
@@ -74,7 +86,13 @@
         "бездомный"
       ]
     ],
-    "note": "go home, get home — без to: go home (не go to home)"
+    "note": "go home, get home — без to: go home (не go to home)",
+    "gram": [
+      [
+        "homes",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "job",
@@ -95,8 +113,20 @@
         "Тебя взяли на эту работу?"
       ]
     ],
-    "forms": [],
-    "note": "job — конкретная должность (a job), work — работа вообще, неисчисляемое"
+    "forms": [
+      [
+        "jobless",
+        "adj",
+        "безработный"
+      ]
+    ],
+    "note": "job — конкретная должность (a job), work — работа вообще, неисчисляемое",
+    "gram": [
+      [
+        "jobs",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "office",
@@ -128,6 +158,12 @@
         "adj",
         "официальный"
       ]
+    ],
+    "gram": [
+      [
+        "offices",
+        "pl"
+      ]
     ]
   },
   {
@@ -154,6 +190,13 @@
         "businessman",
         "n",
         "бизнесмен"
+      ]
+    ],
+    "gram": [
+      [
+        "businesses",
+        "pl",
+        "= компании, фирмы; «бизнес, дело» — неисч."
       ]
     ]
   },
@@ -182,6 +225,12 @@
         "n",
         "планирование"
       ]
+    ],
+    "gram": [
+      [
+        "plans",
+        "pl"
+      ]
     ]
   },
   {
@@ -203,7 +252,21 @@
         "Сколько ты пробудешь в Лондоне?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "stays",
+        "s3"
+      ],
+      [
+        "staying",
+        "ing"
+      ],
+      [
+        "stayed",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "stop",
@@ -225,7 +288,21 @@
       ]
     ],
     "forms": [],
-    "note": "stop doing — перестать делать; stop to do — остановиться, чтобы сделать"
+    "note": "stop doing — перестать делать; stop to do — остановиться, чтобы сделать",
+    "gram": [
+      [
+        "stops",
+        "s3"
+      ],
+      [
+        "stopping",
+        "ing"
+      ],
+      [
+        "stopped",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "finish",
@@ -246,7 +323,21 @@
         "Фильм закончился в полночь."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "finishes",
+        "s3"
+      ],
+      [
+        "finishing",
+        "ing"
+      ],
+      [
+        "finished",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "sell",
@@ -279,6 +370,16 @@
         "n",
         "продавец"
       ]
+    ],
+    "gram": [
+      [
+        "sells",
+        "s3"
+      ],
+      [
+        "selling",
+        "ing"
+      ]
     ]
   },
   {
@@ -300,7 +401,21 @@
         "Она несла ребёнка на руках."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "carries",
+        "s3"
+      ],
+      [
+        "carrying",
+        "ing"
+      ],
+      [
+        "carried",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "hold",
@@ -322,7 +437,17 @@
       ]
     ],
     "irr": "held|held",
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "holds",
+        "s3"
+      ],
+      [
+        "holding",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "cook",
@@ -355,7 +480,21 @@
         "плита"
       ]
     ],
-    "note": "cooker — плита, а не повар; повар — cook"
+    "note": "cooker — плита, а не повар; повар — cook",
+    "gram": [
+      [
+        "cooks",
+        "s3"
+      ],
+      [
+        "cooking",
+        "ing"
+      ],
+      [
+        "cooked",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "wash",
@@ -381,6 +520,20 @@
         "washing",
         "n",
         "стирка; бельё (для стирки)"
+      ]
+    ],
+    "gram": [
+      [
+        "washes",
+        "s3"
+      ],
+      [
+        "washing",
+        "ing"
+      ],
+      [
+        "washed",
+        "pastpp"
       ]
     ]
   },
@@ -414,6 +567,16 @@
         "n",
         "уборка"
       ]
+    ],
+    "gram": [
+      [
+        "cleaner",
+        "comp"
+      ],
+      [
+        "the cleanest",
+        "sup"
+      ]
     ]
   },
   {
@@ -436,7 +599,17 @@
       ]
     ],
     "irr": "wore|worn",
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "wears",
+        "s3"
+      ],
+      [
+        "wearing",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "watch",
@@ -457,7 +630,21 @@
         "Мои часы спешат на пять минут."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "watches",
+        "s3"
+      ],
+      [
+        "watching",
+        "ing"
+      ],
+      [
+        "watched",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "walk",
@@ -483,6 +670,20 @@
         "walker",
         "n",
         "пешеход, любитель ходьбы"
+      ]
+    ],
+    "gram": [
+      [
+        "walks",
+        "s3"
+      ],
+      [
+        "walking",
+        "ing"
+      ],
+      [
+        "walked",
+        "pastpp"
       ]
     ]
   },
@@ -511,6 +712,20 @@
         "n",
         "путешественник"
       ]
+    ],
+    "gram": [
+      [
+        "travels",
+        "s3"
+      ],
+      [
+        "travelling",
+        "ing"
+      ],
+      [
+        "travelled",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -537,6 +752,20 @@
         "visitor",
         "n",
         "посетитель, гость"
+      ]
+    ],
+    "gram": [
+      [
+        "visits",
+        "s3"
+      ],
+      [
+        "visiting",
+        "ing"
+      ],
+      [
+        "visited",
+        "pastpp"
       ]
     ]
   },
@@ -571,6 +800,16 @@
         "n",
         "вождение"
       ]
+    ],
+    "gram": [
+      [
+        "drives",
+        "s3"
+      ],
+      [
+        "driving",
+        "ing"
+      ]
     ]
   },
   {
@@ -604,6 +843,16 @@
         "adj",
         "сонный"
       ]
+    ],
+    "gram": [
+      [
+        "sleeps",
+        "s3"
+      ],
+      [
+        "sleeping",
+        "ing"
+      ]
     ]
   },
   {
@@ -631,6 +880,16 @@
         "awake",
         "adj",
         "не спящий, бодрствующий"
+      ]
+    ],
+    "gram": [
+      [
+        "wakes",
+        "s3"
+      ],
+      [
+        "waking",
+        "ing"
       ]
     ]
   },
@@ -660,6 +919,16 @@
         "n",
         "место, сиденье"
       ]
+    ],
+    "gram": [
+      [
+        "sits",
+        "s3"
+      ],
+      [
+        "sitting",
+        "ing"
+      ]
     ]
   },
   {
@@ -682,7 +951,17 @@
       ]
     ],
     "irr": "stood|stood",
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "stands",
+        "s3"
+      ],
+      [
+        "standing",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "speak",
@@ -716,7 +995,17 @@
         "речь"
       ]
     ],
-    "note": "speak English (не speak on English); speak to/with someone — говорить с кем-то"
+    "note": "speak English (не speak on English); speak to/with someone — говорить с кем-то",
+    "gram": [
+      [
+        "speaks",
+        "s3"
+      ],
+      [
+        "speaking",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "talk",
@@ -743,6 +1032,20 @@
         "adj",
         "разговорчивый"
       ]
+    ],
+    "gram": [
+      [
+        "talks",
+        "s3"
+      ],
+      [
+        "talking",
+        "ing"
+      ],
+      [
+        "talked",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -766,7 +1069,17 @@
     ],
     "irr": "said|said",
     "forms": [],
-    "note": "say something (to someone), но tell someone something: She said to me / She told me"
+    "note": "say something (to someone), но tell someone something: She said to me / She told me",
+    "gram": [
+      [
+        "says",
+        "s3"
+      ],
+      [
+        "saying",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "write",
@@ -799,6 +1112,16 @@
         "n",
         "письмо, письменность"
       ]
+    ],
+    "gram": [
+      [
+        "writes",
+        "s3"
+      ],
+      [
+        "writing",
+        "ing"
+      ]
     ]
   },
   {
@@ -827,7 +1150,21 @@
         "приятный"
       ]
     ],
-    "note": "enjoy doing: I enjoy cooking (не enjoy to cook)"
+    "note": "enjoy doing: I enjoy cooking (не enjoy to cook)",
+    "gram": [
+      [
+        "enjoys",
+        "s3"
+      ],
+      [
+        "enjoying",
+        "ing"
+      ],
+      [
+        "enjoyed",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "love",
@@ -859,6 +1196,20 @@
         "n",
         "любитель; возлюбленный"
       ]
+    ],
+    "gram": [
+      [
+        "loves",
+        "s3"
+      ],
+      [
+        "loving",
+        "ing"
+      ],
+      [
+        "loved",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -880,7 +1231,21 @@
         "Я заканчиваю свои письма словами «С наилучшими пожеланиями»."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "wishes",
+        "s3"
+      ],
+      [
+        "wishing",
+        "ing"
+      ],
+      [
+        "wished",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "order",
@@ -901,7 +1266,21 @@
         "Расположи имена в алфавитном порядке."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "orders",
+        "s3"
+      ],
+      [
+        "ordering",
+        "ing"
+      ],
+      [
+        "ordered",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "save",
@@ -928,6 +1307,20 @@
         "n",
         "сбережения"
       ]
+    ],
+    "gram": [
+      [
+        "saves",
+        "s3"
+      ],
+      [
+        "saving",
+        "ing"
+      ],
+      [
+        "saved",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -949,7 +1342,21 @@
         "Она выложила фотографии в интернет."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "shares",
+        "s3"
+      ],
+      [
+        "sharing",
+        "ing"
+      ],
+      [
+        "shared",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "check",
@@ -970,7 +1377,21 @@
         "Дай я посмотрю в календаре."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "checks",
+        "s3"
+      ],
+      [
+        "checking",
+        "ing"
+      ],
+      [
+        "checked",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "cut",
@@ -992,7 +1413,17 @@
       ]
     ],
     "irr": "cut|cut",
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "cuts",
+        "s3"
+      ],
+      [
+        "cutting",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "build",
@@ -1025,6 +1456,16 @@
         "n",
         "строитель"
       ]
+    ],
+    "gram": [
+      [
+        "builds",
+        "s3"
+      ],
+      [
+        "building",
+        "ing"
+      ]
     ]
   },
   {
@@ -1046,7 +1487,21 @@
         "Не спеши, у нас много времени."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "hurries",
+        "s3"
+      ],
+      [
+        "hurrying",
+        "ing"
+      ],
+      [
+        "hurried",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "hurt",
@@ -1068,7 +1523,17 @@
       ]
     ],
     "irr": "hurt|hurt",
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "hurts",
+        "s3"
+      ],
+      [
+        "hurting",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "introduce",
@@ -1095,6 +1560,20 @@
         "n",
         "знакомство, введение"
       ]
+    ],
+    "gram": [
+      [
+        "introduces",
+        "s3"
+      ],
+      [
+        "introducing",
+        "ing"
+      ],
+      [
+        "introduced",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1117,7 +1596,21 @@
       ]
     ],
     "forms": [],
-    "note": "join us (без to): Join us! (не Join to us)"
+    "note": "join us (без to): Join us! (не Join to us)",
+    "gram": [
+      [
+        "joins",
+        "s3"
+      ],
+      [
+        "joining",
+        "ing"
+      ],
+      [
+        "joined",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "laugh",
@@ -1144,6 +1637,20 @@
         "n",
         "смех"
       ]
+    ],
+    "gram": [
+      [
+        "laughs",
+        "s3"
+      ],
+      [
+        "laughing",
+        "ing"
+      ],
+      [
+        "laughed",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1165,7 +1672,21 @@
         "Почему ты не улыбаешься на этой фотографии?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "smiles",
+        "s3"
+      ],
+      [
+        "smiling",
+        "ing"
+      ],
+      [
+        "smiled",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "cry",
@@ -1186,7 +1707,21 @@
         "Ты плакал на этом фильме?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "cries",
+        "s3"
+      ],
+      [
+        "crying",
+        "ing"
+      ],
+      [
+        "cried",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "repeat",
@@ -1212,6 +1747,20 @@
         "repetition",
         "n",
         "повторение"
+      ]
+    ],
+    "gram": [
+      [
+        "repeats",
+        "s3"
+      ],
+      [
+        "repeating",
+        "ing"
+      ],
+      [
+        "repeated",
+        "pastpp"
       ]
     ]
   },
@@ -1246,7 +1795,13 @@
         "практичный, практический"
       ]
     ],
-    "note": "В британском варианте practice — сущ., practise — глагол; в американском оба practice"
+    "note": "В британском варианте practice — сущ., practise — глагол; в американском оба practice",
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "study",
@@ -1272,6 +1827,20 @@
         "student",
         "n",
         "студент"
+      ]
+    ],
+    "gram": [
+      [
+        "studies",
+        "s3"
+      ],
+      [
+        "studying",
+        "ing"
+      ],
+      [
+        "studied",
+        "pastpp"
       ]
     ]
   },
@@ -1307,7 +1876,17 @@
         "преподавание"
       ]
     ],
-    "note": "teach — учить кого-то, learn/study — учиться самому"
+    "note": "teach — учить кого-то, learn/study — учиться самому",
+    "gram": [
+      [
+        "teaches",
+        "s3"
+      ],
+      [
+        "teaching",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "pick",
@@ -1328,7 +1907,21 @@
         "Я заеду за тобой в восемь."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "picks",
+        "s3"
+      ],
+      [
+        "picking",
+        "ing"
+      ],
+      [
+        "picked",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "turn",
@@ -1349,7 +1942,21 @@
         "Твоя очередь готовить."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "turns",
+        "s3"
+      ],
+      [
+        "turning",
+        "ing"
+      ],
+      [
+        "turned",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "win",
@@ -1376,6 +1983,16 @@
         "winner",
         "n",
         "победитель"
+      ]
+    ],
+    "gram": [
+      [
+        "wins",
+        "s3"
+      ],
+      [
+        "winning",
+        "ing"
       ]
     ]
   },
@@ -1409,7 +2026,8 @@
         "n",
         "реальность"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "true",
@@ -1441,7 +2059,8 @@
         "adv",
         "искренне, действительно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "wrong",
@@ -1468,7 +2087,8 @@
         "adv",
         "неправильно, ошибочно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "right",
@@ -1495,7 +2115,8 @@
         "adv",
         "справедливо, правильно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "correct",
@@ -1532,7 +2153,8 @@
         "adj",
         "неправильный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "special",
@@ -1564,7 +2186,8 @@
         "adv",
         "специально"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "favourite",
@@ -1585,7 +2208,8 @@
         "Это моё любимое кафе."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "interesting",
@@ -1611,6 +2235,16 @@
         "interest",
         "n",
         "интерес"
+      ]
+    ],
+    "gram": [
+      [
+        "more interesting",
+        "comp"
+      ],
+      [
+        "the most interesting",
+        "sup"
       ]
     ]
   },
@@ -1640,7 +2274,17 @@
         "интерес"
       ]
     ],
-    "note": "interested in (не interested about); interested — кто интересуется, interesting — что интересно"
+    "note": "interested in (не interested about); interested — кто интересуется, interesting — что интересно",
+    "gram": [
+      [
+        "more interested",
+        "comp"
+      ],
+      [
+        "the most interested",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "boring",
@@ -1673,7 +2317,17 @@
         "наскучить"
       ]
     ],
-    "note": "I'm bored — мне скучно; I'm boring — я скучный человек"
+    "note": "I'm bored — мне скучно; I'm boring — я скучный человек",
+    "gram": [
+      [
+        "more boring",
+        "comp"
+      ],
+      [
+        "the most boring",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "exciting",
@@ -1699,6 +2353,16 @@
         "excitement",
         "n",
         "волнение, восторг"
+      ]
+    ],
+    "gram": [
+      [
+        "more exciting",
+        "comp"
+      ],
+      [
+        "the most exciting",
+        "sup"
       ]
     ]
   },
@@ -1727,6 +2391,16 @@
         "n",
         "волнение, восторг"
       ]
+    ],
+    "gram": [
+      [
+        "more excited",
+        "comp"
+      ],
+      [
+        "the most excited",
+        "sup"
+      ]
     ]
   },
   {
@@ -1748,7 +2422,8 @@
         "Извините, к сожалению, сегодня мы закрыты."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "angry",
@@ -1779,6 +2454,16 @@
         "angrily",
         "adv",
         "сердито"
+      ]
+    ],
+    "gram": [
+      [
+        "angrier",
+        "comp"
+      ],
+      [
+        "the angriest",
+        "sup"
       ]
     ]
   },
@@ -1812,6 +2497,16 @@
         "adv",
         "грустно, к сожалению"
       ]
+    ],
+    "gram": [
+      [
+        "sadder",
+        "comp"
+      ],
+      [
+        "the saddest",
+        "sup"
+      ]
     ]
   },
   {
@@ -1839,6 +2534,16 @@
         "n",
         "голод"
       ]
+    ],
+    "gram": [
+      [
+        "hungrier",
+        "comp"
+      ],
+      [
+        "the hungriest",
+        "sup"
+      ]
     ]
   },
   {
@@ -1865,6 +2570,16 @@
         "sickness",
         "n",
         "болезнь, тошнота"
+      ]
+    ],
+    "gram": [
+      [
+        "sicker",
+        "comp"
+      ],
+      [
+        "the sickest",
+        "sup"
       ]
     ]
   },
@@ -1898,6 +2613,16 @@
         "adj",
         "нездоровый, вредный"
       ]
+    ],
+    "gram": [
+      [
+        "healthier",
+        "comp"
+      ],
+      [
+        "the healthiest",
+        "sup"
+      ]
     ]
   },
   {
@@ -1919,7 +2644,23 @@
         "У меня сильная простуда."
       ]
     ],
-    "forms": []
+    "forms": [
+      [
+        "coldly",
+        "adv",
+        "холодно (неприветливо)"
+      ]
+    ],
+    "gram": [
+      [
+        "colder",
+        "comp"
+      ],
+      [
+        "the coldest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "warm",
@@ -1945,6 +2686,16 @@
         "warmth",
         "n",
         "тепло"
+      ]
+    ],
+    "gram": [
+      [
+        "warmer",
+        "comp"
+      ],
+      [
+        "the warmest",
+        "sup"
       ]
     ]
   },
@@ -1972,6 +2723,16 @@
         "fully",
         "adv",
         "полностью"
+      ]
+    ],
+    "gram": [
+      [
+        "fuller",
+        "comp"
+      ],
+      [
+        "the fullest",
+        "sup"
       ]
     ]
   },
@@ -2010,6 +2771,16 @@
         "adj",
         "небрежный, неосторожный"
       ]
+    ],
+    "gram": [
+      [
+        "more careful",
+        "comp"
+      ],
+      [
+        "the most careful",
+        "sup"
+      ]
     ]
   },
   {
@@ -2047,6 +2818,16 @@
         "adj",
         "невезучий"
       ]
+    ],
+    "gram": [
+      [
+        "luckier",
+        "comp"
+      ],
+      [
+        "the luckiest",
+        "sup"
+      ]
     ]
   },
   {
@@ -2075,7 +2856,17 @@
         "веселье, удовольствие"
       ]
     ],
-    "note": "funny — смешной; fun — весёлый, приятный: The party was fun (не funny)"
+    "note": "funny — смешной; fun — весёлый, приятный: The party was fun (не funny)",
+    "gram": [
+      [
+        "funnier",
+        "comp"
+      ],
+      [
+        "the funniest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "strange",
@@ -2107,6 +2898,16 @@
         "adv",
         "странно"
       ]
+    ],
+    "gram": [
+      [
+        "stranger",
+        "comp"
+      ],
+      [
+        "the strangest",
+        "sup"
+      ]
     ]
   },
   {
@@ -2134,7 +2935,8 @@
         "adv",
         "ужасно, очень"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "wonderful",
@@ -2160,6 +2962,16 @@
         "wonder",
         "n",
         "чудо, удивление"
+      ]
+    ],
+    "gram": [
+      [
+        "more wonderful",
+        "comp"
+      ],
+      [
+        "the most wonderful",
+        "sup"
       ]
     ]
   },
@@ -2193,6 +3005,16 @@
         "adv",
         "красиво"
       ]
+    ],
+    "gram": [
+      [
+        "more beautiful",
+        "comp"
+      ],
+      [
+        "the most beautiful",
+        "sup"
+      ]
     ]
   },
   {
@@ -2214,7 +3036,17 @@
         "Торт был не таким вкусным, как в прошлый раз."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "more delicious",
+        "comp"
+      ],
+      [
+        "the most delicious",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "famous",
@@ -2240,6 +3072,16 @@
         "fame",
         "n",
         "слава"
+      ]
+    ],
+    "gram": [
+      [
+        "more famous",
+        "comp"
+      ],
+      [
+        "the most famous",
+        "sup"
       ]
     ]
   }

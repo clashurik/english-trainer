@@ -200,7 +200,7 @@
       var ex = (parts[2] || '').trim();
       result.words.push({
         id: id, en: en, ru: parts[1].trim(), pos: /\s/.test(en) ? 'ph' : '', lvl: 'MY',
-        ex: ex ? [[ex, (parts[3] || '').trim()]] : [], forms: [], irr: null, note: ''
+        ex: ex ? [[ex, (parts[3] || '').trim()]] : [], forms: [], gram: [], irr: null, note: ''
       });
     });
     return result;
@@ -211,9 +211,9 @@
    * Приводим их к новому виду: ex — список пар [пример, перевод].
    */
   function normalizeCustom(w) {
-    if (Array.isArray(w.ex)) return Object.assign({ forms: [], irr: null, note: '' }, w);
+    if (Array.isArray(w.ex)) return Object.assign({ forms: [], gram: [], irr: null, note: '' }, w);
     var ex = w.ex ? [[w.ex, w.exRu || '']] : [];
-    return { id: w.id, en: w.en, ru: w.ru, pos: w.pos || '', lvl: 'MY', ex: ex, forms: [], irr: null, note: '' };
+    return { id: w.id, en: w.en, ru: w.ru, pos: w.pos || '', lvl: 'MY', ex: ex, forms: [], gram: [], irr: null, note: '' };
   }
 
   // Общий список слов: сначала свои из уроков, потом словарь. Если слово есть и там и там, берём своё.
@@ -251,7 +251,63 @@
     return hasProgress ? [changelog[0]] : [];
   }
 
+  /*
+   * Все написания слова, по которым его можно найти в примере:
+   * само слово, формы неправильного глагола (felt, found) и грамматические формы (children, tried).
+   */
+  function wordVariants(w) {
+    var out = [w.en];
+    if (w.irr) w.irr.split('|').forEach(function (p) { p.split('/').forEach(function (x) { out.push(x); }); });
+    (w.gram || []).forEach(function (g) { if (g[0]) out.push(g[0]); });
+    return out;
+  }
+
+  var PLACEHOLDER = /\b(sb|sth|someone|something|one's|oneself)\b/gi;
+  var FILLER = /^(a|an|the|my|your|his|her|its|our|their|be|is|am|are|was|were|been|being)$/i;
+  var GAP = "(?:\\s+[\\w']+){0,3}?\\s+"; // между словами фразы — до трёх других слов
+  function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+  /*
+   * Где в примере стоит слово: {start, end} или null.
+   * 1) Точное совпадение с любой формой. В фразах между словами допускается до двух слов,
+   *    чтобы находить разделённые фразовые глаголы: turn down → «turned the offer down».
+   * 2) Если не нашлось — поиск по основе слова (decide → decided, try → tries).
+   */
+  function findWord(example, variants) {
+    // Служебные слова внутри фраз часто меняются (make a mistake → makes mistakes, your mind → my mind,
+    // be late → I'm late), поэтому в фразах из нескольких слов их не ищем.
+    var tokens = function (v) {
+      var t = v.replace(/[?!.,]/g, ' ').replace(PLACEHOLDER, ' ').trim().split(/\s+/).filter(Boolean);
+      var core = t.filter(function (x) { return !FILLER.test(x); });
+      return t.length > 1 && core.length ? core : t;
+    };
+    var base = tokens(variants[0] || '');  // начальная форма — для поиска по основе
+    var list = variants.map(tokens).filter(function (t) { return t.length; });
+    list.sort(function (a, b) { return b.join(' ').length - a.join(' ').length; });
+
+    for (var k = 0; k < list.length; k++) {
+      var re = new RegExp("(^|[^\\w'])(" + list[k].map(escapeRe).join(GAP) + ")(?![\\w])", 'i');
+      var m = re.exec(example);
+      if (m) {
+        var start = m.index + m[1].length;
+        return { start: start, end: start + m[2].length };
+      }
+    }
+
+    if (!base.length) return null;
+    var parts = base.map(function (p) {
+      var stem = p.length > 2 ? p.replace(/(e|y)$/i, '') : p;
+      return escapeRe(stem) + "[\\w']*";
+    });
+    var m2 = new RegExp("(^|[^\\w'])(" + parts.join(GAP) + ")", 'i').exec(example);
+    if (!m2) return null;
+    var s2 = m2.index + m2[1].length;
+    return { start: s2, end: s2 + m2[2].length };
+  }
+
   var Core = {
+    wordVariants: wordVariants,
+    findWord: findWord,
     normalizeCustom: normalizeCustom,
     mergeWords: mergeWords,
     exampleIndex: exampleIndex,

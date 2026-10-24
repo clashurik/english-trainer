@@ -24,6 +24,12 @@
         "v",
         "обрабатывать (данные, заявку)"
       ]
+    ],
+    "gram": [
+      [
+        "processes",
+        "pl"
+      ]
     ]
   },
   {
@@ -57,7 +63,13 @@
         "прогрессивный"
       ]
     ],
-    "note": "progress — неисчисляемое: a lot of progress (не a progress, не progresses); make progress — делать успехи"
+    "note": "progress — неисчисляемое: a lot of progress (не a progress, не progresses); make progress — делать успехи",
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "property",
@@ -78,7 +90,14 @@
         "Эта земля — частная собственность?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "properties",
+        "pl",
+        "= объекты недвижимости; свойства"
+      ]
+    ]
   },
   {
     "en": "proud",
@@ -111,7 +130,17 @@
         "гордо"
       ]
     ],
-    "note": "be proud of (не proud for) — гордиться кем-то / чем-то"
+    "note": "be proud of (не proud for) — гордиться кем-то / чем-то",
+    "gram": [
+      [
+        "prouder",
+        "comp"
+      ],
+      [
+        "the proudest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "rarely",
@@ -138,7 +167,8 @@
         "adj",
         "редкий"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "reality",
@@ -169,6 +199,12 @@
         "realistic",
         "adj",
         "реалистичный"
+      ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
       ]
     ]
   },
@@ -207,6 +243,16 @@
         "n",
         "реальность"
       ]
+    ],
+    "gram": [
+      [
+        "more realistic",
+        "comp"
+      ],
+      [
+        "the most realistic",
+        "sup"
+      ]
     ]
   },
   {
@@ -244,6 +290,16 @@
         "adj",
         "неразумный, необоснованный"
       ]
+    ],
+    "gram": [
+      [
+        "more reasonable",
+        "comp"
+      ],
+      [
+        "the most reasonable",
+        "sup"
+      ]
     ]
   },
   {
@@ -276,6 +332,12 @@
         "n",
         "связь, отношение"
       ]
+    ],
+    "gram": [
+      [
+        "relatives",
+        "pl"
+      ]
     ]
   },
   {
@@ -303,7 +365,8 @@
         "adj",
         "относительный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "responsibility",
@@ -334,6 +397,13 @@
         "irresponsible",
         "adj",
         "безответственный"
+      ]
+    ],
+    "gram": [
+      [
+        "responsibilities",
+        "pl",
+        "= обязанности"
       ]
     ]
   },
@@ -368,7 +438,17 @@
         "безответственный"
       ]
     ],
-    "note": "be responsible for (не of) — отвечать за что-то"
+    "note": "be responsible for (не of) — отвечать за что-то",
+    "gram": [
+      [
+        "more responsible",
+        "comp"
+      ],
+      [
+        "the most responsible",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "routine",
@@ -394,6 +474,12 @@
         "routine",
         "adj",
         "обычный, плановый"
+      ]
+    ],
+    "gram": [
+      [
+        "routines",
+        "pl"
       ]
     ]
   },
@@ -428,7 +514,13 @@
         "безопасно, благополучно"
       ]
     ],
-    "note": "safety — защита от травм и аварий; security — охрана, защита от преступлений"
+    "note": "safety — защита от травм и аварий; security — охрана, защита от преступлений",
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "security",
@@ -460,6 +552,12 @@
         "adj",
         "неуверенный в себе; ненадёжный"
       ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
     ]
   },
   {
@@ -486,6 +584,16 @@
         "seriously",
         "adv",
         "серьёзно"
+      ]
+    ],
+    "gram": [
+      [
+        "more serious",
+        "comp"
+      ],
+      [
+        "the most serious",
+        "sup"
       ]
     ]
   },
@@ -514,6 +622,16 @@
         "adv",
         "сильно, тяжело; сурово"
       ]
+    ],
+    "gram": [
+      [
+        "more severe",
+        "comp"
+      ],
+      [
+        "the most severe",
+        "sup"
+      ]
     ]
   },
   {
@@ -541,7 +659,8 @@
         "adj",
         "небольшой, незначительный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "somehow",
@@ -562,7 +681,8 @@
         "Почему-то я ему не доверяю."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "stress",
@@ -599,6 +719,12 @@
         "adj",
         "в стрессе, на нервах"
       ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
     ]
   },
   {
@@ -632,7 +758,17 @@
         "в стрессе, на нервах"
       ]
     ],
-    "note": "stressful — о ситуации, stressed — о человеке: I'm stressed (не I'm stressful)"
+    "note": "stressful — о ситуации, stressed — о человеке: I'm stressed (не I'm stressful)",
+    "gram": [
+      [
+        "more stressful",
+        "comp"
+      ],
+      [
+        "the most stressful",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "struggle",
@@ -658,6 +794,20 @@
         "struggle",
         "n",
         "борьба, трудность"
+      ]
+    ],
+    "gram": [
+      [
+        "struggles",
+        "s3"
+      ],
+      [
+        "struggling",
+        "ing"
+      ],
+      [
+        "struggled",
+        "pastpp"
       ]
     ]
   },
@@ -687,7 +837,8 @@
         "приклеивать; застревать"
       ]
     ],
-    "note": "get stuck — застрять; stuck — также 2-я и 3-я форма глагола stick"
+    "note": "get stuck — застрять; stuck — также 2-я и 3-я форма глагола stick",
+    "gram": []
   },
   {
     "en": "stupid",
@@ -714,6 +865,16 @@
         "n",
         "глупость"
       ]
+    ],
+    "gram": [
+      [
+        "more stupid",
+        "comp"
+      ],
+      [
+        "the most stupid",
+        "sup"
+      ]
     ]
   },
   {
@@ -735,7 +896,13 @@
         "Если симптомы не пройдут, обратитесь к врачу."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "symptoms",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "temporary",
@@ -762,7 +929,8 @@
         "adv",
         "временно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "tend",
@@ -788,6 +956,20 @@
         "tendency",
         "n",
         "склонность, тенденция"
+      ]
+    ],
+    "gram": [
+      [
+        "tends",
+        "s3"
+      ],
+      [
+        "tending",
+        "ing"
+      ],
+      [
+        "tended",
+        "pastpp"
       ]
     ]
   },
@@ -816,6 +998,12 @@
         "v",
         "угрожать"
       ]
+    ],
+    "gram": [
+      [
+        "threats",
+        "pl"
+      ]
     ]
   },
   {
@@ -837,7 +1025,17 @@
         "Они живут в крошечной деревне в горах."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "tinier",
+        "comp"
+      ],
+      [
+        "the tiniest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "treatment",
@@ -863,6 +1061,13 @@
         "treat",
         "v",
         "обращаться; лечить; угощать"
+      ]
+    ],
+    "gram": [
+      [
+        "treatments",
+        "pl",
+        "= виды лечения, процедуры"
       ]
     ]
   },
@@ -891,6 +1096,16 @@
         "adv",
         "обычно, как правило"
       ]
+    ],
+    "gram": [
+      [
+        "more typical",
+        "comp"
+      ],
+      [
+        "the most typical",
+        "sup"
+      ]
     ]
   },
   {
@@ -918,7 +1133,8 @@
         "adj",
         "типичный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "unable",
@@ -950,7 +1166,8 @@
         "n",
         "неспособность"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "unemployed",
@@ -987,7 +1204,8 @@
         "adj",
         "работающий (по найму)"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "unexpected",
@@ -1019,7 +1237,8 @@
         "v",
         "ожидать"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "unlikely",
@@ -1047,7 +1266,8 @@
         "вероятный"
       ]
     ],
-    "note": "be unlikely to do — «вряд ли»: He's unlikely to come = Он вряд ли придёт"
+    "note": "be unlikely to do — «вряд ли»: He's unlikely to come = Он вряд ли придёт",
+    "gram": []
   },
   {
     "en": "update",
@@ -1078,6 +1298,20 @@
         "up-to-date",
         "adj",
         "современный, актуальный"
+      ]
+    ],
+    "gram": [
+      [
+        "updates",
+        "s3"
+      ],
+      [
+        "updating",
+        "ing"
+      ],
+      [
+        "updated",
+        "pastpp"
       ]
     ]
   },
@@ -1111,6 +1345,16 @@
         "n",
         "срочность"
       ]
+    ],
+    "gram": [
+      [
+        "more urgent",
+        "comp"
+      ],
+      [
+        "the most urgent",
+        "sup"
+      ]
     ]
   },
   {
@@ -1142,6 +1386,16 @@
         "useful",
         "adj",
         "полезный"
+      ]
+    ],
+    "gram": [
+      [
+        "more useless",
+        "comp"
+      ],
+      [
+        "the most useless",
+        "sup"
       ]
     ]
   },
@@ -1176,7 +1430,17 @@
         "ценные вещи"
       ]
     ],
-    "note": "invaluable — бесценный, очень ценный (не «не имеющий ценности»)"
+    "note": "invaluable — бесценный, очень ценный (не «не имеющий ценности»)",
+    "gram": [
+      [
+        "more valuable",
+        "comp"
+      ],
+      [
+        "the most valuable",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "various",
@@ -1208,7 +1472,8 @@
         "n",
         "разнообразие"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "violence",
@@ -1234,6 +1499,12 @@
         "violent",
         "adj",
         "жестокий, агрессивный"
+      ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
       ]
     ]
   },
@@ -1261,6 +1532,20 @@
         "warning",
         "n",
         "предупреждение"
+      ]
+    ],
+    "gram": [
+      [
+        "warns",
+        "s3"
+      ],
+      [
+        "warning",
+        "ing"
+      ],
+      [
+        "warned",
+        "pastpp"
       ]
     ]
   },
@@ -1294,6 +1579,20 @@
         "adj",
         "расточительный"
       ]
+    ],
+    "gram": [
+      [
+        "wastes",
+        "s3"
+      ],
+      [
+        "wasting",
+        "ing"
+      ],
+      [
+        "wasted",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1315,7 +1614,17 @@
         "Ты слышал этот странный звук?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "weirder",
+        "comp"
+      ],
+      [
+        "the weirdest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "whenever",
@@ -1336,7 +1645,8 @@
         "Можем выходить, как только будешь готов."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "worth",
@@ -1369,7 +1679,8 @@
         "стоящий, полезный"
       ]
     ],
-    "note": "be worth + -ing: It's worth trying (не worth to try)"
+    "note": "be worth + -ing: It's worth trying (не worth to try)",
+    "gram": []
   },
   {
     "en": "able",
@@ -1402,7 +1713,8 @@
         "неспособный"
       ]
     ],
-    "note": "be able to заменяет can в других временах: will be able to, have been able to"
+    "note": "be able to заменяет can в других временах: will be able to, have been able to",
+    "gram": []
   },
   {
     "en": "lately",
@@ -1430,7 +1742,8 @@
         "поздний"
       ]
     ],
-    "note": "lately — в последнее время, а не «поздно» (поздно — late)"
+    "note": "lately — в последнее время, а не «поздно» (поздно — late)",
+    "gram": []
   },
   {
     "en": "apology",
@@ -1456,6 +1769,12 @@
         "apologise",
         "v",
         "извиняться"
+      ]
+    ],
+    "gram": [
+      [
+        "apologies",
+        "pl"
       ]
     ]
   },
@@ -1489,6 +1808,12 @@
         "n",
         "кандидат, заявитель"
       ]
+    ],
+    "gram": [
+      [
+        "applications",
+        "pl"
+      ]
     ]
   },
   {
@@ -1516,6 +1841,20 @@
         "n",
         "договорённость; расположение"
       ]
+    ],
+    "gram": [
+      [
+        "arranges",
+        "s3"
+      ],
+      [
+        "arranging",
+        "ing"
+      ],
+      [
+        "arranged",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1542,6 +1881,12 @@
         "arrange",
         "v",
         "организовать, договариваться"
+      ]
+    ],
+    "gram": [
+      [
+        "arrangements",
+        "pl"
       ]
     ]
   },
@@ -1574,6 +1919,12 @@
         "alternatively",
         "adv",
         "или же, как вариант"
+      ]
+    ],
+    "gram": [
+      [
+        "alternatives",
+        "pl"
       ]
     ]
   },
@@ -1612,6 +1963,16 @@
         "adv",
         "удивительно"
       ]
+    ],
+    "gram": [
+      [
+        "more amazing",
+        "comp"
+      ],
+      [
+        "the most amazing",
+        "sup"
+      ]
     ]
   },
   {
@@ -1638,6 +1999,20 @@
         "announcement",
         "n",
         "объявление"
+      ]
+    ],
+    "gram": [
+      [
+        "announces",
+        "s3"
+      ],
+      [
+        "announcing",
+        "ing"
+      ],
+      [
+        "announced",
+        "pastpp"
       ]
     ]
   },
@@ -1672,7 +2047,17 @@
         "раздражающий, надоедливый"
       ]
     ],
-    "note": "annoyed — о человеке (I'm annoyed), annoying — о том, что раздражает (It's annoying)"
+    "note": "annoyed — о человеке (I'm annoyed), annoying — о том, что раздражает (It's annoying)",
+    "gram": [
+      [
+        "more annoyed",
+        "comp"
+      ],
+      [
+        "the most annoyed",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "anxiety",
@@ -1698,6 +2083,12 @@
         "anxious",
         "adj",
         "тревожный, обеспокоенный"
+      ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
       ]
     ]
   },
@@ -1732,7 +2123,21 @@
         "привлекательный"
       ]
     ],
-    "note": "appeal to smb — нравиться кому-то: It doesn't appeal to me = Меня это не привлекает"
+    "note": "appeal to smb — нравиться кому-то: It doesn't appeal to me = Меня это не привлекает",
+    "gram": [
+      [
+        "appeals",
+        "s3"
+      ],
+      [
+        "appealing",
+        "ing"
+      ],
+      [
+        "appealed",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "attach",
@@ -1763,6 +2168,20 @@
         "attached",
         "adj",
         "привязанный"
+      ]
+    ],
+    "gram": [
+      [
+        "attaches",
+        "s3"
+      ],
+      [
+        "attaching",
+        "ing"
+      ],
+      [
+        "attached",
+        "pastpp"
       ]
     ]
   },
@@ -1796,6 +2215,20 @@
         "adj",
         "привлекательный"
       ]
+    ],
+    "gram": [
+      [
+        "attracts",
+        "s3"
+      ],
+      [
+        "attracting",
+        "ing"
+      ],
+      [
+        "attracted",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1822,6 +2255,16 @@
         "awkwardly",
         "adv",
         "неловко"
+      ]
+    ],
+    "gram": [
+      [
+        "more awkward",
+        "comp"
+      ],
+      [
+        "the most awkward",
+        "sup"
       ]
     ]
   },
@@ -1855,6 +2298,12 @@
         "adj",
         "сбалансированный"
       ]
+    ],
+    "gram": [
+      [
+        "balances",
+        "pl"
+      ]
     ]
   },
   {
@@ -1881,6 +2330,20 @@
         "behaviour",
         "n",
         "поведение"
+      ]
+    ],
+    "gram": [
+      [
+        "behaves",
+        "s3"
+      ],
+      [
+        "behaving",
+        "ing"
+      ],
+      [
+        "behaved",
+        "pastpp"
       ]
     ]
   },
@@ -1914,6 +2377,12 @@
         "adj",
         "невероятный"
       ]
+    ],
+    "gram": [
+      [
+        "beliefs",
+        "pl"
+      ]
     ]
   },
   {
@@ -1943,7 +2412,17 @@
         "пари, ставка"
       ]
     ],
-    "note": "I bet... — «спорим / уверен, что...»: I bet he's late again"
+    "note": "I bet... — «спорим / уверен, что...»: I bet he's late again",
+    "gram": [
+      [
+        "bets",
+        "s3"
+      ],
+      [
+        "betting",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "brief",
@@ -1970,7 +2449,8 @@
         "adv",
         "кратко, ненадолго"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "calm",
@@ -2002,6 +2482,16 @@
         "adv",
         "спокойно"
       ]
+    ],
+    "gram": [
+      [
+        "calmer",
+        "comp"
+      ],
+      [
+        "the calmest",
+        "sup"
+      ]
     ]
   },
   {
@@ -2030,7 +2520,17 @@
         "способность, возможность"
       ]
     ],
-    "note": "capable of doing (не capable to do)"
+    "note": "capable of doing (не capable to do)",
+    "gram": [
+      [
+        "more capable",
+        "comp"
+      ],
+      [
+        "the most capable",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "casual",
@@ -2057,6 +2557,16 @@
         "adv",
         "небрежно, непринуждённо"
       ]
+    ],
+    "gram": [
+      [
+        "more casual",
+        "comp"
+      ],
+      [
+        "the most casual",
+        "sup"
+      ]
     ]
   },
   {
@@ -2078,7 +2588,13 @@
         "Я не слежу за новостями о знаменитостях."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "celebrities",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "challenging",
@@ -2109,6 +2625,16 @@
         "challenge",
         "v",
         "бросать вызов; оспаривать"
+      ]
+    ],
+    "gram": [
+      [
+        "more challenging",
+        "comp"
+      ],
+      [
+        "the most challenging",
+        "sup"
       ]
     ]
   },
@@ -2143,7 +2669,21 @@
         "зарядное устройство"
       ]
     ],
-    "note": "in charge of — отвечающий за: Who's in charge here? — Кто здесь главный?"
+    "note": "in charge of — отвечающий за: Who's in charge here? — Кто здесь главный?",
+    "gram": [
+      [
+        "charges",
+        "s3"
+      ],
+      [
+        "charging",
+        "ing"
+      ],
+      [
+        "charged",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "charity",
@@ -2169,6 +2709,13 @@
         "charitable",
         "adj",
         "благотворительный"
+      ]
+    ],
+    "gram": [
+      [
+        "charities",
+        "pl",
+        "= благотворительные организации"
       ]
     ]
   },
@@ -2202,6 +2749,16 @@
         "adv",
         "весело, бодро"
       ]
+    ],
+    "gram": [
+      [
+        "more cheerful",
+        "comp"
+      ],
+      [
+        "the most cheerful",
+        "sup"
+      ]
     ]
   },
   {
@@ -2223,7 +2780,13 @@
         "В нынешней экономической ситуации трудно найти работу."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "climates",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "combine",
@@ -2254,6 +2817,20 @@
         "combined",
         "adj",
         "общий, совместный"
+      ]
+    ],
+    "gram": [
+      [
+        "combines",
+        "s3"
+      ],
+      [
+        "combining",
+        "ing"
+      ],
+      [
+        "combined",
+        "pastpp"
       ]
     ]
   },
@@ -2292,6 +2869,12 @@
         "adv",
         "удобно"
       ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
     ]
   },
   {
@@ -2324,6 +2907,20 @@
         "adj",
         "преданный, увлечённый"
       ]
+    ],
+    "gram": [
+      [
+        "commits",
+        "s3"
+      ],
+      [
+        "committing",
+        "ing"
+      ],
+      [
+        "committed",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2345,7 +2942,8 @@
         "Он умный, но у него нет здравого смысла."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "compete",
@@ -2382,6 +2980,20 @@
         "n",
         "соперник, конкурент"
       ]
+    ],
+    "gram": [
+      [
+        "competes",
+        "s3"
+      ],
+      [
+        "competing",
+        "ing"
+      ],
+      [
+        "competed",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2414,6 +3026,16 @@
         "n",
         "соревнование, конкуренция"
       ]
+    ],
+    "gram": [
+      [
+        "more competitive",
+        "comp"
+      ],
+      [
+        "the most competitive",
+        "sup"
+      ]
     ]
   },
   {
@@ -2440,6 +3062,16 @@
         "complexity",
         "n",
         "сложность"
+      ]
+    ],
+    "gram": [
+      [
+        "more complex",
+        "comp"
+      ],
+      [
+        "the most complex",
+        "sup"
       ]
     ]
   },
@@ -2473,6 +3105,16 @@
         "n",
         "осложнение"
       ]
+    ],
+    "gram": [
+      [
+        "more complicated",
+        "comp"
+      ],
+      [
+        "the most complicated",
+        "sup"
+      ]
     ]
   },
   {
@@ -2501,7 +3143,13 @@
         "делать комплимент, хвалить"
       ]
     ],
-    "note": "compliment (комплимент) ≠ complement (дополнение) — пишутся по-разному"
+    "note": "compliment (комплимент) ≠ complement (дополнение) — пишутся по-разному",
+    "gram": [
+      [
+        "compliments",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "compromise",
@@ -2528,6 +3176,12 @@
         "v",
         "идти на компромисс"
       ]
+    ],
+    "gram": [
+      [
+        "compromises",
+        "pl"
+      ]
     ]
   },
   {
@@ -2549,7 +3203,13 @@
         "Это для тебя новое понятие?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "concepts",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "concerned",
@@ -2582,7 +3242,17 @@
         "беспокоить; касаться"
       ]
     ],
-    "note": "concerned about — обеспокоенный чем-то; as far as I'm concerned — по-моему, что касается меня"
+    "note": "concerned about — обеспокоенный чем-то; as far as I'm concerned — по-моему, что касается меня",
+    "gram": [
+      [
+        "more concerned",
+        "comp"
+      ],
+      [
+        "the most concerned",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "conclusion",
@@ -2608,6 +3278,12 @@
         "conclude",
         "v",
         "заключать, делать вывод"
+      ]
+    ],
+    "gram": [
+      [
+        "conclusions",
+        "pl"
       ]
     ]
   },
@@ -2640,6 +3316,12 @@
         "confidently",
         "adv",
         "уверенно"
+      ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
       ]
     ]
   },
@@ -2678,6 +3360,16 @@
         "n",
         "путаница, замешательство"
       ]
+    ],
+    "gram": [
+      [
+        "more confusing",
+        "comp"
+      ],
+      [
+        "the most confusing",
+        "sup"
+      ]
     ]
   },
   {
@@ -2705,7 +3397,8 @@
         "n",
         "последствие"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "constantly",
@@ -2732,7 +3425,8 @@
         "adj",
         "постоянный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "consumer",
@@ -2764,6 +3458,12 @@
         "n",
         "потребление"
       ]
+    ],
+    "gram": [
+      [
+        "consumers",
+        "pl"
+      ]
     ]
   },
   {
@@ -2790,6 +3490,20 @@
         "contribution",
         "n",
         "вклад, взнос"
+      ]
+    ],
+    "gram": [
+      [
+        "contributes",
+        "s3"
+      ],
+      [
+        "contributing",
+        "ing"
+      ],
+      [
+        "contributed",
+        "pastpp"
       ]
     ]
   },
@@ -2818,6 +3532,16 @@
         "n",
         "спор, разногласия"
       ]
+    ],
+    "gram": [
+      [
+        "more controversial",
+        "comp"
+      ],
+      [
+        "the most controversial",
+        "sup"
+      ]
     ]
   },
   {
@@ -2844,6 +3568,12 @@
         "cough",
         "v",
         "кашлять"
+      ]
+    ],
+    "gram": [
+      [
+        "coughs",
+        "pl"
       ]
     ]
   },
@@ -2877,6 +3607,12 @@
         "v",
         "поощрять, подбадривать"
       ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
     ]
   },
   {
@@ -2903,6 +3639,12 @@
         "crash",
         "v",
         "разбиться; врезаться; зависнуть"
+      ]
+    ],
+    "gram": [
+      [
+        "crashes",
+        "pl"
       ]
     ]
   },
@@ -2935,6 +3677,12 @@
         "criminal",
         "adj",
         "преступный, уголовный"
+      ]
+    ],
+    "gram": [
+      [
+        "criminals",
+        "pl"
       ]
     ]
   },
@@ -2973,6 +3721,16 @@
         "n",
         "критик"
       ]
+    ],
+    "gram": [
+      [
+        "more critical",
+        "comp"
+      ],
+      [
+        "the most critical",
+        "sup"
+      ]
     ]
   },
   {
@@ -2999,6 +3757,12 @@
         "cure",
         "v",
         "вылечивать"
+      ]
+    ],
+    "gram": [
+      [
+        "cures",
+        "pl"
       ]
     ]
   },
@@ -3032,6 +3796,16 @@
         "adv",
         "с любопытством"
       ]
+    ],
+    "gram": [
+      [
+        "more curious",
+        "comp"
+      ],
+      [
+        "the most curious",
+        "sup"
+      ]
     ]
   },
   {
@@ -3060,7 +3834,21 @@
         "смелый, дерзкий"
       ]
     ],
-    "note": "Don't you dare! — Не смей! / Только попробуй!"
+    "note": "Don't you dare! — Не смей! / Только попробуй!",
+    "gram": [
+      [
+        "dares",
+        "s3"
+      ],
+      [
+        "daring",
+        "ing"
+      ],
+      [
+        "dared",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "dating",
@@ -3092,6 +3880,12 @@
         "n",
         "свидание; дата"
       ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
     ]
   },
   {
@@ -3119,6 +3913,20 @@
         "n",
         "спад, снижение"
       ]
+    ],
+    "gram": [
+      [
+        "declines",
+        "s3"
+      ],
+      [
+        "declining",
+        "ing"
+      ],
+      [
+        "declined",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -3145,6 +3953,20 @@
         "decrease",
         "n",
         "снижение, уменьшение"
+      ]
+    ],
+    "gram": [
+      [
+        "decreases",
+        "s3"
+      ],
+      [
+        "decreasing",
+        "ing"
+      ],
+      [
+        "decreased",
+        "pastpp"
       ]
     ]
   }

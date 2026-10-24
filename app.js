@@ -287,7 +287,7 @@
     var n = w.ex.length, i = session.exIdx;
     $('c-exbox').hidden = n === 0;
     if (!n) return;
-    $('c-ex').innerHTML = highlight(w.ex[i][0], w.en);
+    $('c-ex').innerHTML = highlight(w.ex[i][0], w);
     $('c-exru').textContent = w.ex[i][1] || '';
     $('c-exru').hidden = !w.ex[i][1];
     $('ex-next').hidden = n < 2;
@@ -303,7 +303,14 @@
   }
 
   // ---------- Формы слова ----------
-  function hasForms(w) { return !!(w.irr || (w.forms && w.forms.length)); }
+  function hasForms(w) { return !!(w.irr || (w.forms && w.forms.length) || (w.gram && w.gram.length)); }
+
+  // Подписи к грамматическим формам, в порядке показа
+  var GRAM = [
+    ['pl', 'множественное число'], ['unc', 'неисчисляемое: нет множественного числа'],
+    ['s3', 'he / she / it'], ['ing', 'форма на -ing'], ['pastpp', 'прошедшее и причастие (V2 = V3)'],
+    ['past', 'прошедшее (V2)'], ['pp', 'причастие (V3)'], ['comp', 'сравнительная степень'], ['sup', 'превосходная степень']
+  ];
 
   function irrLine(w) {
     var p = w.irr.split('|');
@@ -314,13 +321,24 @@
     if (!session || !session.revealed) return;
     var w = byId[session.queue[0]];
     if (!hasForms(w)) return;
-    var html = '';
+    var html = '<p class="sheet-sub">' + escapeHtml(w.ru) + '</p>';
     if (w.irr) {
       var p = w.irr.split('|');
       html += '<div class="group-label">Неправильный глагол</div><div class="irr-row">' +
-        irrChip(w.en, 'начальная форма') + '<span class="irr-arrow">→</span>' +
-        irrChip(p[0], 'прошедшее (V2)') + '<span class="irr-arrow">→</span>' +
-        irrChip(p[1], 'причастие (V3)') + '</div>';
+        irrChip(w.en, 'начальная') + irrChip(p[0], 'прошедшее, V2') + irrChip(p[1], 'причастие, V3') + '</div>';
+    }
+    var gram = (w.gram || []).slice().sort(function (a, b) {
+      return GRAM.findIndex(function (g) { return g[0] === a[1]; }) - GRAM.findIndex(function (g) { return g[0] === b[1]; });
+    });
+    if (gram.length) {
+      html += '<div class="group-label">Грамматические формы</div><ul class="form-list">' +
+        gram.map(function (g) {
+          var label = (GRAM.filter(function (x) { return x[0] === g[1]; })[0] || ['', g[1]])[1];
+          var note = g[2] ? '<span class="f-ru">' + escapeHtml(g[2]) + '</span>' : '';
+          if (!g[0]) return '<li><div class="form-row static"><span class="f-en muted">—</span><span class="f-pos">' + label + '</span>' + note + '</div></li>';
+          return '<li><button class="form-row" type="button" data-say="' + escapeHtml(g[0]) + '">' +
+            '<span class="f-en">' + escapeHtml(g[0]) + '</span><span class="f-pos">' + label + '</span>' + note + '</button></li>';
+        }).join('') + '</ul>';
     }
     if (w.forms.length) {
       html += '<div class="group-label">Однокоренные слова</div><ul class="form-list">' +
@@ -331,7 +349,7 @@
         }).join('') + '</ul>';
     }
     html += '<p class="small">Нажмите на слово, чтобы услышать произношение.</p>';
-    openSheet(w.en + ' · ' + w.ru, html, false);
+    openSheet(w.en, html, false);
   }
 
   function irrChip(word, label) {
@@ -620,15 +638,11 @@
     return s.replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
   }
 
-  // Выделяем слово в примере, включая его формы: decide → decided, look forward to → looking forward to
-  function highlight(example, word) {
-    var parts = word.replace(/[?!.]/g, '').trim().split(/\s+/).map(function (p) {
-      var stem = p.length > 3 ? p.replace(/(e|y)$/i, '') : p;
-      return stem.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + "[\\w']*";
-    });
-    var m = new RegExp('\\b' + parts.join('\\s+'), 'i').exec(example);
-    if (!m) return escapeHtml(example);
-    return escapeHtml(example.slice(0, m.index)) + '<b>' + escapeHtml(m[0]) + '</b>' + escapeHtml(example.slice(m.index + m[0].length));
+  // Выделяем слово в примере в любой его форме: feel → felt, child → children, turn down → turned it down
+  function highlight(example, w) {
+    var r = Core.findWord(example, Core.wordVariants(w));
+    if (!r) return escapeHtml(example);
+    return escapeHtml(example.slice(0, r.start)) + '<b>' + escapeHtml(example.slice(r.start, r.end)) + '</b>' + escapeHtml(example.slice(r.end));
   }
 
   // ---------- Кнопки и клавиатура ----------

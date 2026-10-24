@@ -17,6 +17,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 LEVELS = ["A1", "A2", "B1", "B2"]
 POS = {"n", "v", "adj", "adv", "ph"}
+FILLER = re.compile(r"^(a|an|the|my|your|his|her|its|our|their|be|is|am|are|was|were|been|being)$", re.I)
+GAP = r"(?:\s+[\w']+){0,3}?\s+"
+GRAM_CODES = {"pl", "unc", "s3", "ing", "pastpp", "past", "pp", "comp", "sup"}
 CYR = re.compile(r"[А-Яа-яЁё]")
 IRR = re.compile(r"^[a-z]+(/[a-z]+)?\|[a-z]+(/[a-z]+)?$")
 
@@ -55,6 +58,23 @@ def stem_pattern(phrase):
     return re.compile(r"\b" + r".*?\b".join(pats), re.I | re.S) if pats else None
 
 
+def found_in(example, card):
+    """Есть ли слово в примере — так же, как ищет приложение (Core.findWord в core.js)."""
+    variants = [card["en"]]
+    if card.get("irr"):
+        variants += [x for part in card["irr"].split("|") for x in part.split("/")]
+    variants += [g[0] for g in (card.get("gram") or []) if isinstance(g, list) and g and g[0]]
+    for v in variants:
+        toks = re.sub(r"\b(sb|sth|someone|something|one's|oneself)\b", " ", re.sub(r"[?!.,]", " ", v), flags=re.I).split()
+        core = [t for t in toks if not FILLER.match(t)]
+        if len(toks) > 1 and core:
+            toks = core
+        if toks and re.search(r"(^|[^\w'])" + GAP.join(map(re.escape, toks)) + r"(?!\w)", example, re.I):
+            return True
+    pat = stem_pattern(card["en"])
+    return bool(pat and pat.search(example))
+
+
 def check(card, where):
     for k in ("en", "ru", "pos", "lvl", "ex"):
         if not card.get(k):
@@ -81,7 +101,7 @@ def check(card, where):
                 err(where, f"пример {i + 1}: кириллица в английском")
             if not CYR.search(pair[1]):
                 err(where, f"пример {i + 1}: в переводе нет кириллицы")
-            if pat and not pat.search(pair[0]) and card.get("irr") is None:
+            if not found_in(pair[0], card):
                 warnings.append(f"{where}: пример {i + 1} без слова: {pair[0]}")
     irr = card.get("irr")
     if irr is not None and (card["pos"] != "v" or not IRR.match(irr)):
@@ -93,6 +113,27 @@ def check(card, where):
         for f in forms:
             if not (isinstance(f, list) and len(f) == 3 and f[1] in POS and f[0] and CYR.search(f[2] or "")):
                 err(where, f"forms: неверный элемент {f}")
+    gram = card.get("gram")
+    if gram is None:
+        err(where, "нет поля gram (может быть [])")
+    elif not isinstance(gram, list):
+        err(where, "gram: должен быть списком")
+    else:
+        codes = []
+        for g in gram:
+            if not (isinstance(g, list) and len(g) in (2, 3) and isinstance(g[0], str) and g[1] in GRAM_CODES):
+                err(where, f"gram: неверный элемент {g}")
+                continue
+            if g[1] != "unc" and (not g[0].strip() or CYR.search(g[0])):
+                err(where, f"gram: пустая или русская форма {g}")
+            codes.append(g[1])
+        pos = card["pos"]
+        if pos == "n" and not ({"pl", "unc"} & set(codes)):
+            err(where, "gram: у существительного нужен pl или unc")
+        if pos == "v" and card.get("irr") and {"past", "pp", "pastpp"} & set(codes):
+            err(where, "gram: у неправильного глагола V2/V3 уже в irr")
+        if pos == "v" and not card.get("irr") and not {"s3", "ing", "pastpp"} <= set(codes):
+            err(where, "gram: у правильного глагола нужны s3, ing, pastpp")
     note = card.get("note")
     if note is not None and not isinstance(note, str):
         err(where, "note: должна быть строкой")
@@ -148,19 +189,19 @@ def main():
         sys.exit(1)
 
     rows = [
-        [c["en"], c["ru"], c["pos"], c["lvl"], c["ex"], c.get("irr") or 0, c.get("forms") or 0, c.get("note") or 0]
+        [c["en"], c["ru"], c["pos"], c["lvl"], c["ex"], c.get("irr") or 0, c.get("forms") or 0, c.get("note") or 0, c.get("gram") or 0]
         for c in ordered
     ]
     body = ",\n".join(json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in rows)
     js = (
         "/*\n * words.js — словарь приложения. ФАЙЛ СОБИРАЕТСЯ АВТОМАТИЧЕСКИ, руками не править:\n"
         " * исходники лежат в data/*.json, сборка — python3 tools/build_words.py\n"
-        " * Строка: [слово, перевод, часть речи, уровень, [[пример, перевод]×3], неправ. формы, однокоренные, подсказка]\n"
+        " * Строка: [слово, перевод, часть речи, уровень, [[пример, перевод]×3], неправ. формы, однокоренные, подсказка, грамм. формы]\n"
         " * Уровни — по списку CEFR-J Wordlist (Tono Lab, TUFS), порядок внутри уровня — по полезности.\n */\n"
         "(function (root) {\n  'use strict';\n  var RAW = [\n" + body + "\n  ];\n"
         "  root.WORDS = RAW.map(function (r) {\n"
         "    return { id: r[0].toLowerCase(), en: r[0], ru: r[1], pos: r[2], lvl: r[3], ex: r[4],\n"
-        "      irr: r[5] || null, forms: r[6] || [], note: r[7] || '' };\n  });\n"
+        "      irr: r[5] || null, forms: r[6] || [], note: r[7] || '', gram: r[8] || [] };\n  });\n"
         "  if (typeof module !== 'undefined' && module.exports) module.exports = root.WORDS;\n"
         "})(typeof window !== 'undefined' ? window : globalThis);\n"
     )

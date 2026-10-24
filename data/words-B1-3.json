@@ -34,6 +34,20 @@
         "adv",
         "определённо, точно"
       ]
+    ],
+    "gram": [
+      [
+        "defines",
+        "s3"
+      ],
+      [
+        "defining",
+        "ing"
+      ],
+      [
+        "defined",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -55,7 +69,27 @@
         "Не удаляй файл, пока я его не проверю."
       ]
     ],
-    "forms": []
+    "forms": [
+      [
+        "deletion",
+        "n",
+        "удаление"
+      ]
+    ],
+    "gram": [
+      [
+        "deletes",
+        "s3"
+      ],
+      [
+        "deleting",
+        "ing"
+      ],
+      [
+        "deleted",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "delighted",
@@ -87,7 +121,8 @@
         "adj",
         "восхитительный, чудесный"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "demand",
@@ -114,6 +149,13 @@
         "adj",
         "требовательный; трудный"
       ]
+    ],
+    "gram": [
+      [
+        "demands",
+        "pl",
+        "= требования; «спрос» — без мн. ч."
+      ]
     ]
   },
   {
@@ -136,7 +178,13 @@
       ]
     ],
     "forms": [],
-    "note": "department store — универмаг"
+    "note": "department store — универмаг",
+    "gram": [
+      [
+        "departments",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "depressed",
@@ -169,7 +217,17 @@
         "гнетущий, удручающий"
       ]
     ],
-    "note": "depressed — о человеке (подавленный), depressing — о том, что угнетает: a depressing film"
+    "note": "depressed — о человеке (подавленный), depressing — о том, что угнетает: a depressing film",
+    "gram": [
+      [
+        "more depressed",
+        "comp"
+      ],
+      [
+        "the most depressed",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "depression",
@@ -200,6 +258,13 @@
         "depressing",
         "adj",
         "удручающий"
+      ]
+    ],
+    "gram": [
+      [
+        "depressions",
+        "pl",
+        "= спады; болезнь — без мн. ч."
       ]
     ]
   },
@@ -233,6 +298,16 @@
         "n",
         "отчаяние"
       ]
+    ],
+    "gram": [
+      [
+        "more desperate",
+        "comp"
+      ],
+      [
+        "the most desperate",
+        "sup"
+      ]
     ]
   },
   {
@@ -254,7 +329,13 @@
         "Во сколько мы прибываем на место?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "destinations",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "device",
@@ -275,7 +356,13 @@
         "Этот маленький прибор измеряет пульс."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "devices",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "digital",
@@ -302,7 +389,8 @@
         "adv",
         "в цифровом виде"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "directly",
@@ -334,7 +422,8 @@
         "n",
         "направление"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "disappointment",
@@ -371,6 +460,12 @@
         "adj",
         "разочаровывающий"
       ]
+    ],
+    "gram": [
+      [
+        "disappointments",
+        "pl"
+      ]
     ]
   },
   {
@@ -398,6 +493,12 @@
         "adj",
         "катастрофический"
       ]
+    ],
+    "gram": [
+      [
+        "disasters",
+        "pl"
+      ]
     ]
   },
   {
@@ -419,7 +520,13 @@
         "На товары с распродажи скидка не действует."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "discounts",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "disgusting",
@@ -451,6 +558,16 @@
         "adj",
         "испытывающий отвращение"
       ]
+    ],
+    "gram": [
+      [
+        "more disgusting",
+        "comp"
+      ],
+      [
+        "the most disgusting",
+        "sup"
+      ]
     ]
   },
   {
@@ -479,7 +596,8 @@
         "развод"
       ]
     ],
-    "note": "get divorced — развестись"
+    "note": "get divorced — развестись",
+    "gram": []
   },
   {
     "en": "document",
@@ -510,6 +628,12 @@
         "documentation",
         "n",
         "документация"
+      ]
+    ],
+    "gram": [
+      [
+        "documents",
+        "pl"
       ]
     ]
   },
@@ -542,6 +666,16 @@
         "eagerness",
         "n",
         "рвение, нетерпение"
+      ]
+    ],
+    "gram": [
+      [
+        "more eager",
+        "comp"
+      ],
+      [
+        "the most eager",
+        "sup"
       ]
     ]
   },
@@ -576,7 +710,8 @@
         "экономика (наука)"
       ]
     ],
-    "note": "economic — экономический, economical — экономный: an economical car"
+    "note": "economic — экономический, economical — экономный: an economical car",
+    "gram": []
   },
   {
     "en": "economy",
@@ -613,6 +748,12 @@
         "n",
         "экономист"
       ]
+    ],
+    "gram": [
+      [
+        "economies",
+        "pl"
+      ]
     ]
   },
   {
@@ -639,6 +780,12 @@
         "elect",
         "v",
         "избирать"
+      ]
+    ],
+    "gram": [
+      [
+        "elections",
+        "pl"
       ]
     ]
   },
@@ -673,7 +820,17 @@
         "смущение, неловкость"
       ]
     ],
-    "note": "embarrassed — о человеке (мне неловко: I'm embarrassed), embarrassing — о ситуации (an embarrassing moment)"
+    "note": "embarrassed — о человеке (мне неловко: I'm embarrassed), embarrassing — о ситуации (an embarrassing moment)",
+    "gram": [
+      [
+        "more embarrassed",
+        "comp"
+      ],
+      [
+        "the most embarrassed",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "enjoyable",
@@ -705,6 +862,16 @@
         "n",
         "удовольствие"
       ]
+    ],
+    "gram": [
+      [
+        "more enjoyable",
+        "comp"
+      ],
+      [
+        "the most enjoyable",
+        "sup"
+      ]
     ]
   },
   {
@@ -732,7 +899,8 @@
         "adv",
         "полностью"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "entirely",
@@ -759,7 +927,8 @@
         "adj",
         "весь, целый"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "equal",
@@ -791,7 +960,8 @@
         "n",
         "равенство"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "equally",
@@ -823,7 +993,8 @@
         "n",
         "равенство"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "estimate",
@@ -844,7 +1015,21 @@
         "Строитель составил нам смету на новую кухню."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "estimates",
+        "s3"
+      ],
+      [
+        "estimating",
+        "ing"
+      ],
+      [
+        "estimated",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "evident",
@@ -875,6 +1060,16 @@
         "evidence",
         "n",
         "доказательства, улики"
+      ]
+    ],
+    "gram": [
+      [
+        "more evident",
+        "comp"
+      ],
+      [
+        "the most evident",
+        "sup"
       ]
     ]
   },
@@ -908,7 +1103,8 @@
         "n",
         "изнеможение"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "expand",
@@ -934,6 +1130,20 @@
         "expansion",
         "n",
         "расширение"
+      ]
+    ],
+    "gram": [
+      [
+        "expands",
+        "s3"
+      ],
+      [
+        "expanding",
+        "ing"
+      ],
+      [
+        "expanded",
+        "pastpp"
       ]
     ]
   },
@@ -967,6 +1177,16 @@
         "adj",
         "неопытный"
       ]
+    ],
+    "gram": [
+      [
+        "more experienced",
+        "comp"
+      ],
+      [
+        "the most experienced",
+        "sup"
+      ]
     ]
   },
   {
@@ -999,6 +1219,20 @@
         "adj",
         "обширный"
       ]
+    ],
+    "gram": [
+      [
+        "extends",
+        "s3"
+      ],
+      [
+        "extending",
+        "ing"
+      ],
+      [
+        "extended",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1021,7 +1255,14 @@
       ]
     ],
     "forms": [],
-    "note": "to some extent — в какой-то степени; to what extent? — насколько?"
+    "note": "to some extent — в какой-то степени; to what extent? — насколько?",
+    "gram": [
+      [
+        "",
+        "unc",
+        "обычно в ед. ч.: to some extent"
+      ]
+    ]
   },
   {
     "en": "extreme",
@@ -1048,6 +1289,16 @@
         "adv",
         "чрезвычайно, крайне"
       ]
+    ],
+    "gram": [
+      [
+        "more extreme",
+        "comp"
+      ],
+      [
+        "the most extreme",
+        "sup"
+      ]
     ]
   },
   {
@@ -1069,7 +1320,8 @@
         "В интернете полно фейковых новостей."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "flu",
@@ -1090,7 +1342,13 @@
         "Она неделю не работала из-за гриппа."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "forecast",
@@ -1112,7 +1370,13 @@
       ]
     ],
     "forms": [],
-    "note": "Глагол неправильный: forecast – forecast – forecast (иногда forecasted)"
+    "note": "Глагол неправильный: forecast – forecast – forecast (иногда forecasted)",
+    "gram": [
+      [
+        "forecasts",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "forgive",
@@ -1139,6 +1403,16 @@
         "forgiveness",
         "n",
         "прощение"
+      ]
+    ],
+    "gram": [
+      [
+        "forgives",
+        "s3"
+      ],
+      [
+        "forgiving",
+        "ing"
       ]
     ]
   },
@@ -1172,6 +1446,16 @@
         "adj",
         "неофициальный"
       ]
+    ],
+    "gram": [
+      [
+        "more formal",
+        "comp"
+      ],
+      [
+        "the most formal",
+        "sup"
+      ]
     ]
   },
   {
@@ -1203,6 +1487,16 @@
         "frequency",
         "n",
         "частота"
+      ]
+    ],
+    "gram": [
+      [
+        "more frequently",
+        "comp"
+      ],
+      [
+        "the most frequently",
+        "sup"
       ]
     ]
   },
@@ -1236,6 +1530,16 @@
         "n",
         "досада, раздражение"
       ]
+    ],
+    "gram": [
+      [
+        "more frustrated",
+        "comp"
+      ],
+      [
+        "the most frustrated",
+        "sup"
+      ]
     ]
   },
   {
@@ -1257,7 +1561,8 @@
         "Я не могу учиться на дневном и ещё работать."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "part-time",
@@ -1278,7 +1583,8 @@
         "Многие студенты подрабатывают, чтобы платить за жильё."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "fund",
@@ -1305,6 +1611,13 @@
         "n",
         "финансирование"
       ]
+    ],
+    "gram": [
+      [
+        "funds",
+        "pl",
+        "= средства, деньги"
+      ]
     ]
   },
   {
@@ -1327,7 +1640,8 @@
       ]
     ],
     "forms": [],
-    "note": "Звучит официально, чаще на письме; в разговоре проще сказать also, plus, besides"
+    "note": "Звучит официально, чаще на письме; в разговоре проще сказать also, plus, besides",
+    "gram": []
   },
   {
     "en": "gain",
@@ -1348,7 +1662,21 @@
         "Что ты надеешься получить от этого курса?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "gains",
+        "s3"
+      ],
+      [
+        "gaining",
+        "ing"
+      ],
+      [
+        "gained",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "gap",
@@ -1369,7 +1697,13 @@
         "Разница в возрасте у них — десять лет."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "gaps",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "generous",
@@ -1400,6 +1734,16 @@
         "generosity",
         "n",
         "щедрость"
+      ]
+    ],
+    "gram": [
+      [
+        "more generous",
+        "comp"
+      ],
+      [
+        "the most generous",
+        "sup"
       ]
     ]
   },
@@ -1433,7 +1777,8 @@
         "n",
         "земной шар"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "goods",
@@ -1455,7 +1800,14 @@
       ]
     ],
     "forms": [],
-    "note": "Только во мн. ч.: the goods are… (не a good)"
+    "note": "Только во мн. ч.: the goods are… (не a good)",
+    "gram": [
+      [
+        "goods",
+        "pl",
+        "только мн. ч."
+      ]
+    ]
   },
   {
     "en": "grab",
@@ -1476,7 +1828,21 @@
         "Ты успел что-нибудь перекусить?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "grabs",
+        "s3"
+      ],
+      [
+        "grabbing",
+        "ing"
+      ],
+      [
+        "grabbed",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "guarantee",
@@ -1497,7 +1863,21 @@
         "Я не могу гарантировать, что он придёт."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "guarantees",
+        "s3"
+      ],
+      [
+        "guaranteeing",
+        "ing"
+      ],
+      [
+        "guaranteed",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "guilty",
@@ -1524,6 +1904,16 @@
         "n",
         "вина, чувство вины"
       ]
+    ],
+    "gram": [
+      [
+        "guiltier",
+        "comp"
+      ],
+      [
+        "the guiltiest",
+        "sup"
+      ]
     ]
   },
   {
@@ -1547,7 +1937,17 @@
       ]
     ],
     "forms": [],
-    "note": "hang up — повесить трубку; hang out — проводить время, тусоваться"
+    "note": "hang up — повесить трубку; hang out — проводить время, тусоваться",
+    "gram": [
+      [
+        "hangs",
+        "s3"
+      ],
+      [
+        "hanging",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "heal",
@@ -1568,7 +1968,21 @@
         "Нога уже зажила?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "heals",
+        "s3"
+      ],
+      [
+        "healing",
+        "ing"
+      ],
+      [
+        "healed",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "highly",
@@ -1596,7 +2010,8 @@
         "высокий"
       ]
     ],
-    "note": "highly — «очень, весьма»; «высоко» в прямом смысле — high: The plane flew high"
+    "note": "highly — «очень, весьма»; «высоко» в прямом смысле — high: The plane flew high",
+    "gram": []
   },
   {
     "en": "hire",
@@ -1617,7 +2032,21 @@
         "Почему её не взяли на работу?"
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "hires",
+        "s3"
+      ],
+      [
+        "hiring",
+        "ing"
+      ],
+      [
+        "hired",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "homeless",
@@ -1644,7 +2073,8 @@
         "n",
         "бездомность"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "honest",
@@ -1682,7 +2112,17 @@
         "нечестный"
       ]
     ],
-    "note": "h не произносится: an honest man [ˈɒnɪst]"
+    "note": "h не произносится: an honest man [ˈɒnɪst]",
+    "gram": [
+      [
+        "more honest",
+        "comp"
+      ],
+      [
+        "the most honest",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "horrible",
@@ -1709,6 +2149,16 @@
         "n",
         "ужас"
       ]
+    ],
+    "gram": [
+      [
+        "more horrible",
+        "comp"
+      ],
+      [
+        "the most horrible",
+        "sup"
+      ]
     ]
   },
   {
@@ -1730,7 +2180,13 @@
         "В большинстве семей в городе есть машина."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "households",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "identity",
@@ -1762,6 +2218,12 @@
         "n",
         "удостоверение личности; опознание"
       ]
+    ],
+    "gram": [
+      [
+        "identities",
+        "pl"
+      ]
     ]
   },
   {
@@ -1789,6 +2251,12 @@
         "v",
         "улучшать(ся)"
       ]
+    ],
+    "gram": [
+      [
+        "improvements",
+        "pl"
+      ]
     ]
   },
   {
@@ -1810,7 +2278,13 @@
         "Самолёт приземлился без происшествий."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "incidents",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "incredible",
@@ -1837,7 +2311,8 @@
         "adv",
         "невероятно"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "increasingly",
@@ -1869,7 +2344,8 @@
         "adj",
         "растущий"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "independent",
@@ -1900,6 +2376,16 @@
         "independently",
         "adv",
         "самостоятельно, независимо"
+      ]
+    ],
+    "gram": [
+      [
+        "more independent",
+        "comp"
+      ],
+      [
+        "the most independent",
+        "sup"
       ]
     ]
   },
@@ -1933,6 +2419,20 @@
         "adj",
         "информативный, познавательный"
       ]
+    ],
+    "gram": [
+      [
+        "informs",
+        "s3"
+      ],
+      [
+        "informing",
+        "ing"
+      ],
+      [
+        "informed",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -1955,7 +2455,13 @@
       ]
     ],
     "forms": [],
-    "note": "for instance = for example — например"
+    "note": "for instance = for example — например",
+    "gram": [
+      [
+        "instances",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "instruction",
@@ -1986,6 +2492,12 @@
         "instructor",
         "n",
         "инструктор"
+      ]
+    ],
+    "gram": [
+      [
+        "instructions",
+        "pl"
       ]
     ]
   },
@@ -2019,6 +2531,20 @@
         "adj",
         "намеренный"
       ]
+    ],
+    "gram": [
+      [
+        "intends",
+        "s3"
+      ],
+      [
+        "intending",
+        "ing"
+      ],
+      [
+        "intended",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2045,6 +2571,20 @@
         "interruption",
         "n",
         "перерыв, помеха"
+      ]
+    ],
+    "gram": [
+      [
+        "interrupts",
+        "s3"
+      ],
+      [
+        "interrupting",
+        "ing"
+      ],
+      [
+        "interrupted",
+        "pastpp"
       ]
     ]
   },
@@ -2078,6 +2618,20 @@
         "n",
         "инвестор"
       ]
+    ],
+    "gram": [
+      [
+        "invests",
+        "s3"
+      ],
+      [
+        "investing",
+        "ing"
+      ],
+      [
+        "invested",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2104,6 +2658,12 @@
         "invite",
         "v",
         "приглашать"
+      ]
+    ],
+    "gram": [
+      [
+        "invitations",
+        "pl"
       ]
     ]
   },
@@ -2137,6 +2697,16 @@
         "n",
         "участие"
       ]
+    ],
+    "gram": [
+      [
+        "more involved",
+        "comp"
+      ],
+      [
+        "the most involved",
+        "sup"
+      ]
     ]
   },
   {
@@ -2165,7 +2735,17 @@
         "ревность, зависть"
       ]
     ],
-    "note": "be jealous of someone — и «ревновать», и «завидовать» (по контексту)"
+    "note": "be jealous of someone — и «ревновать», и «завидовать» (по контексту)",
+    "gram": [
+      [
+        "more jealous",
+        "comp"
+      ],
+      [
+        "the most jealous",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "largely",
@@ -2192,7 +2772,8 @@
         "adj",
         "большой"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "limited",
@@ -2224,6 +2805,16 @@
         "adj",
         "неограниченный, безлимитный"
       ]
+    ],
+    "gram": [
+      [
+        "more limited",
+        "comp"
+      ],
+      [
+        "the most limited",
+        "sup"
+      ]
     ]
   },
   {
@@ -2245,7 +2836,13 @@
         "Два города соединяет новый мост."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "links",
+        "pl"
+      ]
+    ]
   },
   {
     "en": "measure",
@@ -2271,6 +2868,20 @@
         "measurement",
         "n",
         "измерение, размер"
+      ]
+    ],
+    "gram": [
+      [
+        "measures",
+        "s3"
+      ],
+      [
+        "measuring",
+        "ing"
+      ],
+      [
+        "measured",
+        "pastpp"
       ]
     ]
   },
@@ -2299,6 +2910,12 @@
         "n",
         "член, участник"
       ]
+    ],
+    "gram": [
+      [
+        "memberships",
+        "pl"
+      ]
     ]
   },
   {
@@ -2326,7 +2943,8 @@
         "n",
         "меньшинство"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "miserable",
@@ -2353,6 +2971,16 @@
         "n",
         "страдание, несчастье"
       ]
+    ],
+    "gram": [
+      [
+        "more miserable",
+        "comp"
+      ],
+      [
+        "the most miserable",
+        "sup"
+      ]
     ]
   },
   {
@@ -2374,7 +3002,8 @@
         "Кроме того, в цену входит завтрак."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "motivation",
@@ -2406,6 +3035,12 @@
         "adj",
         "мотивированный"
       ]
+    ],
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
     ]
   },
   {
@@ -2427,7 +3062,8 @@
         "Родители живут рядом, поэтому часто заходят."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "negotiate",
@@ -2459,6 +3095,20 @@
         "adj",
         "договорной, обсуждаемый"
       ]
+    ],
+    "gram": [
+      [
+        "negotiates",
+        "s3"
+      ],
+      [
+        "negotiating",
+        "ing"
+      ],
+      [
+        "negotiated",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2480,7 +3130,8 @@
         "Я знал, что это рискованно, но всё же сделал это."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "nonsense",
@@ -2502,7 +3153,13 @@
       ]
     ],
     "forms": [],
-    "note": "Неисчисляемое: nonsense, не a nonsense"
+    "note": "Неисчисляемое: nonsense, не a nonsense",
+    "gram": [
+      [
+        "",
+        "unc"
+      ]
+    ]
   },
   {
     "en": "occasionally",
@@ -2534,7 +3191,8 @@
         "adj",
         "редкий, случающийся время от времени"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "occur",
@@ -2562,7 +3220,21 @@
         "случай, происшествие"
       ]
     ],
-    "note": "it occurred to me — мне пришло в голову; пишется с двумя r: occurred"
+    "note": "it occurred to me — мне пришло в голову; пишется с двумя r: occurred",
+    "gram": [
+      [
+        "occurs",
+        "s3"
+      ],
+      [
+        "occurring",
+        "ing"
+      ],
+      [
+        "occurred",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "otherwise",
@@ -2583,7 +3255,8 @@
         "Если не предупредишь об изменениях, встречаемся в шесть."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": []
   },
   {
     "en": "overcome",
@@ -2605,7 +3278,17 @@
         "Мы вместе преодолели много трудностей."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "overcomes",
+        "s3"
+      ],
+      [
+        "overcoming",
+        "ing"
+      ]
+    ]
   },
   {
     "en": "owe",
@@ -2626,7 +3309,21 @@
         "Ты мне ничего не должен."
       ]
     ],
-    "forms": []
+    "forms": [],
+    "gram": [
+      [
+        "owes",
+        "s3"
+      ],
+      [
+        "owing",
+        "ing"
+      ],
+      [
+        "owed",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "participate",
@@ -2659,7 +3356,21 @@
         "участие"
       ]
     ],
-    "note": "participate in (= take part in), не participate at"
+    "note": "participate in (= take part in), не participate at",
+    "gram": [
+      [
+        "participates",
+        "s3"
+      ],
+      [
+        "participating",
+        "ing"
+      ],
+      [
+        "participated",
+        "pastpp"
+      ]
+    ]
   },
   {
     "en": "recognise",
@@ -2691,6 +3402,20 @@
         "adj",
         "узнаваемый"
       ]
+    ],
+    "gram": [
+      [
+        "recognises",
+        "s3"
+      ],
+      [
+        "recognising",
+        "ing"
+      ],
+      [
+        "recognised",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2718,6 +3443,20 @@
         "n",
         "регистрация"
       ]
+    ],
+    "gram": [
+      [
+        "registers",
+        "s3"
+      ],
+      [
+        "registering",
+        "ing"
+      ],
+      [
+        "registered",
+        "pastpp"
+      ]
     ]
   },
   {
@@ -2744,6 +3483,20 @@
         "rejection",
         "n",
         "отказ"
+      ]
+    ],
+    "gram": [
+      [
+        "rejects",
+        "s3"
+      ],
+      [
+        "rejecting",
+        "ing"
+      ],
+      [
+        "rejected",
+        "pastpp"
       ]
     ]
   },
@@ -2783,7 +3536,17 @@
         "приносящий удовлетворение"
       ]
     ],
-    "note": "satisfied with (не by / of): satisfied with the result"
+    "note": "satisfied with (не by / of): satisfied with the result",
+    "gram": [
+      [
+        "more satisfied",
+        "comp"
+      ],
+      [
+        "the most satisfied",
+        "sup"
+      ]
+    ]
   },
   {
     "en": "settle",
@@ -2809,6 +3572,20 @@
         "settlement",
         "n",
         "поселение; урегулирование"
+      ]
+    ],
+    "gram": [
+      [
+        "settles",
+        "s3"
+      ],
+      [
+        "settling",
+        "ing"
+      ],
+      [
+        "settled",
+        "pastpp"
       ]
     ]
   },
@@ -2842,6 +3619,16 @@
         "adj",
         "страшный"
       ]
+    ],
+    "gram": [
+      [
+        "more scared",
+        "comp"
+      ],
+      [
+        "the most scared",
+        "sup"
+      ]
     ]
   },
   {
@@ -2874,7 +3661,8 @@
         "adj",
         "шокирующий"
       ]
-    ]
+    ],
+    "gram": []
   },
   {
     "en": "shortly",
@@ -2902,7 +3690,8 @@
         "короткий"
       ]
     ],
-    "note": "shortly — «вскоре», а не «коротко» (коротко — briefly)"
+    "note": "shortly — «вскоре», а не «коротко» (коротко — briefly)",
+    "gram": []
   },
   {
     "en": "similarly",
@@ -2934,6 +3723,7 @@
         "n",
         "сходство"
       ]
-    ]
+    ],
+    "gram": []
   }
 ]

@@ -204,4 +204,25 @@ test('история версий: по убыванию, без повторо�
   for (const e of log) { assert.match(e.date, /^\d{4}-\d{2}-\d{2}$/); assert.ok(e.items.length); }
 });
 
+test('подсветка: слово находится в любой форме', () => {
+  const at = (ex, w) => { const r = Core.findWord(ex, Core.wordVariants(w)); return r && ex.slice(r.start, r.end); };
+  assert.equal(at('She felt tired after the long flight.', { en: 'feel', irr: 'felt|felt' }), 'felt');
+  assert.equal(at('I found the exam quite easy.', { en: 'find', irr: 'found|found' }), 'found');
+  assert.equal(at('She told me about her trip.', { en: 'tell', irr: 'told|told' }), 'told');
+  assert.equal(at('I learnt a lot.', { en: 'learn', irr: 'learnt/learned|learnt/learned' }), 'learnt');
+  assert.equal(at('I need to change my password.', { en: 'change' }), 'change');
+  assert.equal(at('Their children are at school.', { en: 'child', gram: [['children', 'pl']] }), 'children');
+  assert.equal(at('He tried again.', { en: 'try', gram: [] }), 'tried', 'по основе, даже без gram');
+  assert.equal(at('She turned the offer down.', { en: 'turn down', gram: [['turned down', 'pastpp']] }), 'turned the offer down');
+  assert.equal(at('Who looks after your dog?', { en: 'look after sb', gram: [['looks after', 's3']] }), 'looks after');
+  assert.equal(at('Hi, Anna! How are you?', { en: 'How are you?' }), 'How are you');
+  assert.equal(at('A cat sat on the mat.', { en: 'at' }), null, 'внутри другого слова не ищем');
+});
+
+test('подсветка: каждый пример словаря содержит своё слово', () => {
+  const missed = [];
+  for (const w of WORDS) for (const [ex] of w.ex) if (!Core.findWord(ex, Core.wordVariants(w))) missed.push(w.en + ': ' + ex);
+  assert.ok(missed.length <= 3, 'слово не найдено в примерах:\n' + missed.join('\n'));
+});
+
 console.log(`\nВсе тесты пройдены: ${passed}`);

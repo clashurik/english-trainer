@@ -58,6 +58,10 @@ with sync_playwright() as p:
         steps = 0
         while page.is_visible("#session") and steps < 40:
             page.click("#reveal-btn")
+            word = page.inner_text("#c-word")
+            assert page.locator("#c-ex b").count() == 1, f"в примере к «{word}» слово не подсвечено: {page.inner_text('#c-ex')}"
+            if page.inner_text("#c-pos") != "фраза":
+                assert "tappable" in (page.get_attribute("#c-word", "class") or ""), f"у слова «{word}» нет форм"
             if not checked_examples and page.is_visible("#ex-next"):
                 before = page.inner_text("#c-ex")
                 assert page.inner_text("#ex-pos") == "1/3", "у нового слова первый из трёх примеров"
@@ -69,6 +73,7 @@ with sync_playwright() as p:
                 page.click("#c-word")
                 assert page.is_visible("#sheet"), "по нажатию на слово открываются формы"
                 assert page.locator("#sheet .form-row, #sheet .irr-chip").count() > 0
+                page.wait_for_timeout(300)  # дождаться конца анимации панели
                 page.screenshot(path=str(OUT / "3-forms.png"))
                 page.click("#sheet-close")
                 assert page.is_hidden("#sheet")
