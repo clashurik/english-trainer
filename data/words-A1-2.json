@@ -1,0 +1,2246 @@
+[
+  {
+    "en": "example",
+    "ru": "пример",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you give me an example?",
+        "Можешь привести пример?"
+      ],
+      [
+        "This is a good example of his work.",
+        "Это хороший пример его работы."
+      ],
+      [
+        "Some fruits, for example apples, are cheap in autumn.",
+        "Некоторые фрукты, например яблоки, осенью дешёвые."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "information",
+    "ru": "информация, сведения",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I need more information about the course.",
+        "Мне нужно больше информации о курсе."
+      ],
+      [
+        "Where can I find information about trains?",
+        "Где можно найти информацию о поездах?"
+      ],
+      [
+        "Thanks for the useful information.",
+        "Спасибо за полезную информацию."
+      ]
+    ],
+    "forms": [
+      [
+        "inform",
+        "v",
+        "сообщать, информировать"
+      ]
+    ],
+    "note": "Неисчисляемое: information (не informations), a piece of information — одно сведение"
+  },
+  {
+    "en": "home",
+    "ru": "дом, домой, дома",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I usually get home at seven.",
+        "Я обычно прихожу домой в семь."
+      ],
+      [
+        "Are you working from home today?",
+        "Ты сегодня работаешь из дома?"
+      ],
+      [
+        "She wasn't at home last night.",
+        "Вчера вечером её не было дома."
+      ]
+    ],
+    "forms": [
+      [
+        "homeless",
+        "adj",
+        "бездомный"
+      ]
+    ],
+    "note": "go home, get home — без to: go home (не go to home)"
+  },
+  {
+    "en": "job",
+    "ru": "работа, должность",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "She has a new job in a bank.",
+        "У неё новая работа в банке."
+      ],
+      [
+        "I'm looking for a part-time job.",
+        "Я ищу работу на неполный день."
+      ],
+      [
+        "Did you get the job?",
+        "Тебя взяли на эту работу?"
+      ]
+    ],
+    "forms": [],
+    "note": "job — конкретная должность (a job), work — работа вообще, неисчисляемое"
+  },
+  {
+    "en": "office",
+    "ru": "офис, кабинет",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Our office is near the station.",
+        "Наш офис рядом с вокзалом."
+      ],
+      [
+        "Is she in the office today?",
+        "Она сегодня в офисе?"
+      ],
+      [
+        "I left my laptop at the office.",
+        "Я оставил ноутбук в офисе."
+      ]
+    ],
+    "forms": [
+      [
+        "officer",
+        "n",
+        "офицер, сотрудник"
+      ],
+      [
+        "official",
+        "adj",
+        "официальный"
+      ]
+    ]
+  },
+  {
+    "en": "business",
+    "ru": "бизнес, дело, компания",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "My sister runs a small business.",
+        "Моя сестра ведёт небольшой бизнес."
+      ],
+      [
+        "He's in Berlin on business this week.",
+        "На этой неделе он в Берлине по делам."
+      ],
+      [
+        "How's business at your shop these days?",
+        "Как сейчас идут дела в твоём магазине?"
+      ]
+    ],
+    "forms": [
+      [
+        "businessman",
+        "n",
+        "бизнесмен"
+      ]
+    ]
+  },
+  {
+    "en": "plan",
+    "ru": "план; планировать",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Do you have any plans for the weekend?",
+        "У тебя есть планы на выходные?"
+      ],
+      [
+        "We're planning a trip to Italy.",
+        "Мы планируем поездку в Италию."
+      ],
+      [
+        "Things didn't go to plan.",
+        "Всё пошло не по плану."
+      ]
+    ],
+    "forms": [
+      [
+        "planning",
+        "n",
+        "планирование"
+      ]
+    ]
+  },
+  {
+    "en": "stay",
+    "ru": "оставаться, останавливаться (в гостинице)",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm going to stay at home tonight.",
+        "Сегодня вечером я останусь дома."
+      ],
+      [
+        "We stayed in a small hotel near the beach.",
+        "Мы остановились в маленьком отеле у пляжа."
+      ],
+      [
+        "How long are you staying in London?",
+        "Сколько ты пробудешь в Лондоне?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "stop",
+    "ru": "останавливать(ся), прекращать; остановка",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Please stop talking, I'm on the phone.",
+        "Пожалуйста, перестаньте разговаривать, я говорю по телефону."
+      ],
+      [
+        "The bus didn't stop here.",
+        "Автобус здесь не остановился."
+      ],
+      [
+        "Get off at the next stop.",
+        "Выходи на следующей остановке."
+      ]
+    ],
+    "forms": [],
+    "note": "stop doing — перестать делать; stop to do — остановиться, чтобы сделать"
+  },
+  {
+    "en": "finish",
+    "ru": "заканчивать, завершать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What time do you finish work?",
+        "Во сколько ты заканчиваешь работу?"
+      ],
+      [
+        "I haven't finished my report yet.",
+        "Я ещё не закончил отчёт."
+      ],
+      [
+        "The film finished at midnight.",
+        "Фильм закончился в полночь."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "sell",
+    "ru": "продавать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "They sell fresh bread in that shop.",
+        "В том магазине продают свежий хлеб."
+      ],
+      [
+        "We sold our old car last month.",
+        "В прошлом месяце мы продали нашу старую машину."
+      ],
+      [
+        "Sorry, the tickets are sold out.",
+        "Извините, билеты распроданы."
+      ]
+    ],
+    "irr": "sold|sold",
+    "forms": [
+      [
+        "sale",
+        "n",
+        "продажа, распродажа"
+      ],
+      [
+        "seller",
+        "n",
+        "продавец"
+      ]
+    ]
+  },
+  {
+    "en": "carry",
+    "ru": "нести, носить (в руках), возить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you help me carry these bags?",
+        "Можешь помочь донести эти сумки?"
+      ],
+      [
+        "I always carry an umbrella in autumn.",
+        "Осенью я всегда ношу с собой зонт."
+      ],
+      [
+        "She was carrying a baby.",
+        "Она несла ребёнка на руках."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "hold",
+    "ru": "держать; проводить (встречу)",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you hold my coffee for a second?",
+        "Подержишь мой кофе секунду?"
+      ],
+      [
+        "They held hands in the park.",
+        "Они держались за руки в парке."
+      ],
+      [
+        "The meeting will be held on Monday.",
+        "Собрание пройдёт в понедельник."
+      ]
+    ],
+    "irr": "held|held",
+    "forms": []
+  },
+  {
+    "en": "cook",
+    "ru": "готовить (еду); повар",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I cook dinner most evenings.",
+        "Я готовлю ужин почти каждый вечер."
+      ],
+      [
+        "Who cooked this soup? It's great!",
+        "Кто приготовил этот суп? Он отличный!"
+      ],
+      [
+        "He works as a cook in a café.",
+        "Он работает поваром в кафе."
+      ]
+    ],
+    "forms": [
+      [
+        "cooking",
+        "n",
+        "кулинария, готовка"
+      ],
+      [
+        "cooker",
+        "n",
+        "плита"
+      ]
+    ],
+    "note": "cooker — плита, а не повар; повар — cook"
+  },
+  {
+    "en": "wash",
+    "ru": "мыть, стирать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Wash your hands before dinner.",
+        "Помой руки перед ужином."
+      ],
+      [
+        "I need to wash my jeans.",
+        "Мне нужно постирать джинсы."
+      ],
+      [
+        "Have you washed the dishes?",
+        "Ты помыл посуду?"
+      ]
+    ],
+    "forms": [
+      [
+        "washing",
+        "n",
+        "стирка; бельё (для стирки)"
+      ]
+    ]
+  },
+  {
+    "en": "clean",
+    "ru": "чистый; убирать, чистить",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The hotel room was clean and quiet.",
+        "Номер в отеле был чистым и тихим."
+      ],
+      [
+        "I clean the flat every Saturday.",
+        "Я убираю квартиру каждую субботу."
+      ],
+      [
+        "Excuse me, the towels in our room aren't clean.",
+        "Извините, полотенца в нашем номере несвежие."
+      ]
+    ],
+    "forms": [
+      [
+        "cleaner",
+        "n",
+        "уборщик, чистящее средство"
+      ],
+      [
+        "cleaning",
+        "n",
+        "уборка"
+      ]
+    ]
+  },
+  {
+    "en": "wear",
+    "ru": "носить (одежду), быть одетым в",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "She usually wears jeans to work.",
+        "Она обычно ходит на работу в джинсах."
+      ],
+      [
+        "What are you wearing to the party?",
+        "Что ты наденешь на вечеринку?"
+      ],
+      [
+        "I don't wear glasses when I drive.",
+        "Я не ношу очки за рулём."
+      ]
+    ],
+    "irr": "wore|worn",
+    "forms": []
+  },
+  {
+    "en": "watch",
+    "ru": "смотреть, наблюдать; часы (наручные)",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We watched a film last night.",
+        "Вчера вечером мы смотрели фильм."
+      ],
+      [
+        "Do you watch the news?",
+        "Ты смотришь новости?"
+      ],
+      [
+        "My watch is five minutes fast.",
+        "Мои часы спешат на пять минут."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "walk",
+    "ru": "ходить пешком, гулять; прогулка",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I walk to work every day.",
+        "Я каждый день хожу на работу пешком."
+      ],
+      [
+        "Let's go for a walk after lunch.",
+        "Давай прогуляемся после обеда."
+      ],
+      [
+        "The station is a ten-minute walk from here.",
+        "Вокзал в десяти минутах ходьбы отсюда."
+      ]
+    ],
+    "forms": [
+      [
+        "walker",
+        "n",
+        "пешеход, любитель ходьбы"
+      ]
+    ]
+  },
+  {
+    "en": "travel",
+    "ru": "путешествовать, ездить; путешествия",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I love travelling alone in the summer.",
+        "Я люблю путешествовать летом в одиночку."
+      ],
+      [
+        "Did you travel by train or plane?",
+        "Ты ехал поездом или летел самолётом?"
+      ],
+      [
+        "He travels a lot for work.",
+        "Он много ездит по работе."
+      ]
+    ],
+    "forms": [
+      [
+        "traveller",
+        "n",
+        "путешественник"
+      ]
+    ]
+  },
+  {
+    "en": "visit",
+    "ru": "посещать, навещать; визит",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We visited my grandparents at the weekend.",
+        "На выходных мы навестили бабушку с дедушкой."
+      ],
+      [
+        "Have you ever visited Rome?",
+        "Ты когда-нибудь был в Риме?"
+      ],
+      [
+        "This is my first visit to Spain.",
+        "Я впервые в Испании."
+      ]
+    ],
+    "forms": [
+      [
+        "visitor",
+        "n",
+        "посетитель, гость"
+      ]
+    ]
+  },
+  {
+    "en": "drive",
+    "ru": "водить (машину), ехать; везти",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you drive, or should we take a taxi?",
+        "Ты умеешь водить, или возьмём такси?"
+      ],
+      [
+        "I drove to work this morning.",
+        "Сегодня утром я поехал на работу на машине."
+      ],
+      [
+        "I'll drive you to the airport.",
+        "Я отвезу тебя в аэропорт."
+      ]
+    ],
+    "irr": "drove|driven",
+    "forms": [
+      [
+        "driver",
+        "n",
+        "водитель"
+      ],
+      [
+        "driving",
+        "n",
+        "вождение"
+      ]
+    ]
+  },
+  {
+    "en": "sleep",
+    "ru": "спать; сон",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I didn't sleep well last night.",
+        "Я плохо спал этой ночью."
+      ],
+      [
+        "How many hours do you usually sleep?",
+        "Сколько часов ты обычно спишь?"
+      ],
+      [
+        "You look tired. You need more sleep.",
+        "Ты выглядишь уставшим. Тебе нужно больше спать."
+      ]
+    ],
+    "irr": "slept|slept",
+    "forms": [
+      [
+        "asleep",
+        "adj",
+        "спящий"
+      ],
+      [
+        "sleepy",
+        "adj",
+        "сонный"
+      ]
+    ]
+  },
+  {
+    "en": "wake",
+    "ru": "просыпаться, будить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I usually wake up at six.",
+        "Я обычно просыпаюсь в шесть."
+      ],
+      [
+        "The noise woke me at three in the morning.",
+        "Шум разбудил меня в три часа ночи."
+      ],
+      [
+        "Please don't wake the baby.",
+        "Пожалуйста, не разбуди ребёнка."
+      ]
+    ],
+    "irr": "woke|woken",
+    "forms": [
+      [
+        "awake",
+        "adj",
+        "не спящий, бодрствующий"
+      ]
+    ]
+  },
+  {
+    "en": "sit",
+    "ru": "сидеть, садиться",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Please sit down and have some tea.",
+        "Садитесь, пожалуйста, и выпейте чаю."
+      ],
+      [
+        "We sat by the window.",
+        "Мы сидели у окна."
+      ],
+      [
+        "Excuse me, can I sit here?",
+        "Извините, можно я здесь сяду?"
+      ]
+    ],
+    "irr": "sat|sat",
+    "forms": [
+      [
+        "seat",
+        "n",
+        "место, сиденье"
+      ]
+    ]
+  },
+  {
+    "en": "stand",
+    "ru": "стоять, вставать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We stood in the queue for an hour.",
+        "Мы час простояли в очереди."
+      ],
+      [
+        "Please stand up when your name is called.",
+        "Пожалуйста, встаньте, когда назовут ваше имя."
+      ],
+      [
+        "I can't stand here all day, my feet hurt.",
+        "Я не могу стоять здесь весь день, у меня болят ноги."
+      ]
+    ],
+    "irr": "stood|stood",
+    "forms": []
+  },
+  {
+    "en": "speak",
+    "ru": "говорить (на языке), разговаривать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Do you speak English at work?",
+        "Ты говоришь на работе по-английски?"
+      ],
+      [
+        "Can I speak to the manager, please?",
+        "Можно поговорить с менеджером?"
+      ],
+      [
+        "I spoke to her yesterday.",
+        "Я говорил с ней вчера."
+      ]
+    ],
+    "irr": "spoke|spoken",
+    "forms": [
+      [
+        "speaker",
+        "n",
+        "говорящий, оратор; колонка"
+      ],
+      [
+        "speech",
+        "n",
+        "речь"
+      ]
+    ],
+    "note": "speak English (не speak on English); speak to/with someone — говорить с кем-то"
+  },
+  {
+    "en": "talk",
+    "ru": "разговаривать, говорить; разговор",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We talked for hours on the phone.",
+        "Мы часами говорили по телефону."
+      ],
+      [
+        "What are you talking about?",
+        "О чём ты говоришь?"
+      ],
+      [
+        "We need to have a talk.",
+        "Нам нужно поговорить."
+      ]
+    ],
+    "forms": [
+      [
+        "talkative",
+        "adj",
+        "разговорчивый"
+      ]
+    ]
+  },
+  {
+    "en": "say",
+    "ru": "сказать, говорить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Sorry, what did you say? It's very noisy.",
+        "Извини, что ты сказал? Здесь очень шумно."
+      ],
+      [
+        "She said she was tired.",
+        "Она сказала, что устала."
+      ],
+      [
+        "How do you say this word in English?",
+        "Как сказать это слово по-английски?"
+      ]
+    ],
+    "irr": "said|said",
+    "forms": [],
+    "note": "say something (to someone), но tell someone something: She said to me / She told me"
+  },
+  {
+    "en": "write",
+    "ru": "писать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Please write your name here.",
+        "Пожалуйста, напишите здесь своё имя."
+      ],
+      [
+        "I wrote him a long email.",
+        "Я написал ему длинное письмо."
+      ],
+      [
+        "Have you written the report yet?",
+        "Ты уже написал отчёт?"
+      ]
+    ],
+    "irr": "wrote|written",
+    "forms": [
+      [
+        "writer",
+        "n",
+        "писатель"
+      ],
+      [
+        "writing",
+        "n",
+        "письмо, письменность"
+      ]
+    ]
+  },
+  {
+    "en": "enjoy",
+    "ru": "наслаждаться, получать удовольствие",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I really enjoyed the concert.",
+        "Мне очень понравился концерт."
+      ],
+      [
+        "Do you enjoy your job?",
+        "Тебе нравится твоя работа?"
+      ],
+      [
+        "Here's your pizza. Enjoy your meal!",
+        "Вот ваша пицца. Приятного аппетита!"
+      ]
+    ],
+    "forms": [
+      [
+        "enjoyable",
+        "adj",
+        "приятный"
+      ]
+    ],
+    "note": "enjoy doing: I enjoy cooking (не enjoy to cook)"
+  },
+  {
+    "en": "love",
+    "ru": "любить; любовь",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I love this song! Can you turn it up?",
+        "Обожаю эту песню! Сделай погромче?"
+      ],
+      [
+        "They fell in love in Paris.",
+        "Они влюбились в Париже."
+      ],
+      [
+        "Would you like some tea? — I'd love some.",
+        "Хочешь чаю? — С удовольствием."
+      ]
+    ],
+    "forms": [
+      [
+        "lovely",
+        "adj",
+        "милый, прекрасный"
+      ],
+      [
+        "lover",
+        "n",
+        "любитель; возлюбленный"
+      ]
+    ]
+  },
+  {
+    "en": "wish",
+    "ru": "желать; желание",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I wish you a happy birthday!",
+        "Желаю тебе счастливого дня рождения!"
+      ],
+      [
+        "Make a wish and blow out the candles!",
+        "Загадай желание и задуй свечи!"
+      ],
+      [
+        "I end my emails with \"Best wishes\".",
+        "Я заканчиваю свои письма словами «С наилучшими пожеланиями»."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "order",
+    "ru": "заказывать; заказ, порядок",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Are you ready to order?",
+        "Вы готовы сделать заказ?"
+      ],
+      [
+        "I ordered a new phone online.",
+        "Я заказал новый телефон в интернете."
+      ],
+      [
+        "Put the names in alphabetical order.",
+        "Расположи имена в алфавитном порядке."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "save",
+    "ru": "экономить, копить; спасать; сохранять",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm saving money for a holiday.",
+        "Я коплю деньги на отпуск."
+      ],
+      [
+        "Don't forget to save the file.",
+        "Не забудь сохранить файл."
+      ],
+      [
+        "The doctor saved his life.",
+        "Врач спас ему жизнь."
+      ]
+    ],
+    "forms": [
+      [
+        "savings",
+        "n",
+        "сбережения"
+      ]
+    ]
+  },
+  {
+    "en": "share",
+    "ru": "делиться, делить; доля",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I share a flat with two friends.",
+        "Я снимаю квартиру вместе с двумя друзьями."
+      ],
+      [
+        "Can we share a pizza?",
+        "Возьмём одну пиццу на двоих?"
+      ],
+      [
+        "She shared the photos online.",
+        "Она выложила фотографии в интернет."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "check",
+    "ru": "проверять, уточнять",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you check my email for mistakes?",
+        "Можешь проверить моё письмо на ошибки?"
+      ],
+      [
+        "I need to check the time of the train.",
+        "Мне нужно уточнить время поезда."
+      ],
+      [
+        "Let me check my calendar.",
+        "Дай я посмотрю в календаре."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "cut",
+    "ru": "резать, порезать; сокращать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you cut the bread, please?",
+        "Порежь, пожалуйста, хлеб."
+      ],
+      [
+        "I cut my finger yesterday.",
+        "Вчера я порезал палец."
+      ],
+      [
+        "Where do you get your hair cut?",
+        "Где ты стрижёшься?"
+      ]
+    ],
+    "irr": "cut|cut",
+    "forms": []
+  },
+  {
+    "en": "build",
+    "ru": "строить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "They're building a new school near us.",
+        "Рядом с нами строят новую школу."
+      ],
+      [
+        "This house was built in 1950.",
+        "Этот дом был построен в 1950 году."
+      ],
+      [
+        "He built the shelves himself.",
+        "Он сам сделал эти полки."
+      ]
+    ],
+    "irr": "built|built",
+    "forms": [
+      [
+        "building",
+        "n",
+        "здание"
+      ],
+      [
+        "builder",
+        "n",
+        "строитель"
+      ]
+    ]
+  },
+  {
+    "en": "hurry",
+    "ru": "спешить, торопиться; спешка",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Hurry up, we're late for the train!",
+        "Поторопись, мы опаздываем на поезд!"
+      ],
+      [
+        "Sorry, I'm in a hurry.",
+        "Извини, я спешу."
+      ],
+      [
+        "Don't hurry, we have plenty of time.",
+        "Не спеши, у нас много времени."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "hurt",
+    "ru": "причинять боль, болеть; ранить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "My back hurts after the long flight.",
+        "После долгого перелёта у меня болит спина."
+      ],
+      [
+        "You fell! Did you hurt yourself?",
+        "Ты упал! Не ушибся?"
+      ],
+      [
+        "She hurt her leg playing football.",
+        "Она повредила ногу, играя в футбол."
+      ]
+    ],
+    "irr": "hurt|hurt",
+    "forms": []
+  },
+  {
+    "en": "introduce",
+    "ru": "представлять (знакомить), вводить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Let me introduce my colleague, Tom.",
+        "Позвольте представить моего коллегу Тома."
+      ],
+      [
+        "Can you introduce yourself, please?",
+        "Представьтесь, пожалуйста."
+      ],
+      [
+        "The company introduced a new app last year.",
+        "В прошлом году компания выпустила новое приложение."
+      ]
+    ],
+    "forms": [
+      [
+        "introduction",
+        "n",
+        "знакомство, введение"
+      ]
+    ]
+  },
+  {
+    "en": "join",
+    "ru": "присоединяться, вступать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Would you like to join us for dinner?",
+        "Хочешь поужинать с нами?"
+      ],
+      [
+        "I joined a gym last month.",
+        "В прошлом месяце я записался в спортзал."
+      ],
+      [
+        "She didn't join the team.",
+        "Она не присоединилась к команде."
+      ]
+    ],
+    "forms": [],
+    "note": "join us (без to): Join us! (не Join to us)"
+  },
+  {
+    "en": "laugh",
+    "ru": "смеяться; смех",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We laughed a lot at the party.",
+        "Мы много смеялись на вечеринке."
+      ],
+      [
+        "Why are you laughing? What's so funny?",
+        "Почему ты смеёшься? Что смешного?"
+      ],
+      [
+        "Don't laugh at me, I'm still learning!",
+        "Не смейся надо мной, я ещё учусь!"
+      ]
+    ],
+    "forms": [
+      [
+        "laughter",
+        "n",
+        "смех"
+      ]
+    ]
+  },
+  {
+    "en": "smile",
+    "ru": "улыбаться; улыбка",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "She smiled at me across the room.",
+        "Она улыбнулась мне с другого конца комнаты."
+      ],
+      [
+        "He has a nice smile.",
+        "У него приятная улыбка."
+      ],
+      [
+        "Why aren't you smiling in this photo?",
+        "Почему ты не улыбаешься на этой фотографии?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "cry",
+    "ru": "плакать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The baby cried all night.",
+        "Ребёнок плакал всю ночь."
+      ],
+      [
+        "Don't cry, it's OK. We can fix it.",
+        "Не плачь, всё в порядке. Мы это исправим."
+      ],
+      [
+        "Did that film make you cry?",
+        "Ты плакал на этом фильме?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "repeat",
+    "ru": "повторять",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Could you repeat that, please?",
+        "Не могли бы вы повторить?"
+      ],
+      [
+        "Don't repeat the same mistake.",
+        "Не повторяй ту же ошибку."
+      ],
+      [
+        "Listen and repeat after me.",
+        "Слушайте и повторяйте за мной."
+      ]
+    ],
+    "forms": [
+      [
+        "repetition",
+        "n",
+        "повторение"
+      ]
+    ]
+  },
+  {
+    "en": "practice",
+    "ru": "практика, тренировка",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Speaking English takes a lot of practice.",
+        "Чтобы говорить по-английски, нужно много практики."
+      ],
+      [
+        "We have football practice on Tuesdays.",
+        "По вторникам у нас тренировка по футболу."
+      ],
+      [
+        "I need more driving practice.",
+        "Мне нужно больше практики вождения."
+      ]
+    ],
+    "forms": [
+      [
+        "practise",
+        "v",
+        "практиковать(ся), тренироваться"
+      ],
+      [
+        "practical",
+        "adj",
+        "практичный, практический"
+      ]
+    ],
+    "note": "В британском варианте practice — сущ., practise — глагол; в американском оба practice"
+  },
+  {
+    "en": "study",
+    "ru": "учиться, изучать; учёба",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I study English in the evenings.",
+        "По вечерам я изучаю английский."
+      ],
+      [
+        "What did you study at university?",
+        "Что ты изучал в университете?"
+      ],
+      [
+        "She's studying for her exams.",
+        "Она готовится к экзаменам."
+      ]
+    ],
+    "forms": [
+      [
+        "student",
+        "n",
+        "студент"
+      ]
+    ]
+  },
+  {
+    "en": "teach",
+    "ru": "учить (кого-то), преподавать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "She teaches maths at a school.",
+        "Она преподаёт математику в школе."
+      ],
+      [
+        "My dad taught me to drive.",
+        "Папа научил меня водить машину."
+      ],
+      [
+        "Can you teach me this game?",
+        "Научишь меня этой игре?"
+      ]
+    ],
+    "irr": "taught|taught",
+    "forms": [
+      [
+        "teacher",
+        "n",
+        "учитель"
+      ],
+      [
+        "teaching",
+        "n",
+        "преподавание"
+      ]
+    ],
+    "note": "teach — учить кого-то, learn/study — учиться самому"
+  },
+  {
+    "en": "pick",
+    "ru": "выбирать; собирать, рвать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Pick a card, any card.",
+        "Выбери карту, любую."
+      ],
+      [
+        "We picked apples in the garden.",
+        "Мы собирали яблоки в саду."
+      ],
+      [
+        "I'll pick you up at eight.",
+        "Я заеду за тобой в восемь."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "turn",
+    "ru": "поворачивать(ся); очередь",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Turn left at the bank.",
+        "У банка поверните налево."
+      ],
+      [
+        "Can you turn off the light?",
+        "Можешь выключить свет?"
+      ],
+      [
+        "It's your turn to cook.",
+        "Твоя очередь готовить."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "win",
+    "ru": "выигрывать, побеждать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Who won the game last night?",
+        "Кто вчера выиграл матч?"
+      ],
+      [
+        "Our team didn't win this year.",
+        "В этом году наша команда не победила."
+      ],
+      [
+        "She won a trip to Paris.",
+        "Она выиграла поездку в Париж."
+      ]
+    ],
+    "irr": "won|won",
+    "forms": [
+      [
+        "winner",
+        "n",
+        "победитель"
+      ]
+    ]
+  },
+  {
+    "en": "real",
+    "ru": "настоящий, реальный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Is this ring made of real gold?",
+        "Это кольцо из настоящего золота?"
+      ],
+      [
+        "Is Max your real name or a nickname?",
+        "Макс — это твоё настоящее имя или прозвище?"
+      ],
+      [
+        "What's the real problem here?",
+        "В чём здесь настоящая проблема?"
+      ]
+    ],
+    "forms": [
+      [
+        "really",
+        "adv",
+        "действительно, очень"
+      ],
+      [
+        "reality",
+        "n",
+        "реальность"
+      ]
+    ]
+  },
+  {
+    "en": "true",
+    "ru": "правдивый, верный, настоящий",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Is it true that you're moving?",
+        "Это правда, что ты переезжаешь?"
+      ],
+      [
+        "That's not true! I was at home all evening.",
+        "Это неправда! Я весь вечер был дома."
+      ],
+      [
+        "The film is based on a true story.",
+        "Фильм основан на реальной истории."
+      ]
+    ],
+    "forms": [
+      [
+        "truth",
+        "n",
+        "правда"
+      ],
+      [
+        "truly",
+        "adv",
+        "искренне, действительно"
+      ]
+    ]
+  },
+  {
+    "en": "wrong",
+    "ru": "неправильный, ошибочный; не так",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Sorry, I think you have the wrong number.",
+        "Извините, кажется, вы ошиблись номером."
+      ],
+      [
+        "You look upset. What's wrong?",
+        "Ты расстроен. Что случилось?"
+      ],
+      [
+        "I was wrong about him.",
+        "Я ошибался насчёт него."
+      ]
+    ],
+    "forms": [
+      [
+        "wrongly",
+        "adv",
+        "неправильно, ошибочно"
+      ]
+    ]
+  },
+  {
+    "en": "right",
+    "ru": "правильный; правый; право",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "You're right, it's too late.",
+        "Ты прав, уже слишком поздно."
+      ],
+      [
+        "Is this the right bus for the airport?",
+        "Это нужный автобус до аэропорта?"
+      ],
+      [
+        "Turn right at the end of the street.",
+        "В конце улицы поверните направо."
+      ]
+    ],
+    "forms": [
+      [
+        "rightly",
+        "adv",
+        "справедливо, правильно"
+      ]
+    ]
+  },
+  {
+    "en": "correct",
+    "ru": "правильный, верный; исправлять",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Is this email address correct?",
+        "Этот адрес электронной почты правильный?"
+      ],
+      [
+        "Yes, that's the correct answer. Well done!",
+        "Да, это правильный ответ. Молодец!"
+      ],
+      [
+        "Please correct my mistakes when I speak.",
+        "Пожалуйста, исправляй мои ошибки, когда я говорю."
+      ]
+    ],
+    "forms": [
+      [
+        "correction",
+        "n",
+        "исправление"
+      ],
+      [
+        "correctly",
+        "adv",
+        "правильно"
+      ],
+      [
+        "incorrect",
+        "adj",
+        "неправильный"
+      ]
+    ]
+  },
+  {
+    "en": "special",
+    "ru": "особый, особенный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Today is a special day for us.",
+        "Сегодня для нас особенный день."
+      ],
+      [
+        "Are you doing anything special this weekend?",
+        "Ты делаешь что-нибудь особенное в эти выходные?"
+      ],
+      [
+        "Nothing special, I'm just working this week.",
+        "Ничего особенного, на этой неделе я просто работаю."
+      ]
+    ],
+    "forms": [
+      [
+        "especially",
+        "adv",
+        "особенно"
+      ],
+      [
+        "specially",
+        "adv",
+        "специально"
+      ]
+    ]
+  },
+  {
+    "en": "favourite",
+    "ru": "любимый",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What's your favourite film of all time?",
+        "Какой твой самый любимый фильм?"
+      ],
+      [
+        "Pizza is my favourite food.",
+        "Пицца — моя любимая еда."
+      ],
+      [
+        "This café is my favourite.",
+        "Это моё любимое кафе."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "interesting",
+    "ru": "интересный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "That's an interesting idea for the project.",
+        "Это интересная идея для проекта."
+      ],
+      [
+        "The book wasn't very interesting.",
+        "Книга была не очень интересной."
+      ],
+      [
+        "Is your new job interesting?",
+        "Твоя новая работа интересная?"
+      ]
+    ],
+    "forms": [
+      [
+        "interest",
+        "n",
+        "интерес"
+      ]
+    ]
+  },
+  {
+    "en": "interested",
+    "ru": "заинтересованный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm very interested in history and art.",
+        "Мне очень интересны история и искусство."
+      ],
+      [
+        "Are you interested in this job?",
+        "Тебя интересует эта работа?"
+      ],
+      [
+        "He isn't interested in football.",
+        "Футбол его не интересует."
+      ]
+    ],
+    "forms": [
+      [
+        "interest",
+        "n",
+        "интерес"
+      ]
+    ],
+    "note": "interested in (не interested about); interested — кто интересуется, interesting — что интересно"
+  },
+  {
+    "en": "boring",
+    "ru": "скучный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The meeting was really boring.",
+        "Собрание было очень скучным."
+      ],
+      [
+        "Do you find your job boring?",
+        "Тебе скучно на твоей работе?"
+      ],
+      [
+        "The film wasn't boring at all.",
+        "Фильм был совсем не скучный."
+      ]
+    ],
+    "forms": [
+      [
+        "bored",
+        "adj",
+        "скучающий"
+      ],
+      [
+        "bore",
+        "v",
+        "наскучить"
+      ]
+    ],
+    "note": "I'm bored — мне скучно; I'm boring — я скучный человек"
+  },
+  {
+    "en": "exciting",
+    "ru": "захватывающий, волнующий",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "It was an exciting game.",
+        "Это был захватывающий матч."
+      ],
+      [
+        "Starting a new job is exciting.",
+        "Начинать новую работу волнительно."
+      ],
+      [
+        "Is there anything exciting in the news?",
+        "В новостях есть что-нибудь интересное?"
+      ]
+    ],
+    "forms": [
+      [
+        "excitement",
+        "n",
+        "волнение, восторг"
+      ]
+    ]
+  },
+  {
+    "en": "excited",
+    "ru": "взволнованный (в радостном ожидании)",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm so excited about the trip!",
+        "Я так жду эту поездку!"
+      ],
+      [
+        "The kids were excited to see the sea.",
+        "Дети были в восторге, увидев море."
+      ],
+      [
+        "It's your birthday! Why aren't you excited?",
+        "У тебя день рождения! Почему ты не радуешься?"
+      ]
+    ],
+    "forms": [
+      [
+        "excitement",
+        "n",
+        "волнение, восторг"
+      ]
+    ]
+  },
+  {
+    "en": "afraid",
+    "ru": "испуганный, боящийся",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "My son is afraid of big dogs.",
+        "Мой сын боится больших собак."
+      ],
+      [
+        "Don't be afraid to ask questions.",
+        "Не бойся задавать вопросы."
+      ],
+      [
+        "Sorry, I'm afraid we're closed today.",
+        "Извините, к сожалению, сегодня мы закрыты."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "angry",
+    "ru": "сердитый, злой",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Why are you angry with me?",
+        "Почему ты на меня злишься?"
+      ],
+      [
+        "He was angry about the delay.",
+        "Его разозлила задержка."
+      ],
+      [
+        "Please don't get angry, it was an accident.",
+        "Пожалуйста, не сердись, это вышло случайно."
+      ]
+    ],
+    "forms": [
+      [
+        "anger",
+        "n",
+        "гнев"
+      ],
+      [
+        "angrily",
+        "adv",
+        "сердито"
+      ]
+    ]
+  },
+  {
+    "en": "sad",
+    "ru": "грустный, печальный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I feel a bit sad today.",
+        "Мне сегодня немного грустно."
+      ],
+      [
+        "It's a very sad film.",
+        "Это очень грустный фильм."
+      ],
+      [
+        "Why do you look so sad?",
+        "Почему ты такой грустный?"
+      ]
+    ],
+    "forms": [
+      [
+        "sadness",
+        "n",
+        "грусть"
+      ],
+      [
+        "sadly",
+        "adv",
+        "грустно, к сожалению"
+      ]
+    ]
+  },
+  {
+    "en": "hungry",
+    "ru": "голодный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm really hungry. Let's get something to eat.",
+        "Я очень голоден. Давай перекусим."
+      ],
+      [
+        "Are you hungry? I can make some sandwiches.",
+        "Ты есть хочешь? Могу сделать бутерброды."
+      ],
+      [
+        "I wasn't hungry, so I didn't eat.",
+        "Я не был голоден, поэтому не ел."
+      ]
+    ],
+    "forms": [
+      [
+        "hunger",
+        "n",
+        "голод"
+      ]
+    ]
+  },
+  {
+    "en": "sick",
+    "ru": "больной; тошнит",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I was sick last week.",
+        "На прошлой неделе я болел."
+      ],
+      [
+        "My son is sick, so I'm staying at home.",
+        "Мой сын болеет, поэтому я остаюсь дома."
+      ],
+      [
+        "I feel sick after that fish.",
+        "Меня тошнит после этой рыбы."
+      ]
+    ],
+    "forms": [
+      [
+        "sickness",
+        "n",
+        "болезнь, тошнота"
+      ]
+    ]
+  },
+  {
+    "en": "healthy",
+    "ru": "здоровый, полезный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I try to eat healthy food.",
+        "Я стараюсь есть здоровую пищу."
+      ],
+      [
+        "She looks healthy and happy.",
+        "Она выглядит здоровой и счастливой."
+      ],
+      [
+        "Is this drink healthy, or is it just sugar?",
+        "Этот напиток полезный или это просто сахар?"
+      ]
+    ],
+    "forms": [
+      [
+        "health",
+        "n",
+        "здоровье"
+      ],
+      [
+        "unhealthy",
+        "adj",
+        "нездоровый, вредный"
+      ]
+    ]
+  },
+  {
+    "en": "cold",
+    "ru": "холодный; простуда",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "It's very cold today, so wear a hat.",
+        "Сегодня очень холодно, так что надень шапку."
+      ],
+      [
+        "Is your coffee cold? I can make another one.",
+        "У тебя кофе остыл? Могу сделать ещё."
+      ],
+      [
+        "I've got a bad cold.",
+        "У меня сильная простуда."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "warm",
+    "ru": "тёплый",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "It's warm outside today, let's eat in the garden.",
+        "Сегодня на улице тепло, давай поедим в саду."
+      ],
+      [
+        "Take a warm jacket, it's windy in the mountains.",
+        "Возьми тёплую куртку, в горах ветрено."
+      ],
+      [
+        "The water wasn't warm enough to swim.",
+        "Вода была недостаточно тёплой, чтобы плавать."
+      ]
+    ],
+    "forms": [
+      [
+        "warmth",
+        "n",
+        "тепло"
+      ]
+    ]
+  },
+  {
+    "en": "full",
+    "ru": "полный; сытый",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The bus was full, so I walked.",
+        "Автобус был полный, поэтому я пошёл пешком."
+      ],
+      [
+        "No more, thanks, I'm full.",
+        "Больше не надо, спасибо, я наелся."
+      ],
+      [
+        "Please write your full name.",
+        "Пожалуйста, напишите своё полное имя."
+      ]
+    ],
+    "forms": [
+      [
+        "fully",
+        "adv",
+        "полностью"
+      ]
+    ]
+  },
+  {
+    "en": "careful",
+    "ru": "осторожный, внимательный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Be careful, the floor is wet.",
+        "Осторожно, пол мокрый."
+      ],
+      [
+        "She's a very careful driver.",
+        "Она очень аккуратный водитель."
+      ],
+      [
+        "I wasn't careful enough and broke a glass.",
+        "Я был недостаточно осторожен и разбил стакан."
+      ]
+    ],
+    "forms": [
+      [
+        "care",
+        "n",
+        "забота, уход"
+      ],
+      [
+        "carefully",
+        "adv",
+        "осторожно, внимательно"
+      ],
+      [
+        "careless",
+        "adj",
+        "небрежный, неосторожный"
+      ]
+    ]
+  },
+  {
+    "en": "lucky",
+    "ru": "удачливый, везучий",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "You're lucky to have such good friends.",
+        "Тебе повезло, что у тебя такие хорошие друзья."
+      ],
+      [
+        "Seven is my lucky number.",
+        "Семь — моё счастливое число."
+      ],
+      [
+        "We weren't lucky with the weather.",
+        "Нам не повезло с погодой."
+      ]
+    ],
+    "forms": [
+      [
+        "luck",
+        "n",
+        "удача"
+      ],
+      [
+        "luckily",
+        "adv",
+        "к счастью"
+      ],
+      [
+        "unlucky",
+        "adj",
+        "невезучий"
+      ]
+    ]
+  },
+  {
+    "en": "funny",
+    "ru": "смешной, забавный; странный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "He told a really funny story.",
+        "Он рассказал очень смешную историю."
+      ],
+      [
+        "Stop it, that's not funny!",
+        "Прекрати, это не смешно!"
+      ],
+      [
+        "This milk tastes funny. Is it old?",
+        "У этого молока странный вкус. Оно не испортилось?"
+      ]
+    ],
+    "forms": [
+      [
+        "fun",
+        "n",
+        "веселье, удовольствие"
+      ]
+    ],
+    "note": "funny — смешной; fun — весёлый, приятный: The party was fun (не funny)"
+  },
+  {
+    "en": "strange",
+    "ru": "странный; незнакомый",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "That's strange, the door is open.",
+        "Странно, дверь открыта."
+      ],
+      [
+        "I heard a strange noise last night.",
+        "Ночью я услышал странный шум."
+      ],
+      [
+        "Everything felt strange in the new city.",
+        "В новом городе всё казалось непривычным."
+      ]
+    ],
+    "forms": [
+      [
+        "stranger",
+        "n",
+        "незнакомец"
+      ],
+      [
+        "strangely",
+        "adv",
+        "странно"
+      ]
+    ]
+  },
+  {
+    "en": "terrible",
+    "ru": "ужасный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The weather was terrible on our holiday.",
+        "Во время отпуска погода была ужасной."
+      ],
+      [
+        "I feel terrible about it.",
+        "Мне очень неловко из-за этого."
+      ],
+      [
+        "The food wasn't terrible, just boring.",
+        "Еда была не ужасной, просто скучной."
+      ]
+    ],
+    "forms": [
+      [
+        "terribly",
+        "adv",
+        "ужасно, очень"
+      ]
+    ]
+  },
+  {
+    "en": "wonderful",
+    "ru": "замечательный, чудесный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We had a wonderful time in Greece.",
+        "Мы замечательно провели время в Греции."
+      ],
+      [
+        "A picnic on Sunday? What a wonderful idea!",
+        "Пикник в воскресенье? Какая чудесная идея!"
+      ],
+      [
+        "Isn't the view from this window wonderful?",
+        "Правда, вид из этого окна чудесный?"
+      ]
+    ],
+    "forms": [
+      [
+        "wonder",
+        "n",
+        "чудо, удивление"
+      ]
+    ]
+  },
+  {
+    "en": "beautiful",
+    "ru": "красивый, прекрасный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What a beautiful day! Let's go to the park.",
+        "Какой прекрасный день! Пойдём в парк."
+      ],
+      [
+        "She has a beautiful voice.",
+        "У неё красивый голос."
+      ],
+      [
+        "The old town was beautiful.",
+        "Старый город был красивым."
+      ]
+    ],
+    "forms": [
+      [
+        "beauty",
+        "n",
+        "красота"
+      ],
+      [
+        "beautifully",
+        "adv",
+        "красиво"
+      ]
+    ]
+  },
+  {
+    "en": "delicious",
+    "ru": "очень вкусный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "This soup is delicious! Can I have the recipe?",
+        "Этот суп очень вкусный! Дашь рецепт?"
+      ],
+      [
+        "We had a delicious dinner.",
+        "У нас был очень вкусный ужин."
+      ],
+      [
+        "The cake wasn't as delicious as last time.",
+        "Торт был не таким вкусным, как в прошлый раз."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "famous",
+    "ru": "известный, знаменитый",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "This café is famous for its cakes.",
+        "Это кафе известно своими пирожными."
+      ],
+      [
+        "Is he famous in your country?",
+        "Он знаменит у вас в стране?"
+      ],
+      [
+        "She wants to be famous.",
+        "Она хочет стать знаменитой."
+      ]
+    ],
+    "forms": [
+      [
+        "fame",
+        "n",
+        "слава"
+      ]
+    ]
+  }
+]

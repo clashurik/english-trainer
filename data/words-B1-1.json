@@ -1,0 +1,2997 @@
+[
+  {
+    "en": "available",
+    "ru": "доступный, свободный, в наличии",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Is this room available for next weekend?",
+        "Этот номер свободен на следующие выходные?"
+      ],
+      [
+        "Sorry, the manager isn't available right now.",
+        "Извините, менеджер сейчас занят."
+      ],
+      [
+        "The new model will be available in shops next month.",
+        "Новая модель появится в магазинах в следующем месяце."
+      ]
+    ],
+    "forms": [
+      [
+        "availability",
+        "n",
+        "наличие, доступность"
+      ],
+      [
+        "unavailable",
+        "adj",
+        "недоступный, занятый"
+      ]
+    ],
+    "note": "available — свободный (о человеке, времени) или есть в наличии; «доступный по цене» — affordable"
+  },
+  {
+    "en": "decision",
+    "ru": "решение",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "It was a difficult decision, but I'm happy with it.",
+        "Это было трудное решение, но я им доволен."
+      ],
+      [
+        "Have you made a decision about the job offer?",
+        "Ты уже решил насчёт предложения о работе?"
+      ],
+      [
+        "We don't need to make a final decision today.",
+        "Нам не нужно принимать окончательное решение сегодня."
+      ]
+    ],
+    "forms": [
+      [
+        "decide",
+        "v",
+        "решать"
+      ],
+      [
+        "decisive",
+        "adj",
+        "решительный"
+      ]
+    ],
+    "note": "make a decision (не do a decision) — принять решение"
+  },
+  {
+    "en": "relationship",
+    "ru": "отношения, связь",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "They've been in a relationship for three years.",
+        "Они встречаются уже три года."
+      ],
+      [
+        "I have a good relationship with my boss.",
+        "У меня хорошие отношения с начальником."
+      ],
+      [
+        "Is there a relationship between stress and sleep?",
+        "Есть ли связь между стрессом и сном?"
+      ]
+    ],
+    "forms": [
+      [
+        "relate",
+        "v",
+        "быть связанным, относиться"
+      ],
+      [
+        "related",
+        "adj",
+        "связанный, родственный"
+      ],
+      [
+        "relative",
+        "n",
+        "родственник"
+      ]
+    ]
+  },
+  {
+    "en": "definitely",
+    "ru": "определённо, точно, обязательно",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'll definitely call you tomorrow.",
+        "Я обязательно позвоню тебе завтра."
+      ],
+      [
+        "This is definitely the best pizza in town.",
+        "Это определённо лучшая пицца в городе."
+      ],
+      [
+        "Are you coming to the party? — Definitely!",
+        "Ты придёшь на вечеринку? — Конечно!"
+      ]
+    ],
+    "forms": [
+      [
+        "definite",
+        "adj",
+        "определённый, точный"
+      ],
+      [
+        "define",
+        "v",
+        "определять"
+      ],
+      [
+        "definition",
+        "n",
+        "определение"
+      ]
+    ]
+  },
+  {
+    "en": "completely",
+    "ru": "полностью, совершенно",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I completely forgot about the meeting.",
+        "Я совершенно забыл о встрече."
+      ],
+      [
+        "The shop has completely changed since last year.",
+        "Магазин полностью изменился с прошлого года."
+      ],
+      [
+        "I'm not completely sure it's a good idea.",
+        "Я не совсем уверен, что это хорошая идея."
+      ]
+    ],
+    "forms": [
+      [
+        "complete",
+        "adj",
+        "полный, законченный"
+      ],
+      [
+        "complete",
+        "v",
+        "завершать, заполнять (анкету)"
+      ]
+    ]
+  },
+  {
+    "en": "particularly",
+    "ru": "особенно, в частности",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'm not particularly hungry right now.",
+        "Я сейчас не особо голоден."
+      ],
+      [
+        "The food was good, particularly the dessert.",
+        "Еда была хорошей, особенно десерт."
+      ],
+      [
+        "This job is particularly difficult for beginners.",
+        "Эта работа особенно трудна для новичков."
+      ]
+    ],
+    "forms": [
+      [
+        "particular",
+        "adj",
+        "особый, конкретный"
+      ]
+    ]
+  },
+  {
+    "en": "currently",
+    "ru": "в настоящее время, сейчас",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'm currently working from home.",
+        "Сейчас я работаю из дома."
+      ],
+      [
+        "This item is currently out of stock.",
+        "Этого товара сейчас нет в наличии."
+      ],
+      [
+        "Where are you currently living?",
+        "Где ты сейчас живёшь?"
+      ]
+    ],
+    "forms": [
+      [
+        "current",
+        "adj",
+        "текущий, нынешний"
+      ]
+    ],
+    "note": "currently — «в настоящее время»; не путать с actually — это «на самом деле» (ложный друг слова «актуально»)"
+  },
+  {
+    "en": "immediately",
+    "ru": "немедленно, сразу",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Please call me immediately when you arrive.",
+        "Пожалуйста, позвони мне сразу, как приедешь."
+      ],
+      [
+        "I didn't recognise her immediately.",
+        "Я не сразу её узнал."
+      ],
+      [
+        "The doctor told me to stop smoking immediately.",
+        "Врач велел мне немедленно бросить курить."
+      ]
+    ],
+    "forms": [
+      [
+        "immediate",
+        "adj",
+        "немедленный"
+      ]
+    ]
+  },
+  {
+    "en": "generally",
+    "ru": "обычно, в целом",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I generally get up at seven on weekdays.",
+        "По будням я обычно встаю в семь."
+      ],
+      [
+        "Generally speaking, people here are very friendly.",
+        "Вообще говоря, люди здесь очень дружелюбные."
+      ],
+      [
+        "Were the reviews generally positive?",
+        "Отзывы были в целом положительные?"
+      ]
+    ],
+    "forms": [
+      [
+        "general",
+        "adj",
+        "общий"
+      ]
+    ]
+  },
+  {
+    "en": "normally",
+    "ru": "обычно, нормально",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I normally have coffee for breakfast.",
+        "Обычно я пью кофе на завтрак."
+      ],
+      [
+        "What time do you normally finish work?",
+        "Во сколько ты обычно заканчиваешь работу?"
+      ],
+      [
+        "The lift is working normally again.",
+        "Лифт снова работает нормально."
+      ]
+    ],
+    "forms": [
+      [
+        "normal",
+        "adj",
+        "нормальный, обычный"
+      ]
+    ]
+  },
+  {
+    "en": "obviously",
+    "ru": "очевидно, конечно, явно",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Obviously, I can't tell you the answer.",
+        "Конечно, я не могу сказать тебе ответ."
+      ],
+      [
+        "She was obviously tired after the flight.",
+        "Она явно устала после перелёта."
+      ],
+      [
+        "He obviously didn't read my email.",
+        "Он явно не прочитал моё письмо."
+      ]
+    ],
+    "forms": [
+      [
+        "obvious",
+        "adj",
+        "очевидный"
+      ]
+    ]
+  },
+  {
+    "en": "honestly",
+    "ru": "честно, честно говоря",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Honestly, I didn't like the film.",
+        "Честно говоря, фильм мне не понравился."
+      ],
+      [
+        "Please answer honestly — do I look tired?",
+        "Ответь честно — я выгляжу уставшим?"
+      ],
+      [
+        "I honestly don't know where he is.",
+        "Я правда не знаю, где он."
+      ]
+    ],
+    "forms": [
+      [
+        "honest",
+        "adj",
+        "честный"
+      ],
+      [
+        "honesty",
+        "n",
+        "честность"
+      ],
+      [
+        "dishonest",
+        "adj",
+        "нечестный"
+      ]
+    ]
+  },
+  {
+    "en": "totally",
+    "ru": "полностью, совершенно",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I totally agree with you.",
+        "Я полностью с тобой согласен."
+      ],
+      [
+        "The two cities are totally different.",
+        "Эти два города совершенно разные."
+      ],
+      [
+        "Sorry, I totally forgot your birthday!",
+        "Прости, я совсем забыл про твой день рождения!"
+      ]
+    ],
+    "forms": [
+      [
+        "total",
+        "adj",
+        "общий, полный"
+      ],
+      [
+        "total",
+        "n",
+        "итог, общая сумма"
+      ]
+    ]
+  },
+  {
+    "en": "hopefully",
+    "ru": "надеюсь, будем надеяться",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Hopefully, the weather will be better tomorrow.",
+        "Надеюсь, завтра погода будет лучше."
+      ],
+      [
+        "The parcel will hopefully arrive on Monday.",
+        "Будем надеяться, посылка придёт в понедельник."
+      ],
+      [
+        "Will it be ready by Friday? — Hopefully.",
+        "Это будет готово к пятнице? — Надеюсь."
+      ]
+    ],
+    "forms": [
+      [
+        "hope",
+        "v",
+        "надеяться"
+      ],
+      [
+        "hopeful",
+        "adj",
+        "полный надежд"
+      ],
+      [
+        "hopeless",
+        "adj",
+        "безнадёжный"
+      ]
+    ]
+  },
+  {
+    "en": "absolutely",
+    "ru": "абсолютно, совершенно; конечно",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I think you're absolutely right.",
+        "Думаю, ты совершенно прав."
+      ],
+      [
+        "Can I borrow your charger? — Absolutely!",
+        "Можно взять твою зарядку? — Конечно!"
+      ],
+      [
+        "There's absolutely nothing to eat in the fridge.",
+        "В холодильнике совершенно нечего есть."
+      ]
+    ],
+    "forms": [
+      [
+        "absolute",
+        "adj",
+        "абсолютный"
+      ]
+    ]
+  },
+  {
+    "en": "require",
+    "ru": "требовать, нуждаться",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "This job requires good English.",
+        "Для этой работы требуется хороший английский."
+      ],
+      [
+        "Is a visa required for this country?",
+        "Нужна ли виза в эту страну?"
+      ],
+      [
+        "The recipe doesn't require any special equipment.",
+        "Для рецепта не нужно никакого особого оборудования."
+      ]
+    ],
+    "forms": [
+      [
+        "requirement",
+        "n",
+        "требование"
+      ]
+    ]
+  },
+  {
+    "en": "involve",
+    "ru": "включать (в себя), вовлекать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "What does the job involve?",
+        "В чём заключается эта работа?"
+      ],
+      [
+        "The plan involves moving to another city.",
+        "План предполагает переезд в другой город."
+      ],
+      [
+        "I don't want to get involved in their argument.",
+        "Я не хочу вмешиваться в их спор."
+      ]
+    ],
+    "forms": [
+      [
+        "involvement",
+        "n",
+        "участие, причастность"
+      ],
+      [
+        "involved",
+        "adj",
+        "вовлечённый, причастный"
+      ]
+    ]
+  },
+  {
+    "en": "recommend",
+    "ru": "рекомендовать, советовать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Can you recommend a good restaurant near here?",
+        "Можешь посоветовать хороший ресторан поблизости?"
+      ],
+      [
+        "I'd recommend booking tickets in advance.",
+        "Я бы посоветовал забронировать билеты заранее."
+      ],
+      [
+        "The doctor recommended that I rest for a week.",
+        "Врач рекомендовал мне неделю отдохнуть."
+      ]
+    ],
+    "forms": [
+      [
+        "recommendation",
+        "n",
+        "рекомендация, совет"
+      ]
+    ],
+    "note": "recommend doing / recommend that… (не recommend to do)"
+  },
+  {
+    "en": "reduce",
+    "ru": "сокращать, снижать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'm trying to reduce my screen time.",
+        "Я стараюсь меньше сидеть в телефоне."
+      ],
+      [
+        "All the jackets are reduced by 30 per cent.",
+        "Все куртки уценены на 30 процентов."
+      ],
+      [
+        "Does exercise really reduce stress?",
+        "Спорт правда снижает стресс?"
+      ]
+    ],
+    "forms": [
+      [
+        "reduction",
+        "n",
+        "сокращение, снижение"
+      ]
+    ]
+  },
+  {
+    "en": "protect",
+    "ru": "защищать, охранять",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Sunglasses protect your eyes from the sun.",
+        "Солнечные очки защищают глаза от солнца."
+      ],
+      [
+        "How can I protect my phone from viruses?",
+        "Как защитить телефон от вирусов?"
+      ],
+      [
+        "She always tried to protect her younger brother.",
+        "Она всегда старалась защищать младшего брата."
+      ]
+    ],
+    "forms": [
+      [
+        "protection",
+        "n",
+        "защита"
+      ],
+      [
+        "protective",
+        "adj",
+        "защитный"
+      ]
+    ]
+  },
+  {
+    "en": "deliver",
+    "ru": "доставлять",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "They deliver pizza until midnight.",
+        "Они доставляют пиццу до полуночи."
+      ],
+      [
+        "Has my parcel been delivered yet?",
+        "Мою посылку уже доставили?"
+      ],
+      [
+        "The courier didn't deliver it to the right address.",
+        "Курьер доставил её не по тому адресу."
+      ]
+    ],
+    "forms": [
+      [
+        "delivery",
+        "n",
+        "доставка"
+      ]
+    ]
+  },
+  {
+    "en": "cancel",
+    "ru": "отменять",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Our flight was cancelled because of the storm.",
+        "Наш рейс отменили из-за шторма."
+      ],
+      [
+        "Can I cancel my order online?",
+        "Можно отменить заказ онлайн?"
+      ],
+      [
+        "Don't cancel the meeting, I'll be there.",
+        "Не отменяй встречу, я приду."
+      ]
+    ],
+    "forms": [
+      [
+        "cancellation",
+        "n",
+        "отмена"
+      ]
+    ]
+  },
+  {
+    "en": "confirm",
+    "ru": "подтверждать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Could you confirm your email address, please?",
+        "Не могли бы вы подтвердить свой адрес электронной почты?"
+      ],
+      [
+        "I've just confirmed the hotel booking.",
+        "Я только что подтвердил бронь в отеле."
+      ],
+      [
+        "They haven't confirmed the date yet.",
+        "Они ещё не подтвердили дату."
+      ]
+    ],
+    "forms": [
+      [
+        "confirmation",
+        "n",
+        "подтверждение"
+      ]
+    ]
+  },
+  {
+    "en": "remove",
+    "ru": "удалять, убирать, снимать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Please remove your shoes before coming in.",
+        "Пожалуйста, снимите обувь перед входом."
+      ],
+      [
+        "How do I remove this app from my phone?",
+        "Как удалить это приложение с телефона?"
+      ],
+      [
+        "This spray removes coffee stains easily.",
+        "Этот спрей легко выводит пятна от кофе."
+      ]
+    ],
+    "forms": [
+      [
+        "removal",
+        "n",
+        "удаление, вывоз"
+      ]
+    ]
+  },
+  {
+    "en": "refuse",
+    "ru": "отказываться, отказывать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He refused to answer my question.",
+        "Он отказался отвечать на мой вопрос."
+      ],
+      [
+        "The bank refused my loan application.",
+        "Банк отказал мне в кредите."
+      ],
+      [
+        "Why did you refuse their offer?",
+        "Почему ты отказался от их предложения?"
+      ]
+    ],
+    "forms": [
+      [
+        "refusal",
+        "n",
+        "отказ"
+      ]
+    ]
+  },
+  {
+    "en": "ignore",
+    "ru": "игнорировать, не обращать внимания",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Just ignore him, he's in a bad mood.",
+        "Не обращай на него внимания, он не в духе."
+      ],
+      [
+        "Why are you ignoring my messages?",
+        "Почему ты игнорируешь мои сообщения?"
+      ],
+      [
+        "I ignored the warning and got a fine.",
+        "Я проигнорировал предупреждение и получил штраф."
+      ]
+    ],
+    "forms": [
+      [
+        "ignorance",
+        "n",
+        "незнание, невежество"
+      ],
+      [
+        "ignorant",
+        "adj",
+        "невежественный"
+      ]
+    ]
+  },
+  {
+    "en": "suppose",
+    "ru": "полагать, предполагать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I suppose you're right about that.",
+        "Пожалуй, тут ты прав."
+      ],
+      [
+        "You're supposed to check in two hours before the flight.",
+        "Регистрироваться нужно за два часа до вылета."
+      ],
+      [
+        "Do you suppose they'll arrive on time?",
+        "Как думаешь, они приедут вовремя?"
+      ]
+    ],
+    "forms": [
+      [
+        "supposedly",
+        "adv",
+        "якобы, предположительно"
+      ]
+    ],
+    "note": "be supposed to do — «должен, полагается»: I'm supposed to be at work."
+  },
+  {
+    "en": "assume",
+    "ru": "предполагать, считать (само собой)",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I assumed you already knew about it.",
+        "Я думал, ты уже об этом знаешь."
+      ],
+      [
+        "Don't assume everyone speaks English.",
+        "Не думай, что все говорят по-английски."
+      ],
+      [
+        "Let's assume the trip costs about 500 pounds.",
+        "Допустим, поездка стоит около 500 фунтов."
+      ]
+    ],
+    "forms": [
+      [
+        "assumption",
+        "n",
+        "предположение"
+      ]
+    ]
+  },
+  {
+    "en": "rely",
+    "ru": "полагаться, рассчитывать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "You can always rely on me.",
+        "Ты всегда можешь на меня положиться."
+      ],
+      [
+        "Many people rely on their phones for everything.",
+        "Многие во всём полагаются на свои телефоны."
+      ],
+      [
+        "I wouldn't rely on the bus — it's often late.",
+        "Я бы не рассчитывал на автобус — он часто опаздывает."
+      ]
+    ],
+    "forms": [
+      [
+        "reliable",
+        "adj",
+        "надёжный"
+      ],
+      [
+        "reliability",
+        "n",
+        "надёжность"
+      ]
+    ],
+    "note": "rely on (не rely to / from)"
+  },
+  {
+    "en": "attend",
+    "ru": "посещать, присутствовать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Over 200 people attended the conference.",
+        "На конференции было больше 200 человек."
+      ],
+      [
+        "Do you attend any evening classes?",
+        "Ты ходишь на какие-нибудь вечерние курсы?"
+      ],
+      [
+        "I couldn't attend the meeting yesterday.",
+        "Я не смог прийти на вчерашнюю встречу."
+      ]
+    ],
+    "forms": [
+      [
+        "attendance",
+        "n",
+        "посещаемость, присутствие"
+      ]
+    ],
+    "note": "attend a meeting — без предлога (не attend to a meeting)"
+  },
+  {
+    "en": "affect",
+    "ru": "влиять, затрагивать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Lack of sleep affects your concentration.",
+        "Недосып влияет на концентрацию."
+      ],
+      [
+        "Were you affected by the train strike?",
+        "Тебя коснулась забастовка на железной дороге?"
+      ],
+      [
+        "The rain didn't affect our plans.",
+        "Дождь не повлиял на наши планы."
+      ]
+    ],
+    "forms": [],
+    "note": "affect sth — без on (не affect on); effect — существительное «эффект»"
+  },
+  {
+    "en": "damage",
+    "ru": "повреждать; ущерб, повреждение",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The storm damaged several cars in our street.",
+        "Буря повредила несколько машин на нашей улице."
+      ],
+      [
+        "Was there any damage to the car?",
+        "Машина как-то пострадала?"
+      ],
+      [
+        "Too much sun can damage your skin.",
+        "Слишком много солнца может повредить кожу."
+      ]
+    ],
+    "forms": [],
+    "note": "ущерб — damage (неисчисл.); damages — компенсация по суду"
+  },
+  {
+    "en": "suffer",
+    "ru": "страдать, пострадать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "My dad suffers from back pain.",
+        "Мой папа страдает от болей в спине."
+      ],
+      [
+        "Did you suffer a lot after the operation?",
+        "Ты сильно мучился после операции?"
+      ],
+      [
+        "Small shops suffered during the lockdown.",
+        "Небольшие магазины пострадали во время локдауна."
+      ]
+    ],
+    "forms": [
+      [
+        "suffering",
+        "n",
+        "страдание"
+      ]
+    ],
+    "note": "suffer from (не suffer of)"
+  },
+  {
+    "en": "deny",
+    "ru": "отрицать; отказывать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He denied taking the money.",
+        "Он отрицал, что взял деньги."
+      ],
+      [
+        "Do you deny that you were there?",
+        "Вы отрицаете, что были там?"
+      ],
+      [
+        "She was denied a visa.",
+        "Ей отказали в визе."
+      ]
+    ],
+    "forms": [
+      [
+        "denial",
+        "n",
+        "отрицание, отказ"
+      ]
+    ]
+  },
+  {
+    "en": "insist",
+    "ru": "настаивать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "She insisted on paying for dinner.",
+        "Она настояла на том, чтобы заплатить за ужин."
+      ],
+      [
+        "If you insist, I'll come with you.",
+        "Если ты настаиваешь, я пойду с тобой."
+      ],
+      [
+        "Why do you always insist that you're right?",
+        "Почему ты всегда настаиваешь, что прав?"
+      ]
+    ],
+    "forms": [
+      [
+        "insistent",
+        "adj",
+        "настойчивый"
+      ]
+    ],
+    "note": "insist on doing (не insist to do)"
+  },
+  {
+    "en": "hesitate",
+    "ru": "колебаться, сомневаться",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Don't hesitate to call me if you need help.",
+        "Не стесняйся звонить мне, если нужна помощь."
+      ],
+      [
+        "She hesitated for a moment before answering.",
+        "Она на секунду замялась, прежде чем ответить."
+      ],
+      [
+        "Why did you hesitate? It was a great offer.",
+        "Почему ты сомневался? Это было отличное предложение."
+      ]
+    ],
+    "forms": [
+      [
+        "hesitation",
+        "n",
+        "колебание, сомнение"
+      ]
+    ],
+    "note": "Please don't hesitate to contact me — вежливая фраза в письмах: «обращайтесь»"
+  },
+  {
+    "en": "persuade",
+    "ru": "убеждать, уговаривать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I persuaded him to see a doctor.",
+        "Я уговорил его сходить к врачу."
+      ],
+      [
+        "Can you persuade your boss to give you a day off?",
+        "Ты можешь уговорить начальника дать тебе выходной?"
+      ],
+      [
+        "She wasn't easy to persuade.",
+        "Её было нелегко убедить."
+      ]
+    ],
+    "forms": [
+      [
+        "persuasion",
+        "n",
+        "убеждение, уговоры"
+      ],
+      [
+        "persuasive",
+        "adj",
+        "убедительный"
+      ]
+    ]
+  },
+  {
+    "en": "recover",
+    "ru": "выздоравливать, восстанавливать(ся)",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "It took me two weeks to recover from the flu.",
+        "Мне понадобилось две недели, чтобы оправиться от гриппа."
+      ],
+      [
+        "Has your mum recovered after the operation?",
+        "Твоя мама восстановилась после операции?"
+      ],
+      [
+        "I couldn't recover the deleted photos.",
+        "Мне не удалось восстановить удалённые фото."
+      ]
+    ],
+    "forms": [
+      [
+        "recovery",
+        "n",
+        "выздоровление, восстановление"
+      ]
+    ]
+  },
+  {
+    "en": "connect",
+    "ru": "соединять, подключать(ся)",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I can't connect to the Wi-Fi.",
+        "Я не могу подключиться к вайфаю."
+      ],
+      [
+        "Connect the printer to your laptop first.",
+        "Сначала подключи принтер к ноутбуку."
+      ],
+      [
+        "The two buildings are connected by a bridge.",
+        "Два здания соединены мостом."
+      ]
+    ],
+    "forms": [
+      [
+        "connection",
+        "n",
+        "связь, соединение"
+      ]
+    ]
+  },
+  {
+    "en": "prove",
+    "ru": "доказывать; оказываться",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Can you prove that you paid?",
+        "Ты можешь доказать, что заплатил?"
+      ],
+      [
+        "The new system has proved very useful.",
+        "Новая система оказалась очень полезной."
+      ],
+      [
+        "I wanted to prove them wrong.",
+        "Я хотел доказать, что они неправы."
+      ]
+    ],
+    "irr": "proved|proved/proven",
+    "forms": [
+      [
+        "proof",
+        "n",
+        "доказательство"
+      ]
+    ]
+  },
+  {
+    "en": "react",
+    "ru": "реагировать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "How did she react when you told her?",
+        "Как она отреагировала, когда ты ей сказал?"
+      ],
+      [
+        "My skin reacts badly to cheap cosmetics.",
+        "Моя кожа плохо реагирует на дешёвую косметику."
+      ],
+      [
+        "Don't react — just stay calm.",
+        "Не реагируй — просто сохраняй спокойствие."
+      ]
+    ],
+    "forms": [
+      [
+        "reaction",
+        "n",
+        "реакция"
+      ]
+    ]
+  },
+  {
+    "en": "respond",
+    "ru": "отвечать, реагировать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "She hasn't responded to my email yet.",
+        "Она ещё не ответила на моё письмо."
+      ],
+      [
+        "How did the team respond to the changes?",
+        "Как команда отреагировала на изменения?"
+      ],
+      [
+        "Please respond within 48 hours.",
+        "Пожалуйста, ответьте в течение 48 часов."
+      ]
+    ],
+    "forms": [
+      [
+        "response",
+        "n",
+        "ответ, реакция"
+      ],
+      [
+        "responsive",
+        "adj",
+        "отзывчивый, быстро реагирующий"
+      ]
+    ]
+  },
+  {
+    "en": "determine",
+    "ru": "определять, устанавливать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The weather will determine where we go.",
+        "Куда мы поедем, будет зависеть от погоды."
+      ],
+      [
+        "Doctors haven't determined the cause yet.",
+        "Врачи пока не установили причину."
+      ],
+      [
+        "She was determined to pass the exam.",
+        "Она была полна решимости сдать экзамен."
+      ]
+    ],
+    "forms": [
+      [
+        "determined",
+        "adj",
+        "решительный, полный решимости"
+      ],
+      [
+        "determination",
+        "n",
+        "решимость"
+      ]
+    ]
+  },
+  {
+    "en": "ensure",
+    "ru": "обеспечивать, гарантировать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Please ensure that all windows are closed.",
+        "Пожалуйста, проследите, чтобы все окна были закрыты."
+      ],
+      [
+        "How can we ensure everyone gets the message?",
+        "Как нам сделать так, чтобы все получили сообщение?"
+      ],
+      [
+        "Good planning ensures a stress-free trip.",
+        "Хорошее планирование гарантирует поездку без стресса."
+      ]
+    ],
+    "forms": [],
+    "note": "ensure — обеспечить, проследить; insure — застраховать"
+  },
+  {
+    "en": "maintain",
+    "ru": "поддерживать, обслуживать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "It's hard to maintain a healthy diet when you travel.",
+        "В поездках трудно придерживаться здорового питания."
+      ],
+      [
+        "Who maintains the garden at your building?",
+        "Кто ухаживает за садом у вашего дома?"
+      ],
+      [
+        "The car hasn't been maintained properly.",
+        "За машиной не следили как следует."
+      ]
+    ],
+    "forms": [
+      [
+        "maintenance",
+        "n",
+        "обслуживание, техобслуживание"
+      ]
+    ]
+  },
+  {
+    "en": "contain",
+    "ru": "содержать, вмещать",
+    "pos": "v",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Does this soup contain nuts?",
+        "В этом супе есть орехи?"
+      ],
+      [
+        "The box contained old photos and letters.",
+        "В коробке были старые фотографии и письма."
+      ],
+      [
+        "This drink doesn't contain any sugar.",
+        "Этот напиток не содержит сахара."
+      ]
+    ],
+    "forms": [
+      [
+        "container",
+        "n",
+        "контейнер, ёмкость"
+      ]
+    ]
+  },
+  {
+    "en": "limit",
+    "ru": "ограничение, предел; ограничивать",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "What's the speed limit on this road?",
+        "Какое ограничение скорости на этой дороге?"
+      ],
+      [
+        "There's no age limit for this course.",
+        "У этого курса нет ограничений по возрасту."
+      ],
+      [
+        "Try to limit your coffee to two cups a day.",
+        "Старайся пить не больше двух чашек кофе в день."
+      ]
+    ],
+    "forms": [
+      [
+        "limited",
+        "adj",
+        "ограниченный"
+      ]
+    ]
+  },
+  {
+    "en": "risk",
+    "ru": "риск; рисковать",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Smoking increases the risk of heart disease.",
+        "Курение повышает риск сердечных заболеваний."
+      ],
+      [
+        "Is it worth the risk?",
+        "Стоит ли рисковать?"
+      ],
+      [
+        "I don't want to risk losing my job.",
+        "Не хочу рисковать работой."
+      ]
+    ],
+    "forms": [
+      [
+        "risky",
+        "adj",
+        "рискованный"
+      ]
+    ]
+  },
+  {
+    "en": "benefit",
+    "ru": "польза, выгода; пособие",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "What are the benefits of working from home?",
+        "Какие плюсы у работы из дома?"
+      ],
+      [
+        "The new rules will benefit small businesses.",
+        "Новые правила пойдут на пользу малому бизнесу."
+      ],
+      [
+        "He's been on benefits since he lost his job.",
+        "Он живёт на пособие с тех пор, как потерял работу."
+      ]
+    ],
+    "forms": [
+      [
+        "beneficial",
+        "adj",
+        "полезный, выгодный"
+      ]
+    ]
+  },
+  {
+    "en": "amount",
+    "ru": "количество, сумма",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I spend a huge amount of time on my phone.",
+        "Я провожу огромное количество времени в телефоне."
+      ],
+      [
+        "What's the total amount on the bill?",
+        "Какая общая сумма в счёте?"
+      ],
+      [
+        "I didn't expect such a large amount of work.",
+        "Я не ожидал такого объёма работы."
+      ]
+    ],
+    "forms": [],
+    "note": "amount of + неисчисл. (money, time); number of + исчисл. (people, cars)"
+  },
+  {
+    "en": "access",
+    "ru": "доступ; получать доступ",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Do you have access to the internet at home?",
+        "У тебя дома есть доступ к интернету?"
+      ],
+      [
+        "Only staff have access to this room.",
+        "Доступ в эту комнату есть только у сотрудников."
+      ],
+      [
+        "I can't access my account.",
+        "Я не могу зайти в свой аккаунт."
+      ]
+    ],
+    "forms": [
+      [
+        "accessible",
+        "adj",
+        "доступный"
+      ]
+    ]
+  },
+  {
+    "en": "approach",
+    "ru": "подход; приближаться",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "We need a different approach to this problem.",
+        "Нам нужен другой подход к этой проблеме."
+      ],
+      [
+        "What's your approach to learning languages?",
+        "Как ты подходишь к изучению языков?"
+      ],
+      [
+        "The train is now approaching the station.",
+        "Поезд подходит к станции."
+      ]
+    ],
+    "forms": [
+      [
+        "approachable",
+        "adj",
+        "доступный, открытый (о человеке)"
+      ]
+    ]
+  },
+  {
+    "en": "aspect",
+    "ru": "аспект, сторона",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Money is an important aspect of any job.",
+        "Деньги — важная сторона любой работы."
+      ],
+      [
+        "Which aspect of the course did you like most?",
+        "Что тебе больше всего понравилось в курсе?"
+      ],
+      [
+        "Don't forget the practical aspects of moving abroad.",
+        "Не забывай о практической стороне переезда за границу."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "career",
+    "ru": "карьера, профессия",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "She wants a career in medicine.",
+        "Она хочет сделать карьеру в медицине."
+      ],
+      [
+        "Have you ever thought about changing careers?",
+        "Ты когда-нибудь думал о смене профессии?"
+      ],
+      [
+        "His football career didn't last long.",
+        "Его футбольная карьера длилась недолго."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "comment",
+    "ru": "комментарий, замечание; комментировать",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Thanks for your comments on my report.",
+        "Спасибо за замечания по моему отчёту."
+      ],
+      [
+        "He made a strange comment about my new haircut.",
+        "Он как-то странно отозвался о моей новой стрижке."
+      ],
+      [
+        "She didn't want to comment on the situation.",
+        "Она не захотела комментировать ситуацию."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "conflict",
+    "ru": "конфликт, противоречие",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "There's always conflict between my brother and my dad.",
+        "Между моим братом и отцом постоянные конфликты."
+      ],
+      [
+        "How do you deal with conflict at work?",
+        "Как ты справляешься с конфликтами на работе?"
+      ],
+      [
+        "We had a small conflict over money last year.",
+        "В прошлом году у нас был небольшой конфликт из-за денег."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "crisis",
+    "ru": "кризис (мн. ч. crises)",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The company is going through a financial crisis.",
+        "Компания переживает финансовый кризис."
+      ],
+      [
+        "What would you do in a crisis?",
+        "Что бы ты делал в критической ситуации?"
+      ],
+      [
+        "It's not a crisis — we just need more time.",
+        "Это не катастрофа — нам просто нужно больше времени."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "current",
+    "ru": "текущий, нынешний; течение",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Could you write your current address here?",
+        "Не могли бы вы написать здесь свой нынешний адрес?"
+      ],
+      [
+        "My current job is quite boring.",
+        "Моя нынешняя работа довольно скучная."
+      ],
+      [
+        "The current is very strong here, so don't swim.",
+        "Течение здесь очень сильное, так что не плавай."
+      ]
+    ],
+    "forms": [
+      [
+        "currently",
+        "adv",
+        "в настоящее время"
+      ],
+      [
+        "currency",
+        "n",
+        "валюта"
+      ]
+    ]
+  },
+  {
+    "en": "debt",
+    "ru": "долг",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He's in debt after buying a new car.",
+        "После покупки новой машины он в долгах."
+      ],
+      [
+        "How long will it take to pay off your debts?",
+        "Сколько времени уйдёт, чтобы выплатить долги?"
+      ],
+      [
+        "I don't want to get into debt.",
+        "Не хочу влезать в долги."
+      ]
+    ],
+    "forms": [],
+    "note": "b не произносится: [det]"
+  },
+  {
+    "en": "deadline",
+    "ru": "крайний срок, дедлайн",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The deadline for the project is Friday.",
+        "Срок сдачи проекта — пятница."
+      ],
+      [
+        "Did you meet the deadline?",
+        "Ты успел к сроку?"
+      ],
+      [
+        "We missed the deadline by two days.",
+        "Мы пропустили срок на два дня."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "disease",
+    "ru": "болезнь, заболевание",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Heart disease is a very common problem.",
+        "Болезни сердца — очень распространённая проблема."
+      ],
+      [
+        "Is this disease dangerous for children?",
+        "Эта болезнь опасна для детей?"
+      ],
+      [
+        "Washing your hands helps prevent disease.",
+        "Мытьё рук помогает предотвратить болезни."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "distance",
+    "ru": "расстояние",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "What's the distance from here to the airport?",
+        "Какое расстояние отсюда до аэропорта?"
+      ],
+      [
+        "The hotel is within walking distance of the beach.",
+        "От отеля можно дойти пешком до пляжа."
+      ],
+      [
+        "We could see the mountains in the distance.",
+        "Вдали виднелись горы."
+      ]
+    ],
+    "forms": [
+      [
+        "distant",
+        "adj",
+        "далёкий"
+      ]
+    ]
+  },
+  {
+    "en": "duty",
+    "ru": "обязанность, долг; пошлина",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "It's your duty to tell the truth.",
+        "Твой долг — сказать правду."
+      ],
+      [
+        "Which doctor is on duty tonight?",
+        "Какой врач сегодня дежурит?"
+      ],
+      [
+        "You can buy perfume duty-free at the airport.",
+        "В аэропорту можно купить духи без пошлины."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "effective",
+    "ru": "эффективный, действенный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "This medicine is very effective against headaches.",
+        "Это лекарство очень хорошо помогает от головной боли."
+      ],
+      [
+        "What's the most effective way to learn words?",
+        "Какой самый действенный способ учить слова?"
+      ],
+      [
+        "The advert wasn't very effective.",
+        "Реклама оказалась не очень эффективной."
+      ]
+    ],
+    "forms": [
+      [
+        "effect",
+        "n",
+        "эффект, действие"
+      ],
+      [
+        "effectively",
+        "adv",
+        "эффективно"
+      ]
+    ],
+    "note": "effective — даёт нужный результат; efficient — без лишних затрат времени и сил"
+  },
+  {
+    "en": "efficient",
+    "ru": "эффективный, продуктивный, экономичный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "She's a very efficient manager.",
+        "Она очень толковый и организованный менеджер."
+      ],
+      [
+        "Is there a more efficient way to do this?",
+        "Можно сделать это как-то эффективнее?"
+      ],
+      [
+        "Our old fridge isn't very energy efficient.",
+        "Наш старый холодильник не очень энергоэффективный."
+      ]
+    ],
+    "forms": [
+      [
+        "efficiency",
+        "n",
+        "эффективность, производительность"
+      ],
+      [
+        "efficiently",
+        "adv",
+        "эффективно, продуктивно"
+      ]
+    ]
+  },
+  {
+    "en": "emotion",
+    "ru": "эмоция, чувство",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He never shows his emotions.",
+        "Он никогда не показывает своих эмоций."
+      ],
+      [
+        "Her voice was full of emotion.",
+        "Её голос был полон чувства."
+      ],
+      [
+        "Is it hard for you to control your emotions?",
+        "Тебе трудно контролировать эмоции?"
+      ]
+    ],
+    "forms": [
+      [
+        "emotional",
+        "adj",
+        "эмоциональный"
+      ]
+    ]
+  },
+  {
+    "en": "emotional",
+    "ru": "эмоциональный, волнующий",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "It was a very emotional moment for all of us.",
+        "Для всех нас это был очень волнующий момент."
+      ],
+      [
+        "Sorry, I'm a bit emotional today.",
+        "Извини, я сегодня немного расчувствовался."
+      ],
+      [
+        "Why do you get so emotional about football?",
+        "Почему ты так переживаешь из-за футбола?"
+      ]
+    ],
+    "forms": [
+      [
+        "emotion",
+        "n",
+        "эмоция"
+      ],
+      [
+        "emotionally",
+        "adv",
+        "эмоционально"
+      ]
+    ]
+  },
+  {
+    "en": "equipment",
+    "ru": "оборудование, снаряжение",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The gym has all the latest equipment.",
+        "В спортзале есть всё новейшее оборудование."
+      ],
+      [
+        "Do we need any special equipment for the hike?",
+        "Нужно ли нам особое снаряжение для похода?"
+      ],
+      [
+        "We bought some new camping equipment last week.",
+        "На прошлой неделе мы купили новое туристическое снаряжение."
+      ]
+    ],
+    "forms": [
+      [
+        "equip",
+        "v",
+        "оснащать, оборудовать"
+      ]
+    ],
+    "note": "неисчисляемое: some equipment, a piece of equipment (не equipments)"
+  },
+  {
+    "en": "essential",
+    "ru": "необходимый, важнейший",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "A good map is essential for this trip.",
+        "Для этой поездки обязательно нужна хорошая карта."
+      ],
+      [
+        "Is it essential to book in advance?",
+        "Обязательно бронировать заранее?"
+      ],
+      [
+        "Only take essential items in your hand luggage.",
+        "Берите в ручную кладь только самое необходимое."
+      ]
+    ],
+    "forms": [
+      [
+        "essentially",
+        "adv",
+        "по сути"
+      ],
+      [
+        "essence",
+        "n",
+        "суть, сущность"
+      ]
+    ]
+  },
+  {
+    "en": "exact",
+    "ru": "точный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Do you know the exact time of the flight?",
+        "Ты знаешь точное время вылета?"
+      ],
+      [
+        "I don't remember the exact address.",
+        "Я не помню точного адреса."
+      ],
+      [
+        "That's the exact same dress I bought!",
+        "Это точно такое же платье, как я купила!"
+      ]
+    ],
+    "forms": [
+      [
+        "exactly",
+        "adv",
+        "точно, именно"
+      ]
+    ]
+  },
+  {
+    "en": "expense",
+    "ru": "расход, затраты",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Living in London is a huge expense.",
+        "Жизнь в Лондоне обходится очень дорого."
+      ],
+      [
+        "Does the company pay your travel expenses?",
+        "Компания оплачивает тебе командировочные расходы?"
+      ],
+      [
+        "We can't afford any extra expenses this month.",
+        "В этом месяце мы не можем позволить себе лишних трат."
+      ]
+    ],
+    "forms": [
+      [
+        "expensive",
+        "adj",
+        "дорогой"
+      ]
+    ]
+  },
+  {
+    "en": "failure",
+    "ru": "неудача, провал; отказ (техники)",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The party was a complete failure.",
+        "Вечеринка полностью провалилась."
+      ],
+      [
+        "Don't be afraid of failure.",
+        "Не бойся неудач."
+      ],
+      [
+        "The flight was delayed because of engine failure.",
+        "Рейс задержали из-за отказа двигателя."
+      ]
+    ],
+    "forms": [
+      [
+        "fail",
+        "v",
+        "провалить(ся), не суметь"
+      ]
+    ]
+  },
+  {
+    "en": "financial",
+    "ru": "финансовый",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "We're having some financial problems at the moment.",
+        "Сейчас у нас некоторые финансовые проблемы."
+      ],
+      [
+        "Do you get any financial help from your parents?",
+        "Родители помогают тебе деньгами?"
+      ],
+      [
+        "She works as a financial adviser.",
+        "Она работает финансовым консультантом."
+      ]
+    ],
+    "forms": [
+      [
+        "finance",
+        "n",
+        "финансы"
+      ]
+    ]
+  },
+  {
+    "en": "former",
+    "ru": "бывший, прежний",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I met my former boss at the supermarket.",
+        "Я встретил своего бывшего начальника в супермаркете."
+      ],
+      [
+        "The hotel is a former school.",
+        "Раньше в здании отеля была школа."
+      ],
+      [
+        "Is he a former student of yours?",
+        "Он твой бывший ученик?"
+      ]
+    ],
+    "forms": [
+      [
+        "formerly",
+        "adv",
+        "прежде, раньше"
+      ]
+    ]
+  },
+  {
+    "en": "growth",
+    "ru": "рост",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The company has seen fast growth this year.",
+        "В этом году компания быстро растёт."
+      ],
+      [
+        "Is this good for hair growth?",
+        "Это полезно для роста волос?"
+      ],
+      [
+        "There's been no growth in sales.",
+        "Роста продаж не было."
+      ]
+    ],
+    "forms": [
+      [
+        "grow",
+        "v",
+        "расти"
+      ]
+    ]
+  },
+  {
+    "en": "huge",
+    "ru": "огромный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "They live in a huge house by the sea.",
+        "Они живут в огромном доме у моря."
+      ],
+      [
+        "Thanks, that's a huge help!",
+        "Спасибо, ты очень выручил!"
+      ],
+      [
+        "It wasn't a huge problem.",
+        "Это не было большой проблемой."
+      ]
+    ],
+    "forms": [
+      [
+        "hugely",
+        "adv",
+        "очень, чрезвычайно"
+      ]
+    ]
+  },
+  {
+    "en": "illness",
+    "ru": "болезнь",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "She missed a week of work because of illness.",
+        "Она пропустила неделю работы из-за болезни."
+      ],
+      [
+        "Have you had any serious illnesses?",
+        "У вас были серьёзные заболевания?"
+      ],
+      [
+        "He's recovering from a long illness.",
+        "Он восстанавливается после долгой болезни."
+      ]
+    ],
+    "forms": [
+      [
+        "ill",
+        "adj",
+        "больной"
+      ]
+    ]
+  },
+  {
+    "en": "impression",
+    "ru": "впечатление",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "She made a great impression at the interview.",
+        "Она произвела отличное впечатление на собеседовании."
+      ],
+      [
+        "What was your first impression of the city?",
+        "Каким было твоё первое впечатление о городе?"
+      ],
+      [
+        "I got the impression he wasn't happy.",
+        "У меня сложилось впечатление, что он недоволен."
+      ]
+    ],
+    "forms": [
+      [
+        "impress",
+        "v",
+        "впечатлять"
+      ],
+      [
+        "impressive",
+        "adj",
+        "впечатляющий"
+      ]
+    ]
+  },
+  {
+    "en": "income",
+    "ru": "доход",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "What's your average monthly income?",
+        "Какой у тебя средний доход в месяц?"
+      ],
+      [
+        "They live on a low income.",
+        "Они живут на небольшой доход."
+      ],
+      [
+        "Half of my income goes on rent.",
+        "Половина моего дохода уходит на аренду."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "individual",
+    "ru": "индивидуальный, отдельный; человек, личность",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "We offer individual lessons as well as group classes.",
+        "Мы проводим индивидуальные занятия, а также групповые."
+      ],
+      [
+        "Each individual room has its own bathroom.",
+        "В каждой отдельной комнате есть своя ванная."
+      ],
+      [
+        "She's a very creative individual.",
+        "Она очень творческий человек."
+      ]
+    ],
+    "forms": [
+      [
+        "individually",
+        "adv",
+        "по отдельности, индивидуально"
+      ]
+    ]
+  },
+  {
+    "en": "industry",
+    "ru": "промышленность, отрасль",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He works in the film industry.",
+        "Он работает в киноиндустрии."
+      ],
+      [
+        "Which industry would you like to work in?",
+        "В какой отрасли ты хотел бы работать?"
+      ],
+      [
+        "There isn't much industry in this area.",
+        "В этом районе мало промышленности."
+      ]
+    ],
+    "forms": [
+      [
+        "industrial",
+        "adj",
+        "промышленный"
+      ]
+    ]
+  },
+  {
+    "en": "injury",
+    "ru": "травма, повреждение",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He missed the match because of an injury.",
+        "Он пропустил матч из-за травмы."
+      ],
+      [
+        "Were there any injuries in the accident?",
+        "В аварии были пострадавшие?"
+      ],
+      [
+        "Luckily, she escaped without serious injury.",
+        "К счастью, она обошлась без серьёзных травм."
+      ]
+    ],
+    "forms": [
+      [
+        "injure",
+        "v",
+        "травмировать, ранить"
+      ]
+    ]
+  },
+  {
+    "en": "insurance",
+    "ru": "страховка, страхование",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Do you have travel insurance?",
+        "У тебя есть туристическая страховка?"
+      ],
+      [
+        "Car insurance is really expensive here.",
+        "Автостраховка здесь очень дорогая."
+      ],
+      [
+        "The insurance didn't cover the cost of the repairs.",
+        "Страховка не покрыла стоимость ремонта."
+      ]
+    ],
+    "forms": [
+      [
+        "insure",
+        "v",
+        "страховать"
+      ]
+    ]
+  },
+  {
+    "en": "intention",
+    "ru": "намерение",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I have no intention of moving abroad.",
+        "Я не собираюсь переезжать за границу."
+      ],
+      [
+        "My intention was to help, not to upset you.",
+        "Я хотел помочь, а не расстроить тебя."
+      ],
+      [
+        "Did you know about his intentions?",
+        "Ты знал о его намерениях?"
+      ]
+    ],
+    "forms": [
+      [
+        "intend",
+        "v",
+        "намереваться, собираться"
+      ],
+      [
+        "intentional",
+        "adj",
+        "намеренный"
+      ]
+    ]
+  },
+  {
+    "en": "legal",
+    "ru": "законный, юридический",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Is it legal to park here at night?",
+        "Здесь разрешено парковаться ночью?"
+      ],
+      [
+        "We need some legal advice.",
+        "Нам нужна юридическая консультация."
+      ],
+      [
+        "Driving at 16 isn't legal in this country.",
+        "В этой стране нельзя водить машину в 16 лет."
+      ]
+    ],
+    "forms": [
+      [
+        "illegal",
+        "adj",
+        "незаконный"
+      ],
+      [
+        "legally",
+        "adv",
+        "законно, юридически"
+      ]
+    ]
+  },
+  {
+    "en": "location",
+    "ru": "местоположение, место",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The hotel is in a great location.",
+        "Отель в отличном месте."
+      ],
+      [
+        "Can you send me your location?",
+        "Можешь скинуть мне свою геолокацию?"
+      ],
+      [
+        "The location of the new office hasn't been decided yet.",
+        "Где будет новый офис, ещё не решили."
+      ]
+    ],
+    "forms": [
+      [
+        "locate",
+        "v",
+        "находить, располагать"
+      ]
+    ]
+  },
+  {
+    "en": "loss",
+    "ru": "потеря, утрата; убыток",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'm so sorry for your loss.",
+        "Мои соболезнования."
+      ],
+      [
+        "Hair loss can be caused by stress.",
+        "Выпадение волос может быть вызвано стрессом."
+      ],
+      [
+        "The shop made a loss last year.",
+        "В прошлом году магазин понёс убытки."
+      ]
+    ],
+    "forms": [
+      [
+        "lose",
+        "v",
+        "терять, проигрывать"
+      ]
+    ]
+  },
+  {
+    "en": "luggage",
+    "ru": "багаж",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "How much luggage are you taking?",
+        "Сколько багажа ты берёшь?"
+      ],
+      [
+        "My luggage didn't arrive with my flight.",
+        "Мой багаж не прилетел вместе со мной."
+      ],
+      [
+        "You can leave your luggage at reception.",
+        "Вы можете оставить багаж на ресепшене."
+      ]
+    ],
+    "forms": [],
+    "note": "неисчисляемое: much luggage, a piece of luggage (не luggages)"
+  },
+  {
+    "en": "main",
+    "ru": "главный, основной",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "What's the main reason you want this job?",
+        "Почему ты прежде всего хочешь эту работу?"
+      ],
+      [
+        "The main entrance is closed today.",
+        "Главный вход сегодня закрыт."
+      ],
+      [
+        "The food wasn't the main problem.",
+        "Еда была не главной проблемой."
+      ]
+    ],
+    "forms": [
+      [
+        "mainly",
+        "adv",
+        "в основном"
+      ]
+    ]
+  },
+  {
+    "en": "majority",
+    "ru": "большинство",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The majority of my friends live in the city.",
+        "Большинство моих друзей живут в городе."
+      ],
+      [
+        "Did the majority agree with the plan?",
+        "Большинство согласилось с планом?"
+      ],
+      [
+        "Women were in the majority at the meeting.",
+        "На собрании женщины были в большинстве."
+      ]
+    ],
+    "forms": [
+      [
+        "major",
+        "adj",
+        "главный, крупный"
+      ]
+    ]
+  },
+  {
+    "en": "marriage",
+    "ru": "брак, супружество",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "They have a very happy marriage.",
+        "У них очень счастливый брак."
+      ],
+      [
+        "Their marriage didn't last long.",
+        "Их брак продлился недолго."
+      ],
+      [
+        "Is this your first marriage?",
+        "Это ваш первый брак?"
+      ]
+    ],
+    "forms": [
+      [
+        "marry",
+        "v",
+        "жениться, выходить замуж"
+      ],
+      [
+        "married",
+        "adj",
+        "женатый, замужем"
+      ]
+    ],
+    "note": "marriage — брак; wedding — свадьба (торжество)"
+  },
+  {
+    "en": "mental",
+    "ru": "психический, умственный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Exercise is good for your mental health.",
+        "Спорт полезен для психического здоровья."
+      ],
+      [
+        "I made a mental note to call her later.",
+        "Я взял себе на заметку позвонить ей позже."
+      ],
+      [
+        "Is the job more mental or physical?",
+        "Эта работа больше умственная или физическая?"
+      ]
+    ],
+    "forms": [
+      [
+        "mentally",
+        "adv",
+        "психически, мысленно"
+      ]
+    ]
+  },
+  {
+    "en": "mess",
+    "ru": "беспорядок, бардак; неразбериха",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Sorry about the mess — we're moving next week.",
+        "Извините за беспорядок — мы переезжаем на следующей неделе."
+      ],
+      [
+        "Who made this mess in the kitchen?",
+        "Кто устроил этот бардак на кухне?"
+      ],
+      [
+        "I really made a mess of the interview.",
+        "Я с треском провалил собеседование."
+      ]
+    ],
+    "forms": [
+      [
+        "messy",
+        "adj",
+        "неубранный, неряшливый"
+      ]
+    ]
+  },
+  {
+    "en": "option",
+    "ru": "вариант, выбор",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "We have two options: stay or leave.",
+        "У нас два варианта: остаться или уйти."
+      ],
+      [
+        "Is there a vegetarian option on the menu?",
+        "В меню есть вегетарианский вариант?"
+      ],
+      [
+        "I had no option but to cancel the trip.",
+        "Мне ничего не оставалось, кроме как отменить поездку."
+      ]
+    ],
+    "forms": [
+      [
+        "optional",
+        "adj",
+        "необязательный"
+      ]
+    ]
+  },
+  {
+    "en": "ordinary",
+    "ru": "обычный, заурядный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "It was just an ordinary day at work.",
+        "Это был обычный рабочий день."
+      ],
+      [
+        "They're just ordinary people like you and me.",
+        "Это самые обычные люди, как мы с тобой."
+      ],
+      [
+        "The food was nothing out of the ordinary.",
+        "Еда была ничем не примечательной."
+      ]
+    ],
+    "forms": [
+      [
+        "ordinarily",
+        "adv",
+        "обычно"
+      ]
+    ]
+  },
+  {
+    "en": "pain",
+    "ru": "боль; мучение (разг.)",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I've got a pain in my back.",
+        "У меня болит спина."
+      ],
+      [
+        "Do you feel any pain when you walk?",
+        "Вы чувствуете боль при ходьбе?"
+      ],
+      [
+        "Filling in these forms is a real pain.",
+        "Заполнять эти анкеты — настоящая мука."
+      ]
+    ],
+    "forms": [
+      [
+        "painful",
+        "adj",
+        "болезненный"
+      ],
+      [
+        "painkiller",
+        "n",
+        "обезболивающее"
+      ]
+    ]
+  },
+  {
+    "en": "painful",
+    "ru": "болезненный, мучительный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Will the injection be painful?",
+        "Укол будет болезненным?"
+      ],
+      [
+        "My knee is still painful after the run.",
+        "Колено всё ещё болит после пробежки."
+      ],
+      [
+        "Saying goodbye was really painful.",
+        "Прощаться было очень тяжело."
+      ]
+    ],
+    "forms": [
+      [
+        "pain",
+        "n",
+        "боль"
+      ],
+      [
+        "painfully",
+        "adv",
+        "болезненно, мучительно"
+      ]
+    ]
+  },
+  {
+    "en": "patience",
+    "ru": "терпение",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Thank you for your patience.",
+        "Спасибо за терпение."
+      ],
+      [
+        "I don't have the patience to cook every day.",
+        "У меня не хватает терпения готовить каждый день."
+      ],
+      [
+        "Teaching children requires a lot of patience.",
+        "Работа с детьми требует большого терпения."
+      ]
+    ],
+    "forms": [
+      [
+        "patient",
+        "adj",
+        "терпеливый"
+      ],
+      [
+        "impatient",
+        "adj",
+        "нетерпеливый"
+      ]
+    ]
+  },
+  {
+    "en": "permanent",
+    "ru": "постоянный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Is this a permanent job or a temporary one?",
+        "Это постоянная работа или временная?"
+      ],
+      [
+        "They're looking for a permanent place to live.",
+        "Они ищут постоянное жильё."
+      ],
+      [
+        "Don't worry, the damage isn't permanent.",
+        "Не волнуйся, это повреждение не навсегда."
+      ]
+    ],
+    "forms": [
+      [
+        "permanently",
+        "adv",
+        "навсегда, постоянно"
+      ]
+    ]
+  },
+  {
+    "en": "personally",
+    "ru": "лично, сам",
+    "pos": "adv",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Personally, I prefer tea to coffee.",
+        "Лично я предпочитаю чай кофе."
+      ],
+      [
+        "I'd like to thank you personally.",
+        "Я хотел бы лично поблагодарить вас."
+      ],
+      [
+        "Don't take it personally — he's rude to everyone.",
+        "Не принимай на свой счёт — он со всеми грубит."
+      ]
+    ],
+    "forms": [
+      [
+        "personal",
+        "adj",
+        "личный"
+      ],
+      [
+        "person",
+        "n",
+        "человек"
+      ]
+    ]
+  },
+  {
+    "en": "politics",
+    "ru": "политика",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'm not really interested in politics.",
+        "Я не особо интересуюсь политикой."
+      ],
+      [
+        "Do you ever talk about politics with your family?",
+        "Ты когда-нибудь говоришь о политике с семьёй?"
+      ],
+      [
+        "There's too much office politics in my company.",
+        "В моей компании слишком много офисных интриг."
+      ]
+    ],
+    "forms": [
+      [
+        "political",
+        "adj",
+        "политический"
+      ],
+      [
+        "politician",
+        "n",
+        "политик"
+      ]
+    ],
+    "note": "politics — политика как сфера; policy — правила, курс (company policy)"
+  },
+  {
+    "en": "positive",
+    "ru": "положительный, позитивный; уверенный",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Try to stay positive, things will get better.",
+        "Старайся не унывать, всё наладится."
+      ],
+      [
+        "My test came back positive.",
+        "Мой тест оказался положительным."
+      ],
+      [
+        "Are you positive you locked the door?",
+        "Ты точно уверен, что запер дверь?"
+      ]
+    ],
+    "forms": [
+      [
+        "positively",
+        "adv",
+        "положительно"
+      ]
+    ]
+  },
+  {
+    "en": "possibility",
+    "ru": "возможность, вероятность",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Is there any possibility of changing the date?",
+        "Есть ли возможность изменить дату?"
+      ],
+      [
+        "There's a possibility that it will rain later.",
+        "Возможно, позже пойдёт дождь."
+      ],
+      [
+        "We didn't think about that possibility.",
+        "Мы не подумали о таком варианте."
+      ]
+    ],
+    "forms": [
+      [
+        "possible",
+        "adj",
+        "возможный"
+      ],
+      [
+        "possibly",
+        "adv",
+        "возможно"
+      ]
+    ]
+  },
+  {
+    "en": "potential",
+    "ru": "потенциальный, возможный; потенциал",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "We're meeting a potential client tomorrow.",
+        "Завтра мы встречаемся с потенциальным клиентом."
+      ],
+      [
+        "This plan has some potential problems.",
+        "У этого плана есть возможные проблемы."
+      ],
+      [
+        "She has a lot of potential as a singer.",
+        "У неё большой потенциал как у певицы."
+      ]
+    ],
+    "forms": [
+      [
+        "potentially",
+        "adv",
+        "потенциально"
+      ]
+    ]
+  },
+  {
+    "en": "practical",
+    "ru": "практичный, практический",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "These shoes are comfortable and practical.",
+        "Эти туфли удобные и практичные."
+      ],
+      [
+        "Can you give me some practical advice?",
+        "Можешь дать мне практический совет?"
+      ],
+      [
+        "It isn't practical to drive to work in the city centre.",
+        "Ездить на работу в центр на машине непрактично."
+      ]
+    ],
+    "forms": [
+      [
+        "practice",
+        "n",
+        "практика"
+      ],
+      [
+        "practically",
+        "adv",
+        "практически, почти"
+      ]
+    ]
+  },
+  {
+    "en": "previous",
+    "ru": "предыдущий, прежний",
+    "pos": "adj",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I liked the previous version of the app better.",
+        "Предыдущая версия приложения нравилась мне больше."
+      ],
+      [
+        "Did you work in sales in your previous job?",
+        "Ты работал в продажах на прошлой работе?"
+      ],
+      [
+        "She had left the previous day.",
+        "Она уехала накануне."
+      ]
+    ],
+    "forms": [
+      [
+        "previously",
+        "adv",
+        "ранее, прежде"
+      ]
+    ]
+  },
+  {
+    "en": "privacy",
+    "ru": "личное пространство, конфиденциальность",
+    "pos": "n",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I need some privacy to make this call.",
+        "Мне нужно уединиться, чтобы сделать этот звонок."
+      ],
+      [
+        "Have you checked the app's privacy settings?",
+        "Ты проверил настройки конфиденциальности в приложении?"
+      ],
+      [
+        "When you live with your parents, there isn't much privacy.",
+        "Когда живёшь с родителями, личного пространства почти нет."
+      ]
+    ],
+    "forms": [
+      [
+        "private",
+        "adj",
+        "частный, личный"
+      ]
+    ]
+  }
+]

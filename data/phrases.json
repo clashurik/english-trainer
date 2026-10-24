@@ -1,0 +1,2546 @@
+[
+  {
+    "en": "Nice to meet you",
+    "ru": "приятно познакомиться",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Hi, I'm Anna from the marketing team. Nice to meet you.",
+        "Привет, я Анна из отдела маркетинга. Приятно познакомиться."
+      ],
+      [
+        "Nice to meet you too, Tom.",
+        "Мне тоже приятно познакомиться, Том."
+      ],
+      [
+        "It was really nice to meet you yesterday.",
+        "Было очень приятно познакомиться с тобой вчера."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "I don't know",
+    "ru": "я не знаю",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Sorry, I don't know where the station is.",
+        "Извините, я не знаю, где вокзал."
+      ],
+      [
+        "I don't know his phone number.",
+        "Я не знаю его номер телефона."
+      ],
+      [
+        "I don't know what to cook tonight.",
+        "Не знаю, что приготовить сегодня вечером."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "of course",
+    "ru": "конечно",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can I use your phone? — Of course.",
+        "Можно воспользоваться твоим телефоном? — Конечно."
+      ],
+      [
+        "Of course I remember you!",
+        "Конечно, я тебя помню!"
+      ],
+      [
+        "You can stay with us, of course.",
+        "Ты, конечно, можешь остановиться у нас."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "Good luck",
+    "ru": "удачи",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Good luck with your job interview tomorrow!",
+        "Удачи завтра на собеседовании!"
+      ],
+      [
+        "I've got an exam today. — Good luck!",
+        "У меня сегодня экзамен. — Удачи!"
+      ],
+      [
+        "We wished him good luck with his new job.",
+        "Мы пожелали ему удачи на новой работе."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "Have a nice day",
+    "ru": "хорошего дня",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Thanks for your help. Have a nice day!",
+        "Спасибо за помощь. Хорошего дня!"
+      ],
+      [
+        "Here's your coffee. Have a nice day.",
+        "Вот ваш кофе. Хорошего дня."
+      ],
+      [
+        "Have a nice day at work, darling.",
+        "Хорошего дня на работе, дорогой."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "wake up",
+    "ru": "просыпаться, будить",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I usually wake up at seven.",
+        "Обычно я просыпаюсь в семь."
+      ],
+      [
+        "Please don't wake me up before nine.",
+        "Пожалуйста, не буди меня раньше девяти."
+      ],
+      [
+        "What time did you wake up this morning?",
+        "Во сколько ты проснулся сегодня утром?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "turn on",
+    "ru": "включать",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you turn on the light, please?",
+        "Можешь включить свет, пожалуйста?"
+      ],
+      [
+        "I turned the TV on and sat down.",
+        "Я включил телевизор и сел."
+      ],
+      [
+        "Don't turn on the heating yet.",
+        "Пока не включай отопление."
+      ]
+    ],
+    "forms": [],
+    "note": "Разделяемый фразовый глагол: turn on the TV = turn the TV on, но только turn it on."
+  },
+  {
+    "en": "turn off",
+    "ru": "выключать",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Please turn off your phones in the cinema.",
+        "Пожалуйста, выключите телефоны в кинотеатре."
+      ],
+      [
+        "Did you turn the oven off?",
+        "Ты выключил духовку?"
+      ],
+      [
+        "I always turn off the lights when I leave.",
+        "Уходя, я всегда выключаю свет."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "come in",
+    "ru": "входить, заходить",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Come in and sit down, please.",
+        "Заходите и садитесь, пожалуйста."
+      ],
+      [
+        "Can I come in for a minute?",
+        "Можно зайти на минутку?"
+      ],
+      [
+        "She knocked and came in with some papers.",
+        "Она постучала и вошла с какими-то бумагами."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "sit down",
+    "ru": "садиться",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Please sit down, the doctor will see you soon.",
+        "Садитесь, пожалуйста, врач скоро вас примет."
+      ],
+      [
+        "We sat down at a table by the window.",
+        "Мы сели за столик у окна."
+      ],
+      [
+        "Why don't you sit down and relax?",
+        "Почему бы тебе не присесть и не отдохнуть?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "come back",
+    "ru": "возвращаться",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "When are you coming back from your holiday?",
+        "Когда ты возвращаешься из отпуска?"
+      ],
+      [
+        "He came back home very late yesterday.",
+        "Вчера он вернулся домой очень поздно."
+      ],
+      [
+        "Please come back tomorrow morning.",
+        "Пожалуйста, приходите снова завтра утром."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "go out",
+    "ru": "выходить, ходить куда-нибудь (развлекаться)",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Let's go out for dinner on Friday.",
+        "Давай сходим куда-нибудь поужинать в пятницу."
+      ],
+      [
+        "I don't want to go out tonight, I'm tired.",
+        "Не хочу сегодня никуда идти, я устал."
+      ],
+      [
+        "She went out to buy some bread.",
+        "Она вышла купить хлеба."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "have breakfast",
+    "ru": "завтракать",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I have breakfast at eight every day.",
+        "Я каждый день завтракаю в восемь."
+      ],
+      [
+        "We had breakfast in a small café.",
+        "Мы позавтракали в маленьком кафе."
+      ],
+      [
+        "Did you have breakfast this morning?",
+        "Ты сегодня завтракал?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "have a shower",
+    "ru": "принимать душ",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I have a shower every morning before work.",
+        "Каждое утро перед работой я принимаю душ."
+      ],
+      [
+        "Can I have a shower before dinner?",
+        "Можно я приму душ перед ужином?"
+      ],
+      [
+        "He's having a shower right now.",
+        "Он сейчас в душе."
+      ]
+    ],
+    "forms": [],
+    "note": "В американском английском чаще take a shower."
+  },
+  {
+    "en": "hurry up",
+    "ru": "торопиться, поторопись",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Hurry up, we're going to miss the bus!",
+        "Поторопись, мы опоздаем на автобус!"
+      ],
+      [
+        "I told him to hurry up, but he didn't listen.",
+        "Я сказал ему поторопиться, но он не послушал."
+      ],
+      [
+        "Can you hurry up a bit, please?",
+        "Можешь немного поторопиться, пожалуйста?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "I'm not sure",
+    "ru": "я не уверен",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'm not sure what time the shop closes.",
+        "Я не уверен, во сколько закрывается магазин."
+      ],
+      [
+        "Is this the right bus? — I'm not sure.",
+        "Это нужный автобус? — Не уверен."
+      ],
+      [
+        "I'm not sure I can come on Saturday.",
+        "Не уверен, что смогу прийти в субботу."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "Don't worry",
+    "ru": "не волнуйся, не беспокойся",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Don't worry, I'll call you when I arrive.",
+        "Не волнуйся, я позвоню, когда приеду."
+      ],
+      [
+        "Don't worry about the money, I'll pay.",
+        "Не беспокойся о деньгах, я заплачу."
+      ],
+      [
+        "I'm late again. — Don't worry, we haven't started.",
+        "Я опять опоздал. — Не волнуйся, мы ещё не начали."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "Never mind",
+    "ru": "ничего страшного, неважно, забудь",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Sorry, I forgot your book. — Never mind.",
+        "Прости, я забыл твою книгу. — Ничего страшного."
+      ],
+      [
+        "What did you say? — Oh, never mind.",
+        "Что ты сказал? — А, неважно."
+      ],
+      [
+        "Never mind, we can try again tomorrow.",
+        "Ничего, попробуем ещё раз завтра."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "No problem",
+    "ru": "без проблем, не за что",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Thanks for the lift. — No problem!",
+        "Спасибо, что подвёз. — Не за что!"
+      ],
+      [
+        "Can you send me the file? — No problem.",
+        "Можешь прислать мне файл? — Без проблем."
+      ],
+      [
+        "It's no problem to change the date.",
+        "Перенести дату — не проблема."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "What's up?",
+    "ru": "как дела?, что случилось?",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Hey Mike, long time no see! What's up?",
+        "Привет, Майк, сто лет не виделись! Как дела?"
+      ],
+      [
+        "You look sad. What's up?",
+        "Ты какой-то грустный. Что случилось?"
+      ],
+      [
+        "What's up with your phone? It keeps turning off.",
+        "Что с твоим телефоном? Он постоянно выключается."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "What's wrong?",
+    "ru": "что случилось?, что не так?",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "What's wrong? You look worried.",
+        "Что случилось? У тебя встревоженный вид."
+      ],
+      [
+        "What's wrong with the car?",
+        "Что не так с машиной?"
+      ],
+      [
+        "I don't know what's wrong with my laptop.",
+        "Не знаю, что с моим ноутбуком."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "I think so",
+    "ru": "думаю, да",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Is the pharmacy open on Sunday? — I think so.",
+        "Аптека открыта в воскресенье? — Думаю, да."
+      ],
+      [
+        "I think so too, it's a great idea.",
+        "Я тоже так думаю, отличная идея."
+      ],
+      [
+        "Is he coming to the party? — Yes, I think so.",
+        "Он придёт на вечеринку? — Да, думаю, придёт."
+      ]
+    ],
+    "forms": [],
+    "note": "Отрицание — обычно I don't think so (I think not звучит книжно)."
+  },
+  {
+    "en": "Me neither",
+    "ru": "я тоже нет",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I don't like horror films. — Me neither.",
+        "Я не люблю фильмы ужасов. — Я тоже."
+      ],
+      [
+        "I can't sleep in hot weather. — Me neither.",
+        "Не могу спать в жару. — Я тоже."
+      ],
+      [
+        "I haven't seen that show. — Me neither.",
+        "Я не смотрел этот сериал. — Я тоже."
+      ]
+    ],
+    "forms": [],
+    "note": "Ответ на отрицательную фразу. На утвердительную — Me too."
+  },
+  {
+    "en": "It doesn't matter",
+    "ru": "неважно, не имеет значения",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "It doesn't matter if you're a bit late.",
+        "Ничего страшного, если ты немного опоздаешь."
+      ],
+      [
+        "Red or blue? — It doesn't matter to me.",
+        "Красный или синий? — Мне без разницы."
+      ],
+      [
+        "Which train? It doesn't matter, they all go there.",
+        "Какой поезд? Неважно, они все туда идут."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "How about",
+    "ru": "как насчёт",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "How about a coffee after work?",
+        "Как насчёт кофе после работы?"
+      ],
+      [
+        "How about going to the beach tomorrow?",
+        "Как насчёт того, чтобы завтра пойти на пляж?"
+      ],
+      [
+        "I'm free on Monday. How about you?",
+        "Я свободен в понедельник. А ты?"
+      ]
+    ],
+    "forms": [],
+    "note": "После how about — существительное или глагол с -ing: How about going…"
+  },
+  {
+    "en": "I'd like",
+    "ru": "я бы хотел",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'd like a table for two, please.",
+        "Мне столик на двоих, пожалуйста."
+      ],
+      [
+        "I'd like to book a room for Friday.",
+        "Я бы хотел забронировать номер на пятницу."
+      ],
+      [
+        "Shall we meet for lunch? — Yes, I'd like that.",
+        "Давай встретимся за обедом? — Да, с удовольствием."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "That's right",
+    "ru": "верно, правильно",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "So you live near the station? — That's right.",
+        "Так ты живёшь рядом с вокзалом? — Верно."
+      ],
+      [
+        "That's right, the meeting is at ten.",
+        "Правильно, встреча в десять."
+      ],
+      [
+        "That's right, you need to change at the next station.",
+        "Верно, вам нужно сделать пересадку на следующей станции."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "Just a moment",
+    "ru": "минутку, одну минуту",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Just a moment, I'll check your booking.",
+        "Минутку, я проверю вашу бронь."
+      ],
+      [
+        "Just a moment, I'm on the phone.",
+        "Одну минуту, я разговариваю по телефону."
+      ],
+      [
+        "Can you wait just a moment, please?",
+        "Подождите минутку, пожалуйста."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "Here you are",
+    "ru": "вот, пожалуйста (когда что-то даёшь)",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Here you are. Your receipt is in the bag.",
+        "Вот, пожалуйста. Чек в пакете."
+      ],
+      [
+        "Can I see your passport? — Here you are.",
+        "Можно ваш паспорт? — Вот, пожалуйста."
+      ],
+      [
+        "Here you are, I found your keys.",
+        "Держи, я нашёл твои ключи."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "look for",
+    "ru": "искать",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'm looking for a cheap flat near the centre.",
+        "Я ищу недорогую квартиру недалеко от центра."
+      ],
+      [
+        "What are you looking for? — My glasses.",
+        "Что ты ищешь? — Свои очки."
+      ],
+      [
+        "She's been looking for a new job for months.",
+        "Она уже несколько месяцев ищет новую работу."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "look after sb",
+    "ru": "заботиться о, присматривать за",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can you look after my cat this weekend?",
+        "Можешь присмотреть за моей кошкой в эти выходные?"
+      ],
+      [
+        "She looks after her elderly parents.",
+        "Она заботится о своих пожилых родителях."
+      ],
+      [
+        "You should look after yourself better.",
+        "Тебе стоит лучше о себе заботиться."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "wait for",
+    "ru": "ждать (кого-то, что-то)",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'm waiting for the bus.",
+        "Я жду автобус."
+      ],
+      [
+        "Wait for me, I'm almost ready!",
+        "Подожди меня, я почти готов!"
+      ],
+      [
+        "How long did you wait for the doctor?",
+        "Сколько ты ждал врача?"
+      ]
+    ],
+    "forms": [],
+    "note": "Ждать кого-то — wait for sb, без for нельзя: wait for me, не wait me."
+  },
+  {
+    "en": "pick up",
+    "ru": "поднимать, забирать (кого-то), взять",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can you pick me up from the airport?",
+        "Можешь забрать меня из аэропорта?"
+      ],
+      [
+        "He picked up the phone and said hello.",
+        "Он взял трубку и поздоровался."
+      ],
+      [
+        "I'll pick up some milk on the way home.",
+        "Я куплю молока по дороге домой."
+      ]
+    ],
+    "forms": [],
+    "note": "Разделяемый: pick up the kids = pick the kids up, но только pick them up."
+  },
+  {
+    "en": "put on",
+    "ru": "надевать",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Put on your coat, it's cold outside.",
+        "Надень пальто, на улице холодно."
+      ],
+      [
+        "She put her glasses on to read the menu.",
+        "Она надела очки, чтобы прочитать меню."
+      ],
+      [
+        "Wait a minute, I'm putting on my shoes.",
+        "Подожди минутку, я обуваюсь."
+      ]
+    ],
+    "forms": [],
+    "note": "put on — процесс (надеть), wear — состояние (быть одетым во что-то)."
+  },
+  {
+    "en": "take off",
+    "ru": "снимать (одежду); взлетать",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Please take off your shoes in the house.",
+        "Пожалуйста, снимайте обувь в доме."
+      ],
+      [
+        "Our plane took off an hour late.",
+        "Наш самолёт взлетел с опозданием на час."
+      ],
+      [
+        "He took his jacket off and sat down.",
+        "Он снял куртку и сел."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "try on",
+    "ru": "примерять",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can I try on these jeans, please?",
+        "Можно примерить эти джинсы?"
+      ],
+      [
+        "I tried the dress on, but it was too small.",
+        "Я примерила платье, но оно оказалось маленьким."
+      ],
+      [
+        "Did you try them on before buying?",
+        "Ты их примерял перед покупкой?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "fill in",
+    "ru": "заполнять (бланк, анкету)",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Please fill in this form and sign it.",
+        "Пожалуйста, заполните этот бланк и подпишите."
+      ],
+      [
+        "I filled in the application online.",
+        "Я заполнил заявление онлайн."
+      ],
+      [
+        "Do I need to fill it in now?",
+        "Мне нужно заполнить это сейчас?"
+      ]
+    ],
+    "forms": [],
+    "note": "В американском английском чаще fill out."
+  },
+  {
+    "en": "call back",
+    "ru": "перезвонить",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'm busy right now. Can I call you back?",
+        "Я сейчас занят. Можно я тебе перезвоню?"
+      ],
+      [
+        "She didn't call me back yesterday.",
+        "Вчера она мне так и не перезвонила."
+      ],
+      [
+        "Please ask him to call back after lunch.",
+        "Пожалуйста, попросите его перезвонить после обеда."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "give back",
+    "ru": "возвращать (вещь)",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can you give me back my charger?",
+        "Можешь вернуть мне зарядку?"
+      ],
+      [
+        "I'll give the book back on Monday.",
+        "Я верну книгу в понедельник."
+      ],
+      [
+        "He never gave back the money I lent him.",
+        "Он так и не вернул деньги, которые я ему одолжил."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "get off",
+    "ru": "выходить (из транспорта)",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We need to get off at the next stop.",
+        "Нам нужно выходить на следующей остановке."
+      ],
+      [
+        "I got off the train and looked for a taxi.",
+        "Я вышел из поезда и стал искать такси."
+      ],
+      [
+        "Where do I get off for the museum?",
+        "Где мне выходить, чтобы попасть в музей?"
+      ]
+    ],
+    "forms": [],
+    "note": "Сесть в автобус/поезд — get on, выйти — get off; для машины и такси — get in / get out of."
+  },
+  {
+    "en": "go on",
+    "ru": "продолжать(ся); происходить",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Go on, tell me what happened next.",
+        "Продолжай, расскажи, что было дальше."
+      ],
+      [
+        "What's going on? Why is everyone outside?",
+        "Что происходит? Почему все на улице?"
+      ],
+      [
+        "The meeting went on for three hours.",
+        "Совещание длилось три часа."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "grow up",
+    "ru": "вырастать, взрослеть",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I grew up in a small town by the sea.",
+        "Я вырос в маленьком городке у моря."
+      ],
+      [
+        "What did you want to be when you grew up?",
+        "Кем ты хотел стать, когда вырастешь?"
+      ],
+      [
+        "Kids grow up so fast these days.",
+        "Дети сейчас так быстро растут."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "hang out",
+    "ru": "проводить время, тусоваться (разг.)",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We usually hang out at a café after class.",
+        "После занятий мы обычно сидим в кафе."
+      ],
+      [
+        "Do you want to hang out this weekend?",
+        "Хочешь потусоваться в эти выходные?"
+      ],
+      [
+        "I haven't hung out with my friends for ages.",
+        "Я сто лет не проводил время с друзьями."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "make a mistake",
+    "ru": "ошибиться, совершить ошибку",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Everyone makes mistakes when they learn a language.",
+        "Все ошибаются, когда учат язык."
+      ],
+      [
+        "I think you've made a mistake with the bill.",
+        "Кажется, вы ошиблись в счёте."
+      ],
+      [
+        "Don't worry, it's easy to make a mistake here.",
+        "Не переживай, тут легко ошибиться."
+      ]
+    ],
+    "forms": [],
+    "note": "Только make a mistake, не do a mistake."
+  },
+  {
+    "en": "take a break",
+    "ru": "сделать перерыв",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Let's take a break and get some coffee.",
+        "Давай сделаем перерыв и выпьем кофе."
+      ],
+      [
+        "You look tired. Why don't you take a break?",
+        "Ты выглядишь уставшим. Может, отдохнёшь?"
+      ],
+      [
+        "I didn't take a break all day.",
+        "Я весь день работал без перерыва."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "have a look",
+    "ru": "взглянуть, посмотреть",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can I have a look at your photos?",
+        "Можно взглянуть на твои фотографии?"
+      ],
+      [
+        "Let me have a look at the map.",
+        "Дай-ка я посмотрю на карту."
+      ],
+      [
+        "The mechanic had a look at my car.",
+        "Механик посмотрел мою машину."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "take a photo",
+    "ru": "сфотографировать",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Could you take a photo of us, please?",
+        "Не могли бы вы нас сфотографировать?"
+      ],
+      [
+        "I took a lot of photos in Rome.",
+        "Я сделал много фотографий в Риме."
+      ],
+      [
+        "You can't take photos inside the museum.",
+        "В музее нельзя фотографировать."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "catch a cold",
+    "ru": "простудиться",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Wear a hat or you'll catch a cold.",
+        "Надень шапку, а то простудишься."
+      ],
+      [
+        "I caught a cold on the plane.",
+        "Я простудился в самолёте."
+      ],
+      [
+        "She catches a cold every winter.",
+        "Она простужается каждую зиму."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "make friends",
+    "ru": "заводить друзей, подружиться",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "It's not easy to make friends in a new city.",
+        "В новом городе непросто завести друзей."
+      ],
+      [
+        "He made friends with his neighbours quickly.",
+        "Он быстро подружился с соседями."
+      ],
+      [
+        "Did you make any friends at work?",
+        "Ты завёл друзей на работе?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "have a good time",
+    "ru": "хорошо провести время",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We had a really good time at the party.",
+        "Мы отлично провели время на вечеринке."
+      ],
+      [
+        "Have a good time in Spain!",
+        "Хорошо тебе отдохнуть в Испании!"
+      ],
+      [
+        "Did you have a good time last night?",
+        "Хорошо провёл вчерашний вечер?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "do the shopping",
+    "ru": "ходить за покупками (продуктами)",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I usually do the shopping on Saturday morning.",
+        "Обычно я хожу за продуктами в субботу утром."
+      ],
+      [
+        "Who does the shopping in your family?",
+        "Кто у вас в семье ходит за продуктами?"
+      ],
+      [
+        "I haven't done the shopping yet.",
+        "Я ещё не сходил за продуктами."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "be late for",
+    "ru": "опаздывать (куда-то)",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Hurry up, we'll be late for the film.",
+        "Поторопись, мы опоздаем на фильм."
+      ],
+      [
+        "I was late for work again this morning.",
+        "Сегодня утром я опять опоздал на работу."
+      ],
+      [
+        "Sorry I'm late for the meeting.",
+        "Извините, что опоздал на встречу."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "in my opinion",
+    "ru": "по-моему, на мой взгляд",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "In my opinion, the book is better than the film.",
+        "По-моему, книга лучше фильма."
+      ],
+      [
+        "This hotel is too expensive, in my opinion.",
+        "На мой взгляд, этот отель слишком дорогой."
+      ],
+      [
+        "In my opinion, we should leave earlier.",
+        "Я считаю, нам стоит выехать пораньше."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "for example",
+    "ru": "например",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I like outdoor sports, for example cycling.",
+        "Я люблю спорт на свежем воздухе, например велосипед."
+      ],
+      [
+        "For example, you can pay by card or online.",
+        "Например, можно заплатить картой или онлайн."
+      ],
+      [
+        "Try a local dish, for example the fish soup.",
+        "Попробуй какое-нибудь местное блюдо, например рыбный суп."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "at least",
+    "ru": "по крайней мере, хотя бы",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The flight takes at least five hours.",
+        "Перелёт занимает минимум пять часов."
+      ],
+      [
+        "At least it didn't rain.",
+        "По крайней мере, не было дождя."
+      ],
+      [
+        "You could at least say thank you.",
+        "Мог бы хотя бы сказать спасибо."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "figure out",
+    "ru": "понять, разобраться, сообразить",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I can't figure out how this app works.",
+        "Не могу разобраться, как работает это приложение."
+      ],
+      [
+        "Did you figure out what was wrong?",
+        "Ты понял, в чём была проблема?"
+      ],
+      [
+        "We'll figure it out together.",
+        "Мы вместе с этим разберёмся."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "give up",
+    "ru": "бросать, сдаваться",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Don't give up, you're almost there!",
+        "Не сдавайся, ты почти у цели!"
+      ],
+      [
+        "He gave up smoking last year.",
+        "В прошлом году он бросил курить."
+      ],
+      [
+        "I gave up trying to fix the printer.",
+        "Я перестал пытаться починить принтер."
+      ]
+    ],
+    "forms": [],
+    "note": "После give up глагол с -ing: give up smoking."
+  },
+  {
+    "en": "deal with",
+    "ru": "справляться с, разбираться с, заниматься",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'll deal with these emails tomorrow.",
+        "Я разберусь с этими письмами завтра."
+      ],
+      [
+        "How do you deal with stress at work?",
+        "Как ты справляешься со стрессом на работе?"
+      ],
+      [
+        "She's good at dealing with difficult customers.",
+        "Она умеет обращаться с трудными клиентами."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "run out of",
+    "ru": "заканчиваться (о запасах), израсходовать",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "We've run out of milk again.",
+        "У нас опять закончилось молоко."
+      ],
+      [
+        "My phone is running out of battery.",
+        "У меня садится телефон."
+      ],
+      [
+        "We ran out of time and didn't finish.",
+        "У нас закончилось время, и мы не успели."
+      ]
+    ],
+    "forms": [],
+    "note": "Подлежащее — человек: We've run out of milk. Без of: The milk has run out."
+  },
+  {
+    "en": "come up with",
+    "ru": "придумать, предложить (идею)",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "She came up with a great idea for the party.",
+        "Она придумала отличную идею для вечеринки."
+      ],
+      [
+        "We need to come up with a plan quickly.",
+        "Нам нужно быстро придумать план."
+      ],
+      [
+        "Can you come up with a better name?",
+        "Можешь придумать название получше?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "put off",
+    "ru": "откладывать",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Stop putting off your visit to the dentist.",
+        "Хватит откладывать поход к стоматологу."
+      ],
+      [
+        "We put the meeting off until next week.",
+        "Мы перенесли встречу на следующую неделю."
+      ],
+      [
+        "I always put off doing my tax return.",
+        "Я всегда откладываю заполнение налоговой декларации."
+      ]
+    ],
+    "forms": [],
+    "note": "После put off глагол с -ing: put off doing sth."
+  },
+  {
+    "en": "turn down",
+    "ru": "отказывать, отклонять; убавлять (звук)",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He turned down the job offer.",
+        "Он отказался от предложения о работе."
+      ],
+      [
+        "Can you turn the music down a bit?",
+        "Можешь сделать музыку чуть потише?"
+      ],
+      [
+        "They invited me, but I had to turn them down.",
+        "Меня пригласили, но мне пришлось отказаться."
+      ]
+    ],
+    "forms": [],
+    "note": "Разделяемый: turn the music down, turn it down. Противоположное по звуку — turn up."
+  },
+  {
+    "en": "work out",
+    "ru": "тренироваться; получаться; вычислить",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I work out at the gym three times a week.",
+        "Я тренируюсь в зале три раза в неделю."
+      ],
+      [
+        "Don't worry, everything will work out.",
+        "Не волнуйся, всё получится."
+      ],
+      [
+        "Can you work out how much we owe?",
+        "Можешь посчитать, сколько мы должны?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "get along with",
+    "ru": "ладить с",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I get along well with my colleagues.",
+        "Я хорошо лажу с коллегами."
+      ],
+      [
+        "Do you get along with your neighbours?",
+        "Ты ладишь с соседями?"
+      ],
+      [
+        "As a kid, I didn't get along with my sister.",
+        "В детстве я не ладил с сестрой."
+      ]
+    ],
+    "forms": [],
+    "note": "В британском английском также get on with."
+  },
+  {
+    "en": "take care of",
+    "ru": "заботиться о, позаботиться; взять на себя",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Who takes care of your dog when you travel?",
+        "Кто ухаживает за твоей собакой, когда ты в отъезде?"
+      ],
+      [
+        "Don't worry about the tickets, I'll take care of it.",
+        "Не беспокойся о билетах, я этим займусь."
+      ],
+      [
+        "You need to take care of your health.",
+        "Тебе нужно следить за своим здоровьем."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "make sense",
+    "ru": "иметь смысл, быть понятным",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "That makes sense, thanks for explaining.",
+        "Понятно, спасибо, что объяснил."
+      ],
+      [
+        "His story doesn't make any sense.",
+        "В его рассказе нет никакой логики."
+      ],
+      [
+        "It makes sense to book the tickets early.",
+        "Имеет смысл купить билеты заранее."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "Fair enough",
+    "ru": "справедливо, ладно, резонно",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'm too tired to go out. — Fair enough.",
+        "Я слишком устал, чтобы куда-то идти. — Ну ладно, понятно."
+      ],
+      [
+        "Fair enough, but I still think it's too expensive.",
+        "Справедливо, но я всё равно считаю, что это слишком дорого."
+      ],
+      [
+        "He wants more money for extra work. Fair enough.",
+        "Он хочет больше денег за дополнительную работу. Это справедливо."
+      ]
+    ],
+    "forms": [],
+    "note": "Показывает, что вы принимаете довод, даже если не до конца согласны."
+  },
+  {
+    "en": "It's not a big deal",
+    "ru": "ничего страшного, ерунда",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I forgot to call you. — It's not a big deal.",
+        "Я забыл тебе позвонить. — Ничего страшного."
+      ],
+      [
+        "It's not a big deal, we can fix it later.",
+        "Это ерунда, исправим позже."
+      ],
+      [
+        "It's not a big deal if we're a bit late.",
+        "Ничего страшного, если мы немного опоздаем."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "No way",
+    "ru": "ни за что; да ладно!, не может быть",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Will you lend him your car? — No way!",
+        "Одолжишь ему машину? — Ни за что!"
+      ],
+      [
+        "I won the competition! — No way! Really?",
+        "Я выиграл конкурс! — Да ладно! Серьёзно?"
+      ],
+      [
+        "There's no way we can finish this today.",
+        "Мы никак не успеем закончить это сегодня."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "I'd rather",
+    "ru": "я бы предпочёл, лучше я",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I'd rather stay at home tonight.",
+        "Я бы лучше остался сегодня дома."
+      ],
+      [
+        "I'd rather not talk about it.",
+        "Я бы предпочёл не говорить об этом."
+      ],
+      [
+        "I'd rather walk than wait for the bus.",
+        "Я лучше пройдусь пешком, чем буду ждать автобус."
+      ]
+    ],
+    "forms": [],
+    "note": "После I'd rather — глагол без to: I'd rather stay (не to stay)."
+  },
+  {
+    "en": "to be honest",
+    "ru": "честно говоря",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "To be honest, I didn't like the film.",
+        "Честно говоря, мне не понравился фильм."
+      ],
+      [
+        "I'm a bit nervous, to be honest.",
+        "Если честно, я немного нервничаю."
+      ],
+      [
+        "To be honest, I've never been there.",
+        "Честно говоря, я там никогда не был."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "as far as I know",
+    "ru": "насколько я знаю",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "As far as I know, the shop opens at nine.",
+        "Насколько я знаю, магазин открывается в девять."
+      ],
+      [
+        "He's still in London, as far as I know.",
+        "Насколько я знаю, он всё ещё в Лондоне."
+      ],
+      [
+        "As far as I know, nobody has complained.",
+        "Насколько мне известно, никто не жаловался."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "on the other hand",
+    "ru": "с другой стороны",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The flat is small. On the other hand, it's cheap.",
+        "Квартира маленькая. С другой стороны, она дешёвая."
+      ],
+      [
+        "City life is exciting, but on the other hand, it's stressful.",
+        "Жизнь в городе интересная, но, с другой стороны, напряжённая."
+      ],
+      [
+        "On the other hand, working from home saves time.",
+        "С другой стороны, работа из дома экономит время."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "in fact",
+    "ru": "на самом деле, фактически, более того",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I thought it was hard. In fact, it was easy.",
+        "Я думал, что это сложно. На самом деле было легко."
+      ],
+      [
+        "She's not just a colleague. In fact, she's my best friend.",
+        "Она не просто коллега. Более того, она моя лучшая подруга."
+      ],
+      [
+        "In fact, most of my friends work from home now.",
+        "Вообще-то, большинство моих друзей сейчас работают из дома."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "I mean",
+    "ru": "то есть, я имею в виду",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Let's meet on Tuesday, I mean Wednesday.",
+        "Давай встретимся во вторник, то есть в среду."
+      ],
+      [
+        "It's nice. I mean, it's not perfect, but it's nice.",
+        "Неплохо. То есть не идеально, но неплохо."
+      ],
+      [
+        "I mean, who works on a Sunday?",
+        "Ну то есть кто работает в воскресенье?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "pay attention",
+    "ru": "обращать внимание, быть внимательным",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Please pay attention, this part is important.",
+        "Пожалуйста, будьте внимательны, это важная часть."
+      ],
+      [
+        "I wasn't paying attention and missed my stop.",
+        "Я отвлёкся и пропустил свою остановку."
+      ],
+      [
+        "Don't pay attention to what he says.",
+        "Не обращай внимания на то, что он говорит."
+      ]
+    ],
+    "forms": [],
+    "note": "Обращать внимание на — pay attention to."
+  },
+  {
+    "en": "keep in touch",
+    "ru": "поддерживать связь, не теряться",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Let's keep in touch after you move.",
+        "Давай не будем теряться после твоего переезда."
+      ],
+      [
+        "We've kept in touch since university.",
+        "Мы общаемся со времён университета."
+      ],
+      [
+        "It was great to meet you. Keep in touch!",
+        "Было здорово познакомиться. Пиши!"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "so far",
+    "ru": "пока что, до сих пор",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "So far, everything is going well.",
+        "Пока что всё идёт хорошо."
+      ],
+      [
+        "How do you like the new job so far?",
+        "Как тебе пока новая работа?"
+      ],
+      [
+        "We haven't had any problems so far.",
+        "До сих пор у нас не было никаких проблем."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "after all",
+    "ru": "всё-таки, в конце концов",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I didn't go to the party after all.",
+        "В итоге я всё-таки не пошёл на вечеринку."
+      ],
+      [
+        "Don't be angry with him. After all, he's new here.",
+        "Не сердись на него. В конце концов, он здесь новенький."
+      ],
+      [
+        "So you decided to come after all!",
+        "Значит, ты всё-таки решил прийти!"
+      ]
+    ],
+    "forms": [],
+    "note": "Не значит «наконец» — для этого finally / in the end."
+  },
+  {
+    "en": "in case",
+    "ru": "на случай, если",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Take an umbrella in case it rains.",
+        "Возьми зонт на случай дождя."
+      ],
+      [
+        "I'll write down my number in case you need it.",
+        "Я запишу свой номер, вдруг понадобится."
+      ],
+      [
+        "Here's a spare key, just in case.",
+        "Вот запасной ключ, на всякий случай."
+      ]
+    ],
+    "forms": [],
+    "note": "После in case не ставят will: in case it rains (не will rain)."
+  },
+  {
+    "en": "on time",
+    "ru": "вовремя, по расписанию",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The train arrived exactly on time.",
+        "Поезд прибыл точно по расписанию."
+      ],
+      [
+        "Please try to be on time tomorrow.",
+        "Пожалуйста, постарайся завтра не опаздывать."
+      ],
+      [
+        "He never pays his bills on time.",
+        "Он никогда не оплачивает счета вовремя."
+      ]
+    ],
+    "forms": [],
+    "note": "on time — точно по графику; in time — успеть заранее, до какого-то момента."
+  },
+  {
+    "en": "as soon as possible",
+    "ru": "как можно скорее",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Please call me back as soon as possible.",
+        "Пожалуйста, перезвоните мне как можно скорее."
+      ],
+      [
+        "We need to fix this as soon as possible.",
+        "Нам нужно исправить это как можно скорее."
+      ],
+      [
+        "I'll send you the details as soon as possible.",
+        "Я пришлю вам подробности как можно скорее."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "be worth",
+    "ru": "стоить (того)",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Is the museum worth visiting?",
+        "Стоит ли сходить в этот музей?"
+      ],
+      [
+        "It was expensive, but it was worth it.",
+        "Было дорого, но оно того стоило."
+      ],
+      [
+        "It's not worth waiting, the bus is always late.",
+        "Ждать нет смысла, автобус всегда опаздывает."
+      ]
+    ],
+    "forms": [],
+    "note": "После worth глагол с -ing: worth visiting."
+  },
+  {
+    "en": "can't stand",
+    "ru": "терпеть не могу",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I can't stand loud music in restaurants.",
+        "Терпеть не могу громкую музыку в ресторанах."
+      ],
+      [
+        "She can't stand waiting in queues.",
+        "Она не выносит стоять в очередях."
+      ],
+      [
+        "I couldn't stand the heat in the city.",
+        "Я не мог выносить жару в городе."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "What's the point?",
+    "ru": "какой смысл?, зачем?",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "What's the point of buying a car if you never drive?",
+        "Какой смысл покупать машину, если ты не водишь?"
+      ],
+      [
+        "He never listens, so what's the point?",
+        "Он никогда не слушает, так какой смысл?"
+      ],
+      [
+        "What's the point? We'll never win anyway.",
+        "Какой смысл? Мы всё равно не выиграем."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "calm down",
+    "ru": "успокоиться, успокоить",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Calm down, it's only a small scratch.",
+        "Успокойся, это всего лишь маленькая царапина."
+      ],
+      [
+        "It took me an hour to calm down.",
+        "Мне понадобился час, чтобы успокоиться."
+      ],
+      [
+        "A cup of tea always calms me down.",
+        "Чашка чая всегда меня успокаивает."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "show up",
+    "ru": "появиться, прийти",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He showed up an hour late.",
+        "Он появился на час позже."
+      ],
+      [
+        "Only five people showed up to the meeting.",
+        "На встречу пришли только пять человек."
+      ],
+      [
+        "What if nobody shows up?",
+        "А что, если никто не придёт?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "end up",
+    "ru": "в итоге оказаться, в итоге сделать",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "We got lost and ended up in a small village.",
+        "Мы заблудились и в итоге оказались в маленькой деревне."
+      ],
+      [
+        "I ended up paying for everyone.",
+        "В итоге я заплатил за всех."
+      ],
+      [
+        "If you don't rest, you'll end up getting ill.",
+        "Если не будешь отдыхать, в конце концов заболеешь."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "turn out",
+    "ru": "оказаться; получиться",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The new neighbour turned out to be very friendly.",
+        "Новый сосед оказался очень дружелюбным."
+      ],
+      [
+        "It turned out that the shop was closed.",
+        "Оказалось, что магазин закрыт."
+      ],
+      [
+        "How did the cake turn out?",
+        "Как получился торт?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "carry on",
+    "ru": "продолжать",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Sorry I interrupted. Please carry on.",
+        "Простите, что перебил. Продолжайте, пожалуйста."
+      ],
+      [
+        "She carried on working after midnight.",
+        "Она продолжала работать и после полуночи."
+      ],
+      [
+        "We can't carry on like this.",
+        "Так дальше продолжаться не может."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "set up",
+    "ru": "организовать, основать, настроить",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Can you help me set up my new phone?",
+        "Поможешь настроить мой новый телефон?"
+      ],
+      [
+        "He set up his own business last year.",
+        "В прошлом году он открыл свой бизнес."
+      ],
+      [
+        "I'll set up a meeting for Thursday.",
+        "Я назначу встречу на четверг."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "sort out",
+    "ru": "уладить, разобраться, привести в порядок",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Don't worry, we'll sort it out.",
+        "Не волнуйся, мы с этим разберёмся."
+      ],
+      [
+        "I need to sort out my documents.",
+        "Мне нужно разобрать свои документы."
+      ],
+      [
+        "Have you sorted out the problem with your bank?",
+        "Ты решил проблему с банком?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "break down",
+    "ru": "сломаться (о технике, машине)",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Our car broke down on the motorway.",
+        "Наша машина сломалась на трассе."
+      ],
+      [
+        "The lift has broken down again.",
+        "Лифт опять сломался."
+      ],
+      [
+        "What do you do if your car breaks down?",
+        "Что ты делаешь, если у тебя ломается машина?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "check in",
+    "ru": "регистрироваться (в отеле, аэропорту), заселяться",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "We checked in at the hotel at three.",
+        "Мы заселились в отель в три часа."
+      ],
+      [
+        "You can check in online the day before.",
+        "Можно зарегистрироваться онлайн накануне."
+      ],
+      [
+        "Where do we check in for the flight?",
+        "Где регистрация на наш рейс?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "cheer up",
+    "ru": "взбодриться, развеселить",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Cheer up! It's not the end of the world.",
+        "Выше нос! Это не конец света."
+      ],
+      [
+        "I bought her flowers to cheer her up.",
+        "Я купил ей цветы, чтобы её порадовать."
+      ],
+      [
+        "A walk in the sun always cheers me up.",
+        "Прогулка на солнце всегда поднимает мне настроение."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "get rid of",
+    "ru": "избавиться от",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "I need to get rid of these old clothes.",
+        "Мне нужно избавиться от этой старой одежды."
+      ],
+      [
+        "How can I get rid of a headache quickly?",
+        "Как быстро избавиться от головной боли?"
+      ],
+      [
+        "We finally got rid of our old sofa.",
+        "Мы наконец избавились от старого дивана."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "take place",
+    "ru": "происходить, проходить (о событиях)",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "The wedding will take place in June.",
+        "Свадьба состоится в июне."
+      ],
+      [
+        "Where did the meeting take place?",
+        "Где проходила встреча?"
+      ],
+      [
+        "The concert didn't take place because of the rain.",
+        "Концерт не состоялся из-за дождя."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "make money",
+    "ru": "зарабатывать (деньги)",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "He makes money by selling old furniture online.",
+        "Он зарабатывает, продавая старую мебель онлайн."
+      ],
+      [
+        "It's hard to make money as a musician.",
+        "Музыканту трудно заработать на жизнь."
+      ],
+      [
+        "Did the café make any money last year?",
+        "Кафе принесло хоть какую-то прибыль в прошлом году?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "as well",
+    "ru": "тоже, также",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Can I have a sandwich as well, please?",
+        "Можно мне ещё и сэндвич?"
+      ],
+      [
+        "She speaks French and German as well.",
+        "Она также говорит по-французски и по-немецки."
+      ],
+      [
+        "Are you coming as well?",
+        "Ты тоже идёшь?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "hold on",
+    "ru": "подождать (минутку); держаться",
+    "pos": "ph",
+    "lvl": "B1",
+    "ex": [
+      [
+        "Hold on, I'll get a pen.",
+        "Подожди, я возьму ручку."
+      ],
+      [
+        "Can you hold on a moment? I'll put you through.",
+        "Не могли бы вы подождать? Я вас соединю."
+      ],
+      [
+        "Hold on tight, the road is bumpy.",
+        "Держись крепче, дорога ухабистая."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "put up with",
+    "ru": "терпеть, мириться с",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I can't put up with this noise any longer.",
+        "Я больше не могу терпеть этот шум."
+      ],
+      [
+        "How do you put up with such a long commute?",
+        "Как ты миришься с такой долгой дорогой на работу?"
+      ],
+      [
+        "She put up with his bad moods for years.",
+        "Она годами терпела его плохое настроение."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "come across",
+    "ru": "случайно найти, наткнуться; производить впечатление",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I came across some old photos while cleaning.",
+        "Во время уборки я наткнулся на старые фотографии."
+      ],
+      [
+        "He comes across as quite shy.",
+        "Он производит впечатление довольно застенчивого человека."
+      ],
+      [
+        "Have you ever come across this word before?",
+        "Ты раньше встречал это слово?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "bring up",
+    "ru": "поднимать (тему); воспитывать",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I didn't want to bring up money at dinner.",
+        "Я не хотел поднимать тему денег за ужином."
+      ],
+      [
+        "She was brought up by her grandparents.",
+        "Её воспитывали бабушка с дедушкой."
+      ],
+      [
+        "Why do you always bring that up?",
+        "Почему ты всегда об этом заговариваешь?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "get over",
+    "ru": "оправиться, пережить, прийти в себя",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "It took me weeks to get over the flu.",
+        "Мне понадобились недели, чтобы оправиться от гриппа."
+      ],
+      [
+        "He still hasn't got over the break-up.",
+        "Он до сих пор не пережил расставание."
+      ],
+      [
+        "Don't worry, you'll get over it.",
+        "Не переживай, это пройдёт."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "look into",
+    "ru": "изучить, разобраться, рассмотреть",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I'll look into the problem and call you back.",
+        "Я разберусь с проблемой и перезвоню вам."
+      ],
+      [
+        "We're looking into cheaper ways to travel.",
+        "Мы изучаем более дешёвые способы путешествовать."
+      ],
+      [
+        "Has anyone looked into your complaint yet?",
+        "Кто-нибудь уже рассмотрел вашу жалобу?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "point out",
+    "ru": "указывать, обращать внимание (на что-то)",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "She pointed out a mistake in my report.",
+        "Она указала на ошибку в моём отчёте."
+      ],
+      [
+        "I'd like to point out that the price includes tax.",
+        "Хочу обратить внимание, что цена включает налог."
+      ],
+      [
+        "Thanks for pointing that out.",
+        "Спасибо, что обратил на это внимание."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "keep an eye on",
+    "ru": "присматривать за, следить за",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "Can you keep an eye on my bag for a minute?",
+        "Можешь минутку присмотреть за моей сумкой?"
+      ],
+      [
+        "I'm keeping an eye on flight prices.",
+        "Я слежу за ценами на билеты."
+      ],
+      [
+        "Keep an eye on the kids while I cook.",
+        "Присмотри за детьми, пока я готовлю."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "take sth for granted",
+    "ru": "принимать как должное",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "We often take our health for granted.",
+        "Мы часто воспринимаем своё здоровье как должное."
+      ],
+      [
+        "Don't take your friends for granted.",
+        "Не принимай своих друзей как должное."
+      ],
+      [
+        "I used to take hot water for granted.",
+        "Раньше я не ценил горячую воду."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "make the most of",
+    "ru": "использовать по максимуму",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "Let's make the most of the sunny weather.",
+        "Давай по максимуму воспользуемся солнечной погодой."
+      ],
+      [
+        "He made the most of his time abroad.",
+        "Он извлёк максимум из времени за границей."
+      ],
+      [
+        "How can I make the most of my weekend?",
+        "Как провести выходные с максимальной пользой?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "cut down on",
+    "ru": "сокращать (потребление)",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I'm trying to cut down on sugar.",
+        "Я стараюсь есть меньше сахара."
+      ],
+      [
+        "We need to cut down on our spending.",
+        "Нам нужно сократить расходы."
+      ],
+      [
+        "Has he cut down on coffee yet?",
+        "Он уже стал пить меньше кофе?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "run into",
+    "ru": "случайно встретить; столкнуться (с проблемой)",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I ran into an old classmate at the supermarket.",
+        "Я случайно встретил одноклассника в супермаркете."
+      ],
+      [
+        "We ran into some problems with the new system.",
+        "Мы столкнулись с некоторыми проблемами в новой системе."
+      ],
+      [
+        "You'll never guess who I ran into today.",
+        "Ни за что не угадаешь, кого я сегодня встретил."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "fall out with",
+    "ru": "поссориться с",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "She fell out with her sister over money.",
+        "Она поссорилась с сестрой из-за денег."
+      ],
+      [
+        "Have you fallen out with Tom?",
+        "Ты поссорился с Томом?"
+      ],
+      [
+        "I don't want to fall out with my neighbours.",
+        "Не хочу ссориться с соседями."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "rule out",
+    "ru": "исключать (возможность)",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "The doctor ruled out anything serious.",
+        "Врач исключил что-либо серьёзное."
+      ],
+      [
+        "We can't rule out a delay.",
+        "Мы не можем исключить задержку."
+      ],
+      [
+        "I wouldn't rule it out completely.",
+        "Я бы не стал полностью это исключать."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "the thing is",
+    "ru": "дело в том, что",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I'd love to come. The thing is, I'm working.",
+        "Я бы с радостью пришёл. Дело в том, что я работаю."
+      ],
+      [
+        "The thing is, we don't have enough money.",
+        "Дело в том, что у нас недостаточно денег."
+      ],
+      [
+        "The thing is, nobody told me about it.",
+        "Дело в том, что мне никто об этом не сказал."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "as a matter of fact",
+    "ru": "вообще-то, на самом деле",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "As a matter of fact, I've just finished it.",
+        "Вообще-то я только что это закончил."
+      ],
+      [
+        "Have you met him? — As a matter of fact, I have.",
+        "Ты с ним знаком? — Вообще-то да."
+      ],
+      [
+        "As a matter of fact, the trip was cheaper than expected.",
+        "На самом деле поездка вышла дешевле, чем ожидалось."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "in the long run",
+    "ru": "в долгосрочной перспективе, в итоге",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "Buying good shoes saves money in the long run.",
+        "Покупка хорошей обуви в итоге экономит деньги."
+      ],
+      [
+        "In the long run, regular exercise pays off.",
+        "В долгосрочной перспективе регулярные тренировки окупаются."
+      ],
+      [
+        "It might be cheaper now, but not in the long run.",
+        "Сейчас это, может, и дешевле, но не в перспективе."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "to some extent",
+    "ru": "в какой-то степени",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I agree with you to some extent.",
+        "В какой-то степени я с тобой согласен."
+      ],
+      [
+        "To some extent, it was our own fault.",
+        "В какой-то мере это была наша вина."
+      ],
+      [
+        "Money is important, but only to some extent.",
+        "Деньги важны, но лишь до определённой степени."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "it goes without saying",
+    "ru": "само собой разумеется",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "It goes without saying that you can stay with us.",
+        "Само собой, ты можешь остановиться у нас."
+      ],
+      [
+        "It goes without saying that safety comes first.",
+        "Само собой разумеется, безопасность прежде всего."
+      ],
+      [
+        "It goes without saying that I'll pay you back.",
+        "Само собой, я верну тебе деньги."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "on second thoughts",
+    "ru": "хотя нет, подумав",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "I'll have tea. On second thoughts, make it coffee.",
+        "Мне чай. Хотя нет, лучше кофе."
+      ],
+      [
+        "On second thoughts, let's stay in tonight.",
+        "Подумав, давай лучше сегодня останемся дома."
+      ],
+      [
+        "On second thoughts, maybe that's not a good idea.",
+        "Хотя, если подумать, это, наверное, не лучшая идея."
+      ]
+    ],
+    "forms": [],
+    "note": "Британский вариант; в американском — on second thought."
+  },
+  {
+    "en": "beside the point",
+    "ru": "не по существу, не в этом дело",
+    "pos": "ph",
+    "lvl": "B2",
+    "ex": [
+      [
+        "Whether it's cheap is beside the point.",
+        "Дёшево это или нет — дело не в этом."
+      ],
+      [
+        "That's beside the point, we're talking about safety.",
+        "Это к делу не относится, мы говорим о безопасности."
+      ],
+      [
+        "His age is completely beside the point.",
+        "Его возраст тут вообще ни при чём."
+      ]
+    ],
+    "forms": []
+  }
+]

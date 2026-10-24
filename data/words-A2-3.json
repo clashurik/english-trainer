@@ -1,0 +1,2667 @@
+[
+  {
+    "en": "disadvantage",
+    "ru": "недостаток, минус",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The main disadvantage of this flat is the noise.",
+        "Главный минус этой квартиры — шум."
+      ],
+      [
+        "Are there any disadvantages to working from home?",
+        "Есть ли минусы у работы из дома?"
+      ],
+      [
+        "Not speaking English was a big disadvantage for me.",
+        "Незнание английского было для меня большим минусом."
+      ]
+    ],
+    "forms": [
+      [
+        "advantage",
+        "n",
+        "преимущество, плюс"
+      ]
+    ]
+  },
+  {
+    "en": "effort",
+    "ru": "усилие, старание",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Learning a language takes time and effort.",
+        "Изучение языка требует времени и сил."
+      ],
+      [
+        "Thanks for all your effort on this project.",
+        "Спасибо за все твои старания в этом проекте."
+      ],
+      [
+        "He didn't make any effort to help us.",
+        "Он даже не попытался нам помочь."
+      ]
+    ],
+    "forms": [
+      [
+        "effortless",
+        "adj",
+        "лёгкий, не требующий усилий"
+      ]
+    ],
+    "note": "make an effort (не do an effort) — постараться"
+  },
+  {
+    "en": "success",
+    "ru": "успех",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The party was a great success.",
+        "Вечеринка прошла с большим успехом."
+      ],
+      [
+        "What is the secret of your success?",
+        "В чём секрет твоего успеха?"
+      ],
+      [
+        "We tried to fix the car, but without success.",
+        "Мы пытались починить машину, но безуспешно."
+      ]
+    ],
+    "forms": [
+      [
+        "succeed",
+        "v",
+        "добиться успеха, удаться"
+      ],
+      [
+        "successful",
+        "adj",
+        "успешный"
+      ],
+      [
+        "successfully",
+        "adv",
+        "успешно"
+      ]
+    ]
+  },
+  {
+    "en": "solution",
+    "ru": "решение (проблемы), выход",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We need to find a solution quickly.",
+        "Нам нужно быстро найти решение."
+      ],
+      [
+        "Is there an easy solution to this problem?",
+        "Есть ли простое решение этой проблемы?"
+      ],
+      [
+        "Moving to a smaller flat isn't the only solution.",
+        "Переезд в квартиру поменьше — не единственный выход."
+      ]
+    ],
+    "forms": [
+      [
+        "solve",
+        "v",
+        "решать"
+      ]
+    ]
+  },
+  {
+    "en": "trouble",
+    "ru": "проблема, неприятности, трудность",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I had some trouble with my phone yesterday.",
+        "Вчера у меня были проблемы с телефоном."
+      ],
+      [
+        "Are you in trouble again?",
+        "Ты опять влип в неприятности?"
+      ],
+      [
+        "Did you have any trouble finding the hotel?",
+        "Тебе было трудно найти гостиницу?"
+      ]
+    ],
+    "forms": [
+      [
+        "troubled",
+        "adj",
+        "встревоженный, проблемный"
+      ]
+    ]
+  },
+  {
+    "en": "difficulty",
+    "ru": "трудность, сложность",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "She had difficulty sleeping after the move.",
+        "После переезда ей было трудно заснуть."
+      ],
+      [
+        "We had no difficulty finding a parking space.",
+        "Мы без труда нашли место для парковки."
+      ],
+      [
+        "What are the main difficulties of your job?",
+        "Какие главные трудности в твоей работе?"
+      ]
+    ],
+    "forms": [
+      [
+        "difficult",
+        "adj",
+        "трудный, сложный"
+      ]
+    ]
+  },
+  {
+    "en": "emergency",
+    "ru": "чрезвычайная ситуация, экстренный случай",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Call this number in an emergency.",
+        "В экстренном случае звоните по этому номеру."
+      ],
+      [
+        "Is it an emergency, or can it wait?",
+        "Это срочно или может подождать?"
+      ],
+      [
+        "The plane made an emergency landing.",
+        "Самолёт совершил аварийную посадку."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "accident",
+    "ru": "несчастный случай, авария",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "He broke his leg in a car accident.",
+        "Он сломал ногу в автомобильной аварии."
+      ],
+      [
+        "Sorry, I didn't do it on purpose. It was an accident.",
+        "Прости, я не нарочно. Это вышло случайно."
+      ],
+      [
+        "I met her by accident at the station.",
+        "Я случайно встретил её на вокзале."
+      ]
+    ],
+    "forms": [
+      [
+        "accidental",
+        "adj",
+        "случайный"
+      ],
+      [
+        "accidentally",
+        "adv",
+        "случайно"
+      ]
+    ],
+    "note": "by accident — случайно"
+  },
+  {
+    "en": "crime",
+    "ru": "преступление, преступность",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Crime in this area is quite low.",
+        "Преступность в этом районе довольно низкая."
+      ],
+      [
+        "He didn't commit the crime.",
+        "Он не совершал этого преступления."
+      ],
+      [
+        "Is stealing a phone a serious crime?",
+        "Кража телефона — это серьёзное преступление?"
+      ]
+    ],
+    "forms": [
+      [
+        "criminal",
+        "n",
+        "преступник"
+      ],
+      [
+        "criminal",
+        "adj",
+        "преступный, уголовный"
+      ]
+    ]
+  },
+  {
+    "en": "death",
+    "ru": "смерть",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Her father's death was a shock to everyone.",
+        "Смерть её отца стала шоком для всех."
+      ],
+      [
+        "Smoking is a common cause of early death.",
+        "Курение — частая причина ранней смерти."
+      ],
+      [
+        "I'm bored to death at this meeting.",
+        "Мне до смерти скучно на этом совещании."
+      ]
+    ],
+    "forms": [
+      [
+        "die",
+        "v",
+        "умирать"
+      ],
+      [
+        "dead",
+        "adj",
+        "мёртвый"
+      ]
+    ]
+  },
+  {
+    "en": "diet",
+    "ru": "диета, питание, рацион",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "A healthy diet includes lots of vegetables.",
+        "Здоровое питание включает много овощей."
+      ],
+      [
+        "I'm on a diet, so no cake for me.",
+        "Я на диете, так что мне без торта."
+      ],
+      [
+        "Has your diet changed since you moved abroad?",
+        "Твоё питание изменилось после переезда за границу?"
+      ]
+    ],
+    "forms": [],
+    "note": "diet — не только «диета», но и вообще то, чем человек питается"
+  },
+  {
+    "en": "weight",
+    "ru": "вес",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I've put on weight since the holidays.",
+        "Я поправился после праздников."
+      ],
+      [
+        "What's the weight limit for hand luggage?",
+        "Какой допустимый вес ручной клади?"
+      ],
+      [
+        "She lost a lot of weight last year.",
+        "В прошлом году она сильно похудела."
+      ]
+    ],
+    "forms": [
+      [
+        "weigh",
+        "v",
+        "весить, взвешивать"
+      ],
+      [
+        "overweight",
+        "adj",
+        "с лишним весом"
+      ]
+    ]
+  },
+  {
+    "en": "stomach",
+    "ru": "живот, желудок",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "My stomach hurts after that spicy food.",
+        "У меня болит живот после той острой еды."
+      ],
+      [
+        "Don't take these pills on an empty stomach.",
+        "Не принимайте эти таблетки натощак."
+      ],
+      [
+        "Do you sleep on your stomach?",
+        "Ты спишь на животе?"
+      ]
+    ],
+    "forms": [
+      [
+        "stomachache",
+        "n",
+        "боль в животе"
+      ]
+    ]
+  },
+  {
+    "en": "pill",
+    "ru": "таблетка",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Take one pill twice a day after meals.",
+        "Принимайте по одной таблетке два раза в день после еды."
+      ],
+      [
+        "Did you remember to take your pills?",
+        "Ты не забыл выпить таблетки?"
+      ],
+      [
+        "I don't like taking sleeping pills.",
+        "Не люблю принимать снотворное."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "temperature",
+    "ru": "температура",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The temperature dropped below zero last night.",
+        "Прошлой ночью температура опустилась ниже нуля."
+      ],
+      [
+        "I think you've got a temperature.",
+        "По-моему, у тебя температура."
+      ],
+      [
+        "What temperature should I wash this shirt at?",
+        "При какой температуре стирать эту рубашку?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "storm",
+    "ru": "буря, гроза, шторм",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "A big storm hit the coast last night.",
+        "Прошлой ночью на побережье обрушилась сильная буря."
+      ],
+      [
+        "Our flight was cancelled because of the storm.",
+        "Наш рейс отменили из-за грозы."
+      ],
+      [
+        "Is there going to be a storm tonight?",
+        "Сегодня ночью будет гроза?"
+      ]
+    ],
+    "forms": [
+      [
+        "stormy",
+        "adj",
+        "штормовой, грозовой"
+      ]
+    ]
+  },
+  {
+    "en": "wedding",
+    "ru": "свадьба",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We're going to my cousin's wedding on Saturday.",
+        "В субботу мы идём на свадьбу моего двоюродного брата."
+      ],
+      [
+        "Where did you have your wedding?",
+        "Где вы играли свадьбу?"
+      ],
+      [
+        "She showed me her wedding photos.",
+        "Она показала мне свои свадебные фотографии."
+      ]
+    ],
+    "forms": [],
+    "note": "wedding — свадьба (праздник); marriage — брак"
+  },
+  {
+    "en": "anniversary",
+    "ru": "годовщина",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Today is our tenth wedding anniversary.",
+        "Сегодня наша десятая годовщина свадьбы."
+      ],
+      [
+        "How are you celebrating your anniversary?",
+        "Как вы будете отмечать годовщину?"
+      ],
+      [
+        "He forgot their anniversary again.",
+        "Он опять забыл про их годовщину."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "childhood",
+    "ru": "детство",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I spent my childhood in a small town.",
+        "Я провёл детство в маленьком городке."
+      ],
+      [
+        "Do you have happy memories of your childhood?",
+        "У тебя остались счастливые воспоминания о детстве?"
+      ],
+      [
+        "We've been friends since childhood.",
+        "Мы дружим с детства."
+      ]
+    ],
+    "forms": [
+      [
+        "child",
+        "n",
+        "ребёнок (мн. ч. children)"
+      ],
+      [
+        "childish",
+        "adj",
+        "ребяческий, детский"
+      ]
+    ]
+  },
+  {
+    "en": "friendship",
+    "ru": "дружба",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Our friendship started at university.",
+        "Наша дружба началась в университете."
+      ],
+      [
+        "Moving away didn't end our friendship.",
+        "Переезд не положил конец нашей дружбе."
+      ],
+      [
+        "What makes a good friendship?",
+        "Что делает дружбу крепкой?"
+      ]
+    ],
+    "forms": [
+      [
+        "friend",
+        "n",
+        "друг"
+      ],
+      [
+        "friendly",
+        "adj",
+        "дружелюбный"
+      ]
+    ]
+  },
+  {
+    "en": "happiness",
+    "ru": "счастье",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Money doesn't always bring happiness.",
+        "Деньги не всегда приносят счастье."
+      ],
+      [
+        "I wish you lots of happiness together.",
+        "Желаю вам много счастья вместе."
+      ],
+      [
+        "What does happiness mean to you?",
+        "Что для тебя значит счастье?"
+      ]
+    ],
+    "forms": [
+      [
+        "happy",
+        "adj",
+        "счастливый"
+      ],
+      [
+        "happily",
+        "adv",
+        "счастливо, радостно"
+      ],
+      [
+        "unhappy",
+        "adj",
+        "несчастный, недовольный"
+      ]
+    ]
+  },
+  {
+    "en": "fear",
+    "ru": "страх, боязнь",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I have a fear of flying.",
+        "Я боюсь летать."
+      ],
+      [
+        "She couldn't speak because of fear.",
+        "Она не могла говорить от страха."
+      ],
+      [
+        "What's your biggest fear in life?",
+        "Чего ты боишься в жизни больше всего?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "mood",
+    "ru": "настроение",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "You're in a good mood today!",
+        "У тебя сегодня хорошее настроение!"
+      ],
+      [
+        "I'm not in the mood for a party.",
+        "Я не в настроении идти на вечеринку."
+      ],
+      [
+        "Bad weather always affects my mood.",
+        "Плохая погода всегда портит мне настроение."
+      ]
+    ],
+    "forms": [
+      [
+        "moody",
+        "adj",
+        "капризный, с переменчивым настроением"
+      ]
+    ]
+  },
+  {
+    "en": "personality",
+    "ru": "характер, личность",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "She has a really strong personality.",
+        "У неё очень сильный характер."
+      ],
+      [
+        "I like his warm and friendly personality.",
+        "Мне нравится его тёплый, дружелюбный характер."
+      ],
+      [
+        "How would you describe your personality?",
+        "Как бы ты описал свой характер?"
+      ]
+    ],
+    "forms": [
+      [
+        "personal",
+        "adj",
+        "личный"
+      ],
+      [
+        "person",
+        "n",
+        "человек"
+      ]
+    ]
+  },
+  {
+    "en": "thought",
+    "ru": "мысль",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "That's a good thought — let's try it.",
+        "Хорошая мысль — давай попробуем."
+      ],
+      [
+        "What are your thoughts on the new plan?",
+        "Что ты думаешь о новом плане?"
+      ],
+      [
+        "The thought of flying makes me nervous.",
+        "При одной мысли о полёте я начинаю нервничать."
+      ]
+    ],
+    "forms": [
+      [
+        "think",
+        "v",
+        "думать"
+      ],
+      [
+        "thoughtful",
+        "adj",
+        "заботливый, задумчивый"
+      ]
+    ]
+  },
+  {
+    "en": "knowledge",
+    "ru": "знание, знания",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "He has a good knowledge of computers.",
+        "Он хорошо разбирается в компьютерах."
+      ],
+      [
+        "You don't need any special knowledge for this job.",
+        "Для этой работы не нужны особые знания."
+      ],
+      [
+        "Is basic knowledge of English enough for this job?",
+        "Достаточно ли для этой работы базового английского?"
+      ]
+    ],
+    "forms": [
+      [
+        "know",
+        "v",
+        "знать"
+      ],
+      [
+        "knowledgeable",
+        "adj",
+        "знающий, осведомлённый"
+      ]
+    ],
+    "note": "knowledge — неисчисляемое: без -s и без a"
+  },
+  {
+    "en": "education",
+    "ru": "образование",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "A good education opens many doors.",
+        "Хорошее образование открывает многие двери."
+      ],
+      [
+        "Where did you get your education?",
+        "Где ты получил образование?"
+      ],
+      [
+        "She works in adult education.",
+        "Она работает в сфере образования для взрослых."
+      ]
+    ],
+    "forms": [
+      [
+        "educate",
+        "v",
+        "обучать, давать образование"
+      ],
+      [
+        "educated",
+        "adj",
+        "образованный"
+      ],
+      [
+        "educational",
+        "adj",
+        "образовательный, познавательный"
+      ]
+    ]
+  },
+  {
+    "en": "university",
+    "ru": "университет",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "My sister is at university in London.",
+        "Моя сестра учится в университете в Лондоне."
+      ],
+      [
+        "Which university did you go to?",
+        "В каком университете ты учился?"
+      ],
+      [
+        "I didn't go to university after school.",
+        "После школы я не пошёл в университет."
+      ]
+    ],
+    "forms": [],
+    "note": "be at university / go to university — без артикля, когда речь об учёбе"
+  },
+  {
+    "en": "exam",
+    "ru": "экзамен",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I've got an important exam next week.",
+        "На следующей неделе у меня важный экзамен."
+      ],
+      [
+        "Did you pass your driving exam?",
+        "Ты сдал экзамен на права?"
+      ],
+      [
+        "He failed the exam twice.",
+        "Он дважды провалил экзамен."
+      ]
+    ],
+    "forms": [
+      [
+        "examine",
+        "v",
+        "осматривать, проверять"
+      ]
+    ],
+    "note": "take an exam — сдавать (пытаться), pass an exam — сдать (успешно)"
+  },
+  {
+    "en": "furniture",
+    "ru": "мебель",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We bought some new furniture for the living room.",
+        "Мы купили новую мебель в гостиную."
+      ],
+      [
+        "The flat comes with all the furniture.",
+        "Квартира сдаётся со всей мебелью."
+      ],
+      [
+        "This piece of furniture doesn't fit anywhere.",
+        "Этот предмет мебели никуда не помещается."
+      ]
+    ],
+    "forms": [
+      [
+        "furnished",
+        "adj",
+        "меблированный"
+      ]
+    ],
+    "note": "furniture — неисчисляемое: a piece of furniture, не a furniture"
+  },
+  {
+    "en": "fridge",
+    "ru": "холодильник",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "There's some milk in the fridge.",
+        "В холодильнике есть молоко."
+      ],
+      [
+        "Can you put the butter back in the fridge?",
+        "Можешь убрать масло обратно в холодильник?"
+      ],
+      [
+        "Our fridge isn't working properly.",
+        "Наш холодильник плохо работает."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "oven",
+    "ru": "духовка, печь",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Bake the cake in the oven for 40 minutes.",
+        "Выпекайте пирог в духовке 40 минут."
+      ],
+      [
+        "Did you turn off the oven?",
+        "Ты выключил духовку?"
+      ],
+      [
+        "The pizza is still in the oven.",
+        "Пицца ещё в духовке."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "cupboard",
+    "ru": "шкаф, шкафчик (кухонный)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The cups are in the cupboard above the sink.",
+        "Чашки в шкафчике над раковиной."
+      ],
+      [
+        "There's nothing to eat in the cupboard.",
+        "В шкафу нечего есть."
+      ],
+      [
+        "Have you checked the kitchen cupboards?",
+        "Ты проверил кухонные шкафчики?"
+      ]
+    ],
+    "forms": [],
+    "note": "Произносится [ˈkʌbəd] — p не читается"
+  },
+  {
+    "en": "mirror",
+    "ru": "зеркало",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "She looked at herself in the mirror.",
+        "Она посмотрела на себя в зеркало."
+      ],
+      [
+        "Is there a mirror in the bathroom?",
+        "В ванной есть зеркало?"
+      ],
+      [
+        "I broke a mirror this morning.",
+        "Сегодня утром я разбил зеркало."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "blanket",
+    "ru": "одеяло, плед",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can I have an extra blanket, please?",
+        "Можно мне ещё одно одеяло?"
+      ],
+      [
+        "We sat on a blanket in the park.",
+        "Мы сидели на пледе в парке."
+      ],
+      [
+        "I can't sleep without a warm blanket.",
+        "Я не могу спать без тёплого одеяла."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "roof",
+    "ru": "крыша",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The roof is leaking again.",
+        "Крыша опять протекает."
+      ],
+      [
+        "We had dinner on the roof of the hotel.",
+        "Мы ужинали на крыше отеля."
+      ],
+      [
+        "How old is the roof on your house?",
+        "Сколько лет крыше на вашем доме?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "apartment",
+    "ru": "квартира",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "They live in a small apartment downtown.",
+        "Они живут в маленькой квартире в центре."
+      ],
+      [
+        "We rented an apartment for our holiday.",
+        "На отпуск мы сняли квартиру."
+      ],
+      [
+        "How many rooms does your apartment have?",
+        "Сколько комнат в твоей квартире?"
+      ]
+    ],
+    "forms": [],
+    "note": "apartment — чаще в американском английском; в британском обычно flat"
+  },
+  {
+    "en": "suitcase",
+    "ru": "чемодан",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I still haven't packed my suitcase.",
+        "Я ещё не собрал чемодан."
+      ],
+      [
+        "Can you help me carry this suitcase?",
+        "Можешь помочь мне донести этот чемодан?"
+      ],
+      [
+        "The airline lost my suitcase.",
+        "Авиакомпания потеряла мой чемодан."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "wallet",
+    "ru": "бумажник, кошелёк",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I left my wallet at home.",
+        "Я оставил кошелёк дома."
+      ],
+      [
+        "Someone stole my wallet on the bus.",
+        "У меня украли кошелёк в автобусе."
+      ],
+      [
+        "Have you seen my wallet anywhere?",
+        "Ты нигде не видел мой кошелёк?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "receipt",
+    "ru": "чек, квитанция",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can I have a receipt, please?",
+        "Можно мне чек, пожалуйста?"
+      ],
+      [
+        "Keep the receipt in case you want to return it.",
+        "Сохраните чек на случай, если захотите вернуть вещь."
+      ],
+      [
+        "I didn't get a receipt for the taxi.",
+        "Мне не дали чек за такси."
+      ]
+    ],
+    "forms": [],
+    "note": "Произносится [rɪˈsiːt] — p не читается; не путать с recipe — рецепт"
+  },
+  {
+    "en": "menu",
+    "ru": "меню",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Could we see the menu, please?",
+        "Можно нам меню, пожалуйста?"
+      ],
+      [
+        "There's nothing vegetarian on the menu.",
+        "В меню нет ничего вегетарианского."
+      ],
+      [
+        "Click on the menu at the top of the page.",
+        "Нажмите на меню вверху страницы."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "dessert",
+    "ru": "десерт",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "What would you like for dessert?",
+        "Что бы вы хотели на десерт?"
+      ],
+      [
+        "I'm too full for dessert.",
+        "Я слишком наелся для десерта."
+      ],
+      [
+        "We shared a chocolate dessert.",
+        "Мы разделили шоколадный десерт на двоих."
+      ]
+    ],
+    "forms": [],
+    "note": "dessert [dɪˈzɜːt] — десерт; desert [ˈdezət] — пустыня"
+  },
+  {
+    "en": "snack",
+    "ru": "перекус, закуска",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I usually have a snack in the afternoon.",
+        "Днём я обычно перекусываю."
+      ],
+      [
+        "Did you bring any snacks for the trip?",
+        "Ты взял что-нибудь перекусить в дорогу?"
+      ],
+      [
+        "Fruit is a healthy snack.",
+        "Фрукты — полезный перекус."
+      ]
+    ],
+    "forms": [
+      [
+        "snack",
+        "v",
+        "перекусывать"
+      ]
+    ]
+  },
+  {
+    "en": "sauce",
+    "ru": "соус",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "This pasta sauce is really good.",
+        "Этот соус для пасты очень вкусный."
+      ],
+      [
+        "Would you like some sauce with your chips?",
+        "Хотите соус к картошке фри?"
+      ],
+      [
+        "I didn't put enough salt in the sauce.",
+        "Я недосолил соус."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "salt",
+    "ru": "соль",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Could you pass the salt, please?",
+        "Передай, пожалуйста, соль."
+      ],
+      [
+        "Add a little salt to the water.",
+        "Добавьте в воду немного соли."
+      ],
+      [
+        "I try not to eat too much salt.",
+        "Я стараюсь не есть слишком много соли."
+      ]
+    ],
+    "forms": [
+      [
+        "salty",
+        "adj",
+        "солёный"
+      ]
+    ]
+  },
+  {
+    "en": "oil",
+    "ru": "масло (растительное), нефть",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Heat some oil in a pan.",
+        "Разогрейте немного масла на сковороде."
+      ],
+      [
+        "Do you cook with olive oil?",
+        "Ты готовишь на оливковом масле?"
+      ],
+      [
+        "The price of oil went up again.",
+        "Цена на нефть снова выросла."
+      ]
+    ],
+    "forms": [
+      [
+        "oily",
+        "adj",
+        "жирный, маслянистый"
+      ]
+    ]
+  },
+  {
+    "en": "garlic",
+    "ru": "чеснок",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Add two cloves of garlic to the sauce.",
+        "Добавьте в соус два зубчика чеснока."
+      ],
+      [
+        "I don't like too much garlic in my food.",
+        "Не люблю, когда в еде много чеснока."
+      ],
+      [
+        "Is there garlic in this soup?",
+        "В этом супе есть чеснок?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "onion",
+    "ru": "лук (репчатый)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Cut the onion into small pieces.",
+        "Нарежьте лук мелкими кусочками."
+      ],
+      [
+        "Cutting onions always makes me cry.",
+        "Когда режу лук, я всегда плачу."
+      ],
+      [
+        "Do you want onions on your burger?",
+        "Тебе положить лук в бургер?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "honey",
+    "ru": "мёд; дорогой, милый (обращение)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I put honey in my tea instead of sugar.",
+        "Я кладу в чай мёд вместо сахара."
+      ],
+      [
+        "Is this honey from a local farm?",
+        "Этот мёд с местной фермы?"
+      ],
+      [
+        "Honey, have you seen my keys?",
+        "Дорогой, ты не видел мои ключи?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "toast",
+    "ru": "тост, поджаренный хлеб; тост (за кого-то)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I had toast and coffee for breakfast.",
+        "На завтрак у меня были тосты и кофе."
+      ],
+      [
+        "Would you like butter on your toast?",
+        "Намазать тебе тост маслом?"
+      ],
+      [
+        "Let's make a toast to the happy couple!",
+        "Давайте поднимем тост за молодожёнов!"
+      ]
+    ],
+    "forms": [
+      [
+        "toaster",
+        "n",
+        "тостер"
+      ]
+    ]
+  },
+  {
+    "en": "seafood",
+    "ru": "морепродукты",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "This restaurant is famous for its seafood.",
+        "Этот ресторан славится морепродуктами."
+      ],
+      [
+        "I'm allergic to all kinds of seafood.",
+        "У меня аллергия на любые морепродукты."
+      ],
+      [
+        "Do you like seafood, or should we go somewhere else?",
+        "Ты любишь морепродукты, или пойдём в другое место?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "wine",
+    "ru": "вино",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Would you like a glass of wine?",
+        "Хотите бокал вина?"
+      ],
+      [
+        "We bought a bottle of red wine for dinner.",
+        "Мы купили к ужину бутылку красного вина."
+      ],
+      [
+        "I don't drink wine at lunch.",
+        "Я не пью вино за обедом."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "beer",
+    "ru": "пиво",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Let's go for a beer after work.",
+        "Пойдём выпьем пива после работы."
+      ],
+      [
+        "Is there any beer in the fridge?",
+        "В холодильнике есть пиво?"
+      ],
+      [
+        "He ordered two beers and some snacks.",
+        "Он заказал два пива и что-то перекусить."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "countryside",
+    "ru": "сельская местность, природа (за городом)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We spent the weekend in the countryside.",
+        "Мы провели выходные за городом."
+      ],
+      [
+        "The countryside around here is beautiful.",
+        "Природа здесь очень красивая."
+      ],
+      [
+        "Would you like to live in the countryside?",
+        "Ты хотел бы жить за городом?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "village",
+    "ru": "деревня, посёлок",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "My grandparents live in a small village.",
+        "Мои бабушка с дедушкой живут в маленькой деревне."
+      ],
+      [
+        "There's only one shop in the village.",
+        "В деревне всего один магазин."
+      ],
+      [
+        "Have you ever lived in a village?",
+        "Ты когда-нибудь жил в деревне?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "lake",
+    "ru": "озеро",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We went swimming in the lake.",
+        "Мы ходили купаться на озеро."
+      ],
+      [
+        "Is the lake far from the hotel?",
+        "Озеро далеко от отеля?"
+      ],
+      [
+        "They have a house by the lake.",
+        "У них дом у озера."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "forest",
+    "ru": "лес",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We went for a walk in the forest.",
+        "Мы гуляли в лесу."
+      ],
+      [
+        "Don't get lost in the forest!",
+        "Не заблудись в лесу!"
+      ],
+      [
+        "Are there any bears in this forest?",
+        "В этом лесу водятся медведи?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "sightseeing",
+    "ru": "осмотр достопримечательностей",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We did some sightseeing in Rome.",
+        "Мы осматривали достопримечательности Рима."
+      ],
+      [
+        "Are you going sightseeing tomorrow?",
+        "Ты завтра пойдёшь смотреть достопримечательности?"
+      ],
+      [
+        "I didn't have time for sightseeing on my business trip.",
+        "В командировке у меня не было времени на экскурсии."
+      ]
+    ],
+    "forms": [
+      [
+        "sight",
+        "n",
+        "вид, достопримечательность"
+      ]
+    ]
+  },
+  {
+    "en": "tour",
+    "ru": "экскурсия, тур, поездка",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We took a tour of the old town.",
+        "Мы сходили на экскурсию по старому городу."
+      ],
+      [
+        "Is the museum tour free?",
+        "Экскурсия по музею бесплатная?"
+      ],
+      [
+        "The band is on tour in Europe.",
+        "Группа сейчас на гастролях в Европе."
+      ]
+    ],
+    "forms": [
+      [
+        "tourist",
+        "n",
+        "турист"
+      ],
+      [
+        "tourism",
+        "n",
+        "туризм"
+      ]
+    ]
+  },
+  {
+    "en": "bargain",
+    "ru": "выгодная покупка, сделка",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "This jacket was a real bargain!",
+        "Эта куртка — просто находка по такой цене!"
+      ],
+      [
+        "I got these shoes at a bargain price.",
+        "Я купил эти туфли по очень выгодной цене."
+      ],
+      [
+        "Is it a bargain, or just cheap?",
+        "Это действительно выгодно или просто дёшево?"
+      ]
+    ],
+    "forms": [
+      [
+        "bargain",
+        "v",
+        "торговаться"
+      ]
+    ]
+  },
+  {
+    "en": "brand",
+    "ru": "бренд, марка",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Which brand of coffee do you usually buy?",
+        "Кофе какой марки ты обычно покупаешь?"
+      ],
+      [
+        "I don't care about brands.",
+        "Мне всё равно, какой бренд."
+      ],
+      [
+        "This is a popular brand of trainers.",
+        "Это популярная марка кроссовок."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "product",
+    "ru": "продукт, товар, изделие",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The company sells its products online.",
+        "Компания продаёт свои товары через интернет."
+      ],
+      [
+        "Is this product made locally?",
+        "Этот товар местного производства?"
+      ],
+      [
+        "We're launching a new product next month.",
+        "В следующем месяце мы выпускаем новый продукт."
+      ]
+    ],
+    "forms": [
+      [
+        "produce",
+        "v",
+        "производить"
+      ],
+      [
+        "production",
+        "n",
+        "производство"
+      ],
+      [
+        "productive",
+        "adj",
+        "продуктивный"
+      ]
+    ],
+    "note": "product — товар, изделие; продукты питания — food или groceries"
+  },
+  {
+    "en": "quality",
+    "ru": "качество",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The quality of the food here is excellent.",
+        "Качество еды здесь отличное."
+      ],
+      [
+        "These shoes are cheap but poor quality.",
+        "Эти туфли дешёвые, но некачественные."
+      ],
+      [
+        "We're happy to pay more for better quality.",
+        "Мы готовы платить больше за лучшее качество."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "market",
+    "ru": "рынок",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I buy fruit at the market on Saturdays.",
+        "По субботам я покупаю фрукты на рынке."
+      ],
+      [
+        "Is there a flea market in your town?",
+        "В вашем городе есть блошиный рынок?"
+      ],
+      [
+        "The job market is very difficult right now.",
+        "Сейчас на рынке труда очень сложно."
+      ]
+    ],
+    "forms": [
+      [
+        "marketing",
+        "n",
+        "маркетинг"
+      ]
+    ]
+  },
+  {
+    "en": "museum",
+    "ru": "музей",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The museum is closed on Mondays.",
+        "По понедельникам музей закрыт."
+      ],
+      [
+        "We spent three hours in the art museum.",
+        "Мы провели в художественном музее три часа."
+      ],
+      [
+        "Is it free to visit the museum?",
+        "Вход в музей бесплатный?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "entertainment",
+    "ru": "развлечения, развлечение",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "There isn't much entertainment in this town.",
+        "В этом городе мало развлечений."
+      ],
+      [
+        "The hotel offers live entertainment every evening.",
+        "В отеле каждый вечер развлекательная программа."
+      ],
+      [
+        "What do you do for entertainment?",
+        "Как ты развлекаешься?"
+      ]
+    ],
+    "forms": [
+      [
+        "entertain",
+        "v",
+        "развлекать"
+      ],
+      [
+        "entertaining",
+        "adj",
+        "занимательный, интересный"
+      ]
+    ]
+  },
+  {
+    "en": "fashion",
+    "ru": "мода",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "She works in the fashion industry.",
+        "Она работает в индустрии моды."
+      ],
+      [
+        "Big sunglasses are back in fashion.",
+        "Большие солнечные очки снова в моде."
+      ],
+      [
+        "I'm not really interested in fashion.",
+        "Мода меня не особенно интересует."
+      ]
+    ],
+    "forms": [
+      [
+        "fashionable",
+        "adj",
+        "модный"
+      ]
+    ]
+  },
+  {
+    "en": "style",
+    "ru": "стиль",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "She has a great sense of style.",
+        "У неё отличное чувство стиля."
+      ],
+      [
+        "What's your boss's management style like?",
+        "Какой стиль руководства у твоего начальника?"
+      ],
+      [
+        "This jacket comes in three different styles.",
+        "Эта куртка бывает трёх разных фасонов."
+      ]
+    ],
+    "forms": [
+      [
+        "stylish",
+        "adj",
+        "стильный"
+      ]
+    ]
+  },
+  {
+    "en": "lifestyle",
+    "ru": "образ жизни",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "He has a very healthy lifestyle.",
+        "Он ведёт очень здоровый образ жизни."
+      ],
+      [
+        "Moving to the country changed our lifestyle.",
+        "Переезд за город изменил наш образ жизни."
+      ],
+      [
+        "Is a busy lifestyle bad for your health?",
+        "Вреден ли для здоровья напряжённый образ жизни?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "film",
+    "ru": "фильм; плёнка",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Have you seen any good films lately?",
+        "Ты смотрел что-нибудь хорошее в последнее время?"
+      ],
+      [
+        "The film starts at eight.",
+        "Фильм начинается в восемь."
+      ],
+      [
+        "My dad still uses an old film camera.",
+        "Мой папа до сих пор снимает на старый плёночный фотоаппарат."
+      ]
+    ],
+    "forms": [
+      [
+        "film",
+        "v",
+        "снимать (на видео)"
+      ]
+    ]
+  },
+  {
+    "en": "novel",
+    "ru": "роман (книга)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'm reading a great novel at the moment.",
+        "Сейчас я читаю отличный роман."
+      ],
+      [
+        "Have you read her latest novel?",
+        "Ты читал её последний роман?"
+      ],
+      [
+        "He wrote his first novel at twenty-five.",
+        "Свой первый роман он написал в двадцать пять."
+      ]
+    ],
+    "forms": [
+      [
+        "novelist",
+        "n",
+        "романист, писатель"
+      ]
+    ],
+    "note": "Ложный друг: novel — роман, а не новелла"
+  },
+  {
+    "en": "screen",
+    "ru": "экран",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I spend too much time looking at a screen.",
+        "Я слишком много времени смотрю в экран."
+      ],
+      [
+        "The screen on my phone is broken.",
+        "У меня разбит экран на телефоне."
+      ],
+      [
+        "Can you share your screen?",
+        "Можешь показать свой экран?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "software",
+    "ru": "программное обеспечение, программы",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "You need to update the software on your laptop.",
+        "Тебе нужно обновить программы на ноутбуке."
+      ],
+      [
+        "What software do you use for video calls?",
+        "Какой программой ты пользуешься для видеозвонков?"
+      ],
+      [
+        "He works as a software developer.",
+        "Он работает разработчиком программного обеспечения."
+      ]
+    ],
+    "forms": [],
+    "note": "software — неисчисляемое: без -s и без a"
+  },
+  {
+    "en": "website",
+    "ru": "сайт, веб-сайт",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "You can book tickets on our website.",
+        "Билеты можно забронировать на нашем сайте."
+      ],
+      [
+        "What's the address of the website?",
+        "Какой адрес у сайта?"
+      ],
+      [
+        "The website isn't working today.",
+        "Сайт сегодня не работает."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "text message",
+    "ru": "текстовое сообщение, эсэмэска",
+    "pos": "ph",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I sent her a text message an hour ago.",
+        "Я отправил ей сообщение час назад."
+      ],
+      [
+        "Did you get my text message?",
+        "Ты получил моё сообщение?"
+      ],
+      [
+        "The bank sends a text message with a code.",
+        "Банк присылает СМС с кодом."
+      ]
+    ],
+    "forms": [
+      [
+        "text",
+        "v",
+        "написать сообщение"
+      ]
+    ]
+  },
+  {
+    "en": "photograph",
+    "ru": "фотография, снимок",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "This photograph was taken in 1990.",
+        "Эта фотография была сделана в 1990 году."
+      ],
+      [
+        "Can I take a photograph of you?",
+        "Можно тебя сфотографировать?"
+      ],
+      [
+        "There are old family photographs on the wall.",
+        "На стене висят старые семейные фотографии."
+      ]
+    ],
+    "forms": [
+      [
+        "photograph",
+        "v",
+        "фотографировать"
+      ],
+      [
+        "photographer",
+        "n",
+        "фотограф"
+      ],
+      [
+        "photography",
+        "n",
+        "фотография (искусство)"
+      ]
+    ]
+  },
+  {
+    "en": "performance",
+    "ru": "выступление, представление; результаты (работы)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The band gave a great performance last night.",
+        "Вчера вечером группа отлично выступила."
+      ],
+      [
+        "Your performance at work has improved a lot.",
+        "Твои результаты на работе заметно улучшились."
+      ],
+      [
+        "What time does the evening performance start?",
+        "Во сколько начинается вечерний спектакль?"
+      ]
+    ],
+    "forms": [
+      [
+        "perform",
+        "v",
+        "выступать, исполнять"
+      ],
+      [
+        "performer",
+        "n",
+        "исполнитель, артист"
+      ]
+    ]
+  },
+  {
+    "en": "government",
+    "ru": "правительство",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The government plans to raise taxes.",
+        "Правительство планирует повысить налоги."
+      ],
+      [
+        "She works for the local government.",
+        "Она работает в местных органах власти."
+      ],
+      [
+        "Should the government pay for university education?",
+        "Должно ли государство оплачивать высшее образование?"
+      ]
+    ],
+    "forms": [
+      [
+        "govern",
+        "v",
+        "управлять, править"
+      ]
+    ]
+  },
+  {
+    "en": "law",
+    "ru": "закон, право",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "It's against the law to drive without a licence.",
+        "Водить без прав запрещено законом."
+      ],
+      [
+        "She's studying law at university.",
+        "Она изучает право в университете."
+      ],
+      [
+        "Is there a law about smoking in cafés here?",
+        "Здесь есть закон о курении в кафе?"
+      ]
+    ],
+    "forms": [
+      [
+        "lawyer",
+        "n",
+        "юрист, адвокат"
+      ]
+    ]
+  },
+  {
+    "en": "pressure",
+    "ru": "давление",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'm under a lot of pressure at work.",
+        "На работе на меня сильно давят."
+      ],
+      [
+        "The doctor checked my blood pressure.",
+        "Врач измерил мне давление."
+      ],
+      [
+        "Don't put pressure on him to decide now.",
+        "Не дави на него, чтобы он решил прямо сейчас."
+      ]
+    ],
+    "forms": [
+      [
+        "press",
+        "v",
+        "нажимать"
+      ]
+    ]
+  },
+  {
+    "en": "strength",
+    "ru": "сила; сильная сторона",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I didn't have the strength to get up.",
+        "У меня не было сил встать."
+      ],
+      [
+        "What are your main strengths?",
+        "Какие у тебя главные сильные стороны?"
+      ],
+      [
+        "Swimming builds strength and fitness.",
+        "Плавание развивает силу и выносливость."
+      ]
+    ],
+    "forms": [
+      [
+        "strong",
+        "adj",
+        "сильный"
+      ],
+      [
+        "strengthen",
+        "v",
+        "укреплять"
+      ]
+    ]
+  },
+  {
+    "en": "freedom",
+    "ru": "свобода",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I love the freedom of working for myself.",
+        "Мне нравится свобода работы на себя."
+      ],
+      [
+        "Teenagers always want more freedom from their parents.",
+        "Подростки всегда хотят больше свободы от родителей."
+      ],
+      [
+        "Does your job give you much freedom?",
+        "Твоя работа даёт тебе много свободы?"
+      ]
+    ],
+    "forms": [
+      [
+        "free",
+        "adj",
+        "свободный; бесплатный"
+      ],
+      [
+        "freely",
+        "adv",
+        "свободно"
+      ]
+    ]
+  },
+  {
+    "en": "interest",
+    "ru": "интерес; процент (банковский)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "She has a strong interest in art.",
+        "Она очень интересуется искусством."
+      ],
+      [
+        "What are your interests outside work?",
+        "Чем ты увлекаешься помимо работы?"
+      ],
+      [
+        "The bank charges high interest on loans.",
+        "Банк берёт высокий процент по кредитам."
+      ]
+    ],
+    "forms": [
+      [
+        "interested",
+        "adj",
+        "заинтересованный"
+      ],
+      [
+        "interesting",
+        "adj",
+        "интересный"
+      ]
+    ],
+    "note": "interest in something: interest in music (не to music)"
+  },
+  {
+    "en": "attention",
+    "ru": "внимание",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Please pay attention to the instructions.",
+        "Пожалуйста, обратите внимание на инструкции."
+      ],
+      [
+        "Can I have your attention, please?",
+        "Минуточку внимания, пожалуйста!"
+      ],
+      [
+        "He didn't pay any attention to me.",
+        "Он не обратил на меня никакого внимания."
+      ]
+    ],
+    "forms": [
+      [
+        "attentive",
+        "adj",
+        "внимательный"
+      ]
+    ],
+    "note": "pay attention to — обращать внимание на"
+  },
+  {
+    "en": "permission",
+    "ru": "разрешение",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "You need permission to park here.",
+        "Чтобы парковаться здесь, нужно разрешение."
+      ],
+      [
+        "Did you ask your boss for permission?",
+        "Ты спросил разрешения у начальника?"
+      ],
+      [
+        "She took my car without permission.",
+        "Она взяла мою машину без разрешения."
+      ]
+    ],
+    "forms": [
+      [
+        "permit",
+        "v",
+        "разрешать"
+      ]
+    ]
+  },
+  {
+    "en": "complaint",
+    "ru": "жалоба",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'd like to make a complaint about the room.",
+        "Я хочу подать жалобу насчёт номера."
+      ],
+      [
+        "We've had several complaints about the noise.",
+        "Мы получили несколько жалоб на шум."
+      ],
+      [
+        "Do you have any complaints about the service?",
+        "У вас есть претензии к обслуживанию?"
+      ]
+    ],
+    "forms": [
+      [
+        "complain",
+        "v",
+        "жаловаться"
+      ]
+    ]
+  },
+  {
+    "en": "discussion",
+    "ru": "обсуждение, дискуссия",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We had a long discussion about money.",
+        "Мы долго обсуждали деньги."
+      ],
+      [
+        "The plan is still under discussion.",
+        "План всё ещё обсуждается."
+      ],
+      [
+        "Can we have a quick discussion after lunch?",
+        "Можем коротко обсудить после обеда?"
+      ]
+    ],
+    "forms": [
+      [
+        "discuss",
+        "v",
+        "обсуждать"
+      ]
+    ]
+  },
+  {
+    "en": "argument",
+    "ru": "спор, ссора; довод",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I had an argument with my neighbour.",
+        "Я поругался с соседом."
+      ],
+      [
+        "They never have arguments about money.",
+        "Они никогда не ссорятся из-за денег."
+      ],
+      [
+        "That's a good argument for moving.",
+        "Это веский довод в пользу переезда."
+      ]
+    ],
+    "forms": [
+      [
+        "argue",
+        "v",
+        "спорить, ссориться"
+      ]
+    ],
+    "note": "argument — чаще всего «ссора, спор», а не только «аргумент»"
+  },
+  {
+    "en": "meaning",
+    "ru": "значение, смысл",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "What's the meaning of this word?",
+        "Какое значение у этого слова?"
+      ],
+      [
+        "I don't understand the meaning of this sign.",
+        "Я не понимаю смысла этого знака."
+      ],
+      [
+        "Her work gives her life meaning.",
+        "Работа придаёт её жизни смысл."
+      ]
+    ],
+    "forms": [
+      [
+        "mean",
+        "v",
+        "значить, иметь в виду"
+      ],
+      [
+        "meaningful",
+        "adj",
+        "значимый, осмысленный"
+      ],
+      [
+        "meaningless",
+        "adj",
+        "бессмысленный"
+      ]
+    ]
+  },
+  {
+    "en": "truth",
+    "ru": "правда, истина",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Just tell me the truth.",
+        "Просто скажи мне правду."
+      ],
+      [
+        "Is there any truth in this story?",
+        "Есть ли в этой истории хоть доля правды?"
+      ],
+      [
+        "To tell the truth, I didn't enjoy the film.",
+        "По правде говоря, фильм мне не понравился."
+      ]
+    ],
+    "forms": [
+      [
+        "true",
+        "adj",
+        "верный, правдивый"
+      ],
+      [
+        "truly",
+        "adv",
+        "по-настоящему, искренне"
+      ]
+    ],
+    "note": "tell the truth (не say the truth)"
+  },
+  {
+    "en": "secret",
+    "ru": "секрет, тайна",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can you keep a secret?",
+        "Ты умеешь хранить секреты?"
+      ],
+      [
+        "The secret of good soup is fresh vegetables.",
+        "Секрет хорошего супа — свежие овощи."
+      ],
+      [
+        "They got married in secret.",
+        "Они поженились тайно."
+      ]
+    ],
+    "forms": [
+      [
+        "secret",
+        "adj",
+        "секретный, тайный"
+      ],
+      [
+        "secretly",
+        "adv",
+        "тайно"
+      ]
+    ]
+  },
+  {
+    "en": "joke",
+    "ru": "шутка, анекдот",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "He told a really funny joke.",
+        "Он рассказал очень смешной анекдот."
+      ],
+      [
+        "Don't be angry, it was just a joke.",
+        "Не злись, это была просто шутка."
+      ],
+      [
+        "I didn't get the joke.",
+        "Я не понял шутку."
+      ]
+    ],
+    "forms": [
+      [
+        "joke",
+        "v",
+        "шутить"
+      ]
+    ]
+  },
+  {
+    "en": "tip",
+    "ru": "совет; чаевые; кончик",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can you give me some tips for the interview?",
+        "Дашь мне пару советов к собеседованию?"
+      ],
+      [
+        "We left a tip for the waiter.",
+        "Мы оставили официанту чаевые."
+      ],
+      [
+        "I burned the tip of my finger.",
+        "Я обжёг кончик пальца."
+      ]
+    ],
+    "forms": [
+      [
+        "tip",
+        "v",
+        "давать чаевые"
+      ]
+    ]
+  },
+  {
+    "en": "task",
+    "ru": "задача, задание",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "My first task was to answer emails.",
+        "Моей первой задачей было отвечать на письма."
+      ],
+      [
+        "Cleaning the kitchen is not my favourite task.",
+        "Уборка кухни — не самое любимое моё занятие."
+      ],
+      [
+        "How many tasks do you have today?",
+        "Сколько у тебя сегодня задач?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "schedule",
+    "ru": "расписание, график",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I have a very busy schedule this week.",
+        "У меня на этой неделе очень плотный график."
+      ],
+      [
+        "Is the project on schedule?",
+        "Проект идёт по графику?"
+      ],
+      [
+        "The train was behind schedule.",
+        "Поезд отставал от расписания."
+      ]
+    ],
+    "forms": [
+      [
+        "schedule",
+        "v",
+        "назначать, планировать"
+      ]
+    ]
+  },
+  {
+    "en": "calendar",
+    "ru": "календарь",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "I'll put the meeting in my calendar.",
+        "Я внесу встречу в календарь."
+      ],
+      [
+        "Is there a calendar on the kitchen wall?",
+        "На кухне висит календарь?"
+      ],
+      [
+        "Let me check my calendar first.",
+        "Сначала я проверю свой календарь."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "midnight",
+    "ru": "полночь",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The party went on until midnight.",
+        "Вечеринка продолжалась до полуночи."
+      ],
+      [
+        "I never go to bed before midnight.",
+        "Я никогда не ложусь спать раньше полуночи."
+      ],
+      [
+        "Did you hear that noise at midnight?",
+        "Ты слышал этот шум в полночь?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "weekday",
+    "ru": "будний день, будни",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "The shop is open on weekdays only.",
+        "Магазин работает только по будням."
+      ],
+      [
+        "I get up at six on weekdays.",
+        "По будним дням я встаю в шесть."
+      ],
+      [
+        "Is it cheaper to fly on a weekday?",
+        "В будний день летать дешевле?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "beginning",
+    "ru": "начало",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "We moved here at the beginning of the year.",
+        "Мы переехали сюда в начале года."
+      ],
+      [
+        "I didn't like the film at the beginning.",
+        "Поначалу фильм мне не понравился."
+      ],
+      [
+        "Let's start again from the beginning.",
+        "Давай начнём сначала."
+      ]
+    ],
+    "forms": [
+      [
+        "begin",
+        "v",
+        "начинать"
+      ],
+      [
+        "beginner",
+        "n",
+        "новичок"
+      ]
+    ]
+  },
+  {
+    "en": "direction",
+    "ru": "направление; указания (как пройти)",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Are we going in the right direction?",
+        "Мы идём в правильном направлении?"
+      ],
+      [
+        "Can you give me directions to the station?",
+        "Не подскажете, как пройти к вокзалу?"
+      ],
+      [
+        "She ran off in the other direction.",
+        "Она убежала в другую сторону."
+      ]
+    ],
+    "forms": [
+      [
+        "direct",
+        "adj",
+        "прямой"
+      ],
+      [
+        "directly",
+        "adv",
+        "прямо, напрямую"
+      ]
+    ]
+  },
+  {
+    "en": "stuff",
+    "ru": "вещи, штуки, всякое",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Where can I put my stuff?",
+        "Куда можно положить мои вещи?"
+      ],
+      [
+        "I have a lot of stuff to do today.",
+        "У меня сегодня куча дел."
+      ],
+      [
+        "What's this stuff in the bottle?",
+        "Что это за штука в бутылке?"
+      ]
+    ],
+    "forms": [],
+    "note": "stuff — разговорное, неисчисляемое: без -s и без a"
+  },
+  {
+    "en": "bit",
+    "ru": "кусочек, немного",
+    "pos": "n",
+    "lvl": "A2",
+    "ex": [
+      [
+        "Can I have a bit of your sandwich?",
+        "Можно кусочек твоего бутерброда?"
+      ],
+      [
+        "I'm a bit tired today.",
+        "Я сегодня немного устал."
+      ],
+      [
+        "Wait a bit, I'm almost ready.",
+        "Подожди немного, я почти готов."
+      ]
+    ],
+    "forms": []
+  }
+]

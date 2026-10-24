@@ -1,0 +1,2053 @@
+[
+  {
+    "en": "young",
+    "ru": "молодой",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "My boss is quite young, about thirty.",
+        "Мой начальник довольно молодой, лет тридцати."
+      ],
+      [
+        "She was very young when she moved to Moscow.",
+        "Она была совсем молодой, когда переехала в Москву."
+      ],
+      [
+        "You're too young to worry about retirement.",
+        "Тебе ещё рано думать о пенсии — ты слишком молод."
+      ]
+    ],
+    "forms": [
+      [
+        "youth",
+        "n",
+        "молодость, юность"
+      ],
+      [
+        "youngster",
+        "n",
+        "подросток, молодой человек"
+      ]
+    ]
+  },
+  {
+    "en": "long",
+    "ru": "длинный, долгий",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "It was a long day at work.",
+        "На работе был долгий день."
+      ],
+      [
+        "How long is the flight to London?",
+        "Сколько длится перелёт до Лондона?"
+      ],
+      [
+        "Her hair isn't as long as before.",
+        "У неё волосы уже не такие длинные, как раньше."
+      ]
+    ],
+    "forms": [
+      [
+        "length",
+        "n",
+        "длина"
+      ],
+      [
+        "lengthen",
+        "v",
+        "удлинять"
+      ]
+    ],
+    "note": "how long? — сколько времени? / какой длины?"
+  },
+  {
+    "en": "short",
+    "ru": "короткий, невысокий",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Let's take a short break.",
+        "Давай сделаем короткий перерыв."
+      ],
+      [
+        "My brother is short, but he plays basketball.",
+        "Мой брат невысокий, но играет в баскетбол."
+      ],
+      [
+        "The meeting wasn't short — it lasted three hours.",
+        "Встреча была совсем не короткой — она длилась три часа."
+      ]
+    ],
+    "forms": [
+      [
+        "shorten",
+        "v",
+        "укорачивать, сокращать"
+      ],
+      [
+        "shortly",
+        "adv",
+        "вскоре"
+      ],
+      [
+        "shorts",
+        "n",
+        "шорты"
+      ]
+    ]
+  },
+  {
+    "en": "tall",
+    "ru": "высокий (о человеке, здании)",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Your son is so tall now!",
+        "Твой сын теперь такой высокий!"
+      ],
+      [
+        "How tall are you, if you don't mind me asking?",
+        "Какой у тебя рост, если не секрет?"
+      ],
+      [
+        "There are a lot of tall buildings in the city centre.",
+        "В центре города много высоких зданий."
+      ]
+    ],
+    "forms": [],
+    "note": "tall — о людях, деревьях, зданиях; high — о горах, ценах, температуре"
+  },
+  {
+    "en": "large",
+    "ru": "большой, крупный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can I have a large coffee, please?",
+        "Можно мне большой кофе, пожалуйста?"
+      ],
+      [
+        "They live in a large house near the river.",
+        "Они живут в большом доме у реки."
+      ],
+      [
+        "This shirt is too large for me.",
+        "Эта рубашка мне велика."
+      ]
+    ],
+    "forms": [
+      [
+        "largely",
+        "adv",
+        "в основном, во многом"
+      ]
+    ]
+  },
+  {
+    "en": "little",
+    "ru": "маленький; мало",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We stayed in a nice little hotel by the sea.",
+        "Мы жили в милом маленьком отеле у моря."
+      ],
+      [
+        "I have very little free time this week.",
+        "На этой неделе у меня очень мало свободного времени."
+      ],
+      [
+        "Could you speak a little slower, please?",
+        "Не могли бы вы говорить немного помедленнее?"
+      ]
+    ],
+    "forms": [],
+    "note": "a little — немного; little — мало (почти нет)"
+  },
+  {
+    "en": "dark",
+    "ru": "тёмный; темнота",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "It gets dark very early in winter.",
+        "Зимой темнеет очень рано."
+      ],
+      [
+        "She was wearing a dark blue jacket.",
+        "На ней была тёмно-синяя куртка."
+      ],
+      [
+        "Are you afraid of the dark?",
+        "Ты боишься темноты?"
+      ]
+    ],
+    "forms": [
+      [
+        "darkness",
+        "n",
+        "темнота"
+      ],
+      [
+        "darken",
+        "v",
+        "темнеть, затемнять"
+      ]
+    ]
+  },
+  {
+    "en": "strong",
+    "ru": "сильный, крепкий",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I like my coffee strong.",
+        "Я люблю крепкий кофе."
+      ],
+      [
+        "He's not very strong, but he's fast.",
+        "Он не очень сильный, но быстрый."
+      ],
+      [
+        "There was a strong wind last night.",
+        "Вчера ночью был сильный ветер."
+      ]
+    ],
+    "forms": [
+      [
+        "strength",
+        "n",
+        "сила"
+      ],
+      [
+        "strengthen",
+        "v",
+        "укреплять"
+      ],
+      [
+        "strongly",
+        "adv",
+        "сильно, решительно"
+      ]
+    ]
+  },
+  {
+    "en": "rich",
+    "ru": "богатый",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "He wants to get rich before he's forty.",
+        "Он хочет разбогатеть до сорока лет."
+      ],
+      [
+        "She comes from a rich family.",
+        "Она из богатой семьи."
+      ],
+      [
+        "Oranges are rich in vitamin C.",
+        "Апельсины богаты витамином C."
+      ]
+    ],
+    "forms": [
+      [
+        "riches",
+        "n",
+        "богатство"
+      ],
+      [
+        "enrich",
+        "v",
+        "обогащать"
+      ]
+    ]
+  },
+  {
+    "en": "fast",
+    "ru": "быстрый; быстро",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "She's a very fast runner.",
+        "Она очень быстро бегает."
+      ],
+      [
+        "Please don't drive so fast, the road is wet.",
+        "Пожалуйста, не гони так, дорога мокрая."
+      ],
+      [
+        "Is the internet fast in your new flat?",
+        "В твоей новой квартире быстрый интернет?"
+      ]
+    ],
+    "forms": [],
+    "note": "fast — и прилагательное, и наречие; слова fastly нет"
+  },
+  {
+    "en": "slow",
+    "ru": "медленный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The bus was really slow this morning.",
+        "Автобус сегодня утром ехал ужасно медленно."
+      ],
+      [
+        "My laptop is getting slow.",
+        "Мой ноутбук начинает тормозить."
+      ],
+      [
+        "Why is the queue so slow today?",
+        "Почему очередь сегодня так медленно движется?"
+      ]
+    ],
+    "forms": [
+      [
+        "slowly",
+        "adv",
+        "медленно"
+      ]
+    ]
+  },
+  {
+    "en": "quickly",
+    "ru": "быстро",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I quickly checked my email before the meeting.",
+        "Перед встречей я быстро проверил почту."
+      ],
+      [
+        "Time goes so quickly on holiday.",
+        "В отпуске время летит так быстро."
+      ],
+      [
+        "Can you come here quickly?",
+        "Можешь быстро подойти сюда?"
+      ]
+    ],
+    "forms": [
+      [
+        "quick",
+        "adj",
+        "быстрый"
+      ]
+    ]
+  },
+  {
+    "en": "meal",
+    "ru": "еда, приём пищи",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Breakfast is the most important meal of the day.",
+        "Завтрак — самый важный приём пищи за день."
+      ],
+      [
+        "We had a nice meal at a Greek restaurant.",
+        "Мы вкусно поели в греческом ресторане."
+      ],
+      [
+        "Do you cook your own meals?",
+        "Ты сам себе готовишь?"
+      ]
+    ],
+    "forms": [],
+    "note": "meal — приём пищи (завтрак, обед, ужин); food — еда как продукты"
+  },
+  {
+    "en": "breakfast",
+    "ru": "завтрак",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What did you have for breakfast?",
+        "Что ты ел на завтрак?"
+      ],
+      [
+        "I never have time for breakfast on weekdays.",
+        "В будни у меня никогда нет времени позавтракать."
+      ],
+      [
+        "Breakfast is included in the price of the room.",
+        "Завтрак включён в стоимость номера."
+      ]
+    ],
+    "forms": [],
+    "note": "have breakfast (без артикля) — завтракать"
+  },
+  {
+    "en": "lunch",
+    "ru": "обед",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Let's have lunch together tomorrow.",
+        "Давай завтра пообедаем вместе."
+      ],
+      [
+        "I usually eat lunch at my desk.",
+        "Я обычно обедаю за рабочим столом."
+      ],
+      [
+        "Where did you go for lunch?",
+        "Куда ты ходил на обед?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "dinner",
+    "ru": "ужин",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What are we having for dinner tonight?",
+        "Что у нас сегодня на ужин?"
+      ],
+      [
+        "We invited our neighbours to dinner.",
+        "Мы пригласили соседей на ужин."
+      ],
+      [
+        "I didn't have dinner because I wasn't hungry.",
+        "Я не ужинал, потому что не был голоден."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "coffee",
+    "ru": "кофе",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Would you like a coffee?",
+        "Хочешь кофе?"
+      ],
+      [
+        "I can't start the day without coffee.",
+        "Я не могу начать день без кофе."
+      ],
+      [
+        "We met for coffee after work.",
+        "Мы встретились выпить кофе после работы."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "tea",
+    "ru": "чай",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Do you take sugar in your tea?",
+        "Ты пьёшь чай с сахаром?"
+      ],
+      [
+        "I'll make us some tea.",
+        "Я сделаю нам чаю."
+      ],
+      [
+        "She drinks green tea every morning.",
+        "Каждое утро она пьёт зелёный чай."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "bread",
+    "ru": "хлеб",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you buy some bread on the way home?",
+        "Можешь купить хлеба по дороге домой?"
+      ],
+      [
+        "This bread is still warm.",
+        "Этот хлеб ещё тёплый."
+      ],
+      [
+        "I try not to eat too much white bread.",
+        "Я стараюсь не есть много белого хлеба."
+      ]
+    ],
+    "forms": [],
+    "note": "bread — неисчисляемое: a loaf of bread (буханка), не a bread"
+  },
+  {
+    "en": "meat",
+    "ru": "мясо",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I don't eat meat, I'm a vegetarian.",
+        "Я не ем мясо, я вегетарианец."
+      ],
+      [
+        "How long should I cook the meat?",
+        "Сколько нужно готовить мясо?"
+      ],
+      [
+        "Meat is getting more expensive.",
+        "Мясо дорожает."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "fish",
+    "ru": "рыба (мн. ч. fish)",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We had fish and rice for dinner.",
+        "На ужин у нас была рыба с рисом."
+      ],
+      [
+        "Do you like fish, or should I cook meat?",
+        "Ты любишь рыбу, или лучше приготовить мясо?"
+      ],
+      [
+        "He caught three big fish last weekend.",
+        "В прошлые выходные он поймал три большие рыбы."
+      ]
+    ],
+    "forms": [
+      [
+        "fishing",
+        "n",
+        "рыбалка"
+      ],
+      [
+        "fisherman",
+        "n",
+        "рыбак"
+      ]
+    ]
+  },
+  {
+    "en": "chicken",
+    "ru": "курица",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'll have the chicken salad, please.",
+        "Мне, пожалуйста, салат с курицей."
+      ],
+      [
+        "Is there any chicken left?",
+        "Курица ещё осталась?"
+      ],
+      [
+        "My grandparents keep chickens in the garden.",
+        "Бабушка с дедушкой держат кур на участке."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "egg",
+    "ru": "яйцо",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I had two eggs for breakfast.",
+        "На завтрак я съел два яйца."
+      ],
+      [
+        "How do you like your eggs?",
+        "Как тебе приготовить яйца?"
+      ],
+      [
+        "We don't have any eggs left.",
+        "У нас закончились яйца."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "rice",
+    "ru": "рис",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Would you like rice or potatoes with that?",
+        "Вам к этому рис или картошку?"
+      ],
+      [
+        "Cook the rice for about fifteen minutes.",
+        "Варите рис примерно пятнадцать минут."
+      ],
+      [
+        "I didn't buy enough rice.",
+        "Я купил недостаточно риса."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "fruit",
+    "ru": "фрукт, фрукты",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I try to eat more fruit and vegetables.",
+        "Я стараюсь есть больше фруктов и овощей."
+      ],
+      [
+        "What's your favourite fruit in summer?",
+        "Какой твой любимый фрукт летом?"
+      ],
+      [
+        "The fruit at the market is very fresh.",
+        "Фрукты на рынке очень свежие."
+      ]
+    ],
+    "forms": [],
+    "note": "fruit обычно неисчисляемое: I eat a lot of fruit; fruits — только о разных видах фруктов"
+  },
+  {
+    "en": "vegetable",
+    "ru": "овощ",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Children often don't like vegetables.",
+        "Дети часто не любят овощи."
+      ],
+      [
+        "We grow our own vegetables at the dacha.",
+        "Мы выращиваем свои овощи на даче."
+      ],
+      [
+        "Which vegetables should I add to the soup?",
+        "Какие овощи добавить в суп?"
+      ]
+    ],
+    "forms": [
+      [
+        "vegetarian",
+        "n",
+        "вегетарианец"
+      ]
+    ]
+  },
+  {
+    "en": "soup",
+    "ru": "суп",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "My mum makes the best chicken soup.",
+        "Моя мама варит самый вкусный куриный суп."
+      ],
+      [
+        "Is the soup hot enough?",
+        "Суп достаточно горячий?"
+      ],
+      [
+        "I had soup and a sandwich for lunch.",
+        "На обед у меня был суп и бутерброд."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "cheese",
+    "ru": "сыр",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Would you like some cheese on your pasta?",
+        "Посыпать тебе пасту сыром?"
+      ],
+      [
+        "This shop sells great French cheese.",
+        "В этом магазине продаётся отличный французский сыр."
+      ],
+      [
+        "I can't eat cheese — I'm allergic to milk.",
+        "Мне нельзя сыр — у меня аллергия на молоко."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "milk",
+    "ru": "молоко",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Do you want milk in your coffee?",
+        "Тебе кофе с молоком?"
+      ],
+      [
+        "We've run out of milk again.",
+        "У нас опять закончилось молоко."
+      ],
+      [
+        "I bought a litre of milk.",
+        "Я купил литр молока."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "restaurant",
+    "ru": "ресторан",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Let's try that new Italian restaurant.",
+        "Давай сходим в тот новый итальянский ресторан."
+      ],
+      [
+        "Did you book a table at the restaurant?",
+        "Ты забронировал столик в ресторане?"
+      ],
+      [
+        "The restaurant was full, so we went home.",
+        "В ресторане не было мест, и мы пошли домой."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "shop",
+    "ru": "магазин",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Is there a shop near here?",
+        "Здесь поблизости есть магазин?"
+      ],
+      [
+        "The shops close at nine on Sundays.",
+        "По воскресеньям магазины закрываются в девять."
+      ],
+      [
+        "I usually shop online to save time.",
+        "Я обычно покупаю в интернете, чтобы сэкономить время."
+      ]
+    ],
+    "forms": [
+      [
+        "shopping",
+        "n",
+        "покупки, шопинг"
+      ],
+      [
+        "shopper",
+        "n",
+        "покупатель"
+      ]
+    ]
+  },
+  {
+    "en": "shopping",
+    "ru": "покупки, шопинг",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I do the shopping on Saturday mornings.",
+        "Я хожу за продуктами по субботам утром."
+      ],
+      [
+        "Do you want to go shopping this afternoon?",
+        "Хочешь пройтись по магазинам сегодня днём?"
+      ],
+      [
+        "Online shopping saves me a lot of time.",
+        "Покупки в интернете экономят мне много времени."
+      ]
+    ],
+    "forms": [
+      [
+        "shop",
+        "v",
+        "делать покупки"
+      ],
+      [
+        "shopper",
+        "n",
+        "покупатель"
+      ]
+    ]
+  },
+  {
+    "en": "supermarket",
+    "ru": "супермаркет",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The supermarket is open until eleven.",
+        "Супермаркет работает до одиннадцати."
+      ],
+      [
+        "I'll stop at the supermarket on my way home.",
+        "Я заеду в супермаркет по дороге домой."
+      ],
+      [
+        "Did you get everything at the supermarket?",
+        "Ты всё купил в супермаркете?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "ticket",
+    "ru": "билет",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I bought the train tickets online.",
+        "Я купил билеты на поезд онлайн."
+      ],
+      [
+        "How much is a ticket to the concert?",
+        "Сколько стоит билет на концерт?"
+      ],
+      [
+        "He got a parking ticket yesterday.",
+        "Вчера ему выписали штраф за парковку."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "trip",
+    "ru": "поездка",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "How was your trip to Spain?",
+        "Как прошла твоя поездка в Испанию?"
+      ],
+      [
+        "I'm going on a business trip next week.",
+        "На следующей неделе я еду в командировку."
+      ],
+      [
+        "We took a day trip to the mountains.",
+        "Мы съездили на день в горы."
+      ]
+    ],
+    "forms": [],
+    "note": "business trip — командировка"
+  },
+  {
+    "en": "hotel",
+    "ru": "гостиница, отель",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Our hotel was right next to the beach.",
+        "Наш отель был прямо у пляжа."
+      ],
+      [
+        "Have you booked a hotel yet?",
+        "Ты уже забронировал гостиницу?"
+      ],
+      [
+        "The hotel didn't have free Wi-Fi.",
+        "В отеле не было бесплатного вайфая."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "airport",
+    "ru": "аэропорт",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you pick me up from the airport?",
+        "Можешь забрать меня из аэропорта?"
+      ],
+      [
+        "We got to the airport two hours early.",
+        "Мы приехали в аэропорт за два часа."
+      ],
+      [
+        "How far is the hotel from the airport?",
+        "Как далеко отель от аэропорта?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "station",
+    "ru": "станция, вокзал",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'll meet you at the station at six.",
+        "Встретимся на вокзале в шесть."
+      ],
+      [
+        "Which metro station is closest to your office?",
+        "Какая станция метро ближе всего к твоему офису?"
+      ],
+      [
+        "There's a petrol station on the corner.",
+        "На углу есть заправка."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "train",
+    "ru": "поезд",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The train leaves at 7:15.",
+        "Поезд отправляется в 7:15."
+      ],
+      [
+        "I usually go to work by train.",
+        "Обычно я езжу на работу на электричке."
+      ],
+      [
+        "We missed the last train home.",
+        "Мы опоздали на последний поезд домой."
+      ]
+    ],
+    "forms": [
+      [
+        "training",
+        "n",
+        "обучение, тренировка"
+      ],
+      [
+        "trainer",
+        "n",
+        "тренер; кроссовка"
+      ]
+    ]
+  },
+  {
+    "en": "bus",
+    "ru": "автобус",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Does this bus go to the city centre?",
+        "Этот автобус идёт в центр города?"
+      ],
+      [
+        "I waited for the bus for twenty minutes.",
+        "Я ждал автобус двадцать минут."
+      ],
+      [
+        "It's quicker to walk than to take the bus.",
+        "Пешком быстрее, чем на автобусе."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "car",
+    "ru": "машина, автомобиль",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Where did you park the car?",
+        "Где ты поставил машину?"
+      ],
+      [
+        "We don't have a car, we use public transport.",
+        "У нас нет машины, мы ездим на общественном транспорте."
+      ],
+      [
+        "She drives to work in her own car.",
+        "Она ездит на работу на своей машине."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "taxi",
+    "ru": "такси",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Let's take a taxi, it's raining.",
+        "Давай возьмём такси, идёт дождь."
+      ],
+      [
+        "I'll call you a taxi.",
+        "Я вызову тебе такси."
+      ],
+      [
+        "How much was the taxi from the airport?",
+        "Сколько стоило такси из аэропорта?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "plane",
+    "ru": "самолёт",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The plane landed an hour late.",
+        "Самолёт приземлился с опозданием на час."
+      ],
+      [
+        "I can't sleep on a plane.",
+        "Я не могу спать в самолёте."
+      ],
+      [
+        "Is it cheaper to go by plane or by train?",
+        "Дешевле лететь самолётом или ехать поездом?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "street",
+    "ru": "улица",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I live on a quiet street near the park.",
+        "Я живу на тихой улице возле парка."
+      ],
+      [
+        "Be careful when you cross the street.",
+        "Будь осторожен, когда переходишь улицу."
+      ],
+      [
+        "What street is the restaurant on?",
+        "На какой улице этот ресторан?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "town",
+    "ru": "город, городок",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I grew up in a small town.",
+        "Я вырос в маленьком городке."
+      ],
+      [
+        "Are you going into town today?",
+        "Ты сегодня поедешь в центр?"
+      ],
+      [
+        "There isn't much to do in this town.",
+        "В этом городе особо нечем заняться."
+      ]
+    ],
+    "forms": [],
+    "note": "town — небольшой город; city — крупный город"
+  },
+  {
+    "en": "doctor",
+    "ru": "врач, доктор",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "You should see a doctor about that cough.",
+        "Тебе стоит сходить к врачу с этим кашлем."
+      ],
+      [
+        "My sister is a doctor at the local hospital.",
+        "Моя сестра работает врачом в местной больнице."
+      ],
+      [
+        "What did the doctor say?",
+        "Что сказал врач?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "hospital",
+    "ru": "больница",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "He spent a week in hospital after the accident.",
+        "После аварии он неделю пролежал в больнице."
+      ],
+      [
+        "Which hospital is your dad in?",
+        "В какой больнице лежит твой папа?"
+      ],
+      [
+        "The hospital is ten minutes from here.",
+        "Больница в десяти минутах отсюда."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "medicine",
+    "ru": "лекарство; медицина",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Have you taken your medicine today?",
+        "Ты сегодня принял лекарство?"
+      ],
+      [
+        "This medicine doesn't help my headache.",
+        "Это лекарство не помогает от головной боли."
+      ],
+      [
+        "My daughter wants to study medicine.",
+        "Моя дочь хочет изучать медицину."
+      ]
+    ],
+    "forms": [
+      [
+        "medical",
+        "adj",
+        "медицинский"
+      ]
+    ]
+  },
+  {
+    "en": "body",
+    "ru": "тело",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Exercise is good for your body and mind.",
+        "Спорт полезен для тела и для ума."
+      ],
+      [
+        "My whole body hurts after the gym.",
+        "После спортзала у меня болит всё тело."
+      ],
+      [
+        "Listen to your body and rest when you're tired.",
+        "Прислушивайся к своему организму и отдыхай, когда устал."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "head",
+    "ru": "голова; глава",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I've got a terrible pain in my head.",
+        "У меня ужасно болит голова."
+      ],
+      [
+        "She's the head of the marketing department.",
+        "Она руководитель отдела маркетинга."
+      ],
+      [
+        "He shook his head and said nothing.",
+        "Он покачал головой и ничего не сказал."
+      ]
+    ],
+    "forms": [
+      [
+        "head",
+        "v",
+        "направляться"
+      ],
+      [
+        "headache",
+        "n",
+        "головная боль"
+      ]
+    ]
+  },
+  {
+    "en": "hand",
+    "ru": "рука (кисть)",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Wash your hands before dinner.",
+        "Помой руки перед ужином."
+      ],
+      [
+        "Can you give me a hand with these bags?",
+        "Можешь помочь мне с этими сумками?"
+      ],
+      [
+        "She had a coffee in one hand and her phone in the other.",
+        "В одной руке у неё был кофе, в другой — телефон."
+      ]
+    ],
+    "forms": [
+      [
+        "hand",
+        "v",
+        "передавать, вручать"
+      ],
+      [
+        "handful",
+        "n",
+        "горсть"
+      ]
+    ],
+    "note": "hand — кисть руки, arm — вся рука; give me a hand — помоги мне"
+  },
+  {
+    "en": "weekend",
+    "ru": "выходные",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What are you doing at the weekend?",
+        "Что ты делаешь на выходных?"
+      ],
+      [
+        "We spent the weekend at the dacha.",
+        "Мы провели выходные на даче."
+      ],
+      [
+        "I don't check work emails at weekends.",
+        "Я не проверяю рабочую почту по выходным."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "evening",
+    "ru": "вечер",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Are you free on Friday evening?",
+        "Ты свободен в пятницу вечером?"
+      ],
+      [
+        "I usually go for a walk in the evening.",
+        "Вечером я обычно хожу на прогулку."
+      ],
+      [
+        "Good evening, can I help you?",
+        "Добрый вечер, чем могу помочь?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "afternoon",
+    "ru": "день, время после полудня",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I have a meeting at three this afternoon.",
+        "Сегодня в три часа дня у меня встреча."
+      ],
+      [
+        "We spent the afternoon at the beach.",
+        "Мы провели вторую половину дня на пляже."
+      ],
+      [
+        "Are you working on Saturday afternoon?",
+        "Ты работаешь в субботу днём?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "night",
+    "ru": "ночь; вечер",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I didn't sleep well last night.",
+        "Я плохо спал прошлой ночью."
+      ],
+      [
+        "Let's go out on Saturday night.",
+        "Давай куда-нибудь сходим в субботу вечером."
+      ],
+      [
+        "She works at night and sleeps during the day.",
+        "Она работает ночью, а спит днём."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "hour",
+    "ru": "час",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The flight takes about three hours.",
+        "Перелёт длится около трёх часов."
+      ],
+      [
+        "I'll be back in an hour.",
+        "Я вернусь через час."
+      ],
+      [
+        "How many hours a week do you work?",
+        "Сколько часов в неделю ты работаешь?"
+      ]
+    ],
+    "forms": [
+      [
+        "hourly",
+        "adj",
+        "почасовой, ежечасный"
+      ]
+    ]
+  },
+  {
+    "en": "minute",
+    "ru": "минута",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The bus will be here in five minutes.",
+        "Автобус будет через пять минут."
+      ],
+      [
+        "Wait a minute, I'm almost ready.",
+        "Подожди минутку, я почти готов."
+      ],
+      [
+        "Do you have a minute to talk?",
+        "У тебя есть минутка поговорить?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "moment",
+    "ru": "момент, мгновение",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Just a moment, please, I'm on the phone.",
+        "Минутку, пожалуйста, я говорю по телефону."
+      ],
+      [
+        "She's not at her desk at the moment.",
+        "Сейчас её нет на месте."
+      ],
+      [
+        "It was the best moment of my life.",
+        "Это был лучший момент в моей жизни."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "month",
+    "ru": "месяц",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm going on holiday next month.",
+        "В следующем месяце я иду в отпуск."
+      ],
+      [
+        "We pay the rent at the start of every month.",
+        "Мы платим за квартиру в начале каждого месяца."
+      ],
+      [
+        "How many months did you live in Berlin?",
+        "Сколько месяцев ты прожил в Берлине?"
+      ]
+    ],
+    "forms": [
+      [
+        "monthly",
+        "adj",
+        "ежемесячный"
+      ]
+    ]
+  },
+  {
+    "en": "year",
+    "ru": "год",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I started this job two years ago.",
+        "Я начал работать здесь два года назад."
+      ],
+      [
+        "We go to the sea every year in July.",
+        "Мы каждый год в июле ездим на море."
+      ],
+      [
+        "How old will you be this year?",
+        "Сколько тебе исполнится в этом году?"
+      ]
+    ],
+    "forms": [
+      [
+        "yearly",
+        "adj",
+        "ежегодный"
+      ]
+    ]
+  },
+  {
+    "en": "birthday",
+    "ru": "день рождения",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Happy birthday! Have a great day!",
+        "С днём рождения! Хорошего тебе дня!"
+      ],
+      [
+        "When's your birthday? Is it in May?",
+        "Когда у тебя день рождения? В мае?"
+      ],
+      [
+        "I forgot my friend's birthday again.",
+        "Я опять забыл про день рождения друга."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "party",
+    "ru": "вечеринка, праздник",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Are you coming to my birthday party?",
+        "Ты придёшь на мой день рождения?"
+      ],
+      [
+        "We're having a party on Saturday.",
+        "В субботу мы устраиваем вечеринку."
+      ],
+      [
+        "The party didn't finish until two in the morning.",
+        "Вечеринка закончилась только в два часа ночи."
+      ]
+    ],
+    "forms": [
+      [
+        "party",
+        "v",
+        "тусоваться, веселиться"
+      ]
+    ]
+  },
+  {
+    "en": "rain",
+    "ru": "дождь",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Don't forget your umbrella — they said rain.",
+        "Не забудь зонт — обещали дождь."
+      ],
+      [
+        "It's going to rain all weekend.",
+        "Все выходные будет идти дождь."
+      ],
+      [
+        "We got caught in the rain on the way home.",
+        "По дороге домой мы попали под дождь."
+      ]
+    ],
+    "forms": [
+      [
+        "rain",
+        "v",
+        "идти (о дожде)"
+      ],
+      [
+        "rainy",
+        "adj",
+        "дождливый"
+      ]
+    ],
+    "note": "it's raining — идёт дождь (подлежащее it обязательно)"
+  },
+  {
+    "en": "clothes",
+    "ru": "одежда",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I need to buy some new clothes for work.",
+        "Мне нужно купить новую одежду для работы."
+      ],
+      [
+        "Where can I wash my clothes?",
+        "Где я могу постирать одежду?"
+      ],
+      [
+        "She always wears nice clothes.",
+        "Она всегда красиво одевается."
+      ]
+    ],
+    "forms": [
+      [
+        "clothing",
+        "n",
+        "одежда (собир.)"
+      ]
+    ],
+    "note": "clothes — только мн. ч.: my clothes are, не a clothe"
+  },
+  {
+    "en": "bag",
+    "ru": "сумка, пакет",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can I leave my bag here?",
+        "Можно я оставлю здесь сумку?"
+      ],
+      [
+        "Do you need a bag?",
+        "Вам нужен пакет?"
+      ],
+      [
+        "I packed my bag the night before the trip.",
+        "Я собрал сумку накануне поездки."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "key",
+    "ru": "ключ; ключевой",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I can't find my car keys.",
+        "Не могу найти ключи от машины."
+      ],
+      [
+        "Did you leave the key under the mat?",
+        "Ты оставил ключ под ковриком?"
+      ],
+      [
+        "Good sleep is the key to good health.",
+        "Хороший сон — ключ к здоровью."
+      ]
+    ],
+    "forms": [
+      [
+        "keyboard",
+        "n",
+        "клавиатура"
+      ]
+    ]
+  },
+  {
+    "en": "room",
+    "ru": "комната; место",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Our flat has three rooms.",
+        "В нашей квартире три комнаты."
+      ],
+      [
+        "I'd like to book a double room for two nights.",
+        "Я бы хотел забронировать двухместный номер на две ночи."
+      ],
+      [
+        "Is there room for one more person in the car?",
+        "В машине найдётся место ещё для одного человека?"
+      ]
+    ],
+    "forms": [
+      [
+        "roommate",
+        "n",
+        "сосед по комнате"
+      ],
+      [
+        "roomy",
+        "adj",
+        "просторный"
+      ]
+    ]
+  },
+  {
+    "en": "bathroom",
+    "ru": "ванная (комната)",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Excuse me, where's the bathroom, please?",
+        "Простите, не подскажете, где туалет?"
+      ],
+      [
+        "The flat has two bathrooms.",
+        "В квартире две ванные комнаты."
+      ],
+      [
+        "Someone is in the bathroom right now.",
+        "В ванной сейчас кто-то есть."
+      ]
+    ],
+    "forms": [],
+    "note": "в гостях или в кафе bathroom часто означает «туалет»"
+  },
+  {
+    "en": "bedroom",
+    "ru": "спальня",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We're looking for a two-bedroom flat.",
+        "Мы ищем квартиру с двумя спальнями."
+      ],
+      [
+        "My bedroom is too small for a desk.",
+        "Моя спальня слишком маленькая для письменного стола."
+      ],
+      [
+        "Does each bedroom have a window?",
+        "В каждой спальне есть окно?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "wife",
+    "ru": "жена (мн. ч. wives)",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "This is my wife, Anna.",
+        "Это моя жена Анна."
+      ],
+      [
+        "His wife works in a bank.",
+        "Его жена работает в банке."
+      ],
+      [
+        "I'm taking my wife out for dinner tonight.",
+        "Сегодня я веду жену в ресторан."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "husband",
+    "ru": "муж",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "My husband does most of the cooking.",
+        "Готовит у нас в основном муж."
+      ],
+      [
+        "Is your husband coming to the party?",
+        "Твой муж придёт на вечеринку?"
+      ],
+      [
+        "She met her husband at university.",
+        "Она познакомилась с мужем в университете."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "son",
+    "ru": "сын",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Our son starts school in September.",
+        "Наш сын идёт в школу в сентябре."
+      ],
+      [
+        "How old is your son?",
+        "Сколько лет твоему сыну?"
+      ],
+      [
+        "They have two sons and a daughter.",
+        "У них двое сыновей и дочь."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "daughter",
+    "ru": "дочь",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "My daughter is studying in Moscow.",
+        "Моя дочь учится в Москве."
+      ],
+      [
+        "Do you have any daughters?",
+        "У тебя есть дочери?"
+      ],
+      [
+        "Their daughter got married last summer.",
+        "Их дочь вышла замуж прошлым летом."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "parent",
+    "ru": "родитель",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I call my parents every Sunday.",
+        "Я звоню родителям каждое воскресенье."
+      ],
+      [
+        "Do your parents live near you?",
+        "Твои родители живут рядом с тобой?"
+      ],
+      [
+        "Being a parent isn't easy.",
+        "Быть родителем непросто."
+      ]
+    ],
+    "forms": [
+      [
+        "parental",
+        "adj",
+        "родительский"
+      ],
+      [
+        "parenting",
+        "n",
+        "воспитание детей"
+      ]
+    ],
+    "note": "parents — только мама и папа; «родственники» — relatives"
+  },
+  {
+    "en": "kid",
+    "ru": "ребёнок (разг.)",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Do you have any kids?",
+        "У тебя есть дети?"
+      ],
+      [
+        "The kids are at school until three.",
+        "Дети в школе до трёх."
+      ],
+      [
+        "We took the kids to the zoo on Sunday.",
+        "В воскресенье мы водили детей в зоопарк."
+      ]
+    ],
+    "forms": [
+      [
+        "kid",
+        "v",
+        "шутить, прикалываться"
+      ]
+    ]
+  },
+  {
+    "en": "guest",
+    "ru": "гость",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We're having guests for dinner tonight.",
+        "Сегодня к ужину у нас будут гости."
+      ],
+      [
+        "Hotel guests can use the pool for free.",
+        "Гости отеля могут пользоваться бассейном бесплатно."
+      ],
+      [
+        "How many guests are coming to the wedding?",
+        "Сколько гостей придёт на свадьбу?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "life",
+    "ru": "жизнь (мн. ч. lives)",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I've lived here all my life.",
+        "Я живу здесь всю жизнь."
+      ],
+      [
+        "Life in a big city is expensive.",
+        "Жизнь в большом городе дорогая."
+      ],
+      [
+        "Hi, Tom! How's life in your new city?",
+        "Привет, Том! Как жизнь на новом месте?"
+      ]
+    ],
+    "forms": [
+      [
+        "live",
+        "v",
+        "жить"
+      ],
+      [
+        "lifestyle",
+        "n",
+        "образ жизни"
+      ],
+      [
+        "lifelong",
+        "adj",
+        "на всю жизнь, давний"
+      ]
+    ]
+  },
+  {
+    "en": "world",
+    "ru": "мир, свет",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'd love to travel around the world.",
+        "Я бы с удовольствием поехал в кругосветное путешествие."
+      ],
+      [
+        "It's one of the biggest cities in the world.",
+        "Это один из самых больших городов в мире."
+      ],
+      [
+        "What's the most beautiful place in the world for you?",
+        "Какое место для тебя самое красивое на свете?"
+      ]
+    ],
+    "forms": [
+      [
+        "worldwide",
+        "adj",
+        "всемирный"
+      ]
+    ]
+  },
+  {
+    "en": "end",
+    "ru": "конец; заканчивать(ся)",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'll pay you back at the end of the month.",
+        "Я верну тебе деньги в конце месяца."
+      ],
+      [
+        "The meeting ended later than we planned.",
+        "Встреча закончилась позже, чем мы планировали."
+      ],
+      [
+        "I didn't like the end of the film.",
+        "Мне не понравилась концовка фильма."
+      ]
+    ],
+    "forms": [
+      [
+        "ending",
+        "n",
+        "окончание, концовка"
+      ],
+      [
+        "endless",
+        "adj",
+        "бесконечный"
+      ]
+    ]
+  },
+  {
+    "en": "side",
+    "ru": "сторона, бок",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The bank is on the other side of the street.",
+        "Банк на другой стороне улицы."
+      ],
+      [
+        "Which side of the bed do you sleep on?",
+        "На какой стороне кровати ты спишь?"
+      ],
+      [
+        "Don't worry, I'm on your side.",
+        "Не волнуйся, я на твоей стороне."
+      ]
+    ],
+    "forms": [
+      [
+        "sideways",
+        "adv",
+        "боком, в сторону"
+      ]
+    ]
+  },
+  {
+    "en": "news",
+    "ru": "новости, новость",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I have some good news for you!",
+        "У меня для тебя хорошая новость!"
+      ],
+      [
+        "Did you watch the news last night?",
+        "Ты смотрел новости вчера вечером?"
+      ],
+      [
+        "No news is good news.",
+        "Отсутствие новостей — хорошая новость."
+      ]
+    ],
+    "forms": [],
+    "note": "news — неисчисляемое, глагол в ед. ч.: the news is good"
+  },
+  {
+    "en": "message",
+    "ru": "сообщение",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I sent you a message an hour ago.",
+        "Я отправил тебе сообщение час назад."
+      ],
+      [
+        "Did you get my message?",
+        "Ты получил моё сообщение?"
+      ],
+      [
+        "Can I leave a message for her?",
+        "Могу я оставить ей сообщение?"
+      ]
+    ],
+    "forms": [
+      [
+        "message",
+        "v",
+        "писать (сообщение)"
+      ]
+    ]
+  },
+  {
+    "en": "mobile phone",
+    "ru": "мобильный телефон",
+    "pos": "ph",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Please turn off your mobile phone.",
+        "Пожалуйста, выключите мобильный телефон."
+      ],
+      [
+        "My mobile phone battery is almost dead.",
+        "У меня почти сел мобильный."
+      ],
+      [
+        "Can I call you on your mobile phone?",
+        "Можно позвонить тебе на мобильный?"
+      ]
+    ],
+    "forms": []
+  }
+]

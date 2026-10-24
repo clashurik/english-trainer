@@ -13,10 +13,18 @@ test('словарь: уникальные id и все поля заполне�
   for (const w of WORDS) {
     assert.ok(!ids.has(w.id), 'дубликат ' + w.id);
     ids.add(w.id);
-    for (const k of ['en', 'ru', 'pos', 'lvl', 'ex', 'exRu']) assert.ok(w[k], w.id + ': пустое поле ' + k);
+    for (const k of ['en', 'ru', 'pos', 'lvl']) assert.ok(w[k], w.id + ': пустое поле ' + k);
     assert.match(w.lvl, /^(A1|A2|B1|B2)$/);
     assert.match(w.pos, /^(n|v|adj|adv|ph)$/);
+    assert.ok(Array.isArray(w.ex) && w.ex.length >= 1, w.id + ': нет примеров');
+    assert.ok(Array.isArray(w.forms), w.id + ': forms не список');
   }
+});
+
+test('словарь: все 120 слов первой версии на месте (к ним привязан прогресс)', () => {
+  const ids = new Set(WORDS.map(w => w.id));
+  const old = require('../data/work/existing-120.json');
+  for (const w of old) assert.ok(ids.has(w.id), 'пропало слово ' + w.en);
 });
 
 test('новое слово: «Хорошо» → завтра, «Легко» → через 4 дня', () => {
@@ -137,7 +145,8 @@ test('импорт: разбирает строки, примеры необяз
   ].join('\n'), {});
   assert.equal(r.words.length, 3);
   assert.deepEqual(r.words.map(w => w.en), ['commute', 'run out of', 'errand']);
-  assert.equal(r.words[0].exRu, 'Я езжу на работу на поезде.');
+  assert.deepEqual(r.words[0].ex, [['I commute by train.', 'Я езжу на работу на поезде.']]);
+  assert.deepEqual(r.words[2].ex, [], 'без примера — пустой список');
   assert.equal(r.words[1].pos, 'ph', 'выражение из нескольких слов — фраза');
   assert.ok(r.words.every(w => w.lvl === 'MY'));
   assert.equal(r.bad.length, 1);
@@ -147,6 +156,52 @@ test('импорт: повторы и уже существующие слова
   const r = Core.parseImport('Borrow | одалживать\ncommute | ездить\ncommute | ездить', { borrow: true });
   assert.deepEqual(r.words.map(w => w.id), ['commute']);
   assert.deepEqual(r.skipped, ['Borrow', 'commute']);
+});
+
+test('слова из уроков версии 1.1.0 переводятся в новый формат', () => {
+  const old = { id: 'commute', en: 'commute', ru: 'ездить', pos: '', lvl: 'MY', ex: 'I commute.', exRu: 'Я езжу.' };
+  assert.deepEqual(Core.normalizeCustom(old).ex, [['I commute.', 'Я езжу.']]);
+  assert.deepEqual(Core.normalizeCustom({ id: 'x', en: 'x', ru: 'икс', ex: '', exRu: '' }).ex, []);
+  const fresh = Core.parseImport('errand | дело', {}).words[0];
+  assert.deepEqual(Core.normalizeCustom(fresh), fresh, 'новый формат не меняется');
+});
+
+test('своё слово из урока заменяет такое же слово словаря, без дубликатов', () => {
+  const mine = [{ id: 'borrow', en: 'borrow', ru: 'мой перевод', lvl: 'MY' }];
+  const all = Core.mergeWords(mine, WORDS);
+  assert.equal(all.filter(w => w.id === 'borrow').length, 1);
+  assert.equal(all[0].ru, 'мой перевод');
+  assert.equal(all.length, WORDS.length);
+});
+
+test('примеры меняются по кругу с каждым показом', () => {
+  assert.equal(Core.exampleIndex(null, 3), 0, 'новое слово — первый пример');
+  assert.equal(Core.exampleIndex({ r: 1, l: 0 }, 3), 1);
+  assert.equal(Core.exampleIndex({ r: 2, l: 0 }, 3), 2);
+  assert.equal(Core.exampleIndex({ r: 2, l: 1 }, 3), 0);
+  assert.equal(Core.exampleIndex({ r: 5, l: 0 }, 1), 0, 'один пример — всегда он');
+  assert.equal(Core.exampleIndex({ r: 1, l: 0 }, 0), -1, 'примеров нет');
+});
+
+test('сравнение версий', () => {
+  assert.equal(Core.compareVersions('1.2.0', '1.1.0'), 1);
+  assert.equal(Core.compareVersions('1.0.1', '1.0.1'), 0);
+  assert.equal(Core.compareVersions('1.10.0', '1.9.3'), 1, 'числа, а не строки');
+  assert.equal(Core.compareVersions('1.0.0', '1.0.1'), -1);
+});
+
+test('«Что нового»: кому и что показывать', () => {
+  const log = require('../changelog.js');
+  assert.deepEqual(Core.whatsNew(log, null, false), [], 'новичку ничего');
+  assert.deepEqual(Core.whatsNew(log, null, true).map(e => e.v), [log[0].v], 'старому пользователю — последнюю');
+  assert.deepEqual(Core.whatsNew(log, log[0].v, true), [], 'уже видел — ничего');
+  assert.deepEqual(Core.whatsNew(log, '1.0.0', true).map(e => e.v), log.filter(e => e.v !== '1.0.0').map(e => e.v));
+});
+
+test('история версий: по убыванию, без повторов, у каждой даты и пункты', () => {
+  const log = require('../changelog.js');
+  for (let i = 1; i < log.length; i++) assert.equal(Core.compareVersions(log[i - 1].v, log[i].v), 1);
+  for (const e of log) { assert.match(e.date, /^\d{4}-\d{2}-\d{2}$/); assert.ok(e.items.length); }
 });
 
 console.log(`\nВсе тесты пройдены: ${passed}`);

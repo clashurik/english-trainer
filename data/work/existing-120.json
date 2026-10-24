@@ -1,0 +1,1082 @@
+[
+ {
+  "id": "time",
+  "en": "time",
+  "ru": "время",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "I don't have much time today.",
+  "exRu": "У меня сегодня мало времени."
+ },
+ {
+  "id": "friend",
+  "en": "friend",
+  "ru": "друг, подруга",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "My best friend lives in Kazan.",
+  "exRu": "Мой лучший друг живёт в Казани."
+ },
+ {
+  "id": "family",
+  "en": "family",
+  "ru": "семья",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "I spend Sundays with my family.",
+  "exRu": "Я провожу воскресенья с семьёй."
+ },
+ {
+  "id": "work",
+  "en": "work",
+  "ru": "работа; работать",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "I usually go to work by metro.",
+  "exRu": "Обычно я езжу на работу на метро."
+ },
+ {
+  "id": "money",
+  "en": "money",
+  "ru": "деньги",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "I need to save some money.",
+  "exRu": "Мне нужно накопить немного денег."
+ },
+ {
+  "id": "water",
+  "en": "water",
+  "ru": "вода",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "Can I have a glass of water, please?",
+  "exRu": "Можно мне стакан воды?"
+ },
+ {
+  "id": "food",
+  "en": "food",
+  "ru": "еда",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "The food here is really good.",
+  "exRu": "Еда здесь очень вкусная."
+ },
+ {
+  "id": "morning",
+  "en": "morning",
+  "ru": "утро",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "I drink coffee every morning.",
+  "exRu": "Я пью кофе каждое утро."
+ },
+ {
+  "id": "week",
+  "en": "week",
+  "ru": "неделя",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "See you next week!",
+  "exRu": "Увидимся на следующей неделе!"
+ },
+ {
+  "id": "city",
+  "en": "city",
+  "ru": "город",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "Moscow is a very big city.",
+  "exRu": "Москва — очень большой город."
+ },
+ {
+  "id": "phone",
+  "en": "phone",
+  "ru": "телефон",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "My phone is almost dead.",
+  "exRu": "У меня почти сел телефон."
+ },
+ {
+  "id": "house",
+  "en": "house",
+  "ru": "дом",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "They live in a small house near the river.",
+  "exRu": "Они живут в маленьком доме у реки."
+ },
+ {
+  "id": "child",
+  "en": "child",
+  "ru": "ребёнок (мн. ч. children)",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "Every child loves holidays.",
+  "exRu": "Каждый ребёнок любит каникулы."
+ },
+ {
+  "id": "name",
+  "en": "name",
+  "ru": "имя",
+  "pos": "n",
+  "lvl": "A1",
+  "ex": "What's your name?",
+  "exRu": "Как тебя зовут?"
+ },
+ {
+  "id": "go",
+  "en": "go",
+  "ru": "идти, ехать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "Let's go to the cinema tonight.",
+  "exRu": "Давай сходим в кино сегодня вечером."
+ },
+ {
+  "id": "come",
+  "en": "come",
+  "ru": "приходить, приезжать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "Can you come to my birthday party?",
+  "exRu": "Ты можешь прийти на мой день рождения?"
+ },
+ {
+  "id": "eat",
+  "en": "eat",
+  "ru": "есть, кушать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "We usually eat dinner at seven.",
+  "exRu": "Обычно мы ужинаем в семь."
+ },
+ {
+  "id": "drink",
+  "en": "drink",
+  "ru": "пить",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I don't drink coffee after six.",
+  "exRu": "Я не пью кофе после шести."
+ },
+ {
+  "id": "buy",
+  "en": "buy",
+  "ru": "покупать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I need to buy some bread.",
+  "exRu": "Мне нужно купить хлеба."
+ },
+ {
+  "id": "want",
+  "en": "want",
+  "ru": "хотеть",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I want to learn English.",
+  "exRu": "Я хочу выучить английский."
+ },
+ {
+  "id": "need",
+  "en": "need",
+  "ru": "нуждаться; нужно",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I need your help.",
+  "exRu": "Мне нужна твоя помощь."
+ },
+ {
+  "id": "know",
+  "en": "know",
+  "ru": "знать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I don't know the answer.",
+  "exRu": "Я не знаю ответа."
+ },
+ {
+  "id": "think",
+  "en": "think",
+  "ru": "думать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I think it's a good idea.",
+  "exRu": "Я думаю, это хорошая идея."
+ },
+ {
+  "id": "like",
+  "en": "like",
+  "ru": "нравиться, любить",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I like walking in the park.",
+  "exRu": "Мне нравится гулять в парке."
+ },
+ {
+  "id": "see",
+  "en": "see",
+  "ru": "видеть",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I can't see anything without my glasses.",
+  "exRu": "Без очков я ничего не вижу."
+ },
+ {
+  "id": "make",
+  "en": "make",
+  "ru": "делать, создавать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "Let me make you some tea.",
+  "exRu": "Давай я сделаю тебе чаю."
+ },
+ {
+  "id": "take",
+  "en": "take",
+  "ru": "брать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "Take an umbrella, it's raining.",
+  "exRu": "Возьми зонт, идёт дождь."
+ },
+ {
+  "id": "give",
+  "en": "give",
+  "ru": "давать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "Can you give me your number?",
+  "exRu": "Можешь дать мне свой номер?"
+ },
+ {
+  "id": "help",
+  "en": "help",
+  "ru": "помогать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "Can you help me with this bag?",
+  "exRu": "Можешь помочь мне с этой сумкой?"
+ },
+ {
+  "id": "live",
+  "en": "live",
+  "ru": "жить",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "Where do you live?",
+  "exRu": "Где ты живёшь?"
+ },
+ {
+  "id": "read",
+  "en": "read",
+  "ru": "читать",
+  "pos": "v",
+  "lvl": "A1",
+  "ex": "I read a few pages before bed.",
+  "exRu": "Я читаю несколько страниц перед сном."
+ },
+ {
+  "id": "good",
+  "en": "good",
+  "ru": "хороший",
+  "pos": "adj",
+  "lvl": "A1",
+  "ex": "Have a good day!",
+  "exRu": "Хорошего дня!"
+ },
+ {
+  "id": "big",
+  "en": "big",
+  "ru": "большой",
+  "pos": "adj",
+  "lvl": "A1",
+  "ex": "This T-shirt is too big for me.",
+  "exRu": "Эта футболка мне велика."
+ },
+ {
+  "id": "small",
+  "en": "small",
+  "ru": "маленький",
+  "pos": "adj",
+  "lvl": "A1",
+  "ex": "I live in a small flat.",
+  "exRu": "Я живу в маленькой квартире."
+ },
+ {
+  "id": "new",
+  "en": "new",
+  "ru": "новый",
+  "pos": "adj",
+  "lvl": "A1",
+  "ex": "Do you like my new jacket?",
+  "exRu": "Тебе нравится моя новая куртка?"
+ },
+ {
+  "id": "old",
+  "en": "old",
+  "ru": "старый",
+  "pos": "adj",
+  "lvl": "A1",
+  "ex": "This is a very old building.",
+  "exRu": "Это очень старое здание."
+ },
+ {
+  "id": "happy",
+  "en": "happy",
+  "ru": "счастливый, довольный",
+  "pos": "adj",
+  "lvl": "A1",
+  "ex": "I'm happy to see you.",
+  "exRu": "Я рад тебя видеть."
+ },
+ {
+  "id": "cheap",
+  "en": "cheap",
+  "ru": "дешёвый",
+  "pos": "adj",
+  "lvl": "A1",
+  "ex": "The tickets were really cheap.",
+  "exRu": "Билеты были очень дешёвыми."
+ },
+ {
+  "id": "hot",
+  "en": "hot",
+  "ru": "горячий, жаркий",
+  "pos": "adj",
+  "lvl": "A1",
+  "ex": "It's very hot today.",
+  "exRu": "Сегодня очень жарко."
+ },
+ {
+  "id": "always",
+  "en": "always",
+  "ru": "всегда",
+  "pos": "adv",
+  "lvl": "A1",
+  "ex": "She always comes on time.",
+  "exRu": "Она всегда приходит вовремя."
+ },
+ {
+  "id": "often",
+  "en": "often",
+  "ru": "часто",
+  "pos": "adv",
+  "lvl": "A1",
+  "ex": "How often do you go to the gym?",
+  "exRu": "Как часто ты ходишь в спортзал?"
+ },
+ {
+  "id": "never",
+  "en": "never",
+  "ru": "никогда",
+  "pos": "adv",
+  "lvl": "A1",
+  "ex": "I never eat fast food.",
+  "exRu": "Я никогда не ем фастфуд."
+ },
+ {
+  "id": "today",
+  "en": "today",
+  "ru": "сегодня",
+  "pos": "adv",
+  "lvl": "A1",
+  "ex": "What are you doing today?",
+  "exRu": "Что ты делаешь сегодня?"
+ },
+ {
+  "id": "tomorrow",
+  "en": "tomorrow",
+  "ru": "завтра",
+  "pos": "adv",
+  "lvl": "A1",
+  "ex": "I'll call you tomorrow.",
+  "exRu": "Я позвоню тебе завтра."
+ },
+ {
+  "id": "here",
+  "en": "here",
+  "ru": "здесь, сюда",
+  "pos": "adv",
+  "lvl": "A1",
+  "ex": "Come here, please.",
+  "exRu": "Подойди сюда, пожалуйста."
+ },
+ {
+  "id": "how are you?",
+  "en": "How are you?",
+  "ru": "Как дела?",
+  "pos": "ph",
+  "lvl": "A1",
+  "ex": "Hi, Anna! How are you?",
+  "exRu": "Привет, Анна! Как дела?"
+ },
+ {
+  "id": "thank you",
+  "en": "Thank you",
+  "ru": "спасибо",
+  "pos": "ph",
+  "lvl": "A1",
+  "ex": "Thank you for your help!",
+  "exRu": "Спасибо за помощь!"
+ },
+ {
+  "id": "see you later",
+  "en": "See you later",
+  "ru": "увидимся, пока",
+  "pos": "ph",
+  "lvl": "A1",
+  "ex": "I have to go. See you later!",
+  "exRu": "Мне пора. Увидимся!"
+ },
+ {
+  "id": "excuse me",
+  "en": "Excuse me",
+  "ru": "извините (чтобы обратиться)",
+  "pos": "ph",
+  "lvl": "A1",
+  "ex": "Excuse me, where is the station?",
+  "exRu": "Извините, где вокзал?"
+ },
+ {
+  "id": "i'm sorry",
+  "en": "I'm sorry",
+  "ru": "извините, мне жаль",
+  "pos": "ph",
+  "lvl": "A1",
+  "ex": "I'm sorry, I'm late.",
+  "exRu": "Простите, я опоздал."
+ },
+ {
+  "id": "weather",
+  "en": "weather",
+  "ru": "погода",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "What's the weather like today?",
+  "exRu": "Какая сегодня погода?"
+ },
+ {
+  "id": "journey",
+  "en": "journey",
+  "ru": "поездка, дорога",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "The journey takes about three hours.",
+  "exRu": "Дорога занимает около трёх часов."
+ },
+ {
+  "id": "kitchen",
+  "en": "kitchen",
+  "ru": "кухня",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "We have breakfast in the kitchen.",
+  "exRu": "Мы завтракаем на кухне."
+ },
+ {
+  "id": "neighbour",
+  "en": "neighbour",
+  "ru": "сосед",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "My neighbour has a big dog.",
+  "exRu": "У моего соседа большая собака."
+ },
+ {
+  "id": "holiday",
+  "en": "holiday",
+  "ru": "отпуск; праздник",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "We're going on holiday in July.",
+  "exRu": "В июле мы едем в отпуск."
+ },
+ {
+  "id": "meeting",
+  "en": "meeting",
+  "ru": "встреча, собрание",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "I have a meeting at ten.",
+  "exRu": "У меня встреча в десять."
+ },
+ {
+  "id": "price",
+  "en": "price",
+  "ru": "цена",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "The price is too high.",
+  "exRu": "Цена слишком высокая."
+ },
+ {
+  "id": "health",
+  "en": "health",
+  "ru": "здоровье",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "Sport is good for your health.",
+  "exRu": "Спорт полезен для здоровья."
+ },
+ {
+  "id": "advice",
+  "en": "advice",
+  "ru": "совет (только ед. ч.)",
+  "pos": "n",
+  "lvl": "A2",
+  "ex": "Can you give me some advice?",
+  "exRu": "Можешь дать мне совет?"
+ },
+ {
+  "id": "borrow",
+  "en": "borrow",
+  "ru": "брать взаймы, одалживать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "Can I borrow your pen?",
+  "exRu": "Можно одолжить твою ручку?"
+ },
+ {
+  "id": "forget",
+  "en": "forget",
+  "ru": "забывать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "Don't forget your keys!",
+  "exRu": "Не забудь ключи!"
+ },
+ {
+  "id": "remember",
+  "en": "remember",
+  "ru": "помнить, вспоминать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "I don't remember his name.",
+  "exRu": "Я не помню, как его зовут."
+ },
+ {
+  "id": "decide",
+  "en": "decide",
+  "ru": "решать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "We decided to stay at home.",
+  "exRu": "Мы решили остаться дома."
+ },
+ {
+  "id": "explain",
+  "en": "explain",
+  "ru": "объяснять",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "Can you explain this rule again?",
+  "exRu": "Можешь ещё раз объяснить это правило?"
+ },
+ {
+  "id": "prefer",
+  "en": "prefer",
+  "ru": "предпочитать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "I prefer tea to coffee.",
+  "exRu": "Я предпочитаю чай кофе."
+ },
+ {
+  "id": "arrive",
+  "en": "arrive",
+  "ru": "прибывать, приезжать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "The train arrives at 8:15.",
+  "exRu": "Поезд прибывает в 8:15."
+ },
+ {
+  "id": "choose",
+  "en": "choose",
+  "ru": "выбирать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "It's hard to choose a gift.",
+  "exRu": "Трудно выбрать подарок."
+ },
+ {
+  "id": "spend",
+  "en": "spend",
+  "ru": "тратить; проводить (время)",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "I spend too much time on my phone.",
+  "exRu": "Я провожу слишком много времени в телефоне."
+ },
+ {
+  "id": "wait",
+  "en": "wait",
+  "ru": "ждать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "Wait for me at the entrance.",
+  "exRu": "Подожди меня у входа."
+ },
+ {
+  "id": "worry",
+  "en": "worry",
+  "ru": "волноваться",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "Don't worry, everything will be fine.",
+  "exRu": "Не волнуйся, всё будет хорошо."
+ },
+ {
+  "id": "invite",
+  "en": "invite",
+  "ru": "приглашать",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "They invited us to dinner.",
+  "exRu": "Они пригласили нас на ужин."
+ },
+ {
+  "id": "agree",
+  "en": "agree",
+  "ru": "соглашаться",
+  "pos": "v",
+  "lvl": "A2",
+  "ex": "I agree with you.",
+  "exRu": "Я с тобой согласен."
+ },
+ {
+  "id": "busy",
+  "en": "busy",
+  "ru": "занятой",
+  "pos": "adj",
+  "lvl": "A2",
+  "ex": "Sorry, I'm busy right now.",
+  "exRu": "Извини, я сейчас занят."
+ },
+ {
+  "id": "tired",
+  "en": "tired",
+  "ru": "уставший",
+  "pos": "adj",
+  "lvl": "A2",
+  "ex": "I'm too tired to cook tonight.",
+  "exRu": "Я слишком устал, чтобы готовить сегодня."
+ },
+ {
+  "id": "expensive",
+  "en": "expensive",
+  "ru": "дорогой (по цене)",
+  "pos": "adj",
+  "lvl": "A2",
+  "ex": "This restaurant is quite expensive.",
+  "exRu": "Этот ресторан довольно дорогой."
+ },
+ {
+  "id": "quiet",
+  "en": "quiet",
+  "ru": "тихий",
+  "pos": "adj",
+  "lvl": "A2",
+  "ex": "It's a quiet street.",
+  "exRu": "Это тихая улица."
+ },
+ {
+  "id": "dangerous",
+  "en": "dangerous",
+  "ru": "опасный",
+  "pos": "adj",
+  "lvl": "A2",
+  "ex": "Driving fast is dangerous.",
+  "exRu": "Быстрая езда опасна."
+ },
+ {
+  "id": "already",
+  "en": "already",
+  "ru": "уже",
+  "pos": "adv",
+  "lvl": "A2",
+  "ex": "I've already finished my work.",
+  "exRu": "Я уже закончил работу."
+ },
+ {
+  "id": "usually",
+  "en": "usually",
+  "ru": "обычно",
+  "pos": "adv",
+  "lvl": "A2",
+  "ex": "I usually get up at seven.",
+  "exRu": "Обычно я встаю в семь."
+ },
+ {
+  "id": "probably",
+  "en": "probably",
+  "ru": "вероятно, наверное",
+  "pos": "adv",
+  "lvl": "A2",
+  "ex": "It will probably rain tomorrow.",
+  "exRu": "Завтра, наверное, будет дождь."
+ },
+ {
+  "id": "almost",
+  "en": "almost",
+  "ru": "почти",
+  "pos": "adv",
+  "lvl": "A2",
+  "ex": "I'm almost ready.",
+  "exRu": "Я почти готов."
+ },
+ {
+  "id": "suddenly",
+  "en": "suddenly",
+  "ru": "вдруг, внезапно",
+  "pos": "adv",
+  "lvl": "A2",
+  "ex": "Suddenly the lights went out.",
+  "exRu": "Вдруг погас свет."
+ },
+ {
+  "id": "it depends",
+  "en": "It depends",
+  "ru": "смотря как, зависит от…",
+  "pos": "ph",
+  "lvl": "A2",
+  "ex": "Will you come? — It depends on the weather.",
+  "exRu": "Ты придёшь? — Зависит от погоды."
+ },
+ {
+  "id": "what do you mean?",
+  "en": "What do you mean?",
+  "ru": "Что ты имеешь в виду?",
+  "pos": "ph",
+  "lvl": "A2",
+  "ex": "What do you mean by 'later'?",
+  "exRu": "Что ты имеешь в виду под «позже»?"
+ },
+ {
+  "id": "no worries",
+  "en": "No worries",
+  "ru": "ничего страшного, без проблем",
+  "pos": "ph",
+  "lvl": "A2",
+  "ex": "Sorry I'm late! — No worries.",
+  "exRu": "Прости, что опоздал! — Ничего страшного."
+ },
+ {
+  "id": "look forward to",
+  "en": "look forward to",
+  "ru": "ждать с нетерпением",
+  "pos": "ph",
+  "lvl": "A2",
+  "ex": "I'm looking forward to the weekend.",
+  "exRu": "Я с нетерпением жду выходных."
+ },
+ {
+  "id": "by the way",
+  "en": "by the way",
+  "ru": "кстати",
+  "pos": "ph",
+  "lvl": "A2",
+  "ex": "By the way, did you call Mike?",
+  "exRu": "Кстати, ты позвонил Майку?"
+ },
+ {
+  "id": "get up",
+  "en": "get up",
+  "ru": "вставать (с постели)",
+  "pos": "ph",
+  "lvl": "A2",
+  "ex": "I get up at seven on weekdays.",
+  "exRu": "По будням я встаю в семь."
+ },
+ {
+  "id": "find out",
+  "en": "find out",
+  "ru": "узнавать, выяснять",
+  "pos": "ph",
+  "lvl": "A2",
+  "ex": "I need to find out the price.",
+  "exRu": "Мне нужно узнать цену."
+ },
+ {
+  "id": "at the moment",
+  "en": "at the moment",
+  "ru": "в данный момент, сейчас",
+  "pos": "ph",
+  "lvl": "A2",
+  "ex": "She's not here at the moment.",
+  "exRu": "Её сейчас нет."
+ },
+ {
+  "id": "opportunity",
+  "en": "opportunity",
+  "ru": "возможность",
+  "pos": "n",
+  "lvl": "B1",
+  "ex": "This job is a great opportunity.",
+  "exRu": "Эта работа — отличная возможность."
+ },
+ {
+  "id": "experience",
+  "en": "experience",
+  "ru": "опыт; впечатление",
+  "pos": "n",
+  "lvl": "B1",
+  "ex": "Do you have any experience in sales?",
+  "exRu": "У вас есть опыт в продажах?"
+ },
+ {
+  "id": "behaviour",
+  "en": "behaviour",
+  "ru": "поведение",
+  "pos": "n",
+  "lvl": "B1",
+  "ex": "His behaviour was really strange.",
+  "exRu": "Его поведение было очень странным."
+ },
+ {
+  "id": "challenge",
+  "en": "challenge",
+  "ru": "трудная задача, вызов",
+  "pos": "n",
+  "lvl": "B1",
+  "ex": "Learning a language is a real challenge.",
+  "exRu": "Выучить язык — серьёзная задача."
+ },
+ {
+  "id": "attitude",
+  "en": "attitude",
+  "ru": "отношение, настрой",
+  "pos": "n",
+  "lvl": "B1",
+  "ex": "She has a positive attitude to life.",
+  "exRu": "У неё позитивное отношение к жизни."
+ },
+ {
+  "id": "environment",
+  "en": "environment",
+  "ru": "окружающая среда; обстановка",
+  "pos": "n",
+  "lvl": "B1",
+  "ex": "We need to protect the environment.",
+  "exRu": "Нам нужно защищать окружающую среду."
+ },
+ {
+  "id": "achieve",
+  "en": "achieve",
+  "ru": "достигать",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "You can achieve a lot in a year.",
+  "exRu": "За год можно многого достичь."
+ },
+ {
+  "id": "afford",
+  "en": "afford",
+  "ru": "позволить себе (по деньгам)",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "I can't afford a new car.",
+  "exRu": "Я не могу позволить себе новую машину."
+ },
+ {
+  "id": "avoid",
+  "en": "avoid",
+  "ru": "избегать",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "Try to avoid sugar.",
+  "exRu": "Старайся избегать сахара."
+ },
+ {
+  "id": "complain",
+  "en": "complain",
+  "ru": "жаловаться",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "He always complains about his job.",
+  "exRu": "Он всегда жалуется на работу."
+ },
+ {
+  "id": "convince",
+  "en": "convince",
+  "ru": "убеждать",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "She convinced me to try again.",
+  "exRu": "Она убедила меня попробовать снова."
+ },
+ {
+  "id": "deserve",
+  "en": "deserve",
+  "ru": "заслуживать",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "You deserve a break.",
+  "exRu": "Ты заслуживаешь отдыха."
+ },
+ {
+  "id": "encourage",
+  "en": "encourage",
+  "ru": "поощрять, поддерживать",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "My parents encouraged me to study abroad.",
+  "exRu": "Родители поддержали моё желание учиться за границей."
+ },
+ {
+  "id": "improve",
+  "en": "improve",
+  "ru": "улучшать(ся)",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "I want to improve my English.",
+  "exRu": "Я хочу улучшить свой английский."
+ },
+ {
+  "id": "manage",
+  "en": "manage",
+  "ru": "справиться, суметь; руководить",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "Did you manage to fix the bike?",
+  "exRu": "Тебе удалось починить велосипед?"
+ },
+ {
+  "id": "suggest",
+  "en": "suggest",
+  "ru": "предлагать",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "I suggest going by train.",
+  "exRu": "Предлагаю поехать на поезде."
+ },
+ {
+  "id": "conduct",
+  "en": "conduct",
+  "ru": "проводить (опрос, исследование)",
+  "pos": "v",
+  "lvl": "B1",
+  "ex": "They conducted a survey of 500 people.",
+  "exRu": "Они провели опрос среди 500 человек."
+ },
+ {
+  "id": "reliable",
+  "en": "reliable",
+  "ru": "надёжный",
+  "pos": "adj",
+  "lvl": "B1",
+  "ex": "We need a reliable car.",
+  "exRu": "Нам нужна надёжная машина."
+ },
+ {
+  "id": "aware",
+  "en": "aware",
+  "ru": "осведомлённый (be aware of — знать о)",
+  "pos": "adj",
+  "lvl": "B1",
+  "ex": "Are you aware of the risks?",
+  "exRu": "Ты знаешь о рисках?"
+ },
+ {
+  "id": "confident",
+  "en": "confident",
+  "ru": "уверенный",
+  "pos": "adj",
+  "lvl": "B1",
+  "ex": "I feel more confident now.",
+  "exRu": "Теперь я чувствую себя увереннее."
+ },
+ {
+  "id": "obvious",
+  "en": "obvious",
+  "ru": "очевидный",
+  "pos": "adj",
+  "lvl": "B1",
+  "ex": "The answer is obvious.",
+  "exRu": "Ответ очевиден."
+ },
+ {
+  "id": "eventually",
+  "en": "eventually",
+  "ru": "в конце концов (не «эвентуально»!)",
+  "pos": "adv",
+  "lvl": "B1",
+  "ex": "Eventually, we found the hotel.",
+  "exRu": "В конце концов мы нашли отель."
+ },
+ {
+  "id": "actually",
+  "en": "actually",
+  "ru": "на самом деле, вообще-то",
+  "pos": "adv",
+  "lvl": "B1",
+  "ex": "Actually, I've changed my mind.",
+  "exRu": "Вообще-то я передумал."
+ },
+ {
+  "id": "meanwhile",
+  "en": "meanwhile",
+  "ru": "тем временем",
+  "pos": "adv",
+  "lvl": "B1",
+  "ex": "Meanwhile, the soup was getting cold.",
+  "exRu": "Тем временем суп остывал."
+ },
+ {
+  "id": "rely on",
+  "en": "rely on",
+  "ru": "полагаться на",
+  "pos": "ph",
+  "lvl": "B1",
+  "ex": "You can always rely on me.",
+  "exRu": "Ты всегда можешь на меня положиться."
+ },
+ {
+  "id": "it's up to you",
+  "en": "It's up to you",
+  "ru": "решать тебе",
+  "pos": "ph",
+  "lvl": "B1",
+  "ex": "Pizza or sushi? It's up to you.",
+  "exRu": "Пицца или суши? Решай сам."
+ },
+ {
+  "id": "get used to",
+  "en": "get used to",
+  "ru": "привыкать к",
+  "pos": "ph",
+  "lvl": "B1",
+  "ex": "I can't get used to the cold.",
+  "exRu": "Не могу привыкнуть к холоду."
+ },
+ {
+  "id": "make up your mind",
+  "en": "make up your mind",
+  "ru": "принять решение, определиться",
+  "pos": "ph",
+  "lvl": "B1",
+  "ex": "Make up your mind, we're late!",
+  "exRu": "Решайся уже, мы опаздываем!"
+ },
+ {
+  "id": "on purpose",
+  "en": "on purpose",
+  "ru": "нарочно, специально",
+  "pos": "ph",
+  "lvl": "B1",
+  "ex": "Sorry, I didn't do it on purpose.",
+  "exRu": "Прости, я не нарочно."
+ },
+ {
+  "id": "take part in",
+  "en": "take part in",
+  "ru": "участвовать в",
+  "pos": "ph",
+  "lvl": "B1",
+  "ex": "Are you going to take part in the race?",
+  "exRu": "Ты будешь участвовать в забеге?"
+ }
+]

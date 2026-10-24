@@ -1,0 +1,1946 @@
+[
+  {
+    "en": "get",
+    "ru": "получать; доставать, покупать; становиться; добираться",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I got a message from my boss this morning.",
+        "Сегодня утром мне пришло сообщение от начальника."
+      ],
+      [
+        "It's getting cold, let's go inside.",
+        "Становится холодно, пойдём внутрь."
+      ],
+      [
+        "How do you get to work every day?",
+        "Как ты каждый день добираешься до работы?"
+      ]
+    ],
+    "irr": "got|got",
+    "forms": [],
+    "note": "get + прилагательное = «становиться»: get tired, get angry, get better"
+  },
+  {
+    "en": "feel",
+    "ru": "чувствовать (себя), ощущать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I don't feel well today, I'll stay at home.",
+        "Я сегодня плохо себя чувствую, останусь дома."
+      ],
+      [
+        "How do you feel about your new job?",
+        "Как тебе твоя новая работа?"
+      ],
+      [
+        "She felt tired after the long flight.",
+        "После долгого перелёта она чувствовала усталость."
+      ]
+    ],
+    "irr": "felt|felt",
+    "forms": [
+      [
+        "feeling",
+        "n",
+        "чувство, ощущение"
+      ]
+    ]
+  },
+  {
+    "en": "start",
+    "ru": "начинать(ся); начало",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The meeting starts at ten.",
+        "Встреча начинается в десять."
+      ],
+      [
+        "When did you start learning English?",
+        "Когда ты начал учить английский?"
+      ],
+      [
+        "We missed the start of the film.",
+        "Мы пропустили начало фильма."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "find",
+    "ru": "находить; считать (каким-то)",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I can't find my keys anywhere.",
+        "Никак не могу найти ключи."
+      ],
+      [
+        "Did you find a good hotel in Rome?",
+        "Ты нашёл хороший отель в Риме?"
+      ],
+      [
+        "I found the exam quite easy.",
+        "Экзамен показался мне довольно лёгким."
+      ]
+    ],
+    "irr": "found|found",
+    "forms": []
+  },
+  {
+    "en": "tell",
+    "ru": "сказать (кому-то), рассказывать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you tell me the way to the station?",
+        "Не подскажете, как пройти к вокзалу?"
+      ],
+      [
+        "She told me about her trip to Spain.",
+        "Она рассказала мне о своей поездке в Испанию."
+      ],
+      [
+        "Don't tell anyone, it's a secret.",
+        "Никому не говори, это секрет."
+      ]
+    ],
+    "irr": "told|told",
+    "forms": [],
+    "note": "tell кому-то без to: tell me (не tell to me); say что-то: say hello"
+  },
+  {
+    "en": "ask",
+    "ru": "спрашивать; просить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can I ask you a question?",
+        "Можно задать тебе вопрос?"
+      ],
+      [
+        "I asked my brother to help me move.",
+        "Я попросил брата помочь мне с переездом."
+      ],
+      [
+        "Ask the waiter for the bill.",
+        "Попроси у официанта счёт."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "call",
+    "ru": "звонить; звать, называть; звонок",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'll call you after work.",
+        "Я позвоню тебе после работы."
+      ],
+      [
+        "His name is Alexander, but everyone calls him Sasha.",
+        "Его зовут Александр, но все зовут его Саша."
+      ],
+      [
+        "Sorry, I missed your call yesterday.",
+        "Извини, я вчера пропустил твой звонок."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "try",
+    "ru": "пытаться, стараться; пробовать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm trying to sleep more this month.",
+        "В этом месяце я стараюсь больше спать."
+      ],
+      [
+        "Have you tried the soup here? It's great.",
+        "Ты пробовал здешний суп? Он отличный."
+      ],
+      [
+        "Can I try on these jeans?",
+        "Можно примерить эти джинсы?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "keep",
+    "ru": "хранить, держать; продолжать (делать)",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I keep my passport in a safe place.",
+        "Я храню паспорт в надёжном месте."
+      ],
+      [
+        "Here's twenty euros, keep the change.",
+        "Вот двадцать евро, сдачи не надо."
+      ],
+      [
+        "He kept talking during the whole film.",
+        "Он болтал весь фильм не переставая."
+      ]
+    ],
+    "irr": "kept|kept",
+    "forms": []
+  },
+  {
+    "en": "leave",
+    "ru": "уходить, уезжать; оставлять",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What time do you leave for work?",
+        "Во сколько ты уходишь на работу?"
+      ],
+      [
+        "I left my phone in the taxi.",
+        "Я оставил телефон в такси."
+      ],
+      [
+        "Please don't leave me alone tonight.",
+        "Пожалуйста, не оставляй меня сегодня одного."
+      ]
+    ],
+    "irr": "left|left",
+    "forms": []
+  },
+  {
+    "en": "let",
+    "ru": "позволять, разрешать; давай(те)",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Let me help you with your bags.",
+        "Давай я помогу тебе с сумками."
+      ],
+      [
+        "My parents didn't let me go to the party.",
+        "Родители не отпустили меня на вечеринку."
+      ],
+      [
+        "Let's order a pizza tonight.",
+        "Давай закажем пиццу сегодня вечером."
+      ]
+    ],
+    "irr": "let|let",
+    "forms": [],
+    "note": "let + глагол без to: let me go (не let me to go)"
+  },
+  {
+    "en": "use",
+    "ru": "использовать, пользоваться; использование",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can I use your phone for a minute?",
+        "Можно воспользоваться твоим телефоном на минутку?"
+      ],
+      [
+        "I don't use this app any more.",
+        "Я больше не пользуюсь этим приложением."
+      ],
+      [
+        "This room is for staff use only.",
+        "Это помещение только для персонала."
+      ]
+    ],
+    "forms": [
+      [
+        "useful",
+        "adj",
+        "полезный"
+      ],
+      [
+        "useless",
+        "adj",
+        "бесполезный"
+      ],
+      [
+        "user",
+        "n",
+        "пользователь"
+      ]
+    ]
+  },
+  {
+    "en": "show",
+    "ru": "показывать; шоу, передача",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you show me how this works?",
+        "Можешь показать, как это работает?"
+      ],
+      [
+        "She showed us photos from her holiday.",
+        "Она показала нам фотографии из отпуска."
+      ],
+      [
+        "What's your favourite TV show?",
+        "Какая твоя любимая телепередача?"
+      ]
+    ],
+    "irr": "showed|shown",
+    "forms": []
+  },
+  {
+    "en": "bring",
+    "ru": "приносить, привозить, приводить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can I bring a friend to the party?",
+        "Можно я приведу друга на вечеринку?"
+      ],
+      [
+        "She brought us some cake from the shop.",
+        "Она принесла нам торт из магазина."
+      ],
+      [
+        "Don't forget to bring your passport.",
+        "Не забудь взять с собой паспорт."
+      ]
+    ],
+    "irr": "brought|brought",
+    "forms": [],
+    "note": "bring — нести сюда, к говорящему; take — уносить туда"
+  },
+  {
+    "en": "change",
+    "ru": "менять(ся); перемена, изменение; сдача",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I need to change my password.",
+        "Мне нужно сменить пароль."
+      ],
+      [
+        "The city has changed a lot in ten years.",
+        "Город сильно изменился за десять лет."
+      ],
+      [
+        "Here's your change, have a nice day.",
+        "Вот ваша сдача, хорошего дня."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "begin",
+    "ru": "начинать(ся)",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The concert begins at eight.",
+        "Концерт начинается в восемь."
+      ],
+      [
+        "It began to rain on our way home.",
+        "По дороге домой начался дождь."
+      ],
+      [
+        "Have you begun packing for the trip?",
+        "Ты уже начал собирать вещи в поездку?"
+      ]
+    ],
+    "irr": "began|begun",
+    "forms": [
+      [
+        "beginning",
+        "n",
+        "начало"
+      ],
+      [
+        "beginner",
+        "n",
+        "новичок, начинающий"
+      ]
+    ]
+  },
+  {
+    "en": "believe",
+    "ru": "верить; считать, полагать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I can't believe it's already Friday!",
+        "Не могу поверить, что уже пятница!"
+      ],
+      [
+        "Do you believe what he told you?",
+        "Ты веришь тому, что он тебе сказал?"
+      ],
+      [
+        "I believe the shop opens at nine.",
+        "По-моему, магазин открывается в девять."
+      ]
+    ],
+    "forms": [
+      [
+        "belief",
+        "n",
+        "вера, убеждение"
+      ]
+    ]
+  },
+  {
+    "en": "become",
+    "ru": "становиться",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "She wants to become a doctor.",
+        "Она хочет стать врачом."
+      ],
+      [
+        "They became good friends at university.",
+        "Они стали хорошими друзьями в университете."
+      ],
+      [
+        "It has become very expensive to rent a flat.",
+        "Снимать квартиру стало очень дорого."
+      ]
+    ],
+    "irr": "became|become",
+    "forms": []
+  },
+  {
+    "en": "happen",
+    "ru": "происходить, случаться",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What happened? You look upset.",
+        "Что случилось? Ты выглядишь расстроенным."
+      ],
+      [
+        "Don't worry, it happens to everyone.",
+        "Не переживай, такое со всеми бывает."
+      ],
+      [
+        "Nothing interesting happened at work today.",
+        "Сегодня на работе ничего интересного не произошло."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "mean",
+    "ru": "значить, означать; иметь в виду",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What does this word mean?",
+        "Что означает это слово?"
+      ],
+      [
+        "Sorry, I didn't mean to wake you up.",
+        "Извини, я не хотел тебя будить."
+      ],
+      [
+        "Do you mean the restaurant near the station?",
+        "Ты имеешь в виду ресторан у вокзала?"
+      ]
+    ],
+    "irr": "meant|meant",
+    "forms": [
+      [
+        "meaning",
+        "n",
+        "значение, смысл"
+      ]
+    ]
+  },
+  {
+    "en": "move",
+    "ru": "двигать(ся); переезжать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We moved to a new flat last year.",
+        "В прошлом году мы переехали в новую квартиру."
+      ],
+      [
+        "Can you move your car, please?",
+        "Не могли бы вы переставить машину?"
+      ],
+      [
+        "Don't move, there's a bee on your arm.",
+        "Не двигайся, у тебя на руке пчела."
+      ]
+    ],
+    "forms": [
+      [
+        "movement",
+        "n",
+        "движение"
+      ]
+    ]
+  },
+  {
+    "en": "open",
+    "ru": "открывать(ся); открытый",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Could you open the window, please?",
+        "Не могли бы вы открыть окно?"
+      ],
+      [
+        "The bank doesn't open on Sundays.",
+        "По воскресеньям банк не работает."
+      ],
+      [
+        "Is the pharmacy still open?",
+        "Аптека ещё открыта?"
+      ]
+    ],
+    "forms": [
+      [
+        "opening",
+        "n",
+        "открытие"
+      ]
+    ]
+  },
+  {
+    "en": "close",
+    "ru": "закрывать(ся); близкий",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Please close the door behind you.",
+        "Пожалуйста, закрой за собой дверь."
+      ],
+      [
+        "What time does the shop close?",
+        "Во сколько закрывается магазин?"
+      ],
+      [
+        "She's my close friend from school.",
+        "Она моя близкая подруга ещё со школы."
+      ]
+    ],
+    "forms": [
+      [
+        "closed",
+        "adj",
+        "закрытый"
+      ]
+    ],
+    "note": "close (глагол) произносится [kləʊz], close (близкий) — [kləʊs]"
+  },
+  {
+    "en": "pay",
+    "ru": "платить, оплачивать; зарплата",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can I pay by card?",
+        "Можно оплатить картой?"
+      ],
+      [
+        "I paid too much for this jacket.",
+        "Я слишком много заплатил за эту куртку."
+      ],
+      [
+        "The pay is good, but the hours are long.",
+        "Платят хорошо, но рабочий день длинный."
+      ]
+    ],
+    "irr": "paid|paid",
+    "forms": [
+      [
+        "payment",
+        "n",
+        "платёж, оплата"
+      ]
+    ],
+    "note": "pay for something — платить за что-то: pay for the tickets"
+  },
+  {
+    "en": "put",
+    "ru": "класть, ставить, положить",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Where did you put my glasses?",
+        "Куда ты положил мои очки?"
+      ],
+      [
+        "Put the milk in the fridge, please.",
+        "Поставь, пожалуйста, молоко в холодильник."
+      ],
+      [
+        "I put on my coat and went out.",
+        "Я надел пальто и вышел."
+      ]
+    ],
+    "irr": "put|put",
+    "forms": []
+  },
+  {
+    "en": "look",
+    "ru": "смотреть; выглядеть; взгляд",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Look at this photo from our trip!",
+        "Посмотри на эту фотографию из нашей поездки!"
+      ],
+      [
+        "You look tired. Are you OK?",
+        "Ты выглядишь уставшим. Всё в порядке?"
+      ],
+      [
+        "I'm looking for a cheap hotel.",
+        "Я ищу недорогой отель."
+      ]
+    ],
+    "forms": [],
+    "note": "look at — смотреть на; look for — искать; look like — быть похожим"
+  },
+  {
+    "en": "hear",
+    "ru": "слышать; услышать (новость)",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Sorry, I can't hear you very well.",
+        "Извини, я тебя плохо слышу."
+      ],
+      [
+        "Did you hear the news about Anna?",
+        "Ты слышал новость про Анну?"
+      ],
+      [
+        "I've heard this song before.",
+        "Я уже слышал эту песню."
+      ]
+    ],
+    "irr": "heard|heard",
+    "forms": []
+  },
+  {
+    "en": "meet",
+    "ru": "встречать(ся); знакомиться",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Hi, I'm Anna. Nice to meet you.",
+        "Привет, я Анна. Приятно познакомиться."
+      ],
+      [
+        "Let's meet outside the cinema at seven.",
+        "Давай встретимся у кинотеатра в семь."
+      ],
+      [
+        "I met my wife at work.",
+        "Я познакомился с женой на работе."
+      ]
+    ],
+    "irr": "met|met",
+    "forms": [
+      [
+        "meeting",
+        "n",
+        "встреча, собрание"
+      ]
+    ]
+  },
+  {
+    "en": "learn",
+    "ru": "учить, изучать; узнавать",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm learning English for my job.",
+        "Я учу английский для работы."
+      ],
+      [
+        "Where did you learn to cook so well?",
+        "Где ты научился так хорошо готовить?"
+      ],
+      [
+        "We learned about the delay too late.",
+        "Мы слишком поздно узнали о задержке."
+      ]
+    ],
+    "irr": "learnt/learned|learnt/learned",
+    "forms": [
+      [
+        "learner",
+        "n",
+        "учащийся, ученик"
+      ]
+    ]
+  },
+  {
+    "en": "hope",
+    "ru": "надеяться; надежда",
+    "pos": "v",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I hope you feel better soon.",
+        "Надеюсь, тебе скоро станет лучше."
+      ],
+      [
+        "We're hoping to visit Italy next summer.",
+        "Мы надеемся съездить в Италию следующим летом."
+      ],
+      [
+        "Don't lose hope, you'll find a job.",
+        "Не теряй надежды, ты найдёшь работу."
+      ]
+    ],
+    "forms": [
+      [
+        "hopeful",
+        "adj",
+        "полный надежды"
+      ],
+      [
+        "hopefully",
+        "adv",
+        "надеюсь, будем надеяться"
+      ]
+    ]
+  },
+  {
+    "en": "ready",
+    "ru": "готовый",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Are you ready? The taxi is here.",
+        "Ты готов? Такси уже здесь."
+      ],
+      [
+        "Dinner will be ready in ten minutes.",
+        "Ужин будет готов через десять минут."
+      ],
+      [
+        "I'm not ready to talk about it.",
+        "Я не готов об этом говорить."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "early",
+    "ru": "ранний; рано",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I have an early flight tomorrow.",
+        "У меня завтра ранний рейс."
+      ],
+      [
+        "We arrived early and got good seats.",
+        "Мы пришли рано и заняли хорошие места."
+      ],
+      [
+        "Do you usually get up early?",
+        "Ты обычно рано встаёшь?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "late",
+    "ru": "поздний; поздно; опоздавший",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Sorry I'm late, the bus didn't come.",
+        "Извини за опоздание, автобус не пришёл."
+      ],
+      [
+        "I worked late last night.",
+        "Вчера я допоздна работал."
+      ],
+      [
+        "It's too late to call him now.",
+        "Сейчас уже слишком поздно ему звонить."
+      ]
+    ],
+    "forms": [
+      [
+        "lately",
+        "adv",
+        "в последнее время"
+      ]
+    ],
+    "note": "lately — не «поздно», а «в последнее время»"
+  },
+  {
+    "en": "sure",
+    "ru": "уверенный; конечно",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Are you sure you locked the door?",
+        "Ты уверен, что запер дверь?"
+      ],
+      [
+        "I'm not sure what time it starts.",
+        "Я не уверен, во сколько это начинается."
+      ],
+      [
+        "Can you help me? — Sure!",
+        "Можешь мне помочь? — Конечно!"
+      ]
+    ],
+    "forms": [
+      [
+        "surely",
+        "adv",
+        "конечно, наверняка"
+      ]
+    ]
+  },
+  {
+    "en": "sorry",
+    "ru": "извините; жаль",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Sorry, I didn't see you there.",
+        "Извини, я тебя не заметил."
+      ],
+      [
+        "I'm sorry to hear about your dad.",
+        "Мне жаль это слышать про твоего папу."
+      ],
+      [
+        "Sorry? Could you say that again?",
+        "Простите? Не могли бы вы повторить?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "free",
+    "ru": "свободный; бесплатный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Are you free on Saturday evening?",
+        "Ты свободен в субботу вечером?"
+      ],
+      [
+        "The museum is free on Mondays.",
+        "По понедельникам вход в музей бесплатный."
+      ],
+      [
+        "Excuse me, is this seat free?",
+        "Простите, это место свободно?"
+      ]
+    ],
+    "forms": [
+      [
+        "freedom",
+        "n",
+        "свобода"
+      ],
+      [
+        "freely",
+        "adv",
+        "свободно"
+      ]
+    ]
+  },
+  {
+    "en": "fine",
+    "ru": "хорошо, нормально; штраф",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "How are you? — I'm fine, thanks.",
+        "Как дела? — Хорошо, спасибо."
+      ],
+      [
+        "Is Friday OK for you? — Yes, that's fine.",
+        "Тебе удобно в пятницу? — Да, нормально."
+      ],
+      [
+        "I got a parking fine yesterday.",
+        "Вчера я получил штраф за парковку."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "great",
+    "ru": "отличный, замечательный; большой",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We had a great time at the beach.",
+        "Мы отлично провели время на пляже."
+      ],
+      [
+        "That's a great idea, let's do it!",
+        "Отличная идея, давай так и сделаем!"
+      ],
+      [
+        "The new café isn't that great.",
+        "Новое кафе не такое уж и классное."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "nice",
+    "ru": "приятный, милый, хороший",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Bye, everyone, have a nice weekend!",
+        "Всем пока, хороших выходных!"
+      ],
+      [
+        "Your new neighbours seem really nice.",
+        "Твои новые соседи, кажется, очень милые."
+      ],
+      [
+        "It wasn't very nice of him to say that.",
+        "С его стороны было не очень красиво так сказать."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "bad",
+    "ru": "плохой",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I've got some bad news.",
+        "У меня плохие новости."
+      ],
+      [
+        "The weather was bad all week.",
+        "Всю неделю была плохая погода."
+      ],
+      [
+        "Is it bad to drink coffee at night?",
+        "Вредно ли пить кофе на ночь?"
+      ]
+    ],
+    "forms": [
+      [
+        "badly",
+        "adv",
+        "плохо, сильно"
+      ]
+    ],
+    "note": "степени сравнения: bad – worse – the worst"
+  },
+  {
+    "en": "better",
+    "ru": "лучше; лучший (сравн. ст. от good/well)",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I feel much better today.",
+        "Сегодня я чувствую себя намного лучше."
+      ],
+      [
+        "This phone is better than my old one.",
+        "Этот телефон лучше моего старого."
+      ],
+      [
+        "You'd better leave now, or you'll be late.",
+        "Тебе лучше выйти сейчас, а то опоздаешь."
+      ]
+    ],
+    "forms": [],
+    "note": "had better (you'd better) + глагол — «лучше бы», совет"
+  },
+  {
+    "en": "best",
+    "ru": "самый лучший; лучше всего",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "She's been my best friend since school.",
+        "Она моя лучшая подруга ещё со школы."
+      ],
+      [
+        "What's the best way to get to the airport?",
+        "Как лучше всего добраться до аэропорта?"
+      ],
+      [
+        "I did my best, but I failed the test.",
+        "Я сделал всё, что мог, но не сдал тест."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "same",
+    "ru": "тот же самый, одинаковый",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We work in the same building.",
+        "Мы работаем в одном здании."
+      ],
+      [
+        "She always orders the same thing.",
+        "Она всегда заказывает одно и то же."
+      ],
+      [
+        "Have a nice day! — Same to you.",
+        "Хорошего дня! — И вам того же."
+      ]
+    ],
+    "forms": [],
+    "note": "всегда с the: the same"
+  },
+  {
+    "en": "different",
+    "ru": "разный; другой, отличающийся",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "My sister and I are very different.",
+        "Мы с сестрой очень разные."
+      ],
+      [
+        "Can I try a different size?",
+        "Можно примерить другой размер?"
+      ],
+      [
+        "Life in a big city is different from village life.",
+        "Жизнь в большом городе отличается от деревенской."
+      ]
+    ],
+    "forms": [
+      [
+        "difference",
+        "n",
+        "разница, различие"
+      ],
+      [
+        "differently",
+        "adv",
+        "по-другому, иначе"
+      ]
+    ]
+  },
+  {
+    "en": "important",
+    "ru": "важный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I have an important meeting at nine.",
+        "В девять у меня важная встреча."
+      ],
+      [
+        "It's important to drink enough water.",
+        "Важно пить достаточно воды."
+      ],
+      [
+        "Money isn't the most important thing.",
+        "Деньги — не самое главное."
+      ]
+    ],
+    "forms": [
+      [
+        "importance",
+        "n",
+        "важность"
+      ]
+    ]
+  },
+  {
+    "en": "easy",
+    "ru": "лёгкий, простой",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The recipe is quick and easy.",
+        "Рецепт быстрый и простой."
+      ],
+      [
+        "It isn't easy to find a good dentist.",
+        "Найти хорошего стоматолога непросто."
+      ],
+      [
+        "Take it easy, everything will be fine.",
+        "Не волнуйся, всё будет хорошо."
+      ]
+    ],
+    "forms": [
+      [
+        "easily",
+        "adv",
+        "легко"
+      ]
+    ]
+  },
+  {
+    "en": "difficult",
+    "ru": "трудный, сложный",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The last question was really difficult.",
+        "Последний вопрос был очень сложным."
+      ],
+      [
+        "Is it difficult to learn to drive?",
+        "Трудно научиться водить машину?"
+      ],
+      [
+        "It was a difficult year for our family.",
+        "Это был тяжёлый год для нашей семьи."
+      ]
+    ],
+    "forms": [
+      [
+        "difficulty",
+        "n",
+        "трудность"
+      ]
+    ]
+  },
+  {
+    "en": "hard",
+    "ru": "трудный; твёрдый; усердно, много",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The exam was harder than I expected.",
+        "Экзамен оказался сложнее, чем я ожидал."
+      ],
+      [
+        "She works hard and rarely takes holidays.",
+        "Она много работает и редко берёт отпуск."
+      ],
+      [
+        "This bed is too hard for me.",
+        "Эта кровать для меня слишком жёсткая."
+      ]
+    ],
+    "forms": [],
+    "note": "hardly — не «тяжело», а «едва, почти не»: I hardly know him"
+  },
+  {
+    "en": "again",
+    "ru": "снова, опять, ещё раз",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can you say that again, please?",
+        "Можете повторить, пожалуйста?"
+      ],
+      [
+        "I'm never going to that restaurant again.",
+        "Больше никогда не пойду в этот ресторан."
+      ],
+      [
+        "The train is late again.",
+        "Поезд опять опаздывает."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "ago",
+    "ru": "назад (о времени)",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I moved here two years ago.",
+        "Я переехал сюда два года назад."
+      ],
+      [
+        "She left five minutes ago.",
+        "Она ушла пять минут назад."
+      ],
+      [
+        "How long ago did you buy this car?",
+        "Как давно ты купил эту машину?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "maybe",
+    "ru": "может быть, возможно",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Maybe we can meet next week.",
+        "Может, встретимся на следующей неделе."
+      ],
+      [
+        "Are you coming tonight? — Maybe.",
+        "Ты придёшь сегодня вечером? — Может быть."
+      ],
+      [
+        "Maybe you should see a doctor.",
+        "Возможно, тебе стоит сходить к врачу."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "later",
+    "ru": "позже, потом",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm busy now, can I call you later?",
+        "Я сейчас занят, можно перезвоню позже?"
+      ],
+      [
+        "I have to go now, see you later!",
+        "Мне пора, увидимся!"
+      ],
+      [
+        "He arrived an hour later than us.",
+        "Он приехал на час позже нас."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "soon",
+    "ru": "скоро, вскоре",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The doctor will be here soon.",
+        "Врач скоро придёт."
+      ],
+      [
+        "Sorry you're ill, get well soon!",
+        "Жаль, что ты заболел, выздоравливай скорее!"
+      ],
+      [
+        "Please reply as soon as possible.",
+        "Пожалуйста, ответьте как можно скорее."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "now",
+    "ru": "сейчас, теперь",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I can't talk now, I'm driving.",
+        "Не могу сейчас говорить, я за рулём."
+      ],
+      [
+        "She lives in Berlin now.",
+        "Сейчас она живёт в Берлине."
+      ],
+      [
+        "Are you leaving right now?",
+        "Ты уходишь прямо сейчас?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "then",
+    "ru": "потом, затем; тогда",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "First we had lunch, then we went shopping.",
+        "Сначала мы пообедали, потом пошли по магазинам."
+      ],
+      [
+        "I was a student then, so I had no money.",
+        "Тогда я был студентом, поэтому денег не было."
+      ],
+      [
+        "You're tired? Then go to bed.",
+        "Устал? Тогда иди спать."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "still",
+    "ru": "всё ещё, до сих пор",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Are you still at the office?",
+        "Ты всё ещё в офисе?"
+      ],
+      [
+        "I still don't understand this app.",
+        "Я до сих пор не разобрался в этом приложении."
+      ],
+      [
+        "It's late, but she's still working.",
+        "Уже поздно, а она всё ещё работает."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "yet",
+    "ru": "ещё (в отрицании); уже (в вопросе)",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I haven't finished my report yet.",
+        "Я ещё не закончил отчёт."
+      ],
+      [
+        "Have you had breakfast yet?",
+        "Ты уже позавтракал?"
+      ],
+      [
+        "Is the pizza here yet? I'm hungry.",
+        "Пиццу уже привезли? Я голоден."
+      ]
+    ],
+    "forms": [],
+    "note": "yet ставится в конце вопроса или отрицания; в утверждениях — already"
+  },
+  {
+    "en": "really",
+    "ru": "действительно, правда; очень",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I really like your new haircut.",
+        "Мне очень нравится твоя новая стрижка."
+      ],
+      [
+        "The film was really boring.",
+        "Фильм был ужасно скучным."
+      ],
+      [
+        "I got the job! — Really? Congratulations!",
+        "Меня взяли на работу! — Правда? Поздравляю!"
+      ]
+    ],
+    "forms": [
+      [
+        "real",
+        "adj",
+        "настоящий, реальный"
+      ]
+    ]
+  },
+  {
+    "en": "very",
+    "ru": "очень",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Thank you very much for your help.",
+        "Большое спасибо за помощь."
+      ],
+      [
+        "The hotel was very clean.",
+        "Отель был очень чистым."
+      ],
+      [
+        "I'm not very good at cooking.",
+        "Я не очень хорошо готовлю."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "too",
+    "ru": "слишком; тоже",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "This coffee is too hot to drink.",
+        "Этот кофе слишком горячий, чтобы пить."
+      ],
+      [
+        "I'm really hungry. — Me too.",
+        "Я ужасно голоден. — Я тоже."
+      ],
+      [
+        "Slow down, you're driving too fast!",
+        "Притормози, ты едешь слишком быстро!"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "also",
+    "ru": "также, тоже",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "She speaks French and also a little Spanish.",
+        "Она говорит по-французски и ещё немного по-испански."
+      ],
+      [
+        "The flat is cheap and also close to work.",
+        "Квартира дешёвая и к тому же близко к работе."
+      ],
+      [
+        "I also want to say thank you.",
+        "Я также хочу сказать спасибо."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "just",
+    "ru": "только что; просто; всего лишь",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I've just arrived at the station.",
+        "Я только что приехал на вокзал."
+      ],
+      [
+        "Just call me if you need anything.",
+        "Просто позвони, если что-нибудь понадобится."
+      ],
+      [
+        "It's just a small problem, don't worry.",
+        "Это всего лишь небольшая проблема, не волнуйся."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "only",
+    "ru": "только; единственный",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I only have ten minutes for lunch.",
+        "У меня всего десять минут на обед."
+      ],
+      [
+        "She's an only child, she has no brothers.",
+        "Она единственный ребёнок, у неё нет братьев."
+      ],
+      [
+        "The shop only takes cash.",
+        "Магазин принимает только наличные."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "once",
+    "ru": "один раз, однажды; когда (как только)",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I go to the gym once a week.",
+        "Я хожу в спортзал раз в неделю."
+      ],
+      [
+        "I've been to London only once.",
+        "Я был в Лондоне всего один раз."
+      ],
+      [
+        "Call me once you get home.",
+        "Позвони, как только доберёшься домой."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "together",
+    "ru": "вместе",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "We often have dinner together.",
+        "Мы часто ужинаем вместе."
+      ],
+      [
+        "Are you two together or just friends?",
+        "Вы двое встречаетесь или просто друзья?"
+      ],
+      [
+        "Let's work on this project together.",
+        "Давай поработаем над этим проектом вместе."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "alone",
+    "ru": "один, одна; в одиночку",
+    "pos": "adj",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Do you live alone or with friends?",
+        "Ты живёшь один или с друзьями?"
+      ],
+      [
+        "She doesn't like travelling alone.",
+        "Она не любит путешествовать одна."
+      ],
+      [
+        "Leave me alone, I'm busy!",
+        "Оставь меня в покое, я занят!"
+      ]
+    ],
+    "forms": [],
+    "note": "alone — один (без других); lonely — одинокий (грустно от этого)"
+  },
+  {
+    "en": "away",
+    "ru": "прочь; в отъезде; на расстоянии",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "The beach is ten minutes away by car.",
+        "До пляжа десять минут на машине."
+      ],
+      [
+        "I'll be away next week on business.",
+        "На следующей неделе я буду в командировке."
+      ],
+      [
+        "Go away, I'm trying to sleep!",
+        "Уйди, я пытаюсь уснуть!"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "back",
+    "ru": "назад, обратно; спина",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'll be back in five minutes.",
+        "Я вернусь через пять минут."
+      ],
+      [
+        "Can I call you back later?",
+        "Можно я тебе перезвоню попозже?"
+      ],
+      [
+        "My back hurts after a day at the computer.",
+        "После дня за компьютером у меня болит спина."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "outside",
+    "ru": "снаружи, на улице",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "It's sunny, let's eat outside.",
+        "Солнечно, давай поедим на улице."
+      ],
+      [
+        "I'll wait for you outside the bank.",
+        "Я подожду тебя у банка."
+      ],
+      [
+        "Is it cold outside? Do I need a coat?",
+        "На улице холодно? Мне нужно пальто?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "tonight",
+    "ru": "сегодня вечером, сегодня ночью",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What are you doing tonight?",
+        "Что ты делаешь сегодня вечером?"
+      ],
+      [
+        "I can't come tonight, I'm working late.",
+        "Сегодня вечером не смогу, я допоздна на работе."
+      ],
+      [
+        "It's going to rain tonight.",
+        "Сегодня ночью будет дождь."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "yesterday",
+    "ru": "вчера",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I saw your sister yesterday.",
+        "Вчера я видел твою сестру."
+      ],
+      [
+        "Where were you yesterday evening?",
+        "Где ты был вчера вечером?"
+      ],
+      [
+        "Yesterday was my first day at the new job.",
+        "Вчера был мой первый день на новой работе."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "else",
+    "ru": "ещё, другой, кроме",
+    "pos": "adv",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Would you like anything else?",
+        "Что-нибудь ещё желаете?"
+      ],
+      [
+        "Let's go somewhere else, it's too busy here.",
+        "Пойдём куда-нибудь в другое место, здесь слишком людно."
+      ],
+      [
+        "Who else is coming to the party?",
+        "Кто ещё придёт на вечеринку?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "thing",
+    "ru": "вещь, предмет; дело",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Don't forget your things when you leave.",
+        "Не забудь свои вещи, когда будешь уходить."
+      ],
+      [
+        "The best thing about my job is the people.",
+        "Лучшее в моей работе — люди."
+      ],
+      [
+        "I have a lot of things to do today.",
+        "У меня сегодня куча дел."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "people",
+    "ru": "люди",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "How many people work in your company?",
+        "Сколько человек работает в вашей компании?"
+      ],
+      [
+        "People here are very friendly.",
+        "Люди здесь очень дружелюбные."
+      ],
+      [
+        "There weren't many people at the gym.",
+        "В спортзале было немного народу."
+      ]
+    ],
+    "forms": [],
+    "note": "people — множественное число (people are), ед. ч. — person"
+  },
+  {
+    "en": "way",
+    "ru": "путь, дорога; способ",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Excuse me, is this the way to the station?",
+        "Извините, это дорога к вокзалу?"
+      ],
+      [
+        "I'm on my way, see you in ten minutes.",
+        "Я уже еду, буду через десять минут."
+      ],
+      [
+        "What's the easiest way to learn new words?",
+        "Как проще всего учить новые слова?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "place",
+    "ru": "место",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "This is a nice place for a picnic.",
+        "Это хорошее место для пикника."
+      ],
+      [
+        "Do you know a good place to eat?",
+        "Знаешь хорошее место, где можно поесть?"
+      ],
+      [
+        "Let's meet at my place on Friday.",
+        "Давай встретимся у меня в пятницу."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "kind",
+    "ru": "вид, тип, сорт; добрый",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What kind of music do you like?",
+        "Какую музыку ты любишь?"
+      ],
+      [
+        "They sell all kinds of cheese here.",
+        "Здесь продают все виды сыра."
+      ],
+      [
+        "That's very kind of you, thank you.",
+        "Это очень мило с вашей стороны, спасибо."
+      ]
+    ],
+    "forms": [
+      [
+        "kindness",
+        "n",
+        "доброта"
+      ]
+    ]
+  },
+  {
+    "en": "lot",
+    "ru": "много (a lot, a lot of)",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Thanks a lot for your help!",
+        "Огромное спасибо за помощь!"
+      ],
+      [
+        "We've got a lot of work this week.",
+        "У нас на этой неделе много работы."
+      ],
+      [
+        "She doesn't travel a lot.",
+        "Она не так много путешествует."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "idea",
+    "ru": "идея, мысль; представление",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Let's go to the cinema. — Good idea!",
+        "Пойдём в кино. — Хорошая идея!"
+      ],
+      [
+        "I have no idea where my phone is.",
+        "Понятия не имею, где мой телефон."
+      ],
+      [
+        "Whose idea was it to come here?",
+        "Чья это была идея прийти сюда?"
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "problem",
+    "ru": "проблема, неполадка",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "There's a problem with my internet connection.",
+        "У меня проблема с интернетом."
+      ],
+      [
+        "Thanks for your help! — No problem.",
+        "Спасибо за помощь! — Не за что."
+      ],
+      [
+        "What's the problem? You look worried.",
+        "В чём дело? Ты выглядишь обеспокоенным."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "question",
+    "ru": "вопрос",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "Can I ask you a personal question?",
+        "Можно задать тебе личный вопрос?"
+      ],
+      [
+        "She didn't answer my question.",
+        "Она не ответила на мой вопрос."
+      ],
+      [
+        "If you have any questions, just email me.",
+        "Если появятся вопросы, просто напишите мне."
+      ]
+    ],
+    "forms": []
+  },
+  {
+    "en": "answer",
+    "ru": "ответ; отвечать",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "I'm still waiting for an answer from the bank.",
+        "Я всё ещё жду ответа из банка."
+      ],
+      [
+        "Why didn't you answer the phone?",
+        "Почему ты не взял трубку?"
+      ],
+      [
+        "The answer is in the email I sent you.",
+        "Ответ в письме, которое я тебе отправил."
+      ]
+    ],
+    "forms": [],
+    "note": "answer a question (без to), но an answer to a question"
+  },
+  {
+    "en": "reason",
+    "ru": "причина, повод",
+    "pos": "n",
+    "lvl": "A1",
+    "ex": [
+      [
+        "What's the reason for your visit?",
+        "Какова цель вашего визита?"
+      ],
+      [
+        "She left without giving a reason.",
+        "Она ушла, не объяснив причины."
+      ],
+      [
+        "There's no reason to worry.",
+        "Нет причин для беспокойства."
+      ]
+    ],
+    "forms": [
+      [
+        "reasonable",
+        "adj",
+        "разумный; приемлемый (о цене)"
+      ]
+    ]
+  }
+]
