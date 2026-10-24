@@ -340,9 +340,13 @@
             '<span class="f-en">' + escapeHtml(g[0]) + '</span><span class="f-pos">' + label + '</span>' + note + '</button></li>';
         }).join('') + '</ul>';
     }
-    if (w.forms.length) {
+    // Однокоренные без повторов: feeling уже есть среди грамматических форм feel
+    var shown = {};
+    gram.forEach(function (g) { shown[g[0].toLowerCase()] = true; });
+    var family = w.forms.filter(function (f) { return !shown[f[0].toLowerCase()]; });
+    if (family.length) {
       html += '<div class="group-label">Однокоренные слова</div><ul class="form-list">' +
-        w.forms.map(function (f) {
+        family.map(function (f) {
           return '<li><button class="form-row" type="button" data-say="' + escapeHtml(f[0]) + '">' +
             '<span class="f-en">' + escapeHtml(f[0]) + '</span><span class="f-pos">' + escapeHtml(POS[f[1]] || f[1]) + '</span>' +
             '<span class="f-ru">' + escapeHtml(f[2]) + '</span></button></li>';

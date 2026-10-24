@@ -276,17 +276,23 @@
   function findWord(example, variants) {
     // Служебные слова внутри фраз часто меняются (make a mistake → makes mistakes, your mind → my mind,
     // be late → I'm late), поэтому в фразах из нескольких слов их не ищем.
-    var tokens = function (v) {
-      var t = v.replace(/[?!.,]/g, ' ').replace(PLACEHOLDER, ' ').trim().split(/\s+/).filter(Boolean);
+    var split = function (v) { return v.replace(/[?!.,]/g, ' ').replace(PLACEHOLDER, ' ').trim().split(/\s+/).filter(Boolean); };
+    var noFiller = function (t) {
       var core = t.filter(function (x) { return !FILLER.test(x); });
-      return t.length > 1 && core.length ? core : t;
+      return t.length > 1 && core.length && core.length < t.length ? core : null;
     };
-    var base = tokens(variants[0] || '');  // начальная форма — для поиска по основе
-    var list = variants.map(tokens).filter(function (t) { return t.length; });
-    list.sort(function (a, b) { return b.join(' ').length - a.join(' ').length; });
+    // Пропускать слова внутри можно только во фразах (turn the TV on). У форм одного слова
+    // (most aware, more expensive) пропусков нет, иначе подсветится полпредложения.
+    var isPhrase = split(variants[0] || '').length > 1;
+    var gap = isPhrase ? GAP : '\\s+';
+    var base = split(variants[0] || '');  // начальная форма — для поиска по основе
+    var full = variants.map(split).filter(function (t) { return t.length; });
+    full.sort(function (a, b) { return b.join(' ').length - a.join(' ').length; });
+    // Сначала фраза целиком (Here you are), потом без служебных слов (make a mistake → makes mistakes)
+    var list = full.concat(full.map(noFiller).filter(Boolean));
 
     for (var k = 0; k < list.length; k++) {
-      var re = new RegExp("(^|[^\\w'])(" + list[k].map(escapeRe).join(GAP) + ")(?![\\w])", 'i');
+      var re = new RegExp("(^|[^\\w'])(" + list[k].map(escapeRe).join(gap) + ")(?![\\w])", 'i');
       var m = re.exec(example);
       if (m) {
         var start = m.index + m[1].length;
@@ -295,11 +301,12 @@
     }
 
     if (!base.length) return null;
-    var parts = base.map(function (p) {
+    var baseCore = noFiller(base) || base;
+    var parts = baseCore.map(function (p) {
       var stem = p.length > 2 ? p.replace(/(e|y)$/i, '') : p;
       return escapeRe(stem) + "[\\w']*";
     });
-    var m2 = new RegExp("(^|[^\\w'])(" + parts.join(GAP) + ")", 'i').exec(example);
+    var m2 = new RegExp("(^|[^\\w'])(" + parts.join(gap) + ")", 'i').exec(example);
     if (!m2) return null;
     var s2 = m2.index + m2[1].length;
     return { start: s2, end: s2 + m2[2].length };

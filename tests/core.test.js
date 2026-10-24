@@ -217,12 +217,17 @@ test('подсветка: слово находится в любой форме
   assert.equal(at('Who looks after your dog?', { en: 'look after sb', gram: [['looks after', 's3']] }), 'looks after');
   assert.equal(at('Hi, Anna! How are you?', { en: 'How are you?' }), 'How are you');
   assert.equal(at('A cat sat on the mat.', { en: 'at' }), null, 'внутри другого слова не ищем');
+  assert.equal(at("Most people aren't aware of this problem.", { en: 'aware', gram: [['more aware', 'comp'], ['most aware', 'sup']] }), 'aware',
+    'у формы одного слова нельзя перепрыгивать через слова');
+  assert.equal(at('Here you are, your coffee.', { en: 'Here you are' }), 'Here you are', 'фраза целиком, со служебными словами');
+  assert.equal(at('Everyone makes mistakes.', { en: 'make a mistake', gram: [['makes a mistake', 's3']] }), 'makes mistakes');
+  assert.equal(at("Sorry I'm late for the meeting.", { en: 'be late for', gram: [] }), 'late for');
 });
 
 test('подсветка: каждый пример словаря содержит своё слово', () => {
   const missed = [];
   for (const w of WORDS) for (const [ex] of w.ex) if (!Core.findWord(ex, Core.wordVariants(w))) missed.push(w.en + ': ' + ex);
-  assert.ok(missed.length <= 3, 'слово не найдено в примерах:\n' + missed.join('\n'));
+  assert.equal(missed.length, 0, 'слово не найдено в примерах:\n' + missed.join('\n'));
 });
 
 console.log(`\nВсе тесты пройдены: ${passed}`);
