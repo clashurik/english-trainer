@@ -31,7 +31,8 @@
   var session = null;
   var words = [];   // все слова: сначала ваши из уроков, потом общий словарь
   var byId = {};
-  var byRu = {};    // перевод → английские слова с таким же переводом (для проверки синонимов)
+  var byRu = {};    // часть перевода → английские слова с ней (для проверки синонимов: город → city, town)
+  var known = {};   // все английские слова словаря в упрощённом виде (honey вместо money — не опечатка)
   var SCREENS = ['home', 'session', 'done', 'practice', 'lessons', 'dict', 'history'];
   var $ = function (id) { return document.getElementById(id); };
 
@@ -39,14 +40,24 @@
     words = Core.mergeWords(state.custom, BASE_WORDS);
     byId = {};
     byRu = {};
+    known = {};
     words.forEach(function (w) {
       byId[w.id] = w;
-      var key = w.ru.toLowerCase().trim();
-      (byRu[key] = byRu[key] || []).push(w.en);
+      known[Core.normalizeAnswer(w.en)] = true;
+      ruParts(w.ru).forEach(function (part) { (byRu[part] = byRu[part] || []).push(w.en); });
     });
   }
+  // «город, городок (небольшой)» → ['город', 'городок']
+  function ruParts(ru) {
+    return ru.toLowerCase().replace(/ё/g, 'е').replace(/\([^)]*\)/g, ' ').split(/[,;]/)
+      .map(function (x) { return x.replace(/\s+/g, ' ').trim(); }).filter(Boolean);
+  }
   function synonymsOf(w) {
-    return (byRu[w.ru.toLowerCase().trim()] || []).filter(function (en) { return en !== w.en; });
+    var out = [];
+    ruParts(w.ru).forEach(function (part) {
+      (byRu[part] || []).forEach(function (en) { if (en !== w.en && out.indexOf(en) === -1) out.push(en); });
+    });
+    return out;
   }
   function current() { return byId[session.queue[0]]; }
   function levelsAll() { return state.custom.length ? LEVELS.concat('MY') : LEVELS.slice(); }
@@ -169,7 +180,9 @@
       // «Ещё 5 слов»: берём следующие новые слова сверх дневного лимита
       fresh = Core.buildQueue(words, state.cards, dailySettings({ newPerDay: 9999 }), {}, day).fresh.slice(0, extraNew);
     }
-    var queue = Core.mixQueue(q.due, fresh);
+    // Добавленные из словаря — в самом начале, остальные новые вперемешку с повторениями
+    var lead = extraNew ? [] : q.priority;
+    var queue = Core.mixQueue(q.due, fresh.slice(lead.length), lead);
     if (!queue.length) return;
     beginSession({ mode: 'daily', dir: 'en', queue: queue });
   }
@@ -289,7 +302,7 @@
     if (session.type) {
       var input = $('type-input');
       input.value = '';
-      input.disabled = false;
+      input.readOnly = false;
       input.className = 'type-input';
       input.placeholder = 'Напишите по-английски';
       $('type-mask').hidden = true;
@@ -355,7 +368,7 @@
     if (!session || !session.type || session.typed) return;
     var w = current();
     var input = giveUp ? '' : $('type-input').value;
-    var res = giveUp ? 'wrong' : Core.checkAnswer(input, w, synonymsOf(w));
+    var res = giveUp ? 'wrong' : Core.checkAnswer(input, w, synonymsOf(w), known);
     if (res === 'empty') { $('type-input').focus(); return; }
     if (res === 'alt') {
       setTypeResult('alt', 'Тоже подходит по смыслу, но здесь загадано другое слово. Попробуйте ещё раз' +
@@ -364,9 +377,9 @@
       return;
     }
     var g = res === 'ok' ? (session.hintUsed ? 2 : 3) : res === 'typo' ? 2 : 1;
-    session.typed = { res: res, grade: g };
+    session.typed = { res: res, grade: g, at: Date.now() };
     var en = '<b>' + escapeHtml(w.en) + '</b>';
-    $('type-input').disabled = true;
+    $('type-input').readOnly = true; // не disabled: так клавиатура на телефоне не закрывается между карточками
     $('type-input').placeholder = giveUp ? 'не знаю' : '';
     $('type-input').className = 'type-input is-' + res + (giveUp ? ' gave-up' : '');
     if (res === 'ok') setTypeResult('ok', session.hintUsed ? 'Верно, с подсказкой.' : 'Верно!');
@@ -386,7 +399,8 @@
     over.textContent = res === 'ok' ? 'Было легко — показать реже' : 'Засчитать как верный ответ';
     $('type-controls').hidden = true;
     $('type-next').hidden = false;
-    $('next-btn').focus();
+    if (giveUp) $('next-btn').focus();
+    else $('type-input').focus(); // после «Не знаю» поле не в фокусе; иначе фокус остаётся в поле, Enter — дальше
   }
 
   function finishTyped(override) {
@@ -748,9 +762,9 @@
     if (st[0] === 'new') {
       status = 'Вы ещё не начинали это слово.';
       action = '<button class="primary" type="button" data-act="add">Добавить в изучение</button>' +
-        '<p class="small">Слово появится первым в ближайшем занятии, сверх дневной нормы новых слов.</p>';
+        '<p class="small">Слово будет в начале ближайшего занятия, сверх дневной нормы новых слов.</p>';
     } else if (st[0] === 'queued') {
-      status = 'Добавлено. Появится первым в ближайшем занятии.';
+      status = 'Добавлено. Будет в начале ближайшего занятия.';
       action = '<button class="ghost" type="button" data-act="remove">Убрать из очереди</button>';
     } else if (c.d <= day) {
       status = (st[0] === 'learned' ? 'Выучено' : 'В изучении') + '. Уже есть в сегодняшнем занятии.';
@@ -795,16 +809,28 @@
     openSheet('Резервная копия',
       '<p>В копию попадут ' + n + ' ' + plural(n, 'слово', 'слова', 'слов') + ' с прогрессом, ' + m + ' ' +
       plural(m, 'слово', 'слова', 'слов') + ' из уроков, серия дней и настройки.</p>' +
-      '<div class="sheet-actions"><button class="primary" type="button" data-act="download">Скачать файл</button>' +
-      '<button class="ghost" type="button" data-act="copy">Скопировать текст</button></div>' +
-      '<p class="import-result" id="backup-msg" role="status"></p>' +
-      '<p class="small">В Telegram на телефоне файл может не скачаться. Тогда нажмите «Скопировать текст» и отправьте его себе в «Избранное». Чтобы восстановить, этот текст достаточно вставить.</p>',
+      '<div class="sheet-actions">' + (mobileTg
+        ? '<button class="primary" type="button" data-act="copy">Скопировать текст</button><button class="ghost" type="button" data-act="download">Скачать файл</button>'
+        : '<button class="primary" type="button" data-act="download">Скачать файл</button><button class="ghost" type="button" data-act="copy">Скопировать текст</button>') +
+      '</div><p class="import-result" id="backup-msg" role="status"></p>' +
+      '<p class="small">' + (mobileTg ? 'В Telegram на телефоне файл обычно не скачивается, поэтому надёжнее скопировать текст. ' : '') +
+      sizeAdvice() + ' Чтобы восстановить, текст достаточно вставить.</p>',
       false);
+  }
+
+  var mobileTg = inTelegram && /^(ios|android)/.test(tg.platform || '');
+
+  // Одно сообщение Telegram — до 4096 символов; длинную копию он разрежет, и вставить её целиком не выйдет
+  function sizeAdvice() {
+    var n = backupText().length;
+    return n <= 4000
+      ? 'Текст копии (' + n + ' символов) помещается в одно сообщение: его можно отправить себе в «Избранное» Telegram.'
+      : 'Текст копии длинный (' + n + ' символов): Telegram разрежет его на несколько сообщений. Сохраните его в «Заметки» телефона или в файл.';
   }
 
   function backupMsg(text, ok) {
     $('backup-msg').textContent = text;
-    $('backup-msg').className = 'import-result ' + (ok ? 'ok' : 'err');
+    $('backup-msg').className = 'import-result' + (ok === true ? ' ok' : ok === false ? ' err' : '');
   }
 
   function downloadBackup() {
@@ -816,7 +842,7 @@
       document.body.appendChild(a);
       a.click();
       setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-      backupMsg('Файл отправлен в загрузки. Если ничего не появилось, скопируйте текст.', true);
+      backupMsg('Если файл не появился в загрузках, скопируйте текст.', null);
     } catch (e) {
       backupMsg('Скачать не получилось. Скопируйте текст.', false);
     }
@@ -826,14 +852,16 @@
     var text = backupText();
     var fallback = function () {
       backupMsg('Автоматически скопировать не получилось. Текст выделен ниже — скопируйте его.', false);
+      var old = $('backup-text');
+      if (old) old.remove();
       var ta = document.createElement('textarea');
       ta.rows = 5; ta.readOnly = true; ta.value = text; ta.id = 'backup-text';
       $('backup-msg').after(ta);
-      ta.focus(); ta.select();
+      ta.focus(); ta.setSelectionRange(0, text.length); // select() на iOS в поле только для чтения не всегда срабатывает
     };
     try {
       navigator.clipboard.writeText(text).then(function () {
-        backupMsg('Скопировано. Отправьте текст себе в «Избранное» Telegram или сохраните в заметки.', true);
+        backupMsg('Скопировано. Сохраните текст туда, где он не потеряется.', true);
       }, fallback);
     } catch (e) { fallback(); }
   }
@@ -857,9 +885,12 @@
     if (!r.ok) { out.innerHTML = '<p class="import-result err">' + escapeHtml(r.error) + '</p>'; return; }
     pendingRestore = r.state;
     var i = r.info, now = Object.keys(state.cards).length;
-    var when = i.saved ? new Date(i.saved).toLocaleString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'без даты';
-    out.innerHTML = '<p class="import-result ok">Копия от ' + escapeHtml(when) + ': ' + i.cards + ' ' + plural(i.cards, 'слово', 'слова', 'слов') +
+    var d = i.saved ? new Date(i.saved) : null;
+    var when = d && !isNaN(d) ? 'Копия от ' + d.toLocaleString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'Копия без даты';
+    var empty = i.cards === 0 && i.custom === 0;
+    out.innerHTML = '<p class="import-result ' + (empty ? 'err' : 'ok') + '">' + escapeHtml(when) + ': ' + i.cards + ' ' + plural(i.cards, 'слово', 'слова', 'слов') +
       ' с прогрессом (выучено ' + i.learned + '), ' + i.custom + ' из уроков, рекорд серии ' + i.best + '.</p>' +
+      (empty ? '<p class="small">В этой копии нет ни одного слова. После замены прогресс начнётся с нуля.</p>' : '') +
       '<div class="confirm"><span>Заменить текущий прогресс (' + now + ' ' + plural(now, 'слово', 'слова', 'слов') + ') этой копией?</span>' +
       '<div class="confirm-actions"><button class="danger-solid" type="button" data-act="apply-backup">Заменить</button></div></div>';
   }
@@ -1048,7 +1079,12 @@
     if (!session) return;
     if (session.type) {
       if (e.target.tagName === 'BUTTON' && e.target.id !== 'next-btn') return; // Enter на кнопке нажимает её саму
-      if (e.key === 'Enter') { e.preventDefault(); session.typed ? finishTyped(false) : checkTyped(false); }
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (e.repeat) return; // удержанный Enter не должен пролистывать результат
+        if (!session.typed) checkTyped(false);
+        else if (Date.now() - session.typed.at > 350) finishTyped(false); // двойное нажатие не пропускает результат
+      }
       return;
     }
     if (e.target === $('c-word') && (e.key === 'Enter' || e.key === ' ')) return;

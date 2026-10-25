@@ -195,6 +195,8 @@ with sync_playwright() as p:
         if scheme == "dark":
             page.close()
             continue
+        page.keyboard.press("Enter")  # сразу — игнорируется
+        page.wait_for_timeout(400)
         page.keyboard.press("Enter")
         assert len(saved(page)["cards"]) == 1 and page.inner_text("#counter") == "1 / 10"
 
@@ -223,6 +225,8 @@ with sync_playwright() as p:
             page.fill("#type-input", en4[:-1] + ("x" if en4[-1] != "x" else "z"))
             page.keyboard.press("Enter")
             assert page.inner_text("#type-result").startswith("Почти"), page.inner_text("#type-result")
+            page.keyboard.press("Enter")  # сразу — игнорируется
+            page.wait_for_timeout(400)
             page.keyboard.press("Enter")
         page.click("#quit-btn")
 
@@ -279,7 +283,8 @@ with sync_playwright() as p:
     backup_path = OUT / "backup.json"
     dl.value.save_as(str(backup_path))
     data = json.loads(backup_path.read_text(encoding="utf-8"))
-    assert data["app"] == "english-trainer" and data["cards"] == before["cards"]
+    packed = {k: [c[x] for x in "riedl"] for k, c in before["cards"].items()}
+    assert data["app"] == "english-trainer" and data["format"] == 2 and data["cards"] == packed, "компактный формат копии"
     assert dl.value.suggested_filename.startswith("english-trainer-")
     page.click("#sheet-close")
 

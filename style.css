@@ -353,7 +353,7 @@ textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; 
 }
 .search { font: 400 16px/1.3 var(--font-body); background: var(--card); }
 .type-input:focus, .search:focus { outline: none; border-color: var(--accent); }
-.type-input:disabled { opacity: 1; -webkit-text-fill-color: var(--ink); }
+.type-input[readonly] { caret-color: transparent; }
 .type-input.is-ok { border-color: var(--good); background: var(--good-soft); }
 .type-input.is-typo { border-color: var(--warn); background: var(--warn-soft); }
 .type-input.is-wrong { border-color: var(--bad); background: var(--bad-soft); text-decoration: line-through; }

@@ -261,7 +261,7 @@ test('ввод ответа: опечатка, синоним, ошибка', ()
 test('подсказка: первые буквы', () => {
   assert.equal(Core.answerHint('borrow'), 'b_____');
   assert.equal(Core.answerHint('look after sb'), 'l___ a____ …');
-  assert.equal(Core.answerHint("What's up?"), "W___'s u_?");
+  assert.equal(Core.answerHint("What's up?"), "W___'_ u_?");
 });
 
 test('поиск: по-английски и по-русски, сначала точные', () => {
@@ -315,6 +315,45 @@ test('резервная копия: понятные ошибки на чужо
   assert.match(Core.parseBackup('').error, /повреждён/);
   const broken = JSON.stringify({ app: 'english-trainer', format: 1, cards: { a: { r: 1 } }, meta: {} });
   assert.match(Core.parseBackup(broken).error, /повреждены записи о 1/);
+});
+
+test('замечания Тестировщика 1.3.0: апострофы, слоты, настоящие слова, компактная копия', () => {
+  const ok = (input, en) => assert.equal(Core.checkAnswer(input, { en }), 'ok', input + ' → ' + en);
+  ok('dont worry', "Don't worry");
+  ok('whats up', "What's up?");
+  ok('im sorry', "I'm sorry");
+  ok('its up to you', "It's up to you");
+  ok('cant stand', "can't stand");
+  ok('I would like', "I'd like");
+  ok('id like', "I'd like");
+  ok('i do not know', "I don't know");
+  ok('ill', 'ill');
+  ok('look after him', 'look after sb');
+  ok('look after my little sister', 'look after sb');
+  ok('take it for granted', 'take sth for granted');
+  ok('make up my mind', 'make up your mind');
+  ok('in my opinion', 'in my opinion');
+  assert.equal(Core.checkAnswer('look', { en: 'look after sb' }), 'wrong');
+  assert.equal(Core.checkAnswer('honey', { en: 'money' }, [], { honey: true, money: true }), 'wrong', 'настоящее слово — не опечатка');
+  assert.equal(Core.checkAnswer('mony', { en: 'money' }, [], { honey: true, money: true }), 'typo');
+  assert.equal(Core.answerHint("I'm sorry"), "I'_ s____");
+  assert.equal(Core.answerHint("can't stand"), "c__'_ s____");
+  // Компактная копия читается, старая (формат 1, объекты) — тоже
+  const cards = { time: { r: 3, i: 25, e: 260, d: 20005, l: 1 } };
+  const packed = Core.makeBackup({ cards, custom: [], meta: {} }, '1.3.0');
+  assert.deepEqual(packed.cards.time, [3, 25, 260, 20005, 1]);
+  assert.deepEqual(Core.parseBackup(JSON.stringify(packed)).state.cards, cards);
+  const v1 = JSON.stringify({ app: 'english-trainer', format: 1, cards, meta: { settings: null } });
+  const r1 = Core.parseBackup(v1);
+  assert.deepEqual(r1.state.cards, cards);
+  assert.equal(r1.state.meta.settings, undefined, 'испорченные настройки отбрасываются');
+});
+
+test('очередь: добавленные из словаря — в самом начале занятия', () => {
+  const q = Core.buildQueue([{ id: 'a', lvl: 'A1' }, { id: 'b', lvl: 'A1' }, { id: 'p', lvl: 'B2' }],
+    { a: { r: 1, i: 1, e: 250, d: DAY, l: 0 } }, { newPerDay: 5, levels: ['A1'] }, { priority: ['p'] }, DAY);
+  assert.deepEqual(q.priority, ['p']);
+  assert.deepEqual(Core.mixQueue(q.due, q.fresh.slice(q.priority.length), q.priority), ['p', 'a', 'b']);
 });
 
 console.log(`\nВсе тесты пройдены: ${passed}`);

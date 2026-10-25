@@ -110,12 +110,13 @@
     fresh = priority.concat(regular);
 
     due.sort(function (a, b) { return cards[a].d - cards[b].d; });
-    return { due: due.slice(0, 150), fresh: fresh };
+    return { due: due.slice(0, 150), fresh: fresh, priority: priority };
   }
 
   // Смешиваем: после каждых трёх повторений одно новое слово, чтобы занятие не было монотонным.
-  function mixQueue(due, fresh) {
-    var out = [];
+  // lead — слова, которые идут в самом начале (добавленные из словаря)
+  function mixQueue(due, fresh, lead) {
+    var out = (lead || []).slice();
     var di = 0, fi = 0;
     while (di < due.length || fi < fresh.length) {
       for (var n = 0; n < 3 && di < due.length; n++) out.push(due[di++]);
@@ -327,18 +328,38 @@
 
   /*
    * Приводим ответ к простому виду, чтобы не придираться к мелочам:
-   * регистр, знаки препинания, «to» перед глаголом, артикль в начале, sb/sth во фразах,
-   * сокращения (what's = what is, don't = do not).
+   * регистр, знаки препинания, апострофы, «to» перед глаголом, артикль в начале,
+   * сокращения (whats = what's = what is, dont = don't = do not, id like = I'd like = I would like).
+   * slots = true: sb/sth и притяжательные слова во фразах (your, my) превращаются в метку SLOT —
+   * на её месте в ответе может стоять до трёх любых слов (look after him, make up my mind).
    */
-  function normalizeAnswer(s) {
-    var t = ' ' + String(s || '').toLowerCase().replace(/[’`´]/g, "'") + ' ';
-    t = t.replace(/\b(what|that|it|there|here|he|she|who|where|how)'s\b/g, '$1 is')
-      .replace(/\bcan't\b/g, 'cannot').replace(/\bwon't\b/g, 'will not').replace(/n't\b/g, ' not')
-      .replace(/'re\b/g, ' are').replace(/\bi'm\b/g, 'i am').replace(/'ll\b/g, ' will').replace(/'ve\b/g, ' have')
-      .replace(/\bcan not\b/g, 'cannot');
-    t = t.replace(PLACEHOLDER, ' ').replace(/[^a-z0-9' -]/g, ' ').replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
+  var SLOT = 'zqslotz';
+  var CONTRACTIONS = {
+    dont: 'do not', doesnt: 'does not', didnt: 'did not', isnt: 'is not', arent: 'are not', wasnt: 'was not',
+    werent: 'were not', havent: 'have not', hasnt: 'has not', hadnt: 'had not', wouldnt: 'would not',
+    couldnt: 'could not', shouldnt: 'should not', cant: 'cannot', wont: 'will not', im: 'i am', ive: 'i have',
+    id: 'i would', youre: 'you are', theyre: 'they are', youve: 'you have', youll: 'you will', theyll: 'they will',
+    whats: 'what is', thats: 'that is', its: 'it is', theres: 'there is', heres: 'here is', hes: 'he is',
+    shes: 'she is', whos: 'who is', wheres: 'where is', hows: 'how is'
+  };
+
+  function normalizeAnswer(s, slots) {
+    var t = String(s || '').toLowerCase().replace(/[’`´']/g, '');
+    t = t.replace(PLACEHOLDER, slots ? ' ' + SLOT + ' ' : ' ');
+    t = t.replace(/[^a-z0-9 -]/g, ' ').replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
+    if (slots && t.indexOf(' ') !== -1) t = t.replace(/\b(my|your|his|her|their|our)\b/g, SLOT);
+    t = t.split(' ').map(function (x) { return CONTRACTIONS[x] || x; }).join(' ');
+    t = t.replace(/ can not\b/g, ' cannot');
     t = t.replace(/^to (?=\S)/, '').replace(/^(a|an|the) (?=\S)/, '');
     return t;
+  }
+
+  // Ответ подходит к слову: точное совпадение, а во фразах со SLOT на его месте — до трёх любых слов
+  function matchesTarget(a, en) {
+    var withSlots = normalizeAnswer(en, true);
+    if (withSlots.indexOf(SLOT) === -1) return a === withSlots;
+    var src = (' ' + withSlots).replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(new RegExp(' ' + SLOT, 'g'), '(?: \\S+){0,3}');
+    return new RegExp('^' + src + '$').test(' ' + a);
   }
 
   // Расстояние Левенштейна: сколько букв надо вставить, удалить или заменить
@@ -360,16 +381,19 @@
    *   'empty' — ничего не введено
    *   'ok'    — верно
    *   'typo'  — опечатка: одна буква (в длинных словах — две)
-   *   'alt'   — это другое слово с тем же переводом (synonyms — список таких слов)
+   *   'alt'   — это другое слово с похожим переводом (synonyms — список таких слов)
    *   'wrong' — неверно
+   * known — все слова словаря (нормализованные) как объект: если ответ — другое настоящее слово
+   * (honey вместо money), это не опечатка, а ошибка.
    */
-  function checkAnswer(input, w, synonyms) {
+  function checkAnswer(input, w, synonyms, known) {
     var a = normalizeAnswer(input);
     if (!a) return 'empty';
-    var target = normalizeAnswer(w.en);
-    if (a === target) return 'ok';
-    var alts = (synonyms || []).map(normalizeAnswer);
+    if (matchesTarget(a, w.en)) return 'ok';
+    var alts = (synonyms || []).map(function (x) { return normalizeAnswer(x); });
     if (alts.indexOf(a) !== -1) return 'alt';
+    if (known && known[a]) return 'wrong';
+    var target = normalizeAnswer(w.en);
     var limit = target.length >= 9 ? 2 : target.length >= 4 ? 1 : 0;
     if (limit && editDistance(a, target) <= limit) return 'typo';
     return 'wrong';
@@ -377,7 +401,7 @@
 
   // Подсказка: первая буква каждого слова, остальные буквы — подчёркивания. look after → l___ a____
   function answerHint(en) {
-    return String(en).replace(PLACEHOLDER, '…').replace(/[A-Za-z]+/g, function (word) {
+    return String(en).replace(PLACEHOLDER, '…').replace(/[A-Za-z][A-Za-z'’]*/g, function (word) {
       return word.charAt(0) + word.slice(1).replace(/[A-Za-z]/g, '_');
     }).replace(/\s+/g, ' ').trim();
   }
@@ -416,9 +440,23 @@
 
   function makeBackup(state, version, now) {
     return {
-      app: BACKUP_APP, format: 1, version: version || '', saved: (now || new Date()).toISOString(),
-      cards: state.cards, custom: state.custom || [], meta: state.meta
+      app: BACKUP_APP, format: 2, version: version || '', saved: (now || new Date()).toISOString(),
+      cards: packCards(state.cards), custom: state.custom || [], meta: state.meta
     };
+  }
+
+  // Формат 2 короче: вместо {"r":1,"i":1,"e":250,"d":20752,"l":0} — [1,1,250,20752,0]
+  var CARD_KEYS = ['r', 'i', 'e', 'd', 'l'];
+  function packCards(cards) {
+    var out = {};
+    Object.keys(cards).forEach(function (id) { var c = cards[id]; out[id] = CARD_KEYS.map(function (k) { return c[k]; }); });
+    return out;
+  }
+  function unpackCard(c) {
+    if (!Array.isArray(c)) return c;
+    var o = {};
+    CARD_KEYS.forEach(function (k, n) { o[k] = c[n]; });
+    return o;
   }
 
   function isCard(c) {
@@ -440,7 +478,7 @@
     }
     var cards = {}, bad = 0, learned = 0;
     Object.keys(data.cards).forEach(function (id) {
-      var c = data.cards[id];
+      var c = unpackCard(data.cards[id]);
       if (!isCard(c)) { bad += 1; return; }
       cards[id] = { r: c.r, i: c.i, e: c.e, d: c.d, l: c.l };
       if (c.i >= LEARNED_INTERVAL) learned += 1;
@@ -448,6 +486,7 @@
     if (bad) return { ok: false, error: 'В копии повреждены записи о ' + bad + ' словах. Попробуйте другой файл.' };
     var custom = Array.isArray(data.custom) ? data.custom.filter(function (w) { return w && w.id && w.en && w.ru; }).map(normalizeCustom) : [];
     var meta = data.meta;
+    if (meta.settings !== undefined && (typeof meta.settings !== 'object' || !meta.settings)) delete meta.settings;
     return {
       ok: true,
       state: { cards: cards, custom: custom, meta: meta },
