@@ -230,4 +230,91 @@ test('подсветка: каждый пример словаря содерж�
   assert.equal(missed.length, 0, 'слово не найдено в примерах:\n' + missed.join('\n'));
 });
 
+// ---------- 1.3.0 ----------
+test('ввод ответа: не придираемся к регистру, знакам, to, артиклю, sb/sth, сокращениям', () => {
+  const ok = (input, en) => assert.equal(Core.checkAnswer(input, { en }), 'ok', input + ' → ' + en);
+  ok('Borrow', 'borrow');
+  ok('  to borrow ', 'borrow');
+  ok('look after', 'look after sb');
+  ok('take for granted', 'take sth for granted');
+  ok('what is wrong', "What's wrong?");
+  ok("what’s the point", "What's the point?");
+  ok('how are you', 'How are you?');
+  ok('an apple', 'apple');
+  ok('well-known', 'well known');
+  assert.equal(Core.checkAnswer('', { en: 'borrow' }), 'empty');
+  assert.equal(Core.checkAnswer('  ?! ', { en: 'borrow' }), 'empty');
+});
+
+test('ввод ответа: опечатка, синоним, ошибка', () => {
+  assert.equal(Core.checkAnswer('borow', { en: 'borrow' }), 'typo');
+  assert.equal(Core.checkAnswer('brrow', { en: 'borrow' }), 'typo');
+  assert.equal(Core.checkAnswer('bring', { en: 'borrow' }), 'wrong');
+  assert.equal(Core.checkAnswer('cat', { en: 'car' }), 'wrong', 'в коротких словах опечаток не прощаем');
+  assert.equal(Core.checkAnswer('enviroment', { en: 'environment' }), 'typo');
+  assert.equal(Core.checkAnswer('envirnmnt', { en: 'environment' }), 'typo', 'в длинных словах — до двух букв');
+  assert.equal(Core.checkAnswer('envrnmnt', { en: 'environment' }), 'wrong');
+  assert.equal(Core.checkAnswer('lend', { en: 'borrow' }, ['lend']), 'alt');
+  assert.equal(Core.checkAnswer('borrow', { en: 'borrow' }, ['borrow']), 'ok', 'верный ответ важнее синонима');
+});
+
+test('подсказка: первые буквы', () => {
+  assert.equal(Core.answerHint('borrow'), 'b_____');
+  assert.equal(Core.answerHint('look after sb'), 'l___ a____ …');
+  assert.equal(Core.answerHint("What's up?"), "W___'s u_?");
+});
+
+test('поиск: по-английски и по-русски, сначала точные', () => {
+  const words = [
+    { id: 'borrowing', en: 'borrowing', ru: 'заимствование' },
+    { id: 'borrow', en: 'borrow', ru: 'одалживать, брать взаймы' },
+    { id: 'take', en: 'take', ru: 'брать' },
+    { id: 'look after sb', en: 'look after sb', ru: 'заботиться о ком-то' },
+    { id: 'tree', en: 'tree', ru: 'ёлка' }
+  ];
+  assert.deepEqual(Core.searchWords(words, 'borrow').ids, ['borrow', 'borrowing']);
+  assert.deepEqual(Core.searchWords(words, 'брать').ids, ['take', 'borrow'], 'точный перевод выше вхождения');
+  assert.deepEqual(Core.searchWords(words, 'after').ids, ['look after sb'], 'по второму слову фразы');
+  assert.deepEqual(Core.searchWords(words, 'елка').ids, ['tree'], 'ё = е');
+  assert.equal(Core.searchWords(words, '   ').total, 0);
+  assert.equal(Core.searchWords(words, 'o', 2).ids.length, 2);
+  assert.equal(Core.searchWords(words, 'o', 2).total, 3);
+  assert.ok(Core.searchWords(WORDS, 'time').ids[0] === 'time', 'в настоящем словаре time находится первым');
+});
+
+test('слова из словаря идут первыми и сверх нормы, изученные выпадают из очереди', () => {
+  const words = [{ id: 'a', lvl: 'A1' }, { id: 'b', lvl: 'A1' }, { id: 'c', lvl: 'A1' }, { id: 'z', lvl: 'B2' }];
+  const settings = { newPerDay: 2, levels: ['A1'] };
+  let q = Core.buildQueue(words, {}, settings, { priority: ['z', 'gone'] }, DAY);
+  assert.deepEqual(q.fresh, ['z', 'a', 'b'], 'z первым, даже из невыбранного уровня; несуществующие пропущены');
+  q = Core.buildQueue(words, {}, settings, { priority: ['b'] }, DAY);
+  assert.deepEqual(q.fresh, ['b', 'a', 'c'], 'без повторов');
+  q = Core.buildQueue(words, { z: Core.newCard(DAY) }, settings, { priority: ['z'], newDay: DAY, newDone: 2 }, DAY);
+  assert.deepEqual(q.fresh, [], 'начатое слово больше не новое, норма выбрана');
+});
+
+test('резервная копия: туда и обратно', () => {
+  const state = {
+    cards: { time: { r: 3, i: 25, e: 260, d: DAY + 5, l: 1 }, go: { r: 1, i: 1, e: 250, d: DAY, l: 0 } },
+    custom: [{ id: 'doomscroll', en: 'doomscroll', ru: 'листать новости', pos: '', lvl: 'MY', ex: [], forms: [], gram: [], irr: null, note: '' }],
+    meta: { streak: 4, best: 9, lastDone: DAY, settings: { newPerDay: 15, levels: ['A1'], typeMode: true }, priority: ['go'] }
+  };
+  const text = JSON.stringify(Core.makeBackup(state, '1.3.0', new Date('2026-10-25T10:00:00Z')));
+  const r = Core.parseBackup(text);
+  assert.ok(r.ok);
+  assert.deepEqual(r.state.cards, state.cards);
+  assert.deepEqual(r.state.custom, state.custom);
+  assert.deepEqual(r.state.meta, state.meta);
+  assert.equal(r.info.cards, 2); assert.equal(r.info.learned, 1); assert.equal(r.info.streak, 4); assert.equal(r.info.custom, 1);
+  assert.equal(r.info.saved, '2026-10-25T10:00:00.000Z');
+});
+
+test('резервная копия: понятные ошибки на чужом и битом тексте', () => {
+  assert.match(Core.parseBackup('{"app":"english-trainer","cards":').error, /повреждён|не целиком/);
+  assert.match(Core.parseBackup('{"foo":1}').error, /не резервная копия/);
+  assert.match(Core.parseBackup('').error, /повреждён/);
+  const broken = JSON.stringify({ app: 'english-trainer', format: 1, cards: { a: { r: 1 } }, meta: {} });
+  assert.match(Core.parseBackup(broken).error, /повреждены записи о 1/);
+});
+
 console.log(`\nВсе тесты пройдены: ${passed}`);

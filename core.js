@@ -81,22 +81,33 @@
    * Очередь на сегодня: сначала слова, которым пришёл срок, затем новые.
    * Новые берутся только из выбранных уровней, по порядку списка (от частых к редким).
    */
+  /*
+   * meta.priority — слова, которые вы сами добавили из словаря. Они идут первыми
+   * и сверх дневной нормы новых слов: вы выбрали их сознательно.
+   */
   function buildQueue(words, cards, settings, meta, day) {
     var due = [];
     var fresh = [];
     var newDoneToday = meta.newDay === day ? meta.newDone : 0;
     var newLeft = Math.max(0, settings.newPerDay - newDoneToday);
     var levels = settings.levels;
+    var known = {};
+    words.forEach(function (w) { known[w.id] = true; });
+    var priority = (meta.priority || []).filter(function (id) { return known[id] && !cards[id]; });
+    var isPriority = {};
+    priority.forEach(function (id) { isPriority[id] = true; });
+    var regular = [];
 
     for (var k = 0; k < words.length; k++) {
       var w = words[k];
       var c = cards[w.id];
       if (c) {
         if (c.d <= day) due.push(w.id);
-      } else if (fresh.length < newLeft && levels.indexOf(w.lvl) !== -1) {
-        fresh.push(w.id);
+      } else if (!isPriority[w.id] && regular.length < newLeft && levels.indexOf(w.lvl) !== -1) {
+        regular.push(w.id);
       }
     }
+    fresh = priority.concat(regular);
 
     due.sort(function (a, b) { return cards[a].d - cards[b].d; });
     return { due: due.slice(0, 150), fresh: fresh };
@@ -312,7 +323,149 @@
     return { start: s2, end: s2 + m2[2].length };
   }
 
+  // ---------- Режим ввода ответа ----------
+
+  /*
+   * Приводим ответ к простому виду, чтобы не придираться к мелочам:
+   * регистр, знаки препинания, «to» перед глаголом, артикль в начале, sb/sth во фразах,
+   * сокращения (what's = what is, don't = do not).
+   */
+  function normalizeAnswer(s) {
+    var t = ' ' + String(s || '').toLowerCase().replace(/[’`´]/g, "'") + ' ';
+    t = t.replace(/\b(what|that|it|there|here|he|she|who|where|how)'s\b/g, '$1 is')
+      .replace(/\bcan't\b/g, 'cannot').replace(/\bwon't\b/g, 'will not').replace(/n't\b/g, ' not')
+      .replace(/'re\b/g, ' are').replace(/\bi'm\b/g, 'i am').replace(/'ll\b/g, ' will').replace(/'ve\b/g, ' have')
+      .replace(/\bcan not\b/g, 'cannot');
+    t = t.replace(PLACEHOLDER, ' ').replace(/[^a-z0-9' -]/g, ' ').replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
+    t = t.replace(/^to (?=\S)/, '').replace(/^(a|an|the) (?=\S)/, '');
+    return t;
+  }
+
+  // Расстояние Левенштейна: сколько букв надо вставить, удалить или заменить
+  function editDistance(a, b) {
+    var prev = [], cur, k, j;
+    for (j = 0; j <= b.length; j++) prev[j] = j;
+    for (k = 1; k <= a.length; k++) {
+      cur = [k];
+      for (j = 1; j <= b.length; j++) {
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a.charAt(k - 1) === b.charAt(j - 1) ? 0 : 1));
+      }
+      prev = cur;
+    }
+    return prev[b.length];
+  }
+
+  /*
+   * Проверка напечатанного ответа. Результат:
+   *   'empty' — ничего не введено
+   *   'ok'    — верно
+   *   'typo'  — опечатка: одна буква (в длинных словах — две)
+   *   'alt'   — это другое слово с тем же переводом (synonyms — список таких слов)
+   *   'wrong' — неверно
+   */
+  function checkAnswer(input, w, synonyms) {
+    var a = normalizeAnswer(input);
+    if (!a) return 'empty';
+    var target = normalizeAnswer(w.en);
+    if (a === target) return 'ok';
+    var alts = (synonyms || []).map(normalizeAnswer);
+    if (alts.indexOf(a) !== -1) return 'alt';
+    var limit = target.length >= 9 ? 2 : target.length >= 4 ? 1 : 0;
+    if (limit && editDistance(a, target) <= limit) return 'typo';
+    return 'wrong';
+  }
+
+  // Подсказка: первая буква каждого слова, остальные буквы — подчёркивания. look after → l___ a____
+  function answerHint(en) {
+    return String(en).replace(PLACEHOLDER, '…').replace(/[A-Za-z]+/g, function (word) {
+      return word.charAt(0) + word.slice(1).replace(/[A-Za-z]/g, '_');
+    }).replace(/\s+/g, ' ').trim();
+  }
+
+  // ---------- Поиск по словарю ----------
+  function normSearch(s) { return String(s || '').toLowerCase().replace(/ё/g, 'е').replace(/[’`]/g, "'").replace(/\s+/g, ' ').trim(); }
+
+  /*
+   * Ищет и по-английски, и по-русски. Сначала точные совпадения, потом начало слова, потом вхождение.
+   * Возвращает { ids: первые limit найденных, total: сколько всего }.
+   */
+  function searchWords(words, query, limit) {
+    var q = normSearch(query);
+    if (!q) return { ids: [], total: 0 };
+    var hits = [];
+    words.forEach(function (w, idx) {
+      var en = normSearch(w.en);
+      var ru = normSearch(w.ru);
+      var ruParts = ru.split(/[,;()/]+/).map(function (x) { return x.trim(); });
+      var score = -1;
+      if (en === q) score = 0;
+      else if (ruParts.indexOf(q) !== -1) score = 1;
+      else if (en.indexOf(q) === 0) score = 2;
+      else if ((' ' + en).indexOf(' ' + q) !== -1) score = 3;
+      else if (ruParts.some(function (p) { return p.indexOf(q) === 0 || p.indexOf(' ' + q) !== -1; })) score = 4;
+      else if (en.indexOf(q) !== -1) score = 5;
+      else if (ru.indexOf(q) !== -1) score = 6;
+      if (score >= 0) hits.push([score, idx, w.id]);
+    });
+    hits.sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; });
+    return { ids: hits.slice(0, limit || 30).map(function (h) { return h[2]; }), total: hits.length };
+  }
+
+  // ---------- Резервная копия ----------
+  var BACKUP_APP = 'english-trainer';
+
+  function makeBackup(state, version, now) {
+    return {
+      app: BACKUP_APP, format: 1, version: version || '', saved: (now || new Date()).toISOString(),
+      cards: state.cards, custom: state.custom || [], meta: state.meta
+    };
+  }
+
+  function isCard(c) {
+    return c && typeof c === 'object' && ['r', 'i', 'e', 'd', 'l'].every(function (k) { return typeof c[k] === 'number' && isFinite(c[k]); });
+  }
+
+  /*
+   * Разбор копии из файла или вставленного текста. Возвращает
+   *   { ok: true, state: {cards, custom, meta}, info: {cards, learned, streak, best, custom, saved} }
+   *   или { ok: false, error: 'понятное объяснение' }.
+   */
+  function parseBackup(text) {
+    var data;
+    try { data = JSON.parse(String(text || '').trim()); } catch (e) {
+      return { ok: false, error: 'Это не похоже на резервную копию: текст повреждён или скопирован не целиком.' };
+    }
+    if (!data || data.app !== BACKUP_APP || typeof data.cards !== 'object' || !data.cards || typeof data.meta !== 'object' || !data.meta) {
+      return { ok: false, error: 'Это не резервная копия English Trainer.' };
+    }
+    var cards = {}, bad = 0, learned = 0;
+    Object.keys(data.cards).forEach(function (id) {
+      var c = data.cards[id];
+      if (!isCard(c)) { bad += 1; return; }
+      cards[id] = { r: c.r, i: c.i, e: c.e, d: c.d, l: c.l };
+      if (c.i >= LEARNED_INTERVAL) learned += 1;
+    });
+    if (bad) return { ok: false, error: 'В копии повреждены записи о ' + bad + ' словах. Попробуйте другой файл.' };
+    var custom = Array.isArray(data.custom) ? data.custom.filter(function (w) { return w && w.id && w.en && w.ru; }).map(normalizeCustom) : [];
+    var meta = data.meta;
+    return {
+      ok: true,
+      state: { cards: cards, custom: custom, meta: meta },
+      info: {
+        cards: Object.keys(cards).length, learned: learned, custom: custom.length,
+        streak: meta.streak || 0, best: meta.best || 0, lastDone: meta.lastDone, saved: data.saved || '', version: data.version || ''
+      }
+    };
+  }
+
   var Core = {
+    normalizeAnswer: normalizeAnswer,
+    editDistance: editDistance,
+    checkAnswer: checkAnswer,
+    answerHint: answerHint,
+    searchWords: searchWords,
+    makeBackup: makeBackup,
+    parseBackup: parseBackup,
     wordVariants: wordVariants,
     findWord: findWord,
     normalizeCustom: normalizeCustom,

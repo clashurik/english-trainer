@@ -168,6 +168,143 @@ with sync_playwright() as p:
     page.wait_for_timeout(300)
     assert page.is_hidden("#sheet"), "второй раз «Что нового» не показываем"
     page.close()
+
+    # ===== 6. Режим ввода ответа (1.3.0) =====
+    answer_js = "WORDS.find(w => w.ru === document.getElementById('c-word').textContent).en"
+    for scheme in ["light", "dark"]:
+        page = new_page(browser, scheme)
+        page.goto(URL)
+        page.wait_for_timeout(300)
+        page.click("#type-toggle")
+        assert saved(page)["meta"]["settings"]["typeMode"] is True, "тумблер сохраняется"
+        page.click("#start-btn")
+        assert page.is_hidden("#reveal-btn") and page.is_visible("#type-input"), "в режиме ввода — поле вместо кнопки"
+        assert re_cyr(page.inner_text("#c-word")), "показываем перевод"
+        assert page.is_hidden("#speak-btn"), "озвучка до ответа выдала бы слово"
+        page.keyboard.press("Enter")
+        assert page.is_hidden("#type-next"), "пустой ответ не проверяем"
+
+        # Верный ответ с «to» и заглавными буквами
+        en = page.evaluate(answer_js)
+        page.fill("#type-input", "To " + en.upper())
+        page.keyboard.press("Enter")
+        assert page.inner_text("#type-result") == "Верно!", page.inner_text("#type-result")
+        assert "вернётся через 1 д" in page.inner_text("#next-btn")
+        assert page.is_visible("#c-answer") and page.inner_text("#c-ru") == en
+        page.screenshot(path=str(OUT / f"7-typed-ok-{scheme}.png"))
+        if scheme == "dark":
+            page.close()
+            continue
+        page.keyboard.press("Enter")
+        assert len(saved(page)["cards"]) == 1 and page.inner_text("#counter") == "1 / 10"
+
+        # Подсказка, затем «Не знаю»: слово вернётся в этом же занятии
+        page.click("#hint-btn")
+        en2 = page.evaluate(answer_js)
+        assert page.inner_text("#type-mask").startswith(en2[0]), "подсказка — первая буква"
+        page.click("#giveup-btn")
+        assert "Правильный ответ" in page.inner_text("#type-result") and en2 in page.inner_text("#type-result")
+        assert "повторим в этом занятии" in page.inner_text("#next-btn")
+        page.screenshot(path=str(OUT / "8-typed-wrong.png"))
+        page.click("#next-btn")
+        assert page.inner_text("#counter") == "1 / 10", "забытое слово не засчитано"
+
+        # Неверный ответ, но «Засчитать как верный»
+        en3 = page.evaluate(answer_js)
+        page.fill("#type-input", "qqqq")
+        page.click("#check-btn")
+        assert page.inner_text("#type-result").startswith("Неверно")
+        page.click("#override-btn")
+        st = saved(page)
+        assert st["cards"][en3.lower()]["i"] == 1 and st["cards"][en3.lower()]["l"] == 0, "засчитано как «Хорошо»"
+        # Опечатка: меняем одну букву в длинном слове
+        en4 = page.evaluate(answer_js)
+        if len(en4) >= 4 and " " not in en4:
+            page.fill("#type-input", en4[:-1] + ("x" if en4[-1] != "x" else "z"))
+            page.keyboard.press("Enter")
+            assert page.inner_text("#type-result").startswith("Почти"), page.inner_text("#type-result")
+            page.keyboard.press("Enter")
+        page.click("#quit-btn")
+
+        # В тренировке направление скрыто, выключение тумблера возвращает карточки
+        page.click("#practice-btn")
+        assert page.is_hidden("#pr-dir-row") and page.is_checked("#pr-type-toggle")
+        page.click("#pr-type-toggle")
+        assert page.is_visible("#pr-dir-row")
+        page.click("#practice [data-home]")
+        assert not page.is_checked("#type-toggle"), "один переключатель на главном и в тренировке"
+        page.click("#start-btn")
+        assert page.is_visible("#reveal-btn") and page.is_hidden("#type-box")
+        page.close()
+
+    # ===== 7. Словарь (1.3.0) =====
+    page = new_page(browser)
+    page.goto(URL)
+    page.wait_for_timeout(300)
+    page.click("#dict-btn")
+    assert "В словаре" in page.inner_text("#dict-info")
+    page.fill("#dict-q", "время")
+    assert "time" in [t.lower() for t in page.locator(".d-en").all_inner_texts()], "поиск по-русски"
+    page.fill("#dict-q", "borrow")
+    assert page.locator(".d-en").first.inner_text() == "borrow"
+    assert page.locator(".d-status").first.inner_text() == "не начато"
+    page.screenshot(path=str(OUT / "9-dict.png"), full_page=True)
+    page.locator(".dict-row").first.click()
+    assert page.is_visible("#sheet") and page.inner_text("#sheet-title") == "borrow"
+    assert page.locator("#sheet .example-box").count() == 3, "в карточке словаря все примеры"
+    page.click("#sheet [data-act='add']")
+    assert page.is_visible("#sheet [data-act='remove']")
+    page.wait_for_timeout(300)
+    page.screenshot(path=str(OUT / "10-dict-word.png"))
+    page.click("#sheet-close")
+    assert page.locator(".d-status").first.inner_text() == "в очереди"
+    page.fill("#dict-q", "")
+    assert page.locator(".d-en").all_inner_texts() == ["borrow"], "пустой поиск показывает очередь"
+    page.click("#dict [data-home]")
+    assert page.inner_text("#new-count") == "11", "добавленное слово — сверх дневной нормы"
+    assert "Ждут ближайшего занятия: 1" in page.inner_text("#dict-sub")
+    page.click("#start-btn")
+    assert page.inner_text("#c-word") == "borrow", "добавленное слово идёт первым"
+    page.click("#reveal-btn")
+    page.click(".grade.g3")
+    assert saved(page)["meta"]["priority"] == [], "после первого показа слово уходит из очереди"
+
+    # ===== 8. Резервная копия (1.3.0) =====
+    page.click("#quit-btn")
+    before = saved(page)
+    page.click("#settings summary")
+    page.click("#backup-btn")
+    with page.expect_download() as dl:
+        page.click("#sheet [data-act='download']")
+    backup_path = OUT / "backup.json"
+    dl.value.save_as(str(backup_path))
+    data = json.loads(backup_path.read_text(encoding="utf-8"))
+    assert data["app"] == "english-trainer" and data["cards"] == before["cards"]
+    assert dl.value.suggested_filename.startswith("english-trainer-")
+    page.click("#sheet-close")
+
+    page.click("#reset-btn")
+    page.click("#reset-yes")
+    assert saved(page)["cards"] == {}
+
+    page.click("#restore-btn")
+    page.fill("#restore-text", "просто текст")
+    page.click("#sheet [data-act='check-backup']")
+    assert "не похоже" in page.inner_text("#restore-out")
+    page.set_input_files("#restore-file", str(backup_path))
+    page.wait_for_selector("#sheet [data-act='apply-backup']")
+    assert "1 слово с прогрессом" in page.inner_text("#restore-out"), page.inner_text("#restore-out")
+    page.screenshot(path=str(OUT / "11-restore.png"))
+    page.click("#sheet [data-act='apply-backup']")
+    assert page.inner_text("#sheet-title") == "Прогресс восстановлен"
+    page.click("#sheet-ok")
+    after = saved(page)
+    assert after["cards"] == before["cards"] and after["meta"]["streak"] == before["meta"]["streak"]
+    page.reload()
+    page.wait_for_timeout(300)
+    assert page.is_hidden("#sheet"), "после восстановления «Что нового» не показываем"
+    assert saved(page)["cards"] == before["cards"], "восстановленное сохраняется"
+    page.close()
     browser.close()
 
 if errors:

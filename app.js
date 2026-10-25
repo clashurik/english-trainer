@@ -6,8 +6,8 @@
  *   custom — ваши слова из уроков (у них уровень "MY")
  *   meta   — серия дней, сколько новых слов взято сегодня, настройки
  *
- * Экраны: home (главный), session (карточки), done (итог),
- *         practice (настройка тренировки), lessons (слова из уроков).
+ * Экраны: home (главный), session (карточки), done (итог), practice (настройка тренировки),
+ *         lessons (слова из уроков), dict (словарь), history (история версий).
  */
 (function () {
   'use strict';
@@ -21,7 +21,8 @@
 
   var DEFAULT_META = {
     streak: 0, best: 0, lastDone: null, newDay: null, newDone: 0,
-    settings: { newPerDay: 10, levels: LEVELS.slice() },
+    priority: [], // слова, добавленные из словаря вне очереди
+    settings: { newPerDay: 10, levels: LEVELS.slice(), typeMode: false },
     practice: { set: 'studied', levels: LEVELS.slice(), kind: 'all', dir: 'en', count: 10 }
   };
   function freshMeta() { return JSON.parse(JSON.stringify(DEFAULT_META)); }
@@ -30,13 +31,24 @@
   var session = null;
   var words = [];   // все слова: сначала ваши из уроков, потом общий словарь
   var byId = {};
+  var byRu = {};    // перевод → английские слова с таким же переводом (для проверки синонимов)
+  var SCREENS = ['home', 'session', 'done', 'practice', 'lessons', 'dict', 'history'];
   var $ = function (id) { return document.getElementById(id); };
 
   function indexWords() {
     words = Core.mergeWords(state.custom, BASE_WORDS);
     byId = {};
-    words.forEach(function (w) { byId[w.id] = w; });
+    byRu = {};
+    words.forEach(function (w) {
+      byId[w.id] = w;
+      var key = w.ru.toLowerCase().trim();
+      (byRu[key] = byRu[key] || []).push(w.en);
+    });
   }
+  function synonymsOf(w) {
+    return (byRu[w.ru.toLowerCase().trim()] || []).filter(function (en) { return en !== w.en; });
+  }
+  function current() { return byId[session.queue[0]]; }
   function levelsAll() { return state.custom.length ? LEVELS.concat('MY') : LEVELS.slice(); }
   function levelLabel(lv) { return LEVEL_LABEL[lv] || lv; }
 
@@ -94,6 +106,12 @@
     $('lessons-sub').textContent = n
       ? n + ' ' + plural(n, 'слово', 'слова', 'слов') + ' из уроков. Добавить ещё'
       : 'Добавить слова из занятий с репетитором';
+
+    var queued = queuedIds().length;
+    $('dict-sub').textContent = queued
+      ? 'Ждут ближайшего занятия: ' + queued + ' ' + plural(queued, 'слово', 'слова', 'слов') + '. Найти ещё'
+      : 'Найти слово, посмотреть карточку и добавить в изучение';
+    $('type-toggle').checked = typeMode();
 
     $('app-version').textContent = window.APP_VERSION || '';
     renderLevels();
@@ -178,6 +196,11 @@
     optionGroup($('pr-dir'), p.dir, function (v) { p.dir = v; update(); });
     optionGroup($('pr-count'), String(p.count), function (v) { p.count = Number(v); update(); });
     $('pr-set-hint').textContent = SET_HINT[p.set];
+    $('pr-type-toggle').checked = typeMode();
+    $('pr-dir-row').hidden = typeMode();
+    $('pr-type-toggle').closest('.switch-row').querySelector('.switch-sub').textContent = typeMode()
+      ? 'Видите перевод и пишете слово по-английски. Направление в этом режиме — RU → EN'
+      : 'Выключено: карточки, вы сами оцениваете, вспомнили ли слово';
 
     $('pr-levels-row').hidden = p.set === 'lessons';
     var chips = $('pr-levels');
@@ -208,13 +231,17 @@
   }
 
   // ---------- Карточки (общие для обоих режимов) ----------
+  function typeMode() { return !!state.meta.settings.typeMode; }
+  function setTypeMode(on) { state.meta.settings.typeMode = !!on; save(); }
+
   function beginSession(opts) {
+    var type = typeMode();
     session = {
-      mode: opts.mode, dir: opts.dir, queue: opts.queue, total: opts.queue.length,
+      mode: opts.mode, dir: type ? 'ru' : opts.dir, type: type, queue: opts.queue, total: opts.queue.length,
       done: 0, reviewed: 0, fresh: 0, errors: 0, firstTry: 0, revealed: false, newIds: {}, missed: {}
     };
-    $('keys-hint').textContent = session.mode === 'daily'
-      ? 'Пробел — показать, 1–4 — оценка'
+    $('keys-hint').textContent = type ? 'Enter — проверить, ещё раз Enter — дальше'
+      : session.mode === 'daily' ? 'Пробел — показать, 1–4 — оценка'
       : 'Пробел — показать, 1 — не помню, 2 — помню';
     show('session');
     showCard();
@@ -249,17 +276,33 @@
 
     $('speak-btn').hidden = ruFirst; // в режиме RU→EN озвучка выдала бы ответ
     $('c-answer').hidden = true;
-    $('reveal-btn').hidden = false;
+    $('reveal-btn').hidden = session.type;
     $('grades').hidden = true;
     $('practice-grades').hidden = true;
+
+    // Режим ввода: поле для ответа вместо кнопки «Показать перевод»
+    session.typed = null;
+    session.hintUsed = false;
+    $('type-box').hidden = !session.type;
+    $('type-controls').hidden = !session.type;
+    $('type-next').hidden = true;
+    if (session.type) {
+      var input = $('type-input');
+      input.value = '';
+      input.disabled = false;
+      input.className = 'type-input';
+      input.placeholder = 'Напишите по-английски';
+      $('type-mask').hidden = true;
+      $('type-result').hidden = true;
+      input.focus();
+    }
 
     $('counter').textContent = session.done + ' / ' + session.total;
     $('bar-fill').style.width = (session.done / session.total * 100) + '%';
   }
 
   function reveal() {
-    if (!session || session.revealed) return;
-    session.revealed = true;
+    if (!session || session.revealed || session.type) return;
     if (session.mode === 'daily') {
       var w = byId[session.queue[0]];
       var p = Core.preview(state.cards[w.id] || Core.newCard(today()), today());
@@ -268,6 +311,12 @@
     } else {
       $('practice-grades').hidden = false;
     }
+    openAnswer();
+  }
+
+  // Показать ответ на карточке (общая часть для карточек и режима ввода)
+  function openAnswer() {
+    session.revealed = true;
     $('speak-btn').hidden = false;
     $('c-answer').hidden = false;
     $('reveal-btn').hidden = true;
@@ -280,6 +329,71 @@
       $('c-word').setAttribute('tabindex', '0');
       $('c-word').setAttribute('aria-label', w2.en + ': показать формы слова');
     }
+  }
+
+  // ---------- Режим ввода ответа ----------
+  function useHint() {
+    if (!session || !session.type || session.typed) return;
+    session.hintUsed = true;
+    $('type-mask').textContent = Core.answerHint(current().en);
+    $('type-mask').hidden = false;
+    $('type-input').focus();
+  }
+
+  function setTypeResult(kind, html) {
+    $('type-result').className = 'type-result ' + kind;
+    $('type-result').innerHTML = html;
+    $('type-result').hidden = false;
+  }
+
+  /*
+   * Проверка напечатанного ответа. Оценка ставится сама:
+   *   верно → «Хорошо» (с подсказкой — «Трудно»), опечатка → «Трудно», неверно → «Забыл».
+   * Кнопка под «Дальше» позволяет поправить: «Было легко» или «Засчитать как верный».
+   */
+  function checkTyped(giveUp) {
+    if (!session || !session.type || session.typed) return;
+    var w = current();
+    var input = giveUp ? '' : $('type-input').value;
+    var res = giveUp ? 'wrong' : Core.checkAnswer(input, w, synonymsOf(w));
+    if (res === 'empty') { $('type-input').focus(); return; }
+    if (res === 'alt') {
+      setTypeResult('alt', 'Тоже подходит по смыслу, но здесь загадано другое слово. Попробуйте ещё раз' +
+        (session.hintUsed ? '.' : ' или возьмите подсказку.'));
+      $('type-input').select();
+      return;
+    }
+    var g = res === 'ok' ? (session.hintUsed ? 2 : 3) : res === 'typo' ? 2 : 1;
+    session.typed = { res: res, grade: g };
+    var en = '<b>' + escapeHtml(w.en) + '</b>';
+    $('type-input').disabled = true;
+    $('type-input').placeholder = giveUp ? 'не знаю' : '';
+    $('type-input').className = 'type-input is-' + res + (giveUp ? ' gave-up' : '');
+    if (res === 'ok') setTypeResult('ok', session.hintUsed ? 'Верно, с подсказкой.' : 'Верно!');
+    else if (res === 'typo') setTypeResult('typo', 'Почти: опечатка. Правильно: ' + en);
+    else setTypeResult('wrong', (giveUp ? 'Правильный ответ: ' : 'Неверно. Правильно: ') + en);
+    haptic(res === 'wrong' ? 'medium' : 'light');
+    openAnswer();
+
+    var label = 'Дальше';
+    if (session.mode === 'daily') {
+      var days = Core.preview(state.cards[w.id] || Core.newCard(today()), today())[g];
+      label += g === 1 ? ' · повторим в этом занятии' : ' · вернётся через ' + intervalLabel(days);
+    }
+    $('next-btn').textContent = label;
+    var over = $('override-btn');
+    over.hidden = !(res !== 'ok' || (session.mode === 'daily' && !session.hintUsed));
+    over.textContent = res === 'ok' ? 'Было легко — показать реже' : 'Засчитать как верный ответ';
+    $('type-controls').hidden = true;
+    $('type-next').hidden = false;
+    $('next-btn').focus();
+  }
+
+  function finishTyped(override) {
+    if (!session || !session.typed) return;
+    var t = session.typed;
+    if (session.mode === 'daily') grade(override ? (t.res === 'ok' ? 4 : 3) : t.grade);
+    else practiceAnswer(override || t.res !== 'wrong');
   }
 
   // ---------- Примеры ----------
@@ -321,7 +435,13 @@
     if (!session || !session.revealed) return;
     var w = byId[session.queue[0]];
     if (!hasForms(w)) return;
-    var html = '<p class="sheet-sub">' + escapeHtml(w.ru) + '</p>';
+    var html = '<p class="sheet-sub">' + escapeHtml(w.ru) + '</p>' + formsHtml(w) +
+      '<p class="small">Нажмите на слово, чтобы услышать произношение.</p>';
+    openSheet(w.en, html, false);
+  }
+
+  function formsHtml(w) {
+    var html = '';
     if (w.irr) {
       var p = w.irr.split('|');
       html += '<div class="group-label">Неправильный глагол</div><div class="irr-row">' +
@@ -352,8 +472,7 @@
             '<span class="f-ru">' + escapeHtml(f[2]) + '</span></button></li>';
         }).join('') + '</ul>';
     }
-    html += '<p class="small">Нажмите на слово, чтобы услышать произношение.</p>';
-    openSheet(w.en, html, false);
+    return html;
   }
 
   function irrChip(word, label) {
@@ -375,8 +494,8 @@
     if ($('sheet').hidden) return;
     $('sheet').hidden = true;
     if (sheetOnOk) { var f = sheetOnOk; sheetOnOk = null; f(); }
-    var current = ['home', 'session', 'done', 'practice', 'lessons', 'history'].filter(function (s) { return !$(s).hidden; })[0];
-    if (inTelegram && (current === 'home' || current === 'done')) tg.BackButton.hide();
+    var shown = SCREENS.filter(function (s) { return !$(s).hidden; })[0];
+    if (inTelegram && (shown === 'home' || shown === 'done')) tg.BackButton.hide();
   }
 
   // ---------- Версии ----------
@@ -423,6 +542,7 @@
       state.meta.newDone += 1;
       session.fresh += 1;
       session.newIds[id] = true; // если слово забудут, при повторном показе оно всё ещё «новое»
+      state.meta.priority = state.meta.priority.filter(function (x) { return x !== id; });
     }
 
     state.cards[id] = Core.schedule(card, g, day);
@@ -572,6 +692,201 @@
     sel.addRange(r);
   }
 
+  // ---------- Словарь ----------
+  function queuedIds() {
+    return state.meta.priority.filter(function (id) { return byId[id] && !state.cards[id]; });
+  }
+
+  function wordStatus(w) {
+    var c = state.cards[w.id];
+    if (!c) return state.meta.priority.indexOf(w.id) !== -1 ? ['queued', 'в очереди'] : ['new', 'не начато'];
+    return c.i >= Core.LEARNED_INTERVAL ? ['learned', 'выучено'] : ['learning', 'в изучении'];
+  }
+
+  function openDict() {
+    show('dict');
+    renderDict();
+    $('dict-q').focus();
+  }
+
+  function renderDict() {
+    var q = $('dict-q').value;
+    var ids, info;
+    if (!q.trim()) {
+      ids = queuedIds();
+      info = ids.length
+        ? 'Добавлены вами и ждут ближайшего занятия: ' + ids.length + '. Найдите ещё слово по-английски или по-русски.'
+        : 'В словаре ' + words.length + ' ' + plural(words.length, 'слово', 'слова', 'слов') + ' и фраз. Введите слово по-английски или по-русски.';
+    } else {
+      var r = Core.searchWords(words, q, 40);
+      ids = r.ids;
+      info = r.total === 0 ? 'Ничего не нашлось. Попробуйте начало слова или другой перевод.'
+        : r.total > ids.length ? 'Найдено ' + r.total + ', показаны первые ' + ids.length + '. Уточните запрос.'
+        : 'Найдено: ' + r.total;
+    }
+    $('dict-info').textContent = info;
+    $('dict-list').innerHTML = ids.map(function (id) {
+      var w = byId[id], st = wordStatus(w);
+      return '<li><button class="dict-row lv-' + w.lvl + '" type="button" data-id="' + escapeHtml(id) + '">' +
+        '<span class="lvl">' + levelLabel(w.lvl) + '</span>' +
+        '<span class="d-main"><span class="d-en">' + escapeHtml(w.en) + '</span><span class="d-ru">' + escapeHtml(w.ru) + '</span></span>' +
+        '<span class="d-status st-' + st[0] + '">' + st[1] + '</span></button></li>';
+    }).join('');
+  }
+
+  var sheetWordId = null;
+  function openWordSheet(id) {
+    var w = byId[id];
+    if (!w) return;
+    openSheet(w.en, wordSheetHtml(w), false);
+    sheetWordId = id;
+  }
+
+  function wordSheetHtml(w) {
+    var c = state.cards[w.id], day = today(), st = wordStatus(w);
+    var status, action = '';
+    if (st[0] === 'new') {
+      status = 'Вы ещё не начинали это слово.';
+      action = '<button class="primary" type="button" data-act="add">Добавить в изучение</button>' +
+        '<p class="small">Слово появится первым в ближайшем занятии, сверх дневной нормы новых слов.</p>';
+    } else if (st[0] === 'queued') {
+      status = 'Добавлено. Появится первым в ближайшем занятии.';
+      action = '<button class="ghost" type="button" data-act="remove">Убрать из очереди</button>';
+    } else if (c.d <= day) {
+      status = (st[0] === 'learned' ? 'Выучено' : 'В изучении') + '. Уже есть в сегодняшнем занятии.';
+    } else {
+      status = (st[0] === 'learned' ? 'Выучено' : 'В изучении') + '. Следующий повтор через ' + intervalLabel(c.d - day) + '.';
+      action = '<button class="ghost" type="button" data-act="review">Повторить в ближайшем занятии</button>';
+    }
+    var html = '<div class="ws-meta lv-' + w.lvl + '"><span class="lvl">' + levelLabel(w.lvl) + '</span>' +
+      '<span class="pos">' + (POS[w.pos] || '') + '</span>' +
+      '<button class="speak" type="button" data-say="' + escapeHtml(w.en) + '">' + $('speak-btn').innerHTML + '</button></div>' +
+      '<p class="ws-ru">' + escapeHtml(w.ru) + '</p>' +
+      (w.irr ? '<p class="irr">' + irrLine(w) + '</p>' : '') +
+      '<div class="ws-status st-' + st[0] + '"><p>' + status + '</p>' + action + '</div>';
+    if (w.ex.length) {
+      html += '<div class="group-label">Примеры</div>' + w.ex.map(function (e) {
+        return '<div class="example-box"><p class="example">' + highlight(e[0], w) + '</p>' +
+          (e[1] ? '<p class="example-ru">' + escapeHtml(e[1]) + '</p>' : '') + '</div>';
+      }).join('');
+    }
+    if (w.note) html += '<p class="note">' + escapeHtml(w.note) + '</p>';
+    return html + formsHtml(w);
+  }
+
+  function wordAction(act) {
+    var id = sheetWordId, w = byId[id];
+    if (!w) return;
+    var pr = state.meta.priority.filter(function (x) { return x !== id; });
+    if (act === 'add') pr.push(id);
+    state.meta.priority = pr;
+    if (act === 'review' && state.cards[id]) state.cards[id] = Object.assign({}, state.cards[id], { d: today() });
+    haptic('light');
+    save();
+    $('sheet-body').innerHTML = wordSheetHtml(w);
+    if (!$('dict').hidden) renderDict();
+  }
+
+  // ---------- Резервная копия ----------
+  function backupText() { return JSON.stringify(Core.makeBackup(state, window.APP_VERSION)); }
+
+  function openBackup() {
+    var n = Object.keys(state.cards).length, m = state.custom.length;
+    openSheet('Резервная копия',
+      '<p>В копию попадут ' + n + ' ' + plural(n, 'слово', 'слова', 'слов') + ' с прогрессом, ' + m + ' ' +
+      plural(m, 'слово', 'слова', 'слов') + ' из уроков, серия дней и настройки.</p>' +
+      '<div class="sheet-actions"><button class="primary" type="button" data-act="download">Скачать файл</button>' +
+      '<button class="ghost" type="button" data-act="copy">Скопировать текст</button></div>' +
+      '<p class="import-result" id="backup-msg" role="status"></p>' +
+      '<p class="small">В Telegram на телефоне файл может не скачаться. Тогда нажмите «Скопировать текст» и отправьте его себе в «Избранное». Чтобы восстановить, этот текст достаточно вставить.</p>',
+      false);
+  }
+
+  function backupMsg(text, ok) {
+    $('backup-msg').textContent = text;
+    $('backup-msg').className = 'import-result ' + (ok ? 'ok' : 'err');
+  }
+
+  function downloadBackup() {
+    try {
+      var blob = new Blob([backupText()], { type: 'application/json' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'english-trainer-' + new Date().toISOString().slice(0, 10) + '.json';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+      backupMsg('Файл отправлен в загрузки. Если ничего не появилось, скопируйте текст.', true);
+    } catch (e) {
+      backupMsg('Скачать не получилось. Скопируйте текст.', false);
+    }
+  }
+
+  function copyBackup() {
+    var text = backupText();
+    var fallback = function () {
+      backupMsg('Автоматически скопировать не получилось. Текст выделен ниже — скопируйте его.', false);
+      var ta = document.createElement('textarea');
+      ta.rows = 5; ta.readOnly = true; ta.value = text; ta.id = 'backup-text';
+      $('backup-msg').after(ta);
+      ta.focus(); ta.select();
+    };
+    try {
+      navigator.clipboard.writeText(text).then(function () {
+        backupMsg('Скопировано. Отправьте текст себе в «Избранное» Telegram или сохраните в заметки.', true);
+      }, fallback);
+    } catch (e) { fallback(); }
+  }
+
+  var pendingRestore = null;
+  function openRestore() {
+    pendingRestore = null;
+    openSheet('Восстановить прогресс',
+      '<p class="small">Выберите файл копии или вставьте её текст. Прогресс, который сейчас в приложении, будет заменён.</p>' +
+      '<button class="ghost" type="button" data-act="pick">Выбрать файл</button>' +
+      '<textarea id="restore-text" rows="5" spellcheck="false" placeholder="Или вставьте текст копии"></textarea>' +
+      '<button class="primary" type="button" data-act="check-backup">Проверить копию</button>' +
+      '<div id="restore-out" class="restore-out" role="status"></div>',
+      false);
+  }
+
+  function checkBackup() {
+    var r = Core.parseBackup($('restore-text').value);
+    var out = $('restore-out');
+    pendingRestore = null;
+    if (!r.ok) { out.innerHTML = '<p class="import-result err">' + escapeHtml(r.error) + '</p>'; return; }
+    pendingRestore = r.state;
+    var i = r.info, now = Object.keys(state.cards).length;
+    var when = i.saved ? new Date(i.saved).toLocaleString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'без даты';
+    out.innerHTML = '<p class="import-result ok">Копия от ' + escapeHtml(when) + ': ' + i.cards + ' ' + plural(i.cards, 'слово', 'слова', 'слов') +
+      ' с прогрессом (выучено ' + i.learned + '), ' + i.custom + ' из уроков, рекорд серии ' + i.best + '.</p>' +
+      '<div class="confirm"><span>Заменить текущий прогресс (' + now + ' ' + plural(now, 'слово', 'слова', 'слов') + ') этой копией?</span>' +
+      '<div class="confirm-actions"><button class="danger-solid" type="button" data-act="apply-backup">Заменить</button></div></div>';
+  }
+
+  function applyBackup() {
+    if (!pendingRestore) return;
+    applySaved(pendingRestore);
+    pendingRestore = null;
+    state.meta.seenVersion = window.APP_VERSION;
+    indexWords();
+    save();
+    renderHome();
+    var n = Object.keys(state.cards).length;
+    openSheet('Прогресс восстановлен', '<p>Восстановлено ' + n + ' ' + plural(n, 'слово', 'слова', 'слов') + ' с прогрессом и ваши настройки.</p>', true);
+  }
+
+  function readRestoreFile() {
+    var f = $('restore-file').files[0];
+    if (!f) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      if ($('restore-text')) { $('restore-text').value = String(reader.result); checkBackup(); }
+      $('restore-file').value = '';
+    };
+    reader.readAsText(f);
+  }
+
   // ---------- Озвучка ----------
   function speak(text) {
     if (!('speechSynthesis' in window)) return;
@@ -586,7 +901,7 @@
 
   // ---------- Вспомогательное ----------
   function show(name) {
-    ['home', 'session', 'done', 'practice', 'lessons', 'history'].forEach(function (s) { $(s).hidden = s !== name; });
+    SCREENS.forEach(function (s) { $(s).hidden = s !== name; });
     if (inTelegram) { name === 'home' || name === 'done' ? tg.BackButton.hide() : tg.BackButton.show(); }
     window.scrollTo(0, 0);
   }
@@ -653,6 +968,22 @@
   $('start-btn').onclick = function () { startDaily(0); };
   $('practice-btn').onclick = function () { show('practice'); renderPractice(); };
   $('lessons-btn').onclick = function () { show('lessons'); renderLessons(); };
+  $('dict-btn').onclick = openDict;
+  $('dict-q').oninput = renderDict;
+  $('dict-list').onclick = function (e) {
+    var row = e.target.closest('.dict-row');
+    if (row) openWordSheet(row.getAttribute('data-id'));
+  };
+  $('type-toggle').onchange = function () { setTypeMode($('type-toggle').checked); };
+  $('pr-type-toggle').onchange = function () { setTypeMode($('pr-type-toggle').checked); renderPractice(); };
+  $('check-btn').onclick = function () { checkTyped(false); };
+  $('giveup-btn').onclick = function () { checkTyped(true); };
+  $('hint-btn').onclick = useHint;
+  $('next-btn').onclick = function () { finishTyped(false); };
+  $('override-btn').onclick = function () { finishTyped(true); };
+  $('backup-btn').onclick = openBackup;
+  $('restore-btn').onclick = openRestore;
+  $('restore-file').onchange = readRestoreFile;
   $('pr-start').onclick = startPractice;
   $('import-btn').onclick = importWords;
   $('copy-ask').onclick = copyAsk;
@@ -661,7 +992,7 @@
   $('history-btn').onclick = function () { show('history'); renderHistory(); };
   $('reveal-btn').onclick = reveal;
   $('card').onclick = function (e) {
-    if (e.target.closest('.speak, .link-btn, .forms-btn')) return;
+    if (e.target.closest('.speak, .link-btn, .forms-btn, .type-box')) return;
     if (session && session.revealed && e.target.closest('.headword.tappable')) { openForms(); return; }
     reveal();
   };
@@ -675,7 +1006,16 @@
   $('sheet').onclick = function (e) {
     if (e.target === $('sheet')) { closeSheet(); return; }
     var say = e.target.closest('[data-say]');
-    if (say) speak(say.getAttribute('data-say'));
+    if (say) { speak(say.getAttribute('data-say')); return; }
+    var act = e.target.closest('[data-act]');
+    if (!act) return;
+    var a = act.getAttribute('data-act');
+    if (a === 'add' || a === 'remove' || a === 'review') wordAction(a);
+    else if (a === 'download') downloadBackup();
+    else if (a === 'copy') copyBackup();
+    else if (a === 'pick') $('restore-file').click();
+    else if (a === 'check-backup') checkBackup();
+    else if (a === 'apply-backup') applyBackup();
   };
   $('speak-btn').onclick = function () { if (session) speak(byId[session.queue[0]].en); };
   $('quit-btn').onclick = quitSession;
@@ -706,6 +1046,11 @@
   document.addEventListener('keydown', function (e) {
     if (!$('sheet').hidden) { if (e.key === 'Escape') closeSheet(); return; }
     if (!session) return;
+    if (session.type) {
+      if (e.target.tagName === 'BUTTON' && e.target.id !== 'next-btn') return; // Enter на кнопке нажимает её саму
+      if (e.key === 'Enter') { e.preventDefault(); session.typed ? finishTyped(false) : checkTyped(false); }
+      return;
+    }
     if (e.target === $('c-word') && (e.key === 'Enter' || e.key === ' ')) return;
     if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); reveal(); return; }
     if (session.mode === 'daily' && /^[1-4]$/.test(e.key)) grade(Number(e.key));
@@ -713,15 +1058,24 @@
   });
 
   // ---------- Запуск ----------
+  // Сохранённое состояние (из хранилища или резервной копии) → state, с настройками по умолчанию для новых полей
+  function applySaved(saved) {
+    var meta = saved.meta || {};
+    state.cards = saved.cards || {};
+    state.custom = (saved.custom || []).map(Core.normalizeCustom);
+    state.meta = Object.assign(freshMeta(), meta);
+    state.meta.settings = Object.assign(freshMeta().settings, meta.settings);
+    state.meta.practice = Object.assign(freshMeta().practice, meta.practice);
+    if (!Array.isArray(state.meta.priority)) state.meta.priority = [];
+    if (!Array.isArray(state.meta.settings.levels) || !state.meta.settings.levels.length) state.meta.settings.levels = LEVELS.slice();
+    if (!Array.isArray(state.meta.practice.levels)) state.meta.practice.levels = LEVELS.slice();
+  }
+
   indexWords();
   AppStorage.load().then(function (saved) {
     var hadProgress = false;
     if (saved && saved.cards && saved.meta) {
-      state.cards = saved.cards;
-      state.custom = (saved.custom || []).map(Core.normalizeCustom);
-      state.meta = Object.assign(freshMeta(), saved.meta);
-      state.meta.settings = Object.assign(freshMeta().settings, saved.meta.settings);
-      state.meta.practice = Object.assign(freshMeta().practice, saved.meta.practice);
+      applySaved(saved);
       hadProgress = Object.keys(state.cards).length > 0 || state.custom.length > 0;
 
       // До 1.2.0 уровня B2 не было. Кто не трогал уровни (выбраны все старые), тому включаем B2.
