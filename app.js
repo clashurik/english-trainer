@@ -22,7 +22,7 @@
   var DEFAULT_META = {
     streak: 0, best: 0, lastDone: null, newDay: null, newDone: 0, revDay: null, revDone: 0,
     priority: [], // слова, добавленные из словаря вне очереди
-    settings: { size: 'normal', levels: LEVELS.slice(), typeMode: false },
+    settings: { size: 'normal', levels: LEVELS.slice(), typeMode: false, sound: 1, vibro: true },
     practice: { set: 'studied', levels: LEVELS.slice(), kind: 'all', dir: 'en', count: 10 }
   };
   function freshMeta() { return JSON.parse(JSON.stringify(DEFAULT_META)); }
@@ -33,7 +33,7 @@
   var byId = {};
   var byRu = {};    // часть перевода → английские слова с ней (для проверки синонимов: город → city, town)
   var known = {};   // все английские слова словаря в упрощённом виде (honey вместо money — не опечатка)
-  var SCREENS = ['home', 'session', 'done', 'practice', 'lessons', 'dict', 'history'];
+  var SCREENS = ['home', 'session', 'done', 'practice', 'lessons', 'dict', 'history', 'test'];
   var $ = function (id) { return document.getElementById(id); };
 
   function indexWords() {
@@ -84,7 +84,61 @@
     });
   }
   function haptic(kind) {
+    if (state.meta.settings.vibro === false) return;
     try { if (inTelegram) tg.HapticFeedback.impactOccurred(kind || 'light'); } catch (e) { /* не поддерживается */ }
+  }
+  function hapticNote(kind) {
+    if (state.meta.settings.vibro === false) return;
+    try { if (inTelegram) tg.HapticFeedback.notificationOccurred(kind); } catch (e) { /* не поддерживается */ }
+  }
+
+  // ---------- Звуки ----------
+  // Синтезируются прямо в браузере (Web Audio): без файлов, мгновенно. Громкость: 0 — выкл, 1 — тихо, 2 — громче.
+  var audio = null;
+  var VOLUME = [0, 0.05, 0.14];
+  function tone(ctx, out, freq, start, dur, type, endFreq) {
+    var o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type || 'sine';
+    o.frequency.setValueAtTime(freq, start);
+    if (endFreq) o.frequency.exponentialRampToValueAtTime(endFreq, start + dur);
+    g.gain.setValueAtTime(0.0001, start);
+    g.gain.exponentialRampToValueAtTime(1, start + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, start + dur);
+    o.connect(g); g.connect(out);
+    o.start(start); o.stop(start + dur + 0.02);
+  }
+  var SOUNDS = {
+    ok: [[784, 0, 0.11], [1175, 0.07, 0.16]],
+    typo: [[660, 0, 0.14], [784, 0.08, 0.14]],
+    wrong: [[330, 0, 0.22, 'triangle', 247]],
+    skip: [[440, 0, 0.12, 'triangle', 392]],
+    finish: [[523, 0, 0.14], [659, 0.1, 0.14], [784, 0.2, 0.14], [1047, 0.3, 0.32]],
+    tier: [[659, 0, 0.12], [880, 0.09, 0.12], [1109, 0.18, 0.12], [1319, 0.27, 0.4], [1760, 0.36, 0.35, 'triangle']]
+  };
+  function playSound(name) {
+    var vol = VOLUME[state.meta.settings.sound == null ? 1 : state.meta.settings.sound] || 0;
+    if (!vol || !SOUNDS[name]) return;
+    try {
+      if (!audio) {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return;
+        audio = new AC();
+      }
+      if (audio.state === 'suspended') audio.resume();
+      var out = audio.createGain();
+      out.gain.value = vol;
+      out.connect(audio.destination);
+      var t = audio.currentTime + 0.01;
+      SOUNDS[name].forEach(function (n) { tone(audio, out, n[0], t + n[1], n[2], n[3], n[4]); });
+    } catch (e) { /* звук недоступен — не мешаем занятию */ }
+  }
+  // Отклик на действие: звук + вибрация
+  function feedback(kind) {
+    playSound(kind);
+    if (kind === 'ok') haptic('light');
+    else if (kind === 'typo' || kind === 'skip') hapticNote('warning');
+    else if (kind === 'wrong') hapticNote('error');
+    else if (kind === 'finish' || kind === 'tier') hapticNote('success');
   }
 
   function save() { AppStorage.save(state); }
@@ -98,6 +152,7 @@
 
     $('today-date').textContent = new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' });
     $('streak-num').textContent = streak;
+    setFlame($('home-flame'), streak);
     $('streak-label').textContent = plural(streak, 'день подряд', 'дня подряд', 'дней подряд');
     $('streak-best').textContent = state.meta.lastDone === day
       ? 'Сегодня уже занимались. Рекорд: ' + (state.meta.best || 0)
@@ -126,6 +181,12 @@
       : 'Найти слово, посмотреть карточку и добавить в изучение';
     $('type-toggle').checked = typeMode();
 
+    var vt = state.meta.vocabTest;
+    $('test-banner').hidden = !!vt;
+    $('vocab-info').textContent = vt
+      ? 'По тесту от ' + formatDate(vt.date) + ': ' + vt.level + '. Новые слова подбираются по этому уровню и уточняются по вашим ответам.'
+      : 'Тест ещё не пройден. Пока новые слова идут по порядку, от простых к сложным.';
+    $('test-again').textContent = vt ? 'Пройти тест заново' : 'Пройти тест';
     $('app-version').textContent = window.APP_VERSION || '';
     renderLevels();
     renderSettings();
@@ -136,6 +197,12 @@
     var sec = q.fresh.length * 20;
     q.due.forEach(function (id) { sec += typeMode() && !Core.isQuick(state.cards[id]) ? 10 : 5; });
     return Math.max(1, Math.round(sec / 60));
+  }
+
+  function setFlame(el, streak) {
+    var f = Core.flameTier(streak);
+    if (f.tier < 0) el.removeAttribute('data-c'); else el.setAttribute('data-c', f.color);
+    el.setAttribute('aria-label', f.tier < 0 ? '' : 'Огонёк: ' + f.name);
   }
 
   function renderLevels() {
@@ -161,6 +228,10 @@
   function renderSettings() {
     var size = state.meta.settings.size;
     optionGroup($('session-size'), size, function (v) { state.meta.settings.size = v; save(); renderHome(); });
+    optionGroup($('sound-level'), String(state.meta.settings.sound), function (v) {
+      state.meta.settings.sound = Number(v); save(); renderSettings(); playSound('ok');
+    });
+    $('vibro-toggle').checked = state.meta.settings.vibro !== false;
     var sz = Core.SIZES[size];
     $('size-hint').textContent = { light: '~5 минут', normal: '~10 минут', intense: '~20 минут' }[size] +
       ': до ' + sz.rev + ' повторений и ' + sz.fresh + ' новых слов. Пока много повторений, новых слов меньше.';
@@ -177,6 +248,7 @@
       }));
     });
 
+    renderReports();
     $('storage-note').textContent = AppStorage.isCloud()
       ? 'В облаке Telegram: прогресс сохранится на любом устройстве.'
       : 'В этом браузере. Внутри Telegram прогресс будет храниться в облаке.';
@@ -300,6 +372,7 @@
     $('c-note').hidden = !w.note;
     $('c-note').textContent = w.note || '';
     $('forms-btn').hidden = !hasForms(w);
+    setReportBtn(w);
 
     // Пример: в ежедневном занятии — следующий по кругу при каждом новом показе, в тренировке — случайный
     var n = w.ex.length;
@@ -406,7 +479,7 @@
     if (res === 'ok') setTypeResult('ok', session.hintUsed ? 'Верно, с подсказкой.' : 'Верно!');
     else if (res === 'typo') setTypeResult('typo', 'Почти: опечатка. Правильно: ' + en);
     else setTypeResult('wrong', (giveUp ? 'Правильный ответ: ' : 'Неверно. Правильно: ') + en);
-    haptic(res === 'wrong' ? 'medium' : 'light');
+    feedback(res);
     openAnswer();
 
     var label = 'Дальше';
@@ -586,7 +659,7 @@
     session.counted[id] = true;
 
     state.cards[id] = Core.schedule(card, g, day, Core.seedOf(id));
-    haptic(g === 1 ? 'medium' : 'light');
+    if (!session.typed) feedback(g === 1 ? 'wrong' : 'ok');
 
     if (g === 1) {
       session.errors += 1;
@@ -603,7 +676,7 @@
   function practiceAnswer(remember) {
     if (!session || !session.revealed || session.mode !== 'practice') return;
     var id = session.queue.shift();
-    haptic(remember ? 'light' : 'medium');
+    if (!session.typed) feedback(remember ? 'ok' : 'wrong');
 
     if (remember) {
       session.done += 1;
@@ -627,6 +700,8 @@
   }
 
   function finishSession() {
+    var tierUp = false;
+    $('done-flame-box').hidden = true;
     var s = session;
     session = null;
     if (s.mode === 'daily') {
@@ -641,6 +716,15 @@
         ? 'Сегодняшний день уже засчитан. Серия: ' + n + ' ' + plural(n, 'день', 'дня', 'дней') + '.'
         : n === 1 ? 'Первый день серии. Возвращайтесь завтра, чтобы она росла.'
         : 'Серия выросла до ' + n + ' ' + plural(n, 'дня', 'дней', 'дней') + ' подряд.';
+      var was = Core.flameTier(before === day - 1 || before === day ? (n - (before === day ? 0 : 1)) : 0).tier;
+      var f = Core.flameTier(n);
+      setFlame($('done-flame'), n);
+      $('done-flame-box').hidden = false;
+      $('done-flame-box').className = 'done-flame' + (f.tier > was ? ' up' : '');
+      $('tier-text').textContent = f.tier > was && f.tier > 0
+        ? 'Новый огонёк — ' + f.name + '!'
+        : f.next ? 'До огонька «' + f.nextName + '»: ' + (f.next - n) + ' ' + plural(f.next - n, 'день', 'дня', 'дней') : 'Максимальный огонёк';
+      tierUp = f.tier > was && f.tier > 0;
       var left = Core.buildQueue(words, state.cards, dailySettings({ revCap: revDoneToday() + 10 }), state.meta, day);
       var moreKind = left.due.length ? 'review' : 'new';
       $('more-btn').textContent = moreKind === 'review'
@@ -657,7 +741,7 @@
       $('more-btn').textContent = 'Ещё одна тренировка';
     }
     $('more-btn').setAttribute('data-mode', s.mode);
-    haptic('heavy');
+    feedback(tierUp ? 'tier' : 'finish');
     show('done');
   }
 
@@ -1054,7 +1138,7 @@
   $('history-btn').onclick = function () { show('history'); renderHistory(); };
   $('reveal-btn').onclick = reveal;
   $('card').onclick = function (e) {
-    if (e.target.closest('.speak, .link-btn, .forms-btn, .type-box')) return;
+    if (e.target.closest('.speak, .link-btn, .forms-btn, .type-box, .report-btn')) return;
     if (session && session.revealed && e.target.closest('.headword.tappable')) { openForms(); return; }
     reveal();
   };
@@ -1122,6 +1206,167 @@
     if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); reveal(); return; }
     if (session.mode === 'daily' && /^[1-4]$/.test(e.key)) grade(Number(e.key));
     if (session.mode === 'practice' && (e.key === '1' || e.key === '2')) practiceAnswer(e.key === '2');
+  });
+
+  // ---------- Ошибки в карточках ----------
+  // Человек отмечает карточку с ошибкой; список можно скопировать в настройках и прислать автору
+  function reports() { return state.meta.reports || (state.meta.reports = []); }
+  function setReportBtn(w) {
+    var on = reports().indexOf(w.id) !== -1;
+    $('report-btn').textContent = on ? '⚑ Отмечено. Отменить' : '⚑ Ошибка в карточке';
+    $('report-btn').classList.toggle('on', on);
+    $('report-btn').hidden = w.lvl === 'MY'; // свои слова человек правит сам
+  }
+  function renderReports() {
+    var list = reports();
+    $('reports-row').hidden = !list.length;
+    $('reports-info').textContent = 'Отмечено карточек: ' + list.length + '. Скопируйте список и пришлите его автору бота — карточки исправят в следующей версии.';
+  }
+  function reportsText() {
+    return 'English Trainer ' + (window.APP_VERSION || '') + ' — ошибки в карточках:\n' + reports().map(function (id) {
+      var w = byId[id];
+      return '- ' + (w ? w.en + ' — ' + w.ru : id);
+    }).join('\n');
+  }
+  $('report-btn').onclick = function () {
+    if (!session) return;
+    var id = session.queue[0], list = reports(), k = list.indexOf(id);
+    if (k === -1) list.push(id); else list.splice(k, 1);
+    save();
+    setReportBtn(byId[id]);
+    haptic('light');
+  };
+  $('reports-copy').onclick = function () {
+    var text = reportsText();
+    var done = function () { $('reports-copy').textContent = 'Скопировано'; setTimeout(function () { $('reports-copy').textContent = 'Скопировать список'; }, 1800); };
+    var fallback = function () { openSheet('Ошибки в карточках', '<textarea class="backup-text" readonly rows="8">' + escapeHtml(text) + '</textarea><p class="small">Выделите текст и скопируйте.</p>', false); };
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  };
+  $('reports-clear').onclick = function () { state.meta.reports = []; save(); renderReports(); };
+
+  // ---------- Словарный тест ----------
+  var test = null;
+  var LEVEL_NAME = { A1: 'начальный', A2: 'элементарный', B1: 'средний', B2: 'выше среднего', 'ниже A1': 'только начинаете' };
+
+  function openTest() {
+    test = null;
+    $('test-intro').hidden = false;
+    $('test-q').hidden = true;
+    $('test-res').hidden = true;
+    show('test');
+  }
+
+  function startTest() {
+    var total = Core.TEST_PLAN.reduce(function (n, p) { return n + p[1]; }, 0);
+    test = { block: 0, queue: [], results: {}, known: [], asked: 0, total: total, q: null, locked: false };
+    $('test-intro').hidden = true;
+    $('test-q').hidden = false;
+    nextTestBlock();
+  }
+
+  function nextTestBlock() {
+    var p = Core.TEST_PLAN[test.block];
+    test.queue = Core.testWords(BASE_WORDS, p[0], p[1]);
+    test.results[p[0]] = { right: 0, wrong: 0, skip: 0 };
+    showTestQuestion();
+  }
+
+  function showTestQuestion() {
+    var q = test.q = Core.testQuestion(BASE_WORDS, test.queue[0]);
+    test.locked = false;
+    $('test-lvl').textContent = q.lvl;
+    $('test-card').className = 'card test-card lv-' + q.lvl;
+    $('test-word').textContent = q.prompt;
+    $('test-counter').textContent = (test.asked + 1) + ' / ' + test.total;
+    $('test-bar').style.width = (test.asked / test.total * 100) + '%';
+    var box = $('test-options');
+    box.className = 'test-options';
+    box.innerHTML = q.options.map(function (o, k) {
+      return '<button class="test-opt" type="button" data-k="' + k + '"><span class="k">' + (k + 1) + '</span><span>' + escapeHtml(o) + '</span></button>';
+    }).join('');
+    $('test-skip').disabled = false;
+  }
+
+  // k — номер варианта, -1 — «Не знаю»
+  function answerTest(k) {
+    if (!test || test.locked || !test.q) return;
+    test.locked = true;
+    var q = test.q, r = test.results[q.lvl];
+    var buttons = $('test-options').querySelectorAll('.test-opt');
+    $('test-options').className = 'test-options locked';
+    $('test-skip').disabled = true;
+    buttons[q.correct].classList.add('is-right');
+    if (k === -1) { r.skip += 1; feedback('skip'); }
+    else if (k === q.correct) { r.right += 1; test.known.push(q.id); feedback('ok'); }
+    else { r.wrong += 1; buttons[k].classList.add('is-wrong'); feedback('wrong'); }
+    test.asked += 1;
+    test.queue.shift();
+    setTimeout(function () {
+      if (!test) return;
+      if (test.queue.length) { showTestQuestion(); return; }
+      // Блок закончен: идём выше, только если слова этого уровня в основном знакомы
+      var lvl = Core.TEST_PLAN[test.block][0];
+      test.block += 1;
+      if (test.block < Core.TEST_PLAN.length && Core.testScore(test.results[lvl]) >= Core.TEST_STOP) nextTestBlock();
+      else finishTest();
+    }, k === q.correct ? 450 : 1100);
+  }
+
+  function finishTest() {
+    var res = Core.testResult(test.results);
+    var day = today();
+    var added = 0;
+    test.known.forEach(function (id) {
+      if (!state.cards[id]) { state.cards[id] = Core.knownCard(id, day); added += 1; }
+    });
+    state.meta.vocab = res.vocab;
+    var now = new Date();
+    state.meta.vocabTest = {
+      date: now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0'),
+      level: res.level
+    };
+    state.meta.settings.levels = LEVELS.slice(); // доли уровней теперь задаёт тест
+    save();
+    feedback('finish');
+
+    $('test-q').hidden = true;
+    $('test-res').hidden = false;
+    $('test-level').textContent = res.level + (LEVEL_NAME[res.level] ? ' — ' + LEVEL_NAME[res.level] : '');
+    $('test-sum').textContent = 'Отвечено на ' + test.asked + ' ' + plural(test.asked, 'вопрос', 'вопроса', 'вопросов') +
+      '. Так выглядит доля знакомых слов на каждом уровне:';
+    $('test-bars').innerHTML = Core.TEST_PLAN.map(function (p) {
+      var v = Math.round(res.vocab[p[0]] * 100);
+      var tested = !!test.results[p[0]];
+      return '<div class="level-row lv-' + p[0] + '"><span class="lvl">' + p[0] + '</span>' +
+        '<div class="level-track" role="img" aria-label="' + p[0] + ': ' + v + '%"><span class="learned" style="width:' + v + '%"></span></div>' +
+        '<span class="level-count">' + (tested ? '' : '≈') + v + '%</span></div>';
+    }).join('');
+    var w = Core.levelWeights(res.vocab, LEVELS);
+    $('test-next').textContent = 'Что дальше: новые слова в занятиях — ' + LEVELS.map(function (lv) {
+      return lv + ' ' + Math.round(w[lv] * 100) + '%';
+    }).join(', ') + '. ' + (added ? added + ' ' + plural(added, 'знакомое слово не придётся', 'знакомых слова не придётся', 'знакомых слов не придётся') +
+      ' учить: они вернутся один раз на быструю проверку. ' : '') +
+      'Доли будут уточняться по вашим ответам. Тест можно пройти заново в настройках.';
+    test = null;
+  }
+
+  $('vibro-toggle').onchange = function () {
+    state.meta.settings.vibro = $('vibro-toggle').checked; save();
+    if (state.meta.settings.vibro) haptic('medium');
+  };
+  $('test-banner').onclick = openTest;
+  $('test-again').onclick = openTest;
+  $('test-start').onclick = startTest;
+  $('test-back').onclick = function () { test = null; goHome(); };
+  $('test-skip').onclick = function () { answerTest(-1); };
+  $('test-options').onclick = function (e) {
+    var b = e.target.closest('.test-opt');
+    if (b) answerTest(Number(b.getAttribute('data-k')));
+  };
+  document.addEventListener('keydown', function (e) {
+    if (!test || $('test').hidden || !$('sheet').hidden) return;
+    if (e.key >= '1' && e.key <= '4') answerTest(Number(e.key) - 1);
+    else if (e.key === '0') answerTest(-1);
   });
 
   // ---------- Запуск ----------

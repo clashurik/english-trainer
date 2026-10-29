@@ -121,13 +121,22 @@
    * минимум 5%, чтобы базовые слова не пропадали совсем.
    */
   function levelWeights(vocab, levels) {
-    var out = {}, sum = 0;
+    var raw = {}, out = {}, MIN = 0.05;
     levels.forEach(function (lv) {
       var p = vocab && typeof vocab[lv] === 'number' ? vocab[lv] : null;
-      out[lv] = p === null ? 0.5 : Math.max(0.05, 1 - p);
-      sum += out[lv];
+      raw[lv] = p === null ? 0.5 : Math.max(0.001, 1 - p);
     });
-    levels.forEach(function (lv) { out[lv] = sum ? out[lv] / sum : 0; });
+    // Пропорционально незнакомым словам, но каждому уровню не меньше 5% занятия
+    var floor = {}, changed = true;
+    while (changed) {
+      changed = false;
+      var free = 1 - Object.keys(floor).length * MIN, sum = 0;
+      levels.forEach(function (lv) { if (!floor[lv]) sum += raw[lv]; });
+      levels.forEach(function (lv) {
+        out[lv] = floor[lv] ? MIN : (sum ? raw[lv] / sum * free : 0);
+        if (!floor[lv] && out[lv] < MIN && levels.length * MIN <= 1) { floor[lv] = true; changed = true; }
+      });
+    }
     return out;
   }
 
@@ -221,6 +230,75 @@
     return out;
   }
 
+  // ---------- Словарный тест ----------
+  /*
+   * Тест идёт блоками по уровням: A1 (6 слов), A2 (10), B1 (11), B2 (11) — до 38 вопросов, ~5 минут.
+   * Вопрос: английское слово и 4 перевода, плюс «Не знаю» (чтобы не угадывали наугад).
+   * Если на уровне знакомо меньше 35% слов, выше не идём: дальше доля оценивается как половина предыдущей.
+   */
+  var TEST_PLAN = [['A1', 6], ['A2', 10], ['B1', 11], ['B2', 11]];
+  var TEST_STOP = 0.35;
+
+  function ruMain(ru) { return String(ru).split(/[;(]/)[0].trim(); }
+  function ruTokens(ru) {
+    return String(ru).toLowerCase().replace(/ё/g, 'е').split(/[^а-я]+/).filter(function (t) { return t.length > 2; });
+  }
+
+  // Слова блока: только из словаря (не из уроков), без слов без русского перевода
+  function testWords(words, lvl, n, rnd) {
+    var pool = words.filter(function (w) { return w.lvl === lvl && w.pos !== 'ph' && ruMain(w.ru); });
+    return shuffle(pool, rnd).slice(0, n).map(function (w) { return w.id; });
+  }
+
+  // Вопрос: 3 неверных варианта той же части речи, без общих слов в переводе с правильным
+  function testQuestion(words, id, rnd) {
+    rnd = rnd || Math.random;
+    var w = null;
+    for (var k = 0; k < words.length; k++) if (words[k].id === id) { w = words[k]; break; }
+    var right = ruMain(w.ru), tk = ruTokens(w.ru), seen = {};
+    seen[right] = true;
+    var same = shuffle(words.filter(function (x) { return x.pos === w.pos && x.lvl !== 'MY'; }), rnd);
+    var rest = shuffle(words.filter(function (x) { return x.lvl !== 'MY'; }), rnd);
+    var opts = [];
+    same.concat(rest).some(function (x) {
+      var r = ruMain(x.ru);
+      if (!r || seen[r] || x.id === id) return false;
+      if (ruTokens(x.ru).some(function (t) { return tk.indexOf(t) !== -1; })) return false;
+      seen[r] = true;
+      opts.push(r);
+      return opts.length === 3;
+    });
+    var at = Math.floor(rnd() * 4);
+    opts.splice(at, 0, right);
+    return { id: id, lvl: w.lvl, prompt: label(w), options: opts, correct: at };
+  }
+
+  // Доля знакомых слов с поправкой на угадывание: каждый неверный ответ «съедает» треть верного
+  function testScore(r) {
+    var n = r.right + r.wrong + r.skip;
+    if (!n) return 0;
+    return Math.round(Math.max(0, (r.right - r.wrong / 3) / n) * 100) / 100;
+  }
+
+  // Итог: доли по всем уровням (непройденные — по половине предыдущего) и подпись уровня
+  function testResult(results) {
+    var vocab = {}, prev = 1;
+    TEST_PLAN.forEach(function (p) {
+      var r = results[p[0]];
+      vocab[p[0]] = r ? testScore(r) : Math.round(prev / 2 * 100) / 100;
+      prev = vocab[p[0]];
+    });
+    var level = 'ниже A1';
+    TEST_PLAN.forEach(function (p) { if (vocab[p[0]] >= 0.6) level = p[0]; });
+    return { vocab: vocab, level: level };
+  }
+
+  // Карточка для слова, которое человек уверенно знает: вернётся на быструю проверку через 1–3 недели
+  function knownCard(id, day) {
+    var wait = 7 + seedOf(id) % 15;
+    return { r: 2, i: LEARNED_INTERVAL, e: 250, d: day + wait, l: 0 };
+  }
+
   // Смешиваем: после каждых трёх повторений одно новое слово, чтобы занятие не было монотонным.
   // lead — слова, которые идут в самом начале (добавленные из словаря)
   function mixQueue(due, fresh, lead) {
@@ -246,6 +324,18 @@
   function currentStreak(meta, day) {
     if (meta.lastDone === day || meta.lastDone === day - 1) return meta.streak || 0;
     return 0;
+  }
+
+  // Огонёк серии: цвет меняется на 1, 10, 30, 50, 100, 200 и 365 днях подряд
+  var FLAMES = [[1, 'orange', 'оранжевый'], [10, 'teal', 'бирюзовый'], [30, 'green', 'зелёный'], [50, 'blue', 'синий'],
+    [100, 'purple', 'фиолетовый'], [200, 'gold', 'золотой'], [365, 'rainbow', 'радужный']];
+  // Номер ступени (-1 — серии нет) и сколько дней до следующей
+  function flameTier(streak) {
+    var t = -1;
+    for (var k = 0; k < FLAMES.length; k++) if (streak >= FLAMES[k][0]) t = k;
+    var next = FLAMES[t + 1];
+    return { tier: t, color: t < 0 ? 'none' : FLAMES[t][1], name: t < 0 ? '' : FLAMES[t][2],
+      next: next ? next[0] : null, nextName: next ? next[2] : '' };
   }
 
   function stats(words, cards) {
@@ -616,6 +706,15 @@
     normalizeAnswer: normalizeAnswer,
     editDistance: editDistance,
     checkAnswer: checkAnswer,
+    FLAMES: FLAMES,
+    flameTier: flameTier,
+    TEST_PLAN: TEST_PLAN,
+    TEST_STOP: TEST_STOP,
+    testWords: testWords,
+    testQuestion: testQuestion,
+    testScore: testScore,
+    testResult: testResult,
+    knownCard: knownCard,
     seedOf: seedOf,
     SIZES: SIZES,
     isQuick: isQuick,

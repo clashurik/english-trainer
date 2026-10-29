@@ -310,6 +310,95 @@ with sync_playwright() as p:
     assert page.is_hidden("#sheet"), "после восстановления «Что нового» не показываем"
     assert saved(page)["cards"] == before["cards"], "восстановленное сохраняется"
     page.close()
+
+    # ===== 1.4.0: словарный тест, огонёк, размер занятия, отметка ошибки, хвост повторений =====
+    for scheme in ["light", "dark"]:
+        page = new_page(browser, scheme)
+        page.goto(URL)
+        page.wait_for_timeout(300)
+        assert page.is_visible("#test-banner"), "новичку предлагаем тест"
+        page.click("#test-banner")
+        page.screenshot(path=str(OUT / f"12-test-intro-{scheme}.png"))
+        page.click("#test-start")
+        asked = 0
+        while page.is_visible("#test-q") and asked < 60:
+            page.wait_for_selector("#test-options:not(.locked) .test-opt")
+            if asked == 2:
+                page.screenshot(path=str(OUT / f"13-test-q-{scheme}.png"))
+            # Знаем всё A1–A2, на B1 жмём «Не знаю»: тест должен остановиться после B1
+            lvl = page.inner_text("#test-lvl")
+            if lvl in ("A1", "A2"):
+                ru = page.evaluate("(w) => WORDS.find(v => Core.label(v) === w).ru", page.inner_text("#test-word"))
+                opts = page.locator("#test-options .test-opt")
+                texts = opts.all_inner_texts()
+                k = next(i for i, t in enumerate(texts) if ru.startswith(t.split("\n")[-1].strip()))
+                opts.nth(k).click()
+            else:
+                page.click("#test-skip")
+            asked += 1
+            page.wait_for_timeout(1200)
+        assert page.is_visible("#test-res"), "тест закончился"
+        assert asked == 6 + 10 + 11, f"после B1 тест останавливается: {asked}"
+        page.screenshot(path=str(OUT / f"14-test-result-{scheme}.png"), full_page=True)
+        st = saved(page)
+        assert st["meta"]["vocabTest"]["level"] == "A2", st["meta"]["vocabTest"]
+        assert st["meta"]["vocab"]["A1"] == 1 and st["meta"]["vocab"]["B1"] == 0, st["meta"]["vocab"]
+        assert len(st["cards"]) == 16, "знакомые слова получили карточки"
+        page.click("#test-res [data-home]")
+        assert page.is_hidden("#test-banner"), "после теста баннер не показываем"
+        page.click("#settings summary")
+        assert "A2" in page.inner_text("#vocab-info")
+        page.close()
+
+    # Хвост: 100 просроченных слов, «Лёгкое» занятие — 20 повторений, новых нет; огонёк серии
+    page = new_page(browser)
+    page.goto(URL)
+    page.wait_for_timeout(300)
+    page.evaluate("""() => {
+      const day = Core.dayNumber(), cards = {};
+      WORDS.slice(0, 100).forEach((w, k) => { cards[w.id] = k < 10 ? { r: 3, i: 30, e: 250, d: day - 25, l: 0 } : { r: 3, i: 5, e: 250, d: day - 1, l: 0 }; });
+      localStorage.setItem('english-trainer-v1', JSON.stringify({ cards, custom: [], meta: {
+        streak: 9, best: 9, lastDone: day - 1, seenVersion: window.APP_VERSION, settings: { size: 'light', typeMode: true } } }));
+    }""")
+    page.reload()
+    page.wait_for_timeout(300)
+    assert page.inner_text("#due-count") == "20", page.inner_text("#due-count")
+    assert page.inner_text("#new-count") == "0", "при большом хвосте новых слов нет"
+    assert "80 повторений подождут" in page.inner_text("#start-hint"), page.inner_text("#start-hint")
+    assert page.get_attribute("#home-flame", "data-c") == "orange"
+    page.click("#start-btn")
+    quick = typed = 0
+    while page.is_visible("#session"):
+        if page.is_visible("#quick-note"):
+            quick += 1
+            page.click("#reveal-btn")
+            if quick == 1:
+                page.click("#report-btn")
+                assert "Отмечено" in page.inner_text("#report-btn")
+                page.screenshot(path=str(OUT / "15-quick.png"))
+            page.click(".grade.g3")
+        else:
+            typed += 1
+            page.fill("#type-input", "zzz")
+            page.keyboard.press("Enter")
+            page.click("#override-btn")
+    assert quick > 0 and typed > 0, (quick, typed)
+    assert page.get_attribute("#done-flame", "data-c") == "teal", "10-й день — бирюзовый огонёк"
+    assert "бирюзовый" in page.inner_text("#tier-text")
+    assert "Ещё порция" in page.inner_text("#more-btn")
+    page.screenshot(path=str(OUT / "16-done-flame.png"), full_page=True)
+    page.click("#more-btn")
+    assert page.inner_text("#counter") == "0 / 10", "ещё порция — 10 повторений"
+    page.click("#quit-btn")
+    page.goto(URL)
+    page.wait_for_timeout(300)
+    page.click("#settings summary")
+    assert page.is_visible("#reports-row")
+    assert "Отмечено карточек: 1" in page.inner_text("#reports-info")
+    page.click("#session-size [data-v='intense']")
+    assert "до 80 повторений" in page.inner_text("#size-hint")
+    page.screenshot(path=str(OUT / "17-settings.png"), full_page=True)
+    page.close()
     browser.close()
 
 if errors:

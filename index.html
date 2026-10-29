@@ -26,7 +26,7 @@
     </header>
 
     <div class="streak">
-      <span class="streak-num" id="streak-num">0</span>
+      <span class="streak-num-wrap"><span class="streak-num" id="streak-num">0</span><svg class="flame" id="home-flame" viewBox="0 0 32 40" aria-hidden="true"><defs><linearGradient id="home-flame-g" x1="0" y1="1" x2="0" y2="0"><stop offset="0" class="f-a"/><stop offset="1" class="f-b"/></linearGradient></defs><path fill="url(#home-flame-g)" d="M16 1c1.6 6.2 6.8 9.4 9.6 14.6 3.4 6.4 2.3 13.6-2.3 18.3A12 12 0 0 1 4.1 32C.6 26.6 2 20.2 6.1 16.1c.5 3 1.9 5 4.2 6.1C8.7 14.4 11.8 6.8 16 1z"/><path class="f-core" d="M16.4 20.5c1 3.2 4.1 4.6 4.3 8.6a5.2 5.2 0 0 1-10.4.4c-.1-2.6 1.2-4.2 2.7-5.6.2 1.3.8 2.3 1.8 2.8-.4-2.4.1-4.4 1.6-6.2z"/></svg></span>
       <div class="streak-text">
         <div class="streak-label" id="streak-label">дней подряд</div>
         <div class="muted" id="streak-best">Рекорд: 0</div>
@@ -46,6 +46,12 @@
         <input type="checkbox" role="switch" id="type-toggle" class="switch">
       </label>
     </div>
+
+    <button class="panel test-banner" id="test-banner" type="button" hidden>
+      <span class="eyebrow">Новое</span>
+      <span class="test-banner-title">Узнайте свой уровень</span>
+      <span class="muted">Тест на 5 минут: дальше занятия подстроятся под ваш словарный запас</span>
+    </button>
 
     <div class="actions">
       <button class="action" id="practice-btn" type="button">
@@ -85,6 +91,23 @@
         <p class="small" id="size-hint"></p>
       </div>
       <div class="setting">
+        <div class="setting-label">Звуки</div>
+        <div class="segmented" id="sound-level" role="radiogroup" aria-label="Громкость звуков">
+          <button type="button" role="radio" data-v="0">Выкл</button>
+          <button type="button" role="radio" data-v="1">Тихо</button>
+          <button type="button" role="radio" data-v="2">Громче</button>
+        </div>
+        <label class="switch-row" for="vibro-toggle">
+          <span class="switch-text"><span class="switch-title">Вибрация</span><span class="switch-sub">Лёгкий отклик на ответы в Telegram на телефоне</span></span>
+          <input type="checkbox" role="switch" id="vibro-toggle" class="switch">
+        </label>
+      </div>
+      <div class="setting">
+        <div class="setting-label">Словарный уровень</div>
+        <p class="small" id="vocab-info"></p>
+        <button class="ghost" type="button" id="test-again">Пройти тест</button>
+      </div>
+      <div class="setting">
         <div class="setting-label">Уровни для новых слов</div>
         <div class="chips" id="level-toggles"></div>
       </div>
@@ -106,6 +129,14 @@
       <div class="setting">
         <div class="setting-label">Где хранится прогресс</div>
         <p class="muted" id="storage-note"></p>
+      </div>
+      <div class="setting" id="reports-row" hidden>
+        <div class="setting-label">Ошибки в карточках</div>
+        <p class="small" id="reports-info"></p>
+        <div class="row-btns">
+          <button class="ghost" id="reports-copy" type="button">Скопировать список</button>
+          <button class="ghost" id="reports-clear" type="button">Очистить</button>
+        </div>
       </div>
       <div class="setting">
         <div class="setting-label">Резервная копия</div>
@@ -176,7 +207,10 @@
           <button class="link-btn" id="ex-next" type="button" hidden>Ещё пример <span id="ex-pos"></span></button>
         </div>
         <p class="note" id="c-note" hidden></p>
-        <button class="forms-btn" id="forms-btn" type="button" hidden>Формы слова <span aria-hidden="true">›</span></button>
+        <div class="answer-actions">
+          <button class="forms-btn" id="forms-btn" type="button" hidden>Формы слова <span aria-hidden="true">›</span></button>
+          <button class="link-btn report-btn" id="report-btn" type="button">⚑ Ошибка в карточке</button>
+        </div>
       </div>
     </article>
 
@@ -301,6 +335,41 @@ run out of | закончиться (о запасах)</pre>
     <ul class="dict-list" id="dict-list"></ul>
   </section>
 
+  <!-- ===== Словарный тест ===== -->
+  <section id="test" class="screen" hidden>
+    <div class="screen-top">
+      <button class="ghost small-btn" type="button" id="test-back">Назад</button>
+      <h2 class="screen-title">Тест на словарный запас</h2>
+    </div>
+    <div id="test-intro">
+      <p>Покажем английские слова от простых к сложным, нужно выбрать перевод. Около 5 минут, до 38 слов.</p>
+      <p class="muted">Если слово незнакомо, честно жмите «Не знаю»: угаданные ответы тест учитывает со штрафом, а честный результат подберёт слова точнее.</p>
+      <p class="muted">После теста в занятиях будет больше слов вашего уровня и меньше тех, что вы уже знаете. Слова, которые вы узнали в тесте, не придётся учить заново: они вернутся один раз на быструю проверку.</p>
+      <button class="primary" id="test-start" type="button">Начать тест</button>
+    </div>
+    <div id="test-q" hidden>
+      <div class="session-top test-top">
+        <div class="bar" aria-hidden="true"><span id="test-bar"></span></div>
+        <span class="counter" id="test-counter"></span>
+      </div>
+      <article class="card test-card" id="test-card">
+        <div class="card-meta"><span class="lvl" id="test-lvl"></span><span class="pos">выберите перевод</span></div>
+        <h1 class="headword" id="test-word"></h1>
+        <div class="test-options" id="test-options"></div>
+        <button class="ghost" id="test-skip" type="button">Не знаю</button>
+      </article>
+      <p class="keys">1–4 — вариант, 0 — не знаю</p>
+    </div>
+    <div id="test-res" hidden>
+      <div class="eyebrow">Ваш словарный уровень</div>
+      <h2 class="done-title" id="test-level"></h2>
+      <p class="muted" id="test-sum"></p>
+      <div class="level-rows test-bars" id="test-bars"></div>
+      <p class="muted" id="test-next"></p>
+      <button class="primary" type="button" data-home>На главную</button>
+    </div>
+  </section>
+
   <!-- ===== Итог занятия ===== -->
   <section id="done" class="screen" hidden>
     <div class="done">
@@ -311,6 +380,7 @@ run out of | закончиться (о запасах)</pre>
         <div><dt id="d-l2">Новых слов</dt><dd id="d-new">0</dd></div>
         <div><dt id="d-l3">Ошибок</dt><dd id="d-errors">0</dd></div>
       </dl>
+      <div class="done-flame" id="done-flame-box" hidden><svg class="flame" id="done-flame" viewBox="0 0 32 40" aria-hidden="true"><defs><linearGradient id="done-flame-g" x1="0" y1="1" x2="0" y2="0"><stop offset="0" class="f-a"/><stop offset="1" class="f-b"/></linearGradient></defs><path fill="url(#done-flame-g)" d="M16 1c1.6 6.2 6.8 9.4 9.6 14.6 3.4 6.4 2.3 13.6-2.3 18.3A12 12 0 0 1 4.1 32C.6 26.6 2 20.2 6.1 16.1c.5 3 1.9 5 4.2 6.1C8.7 14.4 11.8 6.8 16 1z"/><path class="f-core" d="M16.4 20.5c1 3.2 4.1 4.6 4.3 8.6a5.2 5.2 0 0 1-10.4.4c-.1-2.6 1.2-4.2 2.7-5.6.2 1.3.8 2.3 1.8 2.8-.4-2.4.1-4.4 1.6-6.2z"/></svg><p class="tier-text" id="tier-text"></p></div>
       <p class="muted" id="done-streak"></p>
       <button class="primary" id="home-btn" type="button">На главную</button>
       <button class="ghost" id="more-btn" type="button">Ещё 5 новых слов</button>

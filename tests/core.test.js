@@ -405,6 +405,9 @@ test('очередь: после теста новые слова набираю
   assert.ok(by('A1') >= 1, 'базовые слова не пропадают совсем');
   const w = Core.levelWeights(vocab, ['A1', 'A2', 'B1', 'B2']);
   assert.ok(Math.abs(Object.values(w).reduce((a, b) => a + b) - 1) < 1e-9);
+  const w2 = Core.levelWeights({ A1: 1, A2: 1, B1: 0, B2: 0.05 }, ['A1', 'A2', 'B1', 'B2']);
+  assert.ok(Math.abs(w2.A1 - 0.05) < 1e-9 && Math.abs(w2.A2 - 0.05) < 1e-9, 'минимум 5% у знакомых уровней');
+  assert.ok(Math.abs(Object.values(w2).reduce((a, b) => a + b) - 1) < 1e-9);
 });
 
 test('очередь: если уровень закончился, места добираются из других', () => {
@@ -433,6 +436,55 @@ test('быстрый режим: только для хорошо выученн
   assert.equal(Core.isQuick({ r: 4, i: 25 }), true);
   assert.equal(Core.isQuick({ r: 2, i: 6 }), false);
   assert.equal(Core.isQuick(undefined), false);
+});
+
+// ---------- 1.4.0: словарный тест ----------
+const seeded = (n) => () => { n = (n * 16807) % 2147483647; return n / 2147483647; };
+
+test('тест: вопросы по всему словарю корректны — 4 разных варианта, правильный один', () => {
+  const rnd = seeded(42);
+  let checked = 0;
+  for (const [lvl, n] of Core.TEST_PLAN) {
+    const ids = Core.testWords(WORDS, lvl, 60, rnd);
+    assert.equal(ids.length, 60);
+    for (const id of ids) {
+      const q = Core.testQuestion(WORDS, id, rnd);
+      assert.equal(q.options.length, 4, id);
+      assert.equal(new Set(q.options).size, 4, id + ': повтор варианта');
+      const w = WORDS.find(x => x.id === id);
+      assert.ok(w.ru.startsWith(q.options[q.correct]), id);
+      assert.doesNotMatch(q.prompt, /[а-я]/i);
+      checked++;
+    }
+  }
+  assert.ok(checked >= 240);
+});
+
+test('тест: поправка на угадывание и досрочная остановка', () => {
+  assert.equal(Core.testScore({ right: 10, wrong: 0, skip: 0 }), 1);
+  assert.equal(Core.testScore({ right: 6, wrong: 3, skip: 1 }), 0.5);
+  assert.equal(Core.testScore({ right: 1, wrong: 9, skip: 0 }), 0);
+  const r = Core.testResult({ A1: { right: 6, wrong: 0, skip: 0 }, A2: { right: 9, wrong: 0, skip: 1 }, B1: { right: 3, wrong: 3, skip: 5 } });
+  assert.deepEqual(r.vocab, { A1: 1, A2: 0.9, B1: 0.18, B2: 0.09 });
+  assert.equal(r.level, 'A2');
+  assert.equal(Core.testResult({ A1: { right: 1, wrong: 2, skip: 3 } }).level, 'ниже A1');
+});
+
+test('тест: знакомое слово получает длинный интервал и попадает в быструю проверку', () => {
+  const c = Core.knownCard('decide', DAY);
+  assert.ok(Core.isQuick(c));
+  assert.ok(c.d >= DAY + 7 && c.d <= DAY + 21);
+});
+
+test('огонёк: ступени серии', () => {
+  assert.equal(Core.flameTier(0).tier, -1);
+  assert.equal(Core.flameTier(1).color, 'orange');
+  assert.equal(Core.flameTier(9).next, 10);
+  assert.equal(Core.flameTier(10).color, 'teal');
+  assert.equal(Core.flameTier(49).color, 'green');
+  assert.equal(Core.flameTier(50).color, 'blue');
+  assert.equal(Core.flameTier(400).color, 'rainbow');
+  assert.equal(Core.flameTier(400).next, null);
 });
 
 console.log(`\nВсе тесты пройдены: ${passed}`);
