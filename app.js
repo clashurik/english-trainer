@@ -20,9 +20,9 @@
   var LEVELS = ['A1', 'A2', 'B1', 'B2'].filter(function (lv) { return BASE_WORDS.some(function (w) { return w.lvl === lv; }); });
 
   var DEFAULT_META = {
-    streak: 0, best: 0, lastDone: null, newDay: null, newDone: 0,
+    streak: 0, best: 0, lastDone: null, newDay: null, newDone: 0, revDay: null, revDone: 0,
     priority: [], // слова, добавленные из словаря вне очереди
-    settings: { newPerDay: 10, levels: LEVELS.slice(), typeMode: false },
+    settings: { size: 'normal', levels: LEVELS.slice(), typeMode: false },
     practice: { set: 'studied', levels: LEVELS.slice(), kind: 'all', dir: 'en', count: 10 }
   };
   function freshMeta() { return JSON.parse(JSON.stringify(DEFAULT_META)); }
@@ -108,10 +108,12 @@
     var total = q.due.length + q.fresh.length;
     $('start-btn').disabled = total === 0;
     $('start-btn').textContent = total === 0 ? 'На сегодня всё' : 'Начать занятие';
-    var minutes = Math.max(1, Math.round((q.due.length * 8 + q.fresh.length * 20) / 60));
+    var minutes = sessionMinutes(q);
+    var tail = q.backlog ? ' Ещё ' + q.backlog + ' ' + plural(q.backlog, 'повторение подождёт', 'повторения подождут', 'повторений подождут') +
+      ' следующих дней — сначала самые важные.' : '';
     $('start-hint').textContent = total === 0
-      ? 'Задание выполнено. Можно потренироваться свободно или взять ещё новых слов после занятия.'
-      : 'Примерно ' + minutes + ' ' + plural(minutes, 'минута', 'минуты', 'минут');
+      ? 'Задание выполнено. Можно потренироваться свободно.' + tail
+      : 'Примерно ' + minutes + ' ' + plural(minutes, 'минута', 'минуты', 'минут') + '.' + tail;
 
     var n = state.custom.length;
     $('lessons-sub').textContent = n
@@ -127,6 +129,13 @@
     $('app-version').textContent = window.APP_VERSION || '';
     renderLevels();
     renderSettings();
+  }
+
+  // Оценка времени: напечатать ответ ~10 с, быстрая проверка и карточка ~5 с, новое слово ~20 с
+  function sessionMinutes(q) {
+    var sec = q.fresh.length * 20;
+    q.due.forEach(function (id) { sec += typeMode() && !Core.isQuick(state.cards[id]) ? 10 : 5; });
+    return Math.max(1, Math.round(sec / 60));
   }
 
   function renderLevels() {
@@ -150,9 +159,11 @@
   }
 
   function renderSettings() {
-    radioGroup($('new-per-day'), [5, 10, 15, 20], state.meta.settings.newPerDay, function (n) {
-      state.meta.settings.newPerDay = n; save(); renderHome();
-    });
+    var size = state.meta.settings.size;
+    optionGroup($('session-size'), size, function (v) { state.meta.settings.size = v; save(); renderHome(); });
+    var sz = Core.SIZES[size];
+    $('size-hint').textContent = { light: '~5 минут', normal: '~10 минут', intense: '~20 минут' }[size] +
+      ': до ' + sz.rev + ' повторений и ' + sz.fresh + ' новых слов. Пока много повторений, новых слов меньше.';
 
     var chips = $('level-toggles');
     chips.innerHTML = '';
@@ -172,16 +183,22 @@
   }
 
   // ---------- Ежедневное занятие ----------
-  function startDaily(extraNew) {
+  /*
+   * more: 'new' — «Ещё 5 новых слов» сверх нормы; 'review' — «Ещё порция»: 10 повторений из хвоста.
+   */
+  function revDoneToday() { return state.meta.revDay === today() ? state.meta.revDone || 0 : 0; }
+  function startDaily(more) {
     var day = today();
-    var q = Core.buildQueue(words, state.cards, dailySettings(), state.meta, day);
+    var q = more === 'review'
+      ? Core.buildQueue(words, state.cards, dailySettings({ revCap: revDoneToday() + 10, newPerDay: 0 }), state.meta, day)
+      : Core.buildQueue(words, state.cards, dailySettings(), state.meta, day);
     var fresh = q.fresh;
-    if (extraNew) {
-      // «Ещё 5 слов»: берём следующие новые слова сверх дневного лимита
-      fresh = Core.buildQueue(words, state.cards, dailySettings({ newPerDay: 9999 }), {}, day).fresh.slice(0, extraNew);
+    if (more === 'new') {
+      fresh = Core.buildQueue(words, state.cards, dailySettings({ newPerDay: 9999, noBacklogCut: true }), { vocab: state.meta.vocab }, day).fresh.slice(0, 5);
+      q = { due: [], priority: [] };
     }
     // Добавленные из словаря — в самом начале, остальные новые вперемешку с повторениями
-    var lead = extraNew ? [] : q.priority;
+    var lead = more ? [] : q.priority;
     var queue = Core.mixQueue(q.due, fresh.slice(lead.length), lead);
     if (!queue.length) return;
     beginSession({ mode: 'daily', dir: 'en', queue: queue });
@@ -250,12 +267,9 @@
   function beginSession(opts) {
     var type = typeMode();
     session = {
-      mode: opts.mode, dir: type ? 'ru' : opts.dir, type: type, queue: opts.queue, total: opts.queue.length,
-      done: 0, reviewed: 0, fresh: 0, errors: 0, firstTry: 0, revealed: false, newIds: {}, missed: {}
+      mode: opts.mode, dir: type ? 'ru' : opts.dir, typeMode: type, type: type, queue: opts.queue, total: opts.queue.length,
+      done: 0, reviewed: 0, fresh: 0, errors: 0, firstTry: 0, revealed: false, newIds: {}, missed: {}, counted: {}
     };
-    $('keys-hint').textContent = type ? 'Enter — проверить, ещё раз Enter — дальше'
-      : session.mode === 'daily' ? 'Пробел — показать, 1–4 — оценка'
-      : 'Пробел — показать, 1 — не помню, 2 — помню';
     show('session');
     showCard();
   }
@@ -264,6 +278,13 @@
     var w = byId[session.queue[0]];
     var ruFirst = session.dir === 'ru';
     session.revealed = false;
+    // Хорошо выученное слово в режиме ввода — быстрая проверка: вспомнить и открыть ответ
+    session.quick = session.typeMode && session.mode === 'daily' && Core.isQuick(state.cards[w.id]);
+    session.type = session.typeMode && !session.quick;
+    $('quick-note').hidden = !session.quick;
+    $('keys-hint').textContent = session.type ? 'Enter — проверить, ещё раз Enter — дальше'
+      : session.mode === 'daily' ? 'Пробел — показать, 1–4 — оценка'
+      : 'Пробел — показать, 1 — не помню, 2 — помню';
 
     $('card').className = 'card lv-' + w.lvl;
     $('c-lvl').textContent = levelLabel(w.lvl);
@@ -318,7 +339,7 @@
     if (!session || session.revealed || session.type) return;
     if (session.mode === 'daily') {
       var w = byId[session.queue[0]];
-      var p = Core.preview(state.cards[w.id] || Core.newCard(today()), today());
+      var p = Core.preview(state.cards[w.id] || Core.newCard(today()), today(), Core.seedOf(w.id));
       for (var g = 1; g <= 4; g++) $('p' + g).textContent = intervalLabel(p[g]);
       $('grades').hidden = false;
     } else {
@@ -390,7 +411,7 @@
 
     var label = 'Дальше';
     if (session.mode === 'daily') {
-      var days = Core.preview(state.cards[w.id] || Core.newCard(today()), today())[g];
+      var days = Core.preview(state.cards[w.id] || Core.newCard(today()), today(), Core.seedOf(w.id))[g];
       label += g === 1 ? ' · повторим в этом занятии' : ' · вернётся через ' + intervalLabel(days);
     }
     $('next-btn').textContent = label;
@@ -557,9 +578,14 @@
       session.fresh += 1;
       session.newIds[id] = true; // если слово забудут, при повторном показе оно всё ещё «новое»
       state.meta.priority = state.meta.priority.filter(function (x) { return x !== id; });
+      if (!session.counted[id]) state.meta.vocab = Core.calibrate(state.meta.vocab, byId[id].lvl, g >= 3);
+    } else if (!session.counted[id] && !session.newIds[id]) {
+      if (state.meta.revDay !== day) { state.meta.revDay = day; state.meta.revDone = 0; }
+      state.meta.revDone += 1;
     }
+    session.counted[id] = true;
 
-    state.cards[id] = Core.schedule(card, g, day);
+    state.cards[id] = Core.schedule(card, g, day, Core.seedOf(id));
     haptic(g === 1 ? 'medium' : 'light');
 
     if (g === 1) {
@@ -615,7 +641,12 @@
         ? 'Сегодняшний день уже засчитан. Серия: ' + n + ' ' + plural(n, 'день', 'дня', 'дней') + '.'
         : n === 1 ? 'Первый день серии. Возвращайтесь завтра, чтобы она росла.'
         : 'Серия выросла до ' + n + ' ' + plural(n, 'дня', 'дней', 'дней') + ' подряд.';
-      $('more-btn').textContent = 'Ещё 5 новых слов';
+      var left = Core.buildQueue(words, state.cards, dailySettings({ revCap: revDoneToday() + 10 }), state.meta, day);
+      var moreKind = left.due.length ? 'review' : 'new';
+      $('more-btn').textContent = moreKind === 'review'
+        ? 'Ещё порция: ' + left.due.length + ' ' + plural(left.due.length, 'повторение', 'повторения', 'повторений')
+        : 'Ещё 5 новых слов';
+      $('more-btn').setAttribute('data-more', moreKind);
     } else {
       var missed = Object.keys(s.missed).length;
       setDone('Тренировка завершена', missed === 0 ? 'Всё вспомнили' : 'Хорошая тренировка',
@@ -1060,7 +1091,7 @@
   $('home-btn').onclick = goHome;
   $('more-btn').onclick = function () {
     if ($('more-btn').getAttribute('data-mode') === 'practice') { show('practice'); renderPractice(); }
-    else startDaily(5);
+    else startDaily($('more-btn').getAttribute('data-more') || 'new');
   };
 
   $('reset-btn').onclick = function () { $('reset-confirm').hidden = false; $('reset-btn').hidden = true; };
@@ -1103,6 +1134,10 @@
     state.meta.settings = Object.assign(freshMeta().settings, meta.settings);
     state.meta.practice = Object.assign(freshMeta().practice, meta.practice);
     if (!Array.isArray(state.meta.priority)) state.meta.priority = [];
+    // До 1.4.0 было «новых слов в день» (5–20); теперь — размер занятия
+    var s14 = state.meta.settings;
+    if (!(s14.size in Core.SIZES)) s14.size = s14.newPerDay <= 5 ? 'light' : s14.newPerDay <= 10 ? 'normal' : 'intense';
+    delete s14.newPerDay;
     if (!Array.isArray(state.meta.settings.levels) || !state.meta.settings.levels.length) state.meta.settings.levels = LEVELS.slice();
     if (!Array.isArray(state.meta.practice.levels)) state.meta.practice.levels = LEVELS.slice();
   }

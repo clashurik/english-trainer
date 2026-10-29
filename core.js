@@ -36,8 +36,15 @@
    *   4 — «Легко»: интервал растёт быстрее, лёгкость повышается
    * Это упрощённый вариант алгоритма SM-2, на котором много лет работает Anki.
    */
-  function schedule(card, grade, day) {
+  /*
+   * seed — число от id слова (seedOf): слегка сдвигает длинные интервалы (±5%),
+   * чтобы слова, выученные в один день, не возвращались все разом.
+   * Если слово повторили позже срока и всё равно вспомнили, просрочка засчитывается в интервал
+   * (как в Anki): пропуски не наказывают двойной работой.
+   */
+  function schedule(card, grade, day, seed) {
     var c = { r: card.r, i: card.i, e: card.e, d: card.d, l: card.l };
+    var late = c.r >= 2 ? Math.max(0, day - c.d) : 0;
 
     if (grade === 1) {
       c.l += 1;
@@ -55,10 +62,15 @@
       next = grade === 2 ? 2 : grade === 3 ? 3 : 6;
     } else {
       var factor = c.e / 100;
-      if (grade === 2) next = c.i * 1.2;
-      else if (grade === 3) next = c.i * factor;
-      else next = c.i * factor * 1.3;
+      if (grade === 2) next = (c.i + late / 4) * 1.2;
+      else if (grade === 3) next = (c.i + late / 2) * factor;
+      else next = (c.i + late) * factor * 1.3;
       next = Math.max(c.i + 1, Math.round(next));
+      if (seed != null && next >= 7) {
+        var spread = Math.max(1, Math.round(next * 0.05));
+        var frac = ((seed * 9301 + 49297 + c.r * 233) % 233280) / 233280;
+        next = Math.max(c.i + 1, next + Math.round((frac * 2 - 1) * spread));
+      }
     }
 
     if (grade === 2) c.e = Math.max(MIN_EASE, c.e - 15);
@@ -71,46 +83,142 @@
   }
 
   // Подписи на кнопках: через сколько дней слово вернётся при каждой оценке.
-  function preview(card, day) {
+  function preview(card, day, seed) {
     var out = {};
-    for (var g = 1; g <= 4; g++) out[g] = schedule(card, g, day).i;
+    for (var g = 1; g <= 4; g++) out[g] = schedule(card, g, day, seed).i;
+    return out;
+  }
+
+  // Число от id слова для разброса интервалов (одно и то же у слова всегда)
+  function seedOf(id) {
+    var h = 0;
+    for (var k = 0; k < id.length; k++) h = (h * 31 + id.charCodeAt(k)) % 100003;
+    return h;
+  }
+
+  /*
+   * Размер занятия: сколько максимум повторений и новых слов в день.
+   * Всё, что не влезло, ждёт следующего дня (первыми идут самые «рискованные» слова).
+   */
+  var SIZES = {
+    light: { rev: 20, fresh: 5 },
+    normal: { rev: 40, fresh: 10 },
+    intense: { rev: 80, fresh: 20 }
+  };
+  function sizeOf(settings) { return SIZES[settings.size] || SIZES.normal; }
+
+  // Хорошо выученное слово (интервал от 3 недель): в режиме ввода проверяется быстро, «помню / не помню»
+  function isQuick(card) { return !!(card && card.r >= 2 && card.i >= LEARNED_INTERVAL); }
+
+  // Риск забыть: насколько слово просрочено относительно своего интервала, плюс трудность и ошибки
+  function risk(c, day) {
+    return (day - c.d + 1) / Math.max(1, c.i) + (c.e < 200 ? 0.5 : 0) + Math.min(c.l, 3) * 0.2;
+  }
+
+  /*
+   * Доли новых слов по уровням после словарного теста.
+   * vocab — сколько слов каждого уровня человек знает (0…1). Чем больше незнакомых, тем больше доля;
+   * минимум 5%, чтобы базовые слова не пропадали совсем.
+   */
+  function levelWeights(vocab, levels) {
+    var out = {}, sum = 0;
+    levels.forEach(function (lv) {
+      var p = vocab && typeof vocab[lv] === 'number' ? vocab[lv] : null;
+      out[lv] = p === null ? 0.5 : Math.max(0.05, 1 - p);
+      sum += out[lv];
+    });
+    levels.forEach(function (lv) { out[lv] = sum ? out[lv] / sum : 0; });
+    return out;
+  }
+
+  // Разложить n мест по уровням пропорционально весам (метод наибольших остатков)
+  function splitByWeights(n, weights) {
+    var lv = Object.keys(weights), out = {}, used = 0;
+    var rest = lv.map(function (l) { var x = n * weights[l]; out[l] = Math.floor(x); used += out[l]; return [x - out[l], l]; });
+    rest.sort(function (a, b) { return b[0] - a[0]; });
+    for (var k = 0; used < n && k < rest.length; k++, used++) out[rest[k][1]] += 1;
     return out;
   }
 
   /*
-   * Очередь на сегодня: сначала слова, которым пришёл срок, затем новые.
-   * Новые берутся только из выбранных уровней, по порядку списка (от частых к редким).
-   */
-  /*
-   * meta.priority — слова, которые вы сами добавили из словаря. Они идут первыми
-   * и сверх дневной нормы новых слов: вы выбрали их сознательно.
+   * Очередь на сегодня.
+   *   due      — повторения, самые рискованные первыми, не больше потолка размера занятия
+   *   backlog  — сколько повторений не влезло и ждёт следующих дней
+   *   fresh    — новые слова. Пока висит хвост повторений, новых меньше (вплоть до нуля):
+   *              каждое новое слово — это будущие повторения
+   *   priority — слова, которые человек сам добавил из словаря: первыми и сверх нормы
+   * После словарного теста (meta.vocab) новые слова набираются по долям уровней,
+   * иначе — по порядку списка, от простых к сложным.
    */
   function buildQueue(words, cards, settings, meta, day) {
-    var due = [];
-    var fresh = [];
+    var size = sizeOf(settings);
+    var revDone = meta.revDay === day ? (meta.revDone || 0) : 0;
+    var revLeft = Math.max(0, (settings.revCap || size.rev) - revDone);
     var newDoneToday = meta.newDay === day ? meta.newDone : 0;
-    var newLeft = Math.max(0, settings.newPerDay - newDoneToday);
     var levels = settings.levels;
     var known = {};
     words.forEach(function (w) { known[w.id] = true; });
     var priority = (meta.priority || []).filter(function (id) { return known[id] && !cards[id]; });
     var isPriority = {};
     priority.forEach(function (id) { isPriority[id] = true; });
-    var regular = [];
 
+    var allDue = [], candidates = {};
     for (var k = 0; k < words.length; k++) {
       var w = words[k];
       var c = cards[w.id];
       if (c) {
-        if (c.d <= day) due.push(w.id);
-      } else if (!isPriority[w.id] && regular.length < newLeft && levels.indexOf(w.lvl) !== -1) {
-        regular.push(w.id);
+        if (c.d <= day) allDue.push(w.id);
+      } else if (!isPriority[w.id] && levels.indexOf(w.lvl) !== -1) {
+        (candidates[w.lvl] = candidates[w.lvl] || []).push(w.id);
       }
     }
-    fresh = priority.concat(regular);
+    allDue.sort(function (a, b) { return risk(cards[b], day) - risk(cards[a], day) || cards[a].d - cards[b].d; });
+    var due = allDue.slice(0, revLeft);
+    var backlog = allDue.length - due.length;
 
-    due.sort(function (a, b) { return cards[a].d - cards[b].d; });
-    return { due: due.slice(0, 150), fresh: fresh, priority: priority };
+    // Хвост: если повторений больше половины потолка, новых слов меньше; при полуторном потолке — ноль
+    var cap = size.rev;
+    var load = (allDue.length - cap / 2) / cap;
+    var factor = settings.noBacklogCut ? 1 : Math.max(0, Math.min(1, 1 - load));
+    var perDay = settings.newPerDay != null ? settings.newPerDay : size.fresh;
+    var newLeft = Math.round(Math.max(0, perDay - newDoneToday) * factor);
+
+    var regular = [];
+    if (meta.vocab) {
+      // Слова из уроков (MY) — первыми и вне долей, остальные места делятся по уровням
+      regular = (candidates.MY || []).slice(0, newLeft);
+      var real = levels.filter(function (lv) { return /^[AB][12]$/.test(lv) && candidates[lv]; });
+      var quota = splitByWeights(newLeft - regular.length, levelWeights(meta.vocab, real));
+      var spare = 0;
+      real.forEach(function (lv) {
+        var take = candidates[lv].slice(0, quota[lv]);
+        spare += quota[lv] - take.length;
+        regular = regular.concat(take);
+        candidates[lv] = candidates[lv].slice(take.length);
+      });
+      // Уровень закончился — добираем из остальных, начиная с самых «незнакомых»
+      var order = real.slice().sort(function (a, b) { return (meta.vocab[a] || 0) - (meta.vocab[b] || 0); });
+      order.forEach(function (lv) { while (spare > 0 && candidates[lv].length) { regular.push(candidates[lv].shift()); spare--; } });
+    } else {
+      for (var j = 0; j < words.length && regular.length < newLeft; j++) {
+        var lvl = words[j].lvl, list = candidates[lvl];
+        if (list && list[0] === words[j].id) regular.push(list.shift());
+      }
+    }
+
+    return { due: due, fresh: priority.concat(regular), priority: priority, backlog: backlog };
+  }
+
+  /*
+   * Уточнение словарного уровня по ежедневным ответам: первая оценка нового слова двигает
+   * долю знакомых слов его уровня на 5% в нужную сторону.
+   */
+  function calibrate(vocab, lvl, knew) {
+    if (!vocab || typeof vocab[lvl] !== 'number') return vocab;
+    var out = Object.assign({}, vocab);
+    var p = out[lvl];
+    out[lvl] = Math.round((knew ? p + 0.05 * (1 - p) : p - 0.05 * p) * 1000) / 1000;
+    return out;
   }
 
   // Смешиваем: после каждых трёх повторений одно новое слово, чтобы занятие не было монотонным.
@@ -508,6 +616,12 @@
     normalizeAnswer: normalizeAnswer,
     editDistance: editDistance,
     checkAnswer: checkAnswer,
+    seedOf: seedOf,
+    SIZES: SIZES,
+    isQuick: isQuick,
+    levelWeights: levelWeights,
+    splitByWeights: splitByWeights,
+    calibrate: calibrate,
     label: label,
     sayText: sayText,
     answerHint: answerHint,

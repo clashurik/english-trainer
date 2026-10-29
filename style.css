@@ -148,6 +148,7 @@ button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); 
 }
 .card-meta { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 13px; }
 .new-tag { margin-left: auto; color: var(--accent); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+.quick-tag { color: var(--muted); }
 .headword {
   font-family: var(--font-head); font-weight: 650; font-size: clamp(2rem, 9vw, 2.75rem); line-height: 1.1;
   margin: 8px 0 0; text-wrap: balance; overflow-wrap: anywhere;

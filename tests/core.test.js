@@ -366,4 +366,73 @@ test('show: естественная форма слова принимаетс�
   assert.equal(Core.label({ en: 'decide' }), 'decide');
 });
 
+// ---------- 1.4.0: занятие без завала ----------
+const mk = (n, lvl, pre) => Array.from({ length: n }, (_, k) => ({ id: (pre || lvl) + k, lvl }));
+const dueCard = (late, i, e, l) => ({ r: 3, i, e: e || 250, d: DAY - late, l: l || 0 });
+
+test('очередь: повторений не больше потолка размера занятия, остальное — в хвост', () => {
+  const ws = mk(100, 'A1'); const cards = {};
+  ws.forEach(w => { cards[w.id] = dueCard(1, 10); });
+  const q = Core.buildQueue(ws, cards, { size: 'light', levels: ['A1'] }, {}, DAY);
+  assert.equal(q.due.length, 20);
+  assert.equal(q.backlog, 80);
+  const q2 = Core.buildQueue(ws, cards, { size: 'light', levels: ['A1'] }, { revDay: DAY, revDone: 15 }, DAY);
+  assert.equal(q2.due.length, 5, 'уже сделанные сегодня повторения вычитаются');
+});
+
+test('очередь: первыми идут самые рискованные слова', () => {
+  const ws = mk(3, 'A1'); const cards = { A10: dueCard(0, 60), A11: dueCard(10, 5), A12: dueCard(0, 3, 150, 2) };
+  const q = Core.buildQueue(ws, cards, { size: 'normal', levels: ['A1'] }, {}, DAY);
+  assert.deepEqual(q.due, ['A11', 'A12', 'A10']);
+});
+
+test('очередь: при большом хвосте новых слов меньше, при полуторном потолке — ни одного', () => {
+  const ws = mk(200, 'A1'); const cards = {};
+  const run = n => { const c = {}; ws.slice(0, n).forEach(w => { c[w.id] = dueCard(0, 5); }); return Core.buildQueue(ws, c, { size: 'normal', levels: ['A1'] }, {}, DAY).fresh.length; };
+  assert.equal(run(10), 10);
+  assert.equal(run(40), 5);
+  assert.equal(run(70), 0);
+  assert.equal(Core.buildQueue(ws, cards, { size: 'intense', levels: ['A1'] }, {}, DAY).fresh.length, 20);
+});
+
+test('очередь: после теста новые слова набираются по долям незнакомых', () => {
+  const ws = [...mk(50, 'A1'), ...mk(50, 'A2'), ...mk(50, 'B1'), ...mk(50, 'B2')];
+  const vocab = { A1: 0.95, A2: 0.85, B1: 0.6, B2: 0.35 };
+  const q = Core.buildQueue(ws, {}, { size: 'intense', levels: ['A1', 'A2', 'B1', 'B2'] }, { vocab }, DAY);
+  const by = l => q.fresh.filter(id => id.startsWith(l)).length;
+  assert.equal(q.fresh.length, 20);
+  assert.ok(by('B2') > by('B1') && by('B1') > by('A2') && by('A2') >= by('A1'), JSON.stringify([by('A1'), by('A2'), by('B1'), by('B2')]));
+  assert.ok(by('A1') >= 1, 'базовые слова не пропадают совсем');
+  const w = Core.levelWeights(vocab, ['A1', 'A2', 'B1', 'B2']);
+  assert.ok(Math.abs(Object.values(w).reduce((a, b) => a + b) - 1) < 1e-9);
+});
+
+test('очередь: если уровень закончился, места добираются из других', () => {
+  const ws = [...mk(1, 'B2'), ...mk(30, 'A2')];
+  const q = Core.buildQueue(ws, {}, { size: 'normal', levels: ['A2', 'B2'] }, { vocab: { A2: 0.9, B2: 0.1 } }, DAY);
+  assert.equal(q.fresh.length, 10);
+});
+
+test('уточнение уровня: знакомое слово двигает долю вверх, незнакомое — вниз', () => {
+  assert.ok(Core.calibrate({ B1: 0.5 }, 'B1', true).B1 > 0.5);
+  assert.ok(Core.calibrate({ B1: 0.5 }, 'B1', false).B1 < 0.5);
+  assert.equal(Core.calibrate(null, 'B1', true), null);
+});
+
+test('интервалы: разброс у разных слов и бонус за просрочку', () => {
+  const c = { r: 4, i: 30, e: 250, d: DAY, l: 0 };
+  const set = new Set(['apple', 'table', 'river', 'dog', 'house', 'quiet'].map(id => Core.schedule(c, 3, DAY, Core.seedOf(id)).i));
+  assert.ok(set.size > 1, 'интервалы разъезжаются');
+  for (const v of set) assert.ok(v >= 71 && v <= 79, 'разброс не больше 5%: ' + v);
+  assert.equal(Core.schedule(c, 3, DAY, 7).i, Core.preview(c, DAY, 7)[3], 'подпись кнопки совпадает с расписанием');
+  const late = Core.schedule({ ...c, d: DAY - 20 }, 3, DAY).i;
+  assert.ok(late > Core.schedule(c, 3, DAY).i, 'вспомнил после пропуска — интервал больше');
+});
+
+test('быстрый режим: только для хорошо выученных слов', () => {
+  assert.equal(Core.isQuick({ r: 4, i: 25 }), true);
+  assert.equal(Core.isQuick({ r: 2, i: 6 }), false);
+  assert.equal(Core.isQuick(undefined), false);
+});
+
 console.log(`\nВсе тесты пройдены: ${passed}`);

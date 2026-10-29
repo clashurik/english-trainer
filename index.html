@@ -76,8 +76,13 @@
     <details class="block settings" id="settings">
       <summary>Настройки</summary>
       <div class="setting">
-        <div class="setting-label">Новых слов в день</div>
-        <div class="segmented" id="new-per-day" role="radiogroup" aria-label="Новых слов в день"></div>
+        <div class="setting-label">Размер занятия</div>
+        <div class="segmented" id="session-size" role="radiogroup" aria-label="Размер занятия">
+          <button type="button" role="radio" data-v="light">Лёгкое</button>
+          <button type="button" role="radio" data-v="normal">Обычное</button>
+          <button type="button" role="radio" data-v="intense">Интенсивное</button>
+        </div>
+        <p class="small" id="size-hint"></p>
       </div>
       <div class="setting">
         <div class="setting-label">Уровни для новых слов</div>
@@ -150,6 +155,7 @@
         <span class="lvl" id="c-lvl">A1</span>
         <span class="pos" id="c-pos"></span>
         <span class="new-tag" id="c-new" hidden>новое слово</span>
+        <span class="new-tag quick-tag" id="quick-note" title="Слово хорошо выучено: вспомните его и откройте ответ" hidden>быстрая проверка</span>
       </div>
       <h1 class="headword" id="c-word"></h1>
       <button class="speak" id="speak-btn" type="button" aria-label="Произнести слово">
