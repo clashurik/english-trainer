@@ -382,6 +382,7 @@ textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; 
 .d-status.st-queued { color: var(--accent); font-weight: 600; }
 .d-status.st-learning { color: var(--warn); }
 .d-status.st-learned { color: var(--good); }
+.d-status.st-known { color: var(--muted); }
 
 /* Карточка слова в нижней панели */
 .ws-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }

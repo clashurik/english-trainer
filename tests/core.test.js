@@ -487,4 +487,24 @@ test('огонёк: ступени серии', () => {
   assert.equal(Core.flameTier(400).next, null);
 });
 
+test('доли: выше «рубежа» уровни получают меньше, новичку почти нет B2', () => {
+  const L = ['A1', 'A2', 'B1', 'B2'];
+  const z = Core.levelWeights({ A1: 0, A2: 0, B1: 0, B2: 0 }, L);
+  assert.ok(z.A1 > z.A2 && z.A2 > z.B1 && z.B1 > z.B2 && z.B2 <= 0.1, JSON.stringify(z));
+  const a2 = Core.levelWeights({ A1: 1, A2: 1, B1: 0, B2: 0 }, L);
+  assert.ok(a2.B1 > 0.5 && a2.B2 < a2.B1, JSON.stringify(a2));
+});
+
+test('прогресс: знакомые по тесту слова не считаются начатыми, пока их не проверили', () => {
+  const ws = [{ id: 'a', lvl: 'A1' }, { id: 'b', lvl: 'A1' }];
+  const st = Core.stats(ws, { a: Core.knownCard('a', DAY), b: { r: 4, i: 30, e: 250, d: DAY + 30, l: 0 } });
+  assert.equal(st.byLevel.A1.seen, 1);
+  assert.equal(st.byLevel.A1.learned, 1);
+});
+
+test('словарь: поиск находит слово по show', () => {
+  const lot = WORDS.findIndex(w => w.id === 'lot');
+  assert.ok(Core.searchWords(WORDS, 'a lot').ids.includes(WORDS[lot].id));
+});
+
 console.log(`\nВсе тесты пройдены: ${passed}`);

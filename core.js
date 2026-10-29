@@ -122,9 +122,14 @@
    */
   function levelWeights(vocab, levels) {
     var raw = {}, out = {}, MIN = 0.05;
-    levels.forEach(function (lv) {
+    // «Рубеж» — первый уровень, где знакомо меньше 60% слов: его учить сейчас.
+    // Каждый уровень выше рубежа получает вдвое меньше, чтобы новичку не сыпались слова B2.
+    var front = -1;
+    levels.forEach(function (lv, k) {
       var p = vocab && typeof vocab[lv] === 'number' ? vocab[lv] : null;
       raw[lv] = p === null ? 0.5 : Math.max(0.001, 1 - p);
+      if (front < 0 && p !== null && p < 0.6) front = k;
+      if (front >= 0 && k > front) raw[lv] *= Math.pow(0.5, k - front);
     });
     // Пропорционально незнакомым словам, но каждому уровню не меньше 5% занятия
     var floor = {}, changed = true;
@@ -346,7 +351,7 @@
       var lv = byLevel[w.lvl] || (byLevel[w.lvl] = { total: 0, seen: 0, learned: 0 });
       lv.total += 1;
       var c = cards[w.id];
-      if (!c) continue;
+      if (!c || (c.r === 2 && c.i >= LEARNED_INTERVAL)) continue; // нет карточки или знакомо по тесту и ещё не проверено
       lv.seen += 1;
       if (c.i >= LEARNED_INTERVAL) { lv.learned += 1; learned += 1; }
       else learning += 1;
@@ -623,7 +628,7 @@
     if (!q) return { ids: [], total: 0 };
     var hits = [];
     words.forEach(function (w, idx) {
-      var en = normSearch(w.en);
+      var en = normSearch(w.show ? w.en + ' / ' + w.show : w.en);
       var ru = normSearch(w.ru);
       var ruParts = ru.split(/[,;()/]+/).map(function (x) { return x.trim(); });
       var score = -1;

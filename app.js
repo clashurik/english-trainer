@@ -258,17 +258,19 @@
   /*
    * more: 'new' — «Ещё 5 новых слов» сверх нормы; 'review' — «Ещё порция»: 10 повторений из хвоста.
    */
+  // «Ещё 5 новых слов» сверх нормы, с учётом долей уровней после теста
+  function extraNew() {
+    return Core.buildQueue(words, state.cards, dailySettings({ newPerDay: 5, noBacklogCut: true, revCap: 0 }),
+      { vocab: state.meta.vocab }, today()).fresh;
+  }
   function revDoneToday() { return state.meta.revDay === today() ? state.meta.revDone || 0 : 0; }
   function startDaily(more) {
     var day = today();
     var q = more === 'review'
       ? Core.buildQueue(words, state.cards, dailySettings({ revCap: revDoneToday() + 10, newPerDay: 0 }), state.meta, day)
       : Core.buildQueue(words, state.cards, dailySettings(), state.meta, day);
-    var fresh = q.fresh;
-    if (more === 'new') {
-      fresh = Core.buildQueue(words, state.cards, dailySettings({ newPerDay: 9999, noBacklogCut: true }), { vocab: state.meta.vocab }, day).fresh.slice(0, 5);
-      q = { due: [], priority: [] };
-    }
+    var fresh = more === 'review' ? [] : q.fresh; // в порцию повторений новые слова не добавляем
+    if (more === 'new') q = { due: [], priority: [], fresh: (fresh = extraNew()) };
     // Добавленные из словаря — в самом начале, остальные новые вперемешку с повторениями
     var lead = more ? [] : q.priority;
     var queue = Core.mixQueue(q.due, fresh.slice(lead.length), lead);
@@ -726,7 +728,8 @@
         : f.next ? 'До огонька «' + f.nextName + '»: ' + (f.next - n) + ' ' + plural(f.next - n, 'день', 'дня', 'дней') : 'Максимальный огонёк';
       tierUp = f.tier > was && f.tier > 0;
       var left = Core.buildQueue(words, state.cards, dailySettings({ revCap: revDoneToday() + 10 }), state.meta, day);
-      var moreKind = left.due.length ? 'review' : 'new';
+      var moreKind = left.due.length ? 'review' : extraNew().length ? 'new' : '';
+      $('more-btn').hidden = !moreKind;
       $('more-btn').textContent = moreKind === 'review'
         ? 'Ещё порция: ' + left.due.length + ' ' + plural(left.due.length, 'повторение', 'повторения', 'повторений')
         : 'Ещё 5 новых слов';
@@ -740,6 +743,7 @@
         : 'Тренировка не влияет на серию дней: её засчитывает ежедневное задание.';
       $('more-btn').textContent = 'Ещё одна тренировка';
     }
+    if (s.mode !== 'daily') $('more-btn').hidden = false;
     $('more-btn').setAttribute('data-mode', s.mode);
     feedback(tierUp ? 'tier' : 'finish');
     show('done');
@@ -829,6 +833,7 @@
   function wordStatus(w) {
     var c = state.cards[w.id];
     if (!c) return state.meta.priority.indexOf(w.id) !== -1 ? ['queued', 'в очереди'] : ['new', 'не начато'];
+    if (c.r === 2 && c.i >= Core.LEARNED_INTERVAL) return ['known', 'знакомо по тесту'];
     return c.i >= Core.LEARNED_INTERVAL ? ['learned', 'выучено'] : ['learning', 'в изучении'];
   }
 
@@ -882,9 +887,9 @@
       status = 'Добавлено. Будет в начале ближайшего занятия.';
       action = '<button class="ghost" type="button" data-act="remove">Убрать из очереди</button>';
     } else if (c.d <= day) {
-      status = (st[0] === 'learned' ? 'Выучено' : 'В изучении') + '. Уже есть в сегодняшнем занятии.';
+      status = ({ learned: 'Выучено', known: 'Знакомо по тесту' }[st[0]] || 'В изучении') + '. Уже есть в сегодняшнем занятии.';
     } else {
-      status = (st[0] === 'learned' ? 'Выучено' : 'В изучении') + '. Следующий повтор через ' + intervalLabel(c.d - day) + '.';
+      status = ({ learned: 'Выучено', known: 'Знакомо по тесту' }[st[0]] || 'В изучении') + '. Следующий повтор через ' + intervalLabel(c.d - day) + '.';
       action = '<button class="ghost" type="button" data-act="review">Повторить в ближайшем занятии</button>';
     }
     var html = '<div class="ws-meta lv-' + w.lvl + '"><span class="lvl">' + levelLabel(w.lvl) + '</span>' +
@@ -1051,7 +1056,7 @@
     if (inTelegram) { name === 'home' || name === 'done' ? tg.BackButton.hide() : tg.BackButton.show(); }
     window.scrollTo(0, 0);
   }
-  function goHome() { show('home'); renderHome(); }
+  function goHome() { test = null; show('home'); renderHome(); }
 
   // Группа кнопок «выбери одно» с готовыми кнопками в разметке (data-v)
   function optionGroup(box, value, onPick) {
@@ -1204,8 +1209,8 @@
     }
     if (e.target === $('c-word') && (e.key === 'Enter' || e.key === ' ')) return;
     if (e.code === 'Space' || e.key === 'Enter') { e.preventDefault(); reveal(); return; }
-    if (session.mode === 'daily' && /^[1-4]$/.test(e.key)) grade(Number(e.key));
-    if (session.mode === 'practice' && (e.key === '1' || e.key === '2')) practiceAnswer(e.key === '2');
+    if (session.mode === 'daily' && /^[1-4]$/.test(e.key)) { e.preventDefault(); grade(Number(e.key)); }
+    if (session.mode === 'practice' && (e.key === '1' || e.key === '2')) { e.preventDefault(); practiceAnswer(e.key === '2'); }
   });
 
   // ---------- Ошибки в карточках ----------
@@ -1301,8 +1306,9 @@
     else { r.wrong += 1; buttons[k].classList.add('is-wrong'); feedback('wrong'); }
     test.asked += 1;
     test.queue.shift();
+    var run = test;
     setTimeout(function () {
-      if (!test) return;
+      if (test !== run) return; // тест прервали или начали заново
       if (test.queue.length) { showTestQuestion(); return; }
       // Блок закончен: идём выше, только если слова этого уровня в основном знакомы
       var lvl = Core.TEST_PLAN[test.block][0];
@@ -1325,7 +1331,6 @@
       date: now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0'),
       level: res.level
     };
-    state.meta.settings.levels = LEVELS.slice(); // доли уровней теперь задаёт тест
     save();
     feedback('finish');
 
@@ -1364,7 +1369,7 @@
     if (b) answerTest(Number(b.getAttribute('data-k')));
   };
   document.addEventListener('keydown', function (e) {
-    if (!test || $('test').hidden || !$('sheet').hidden) return;
+    if (!test || $('test').hidden || !$('sheet').hidden || e.repeat) return;
     if (e.key >= '1' && e.key <= '4') answerTest(Number(e.key) - 1);
     else if (e.key === '0') answerTest(-1);
   });
@@ -1376,12 +1381,14 @@
     state.cards = saved.cards || {};
     state.custom = (saved.custom || []).map(Core.normalizeCustom);
     state.meta = Object.assign(freshMeta(), meta);
+    var oldPerDay = meta.settings && !('size' in meta.settings) ? meta.settings.newPerDay : null;
     state.meta.settings = Object.assign(freshMeta().settings, meta.settings);
     state.meta.practice = Object.assign(freshMeta().practice, meta.practice);
     if (!Array.isArray(state.meta.priority)) state.meta.priority = [];
     // До 1.4.0 было «новых слов в день» (5–20); теперь — размер занятия
     var s14 = state.meta.settings;
-    if (!(s14.size in Core.SIZES)) s14.size = s14.newPerDay <= 5 ? 'light' : s14.newPerDay <= 10 ? 'normal' : 'intense';
+    if (typeof oldPerDay === 'number') s14.size = oldPerDay <= 5 ? 'light' : oldPerDay <= 10 ? 'normal' : 'intense';
+    if (!(s14.size in Core.SIZES)) s14.size = 'normal';
     delete s14.newPerDay;
     if (!Array.isArray(state.meta.settings.levels) || !state.meta.settings.levels.length) state.meta.settings.levels = LEVELS.slice();
     if (!Array.isArray(state.meta.practice.levels)) state.meta.practice.levels = LEVELS.slice();

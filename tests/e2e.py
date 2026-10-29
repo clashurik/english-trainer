@@ -399,6 +399,17 @@ with sync_playwright() as p:
     assert "до 80 повторений" in page.inner_text("#size-hint")
     page.screenshot(path=str(OUT / "17-settings.png"), full_page=True)
     page.close()
+
+    # Перенос старой настройки «новых слов в день» (1.3.0) в размер занятия
+    for old, size in [(5, "light"), (10, "normal"), (15, "intense"), (20, "intense")]:
+        page = new_page(browser)
+        page.goto(URL)
+        page.evaluate("(n) => localStorage.setItem('english-trainer-v1', JSON.stringify({ cards: {}, custom: [], meta: { seenVersion: window.APP_VERSION, settings: { newPerDay: n } } }))", old)
+        page.reload()
+        page.wait_for_timeout(200)
+        page.click("#settings summary")
+        assert page.get_attribute(f"#session-size [data-v='{size}']", "aria-checked") == "true", (old, size)
+        page.close()
     browser.close()
 
 if errors:
