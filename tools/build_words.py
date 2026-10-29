@@ -189,19 +189,19 @@ def main():
         sys.exit(1)
 
     rows = [
-        [c["en"], c["ru"], c["pos"], c["lvl"], c["ex"], c.get("irr") or 0, c.get("forms") or 0, c.get("note") or 0, c.get("gram") or 0]
+        [c["en"], c["ru"], c["pos"], c["lvl"], c["ex"], c.get("irr") or 0, c.get("forms") or 0, c.get("note") or 0, c.get("gram") or 0] + ([c["show"]] if c.get("show") else [])
         for c in ordered
     ]
     body = ",\n".join(json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in rows)
     js = (
         "/*\n * words.js — словарь приложения. ФАЙЛ СОБИРАЕТСЯ АВТОМАТИЧЕСКИ, руками не править:\n"
         " * исходники лежат в data/*.json, сборка — python3 tools/build_words.py\n"
-        " * Строка: [слово, перевод, часть речи, уровень, [[пример, перевод]×3], неправ. формы, однокоренные, подсказка, грамм. формы]\n"
+        " * Строка: [слово, перевод, часть речи, уровень, [[пример, перевод]×3], неправ. формы, однокоренные, подсказка, грамм. формы, show]\n"
         " * Уровни — по списку CEFR-J Wordlist (Tono Lab, TUFS), порядок внутри уровня — по полезности.\n */\n"
         "(function (root) {\n  'use strict';\n  var RAW = [\n" + body + "\n  ];\n"
         "  root.WORDS = RAW.map(function (r) {\n"
         "    return { id: r[0].toLowerCase(), en: r[0], ru: r[1], pos: r[2], lvl: r[3], ex: r[4],\n"
-        "      irr: r[5] || null, forms: r[6] || [], note: r[7] || '', gram: r[8] || [] };\n  });\n"
+        "      irr: r[5] || null, forms: r[6] || [], note: r[7] || '', gram: r[8] || [], show: r[9] || '' };\n  });\n"
         "  if (typeof module !== 'undefined' && module.exports) module.exports = root.WORDS;\n"
         "})(typeof window !== 'undefined' ? window : globalThis);\n"
     )

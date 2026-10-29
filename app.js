@@ -269,11 +269,11 @@
     $('c-lvl').textContent = levelLabel(w.lvl);
     $('c-pos').textContent = POS[w.pos] || '';
     $('c-new').hidden = !(session.mode === 'daily' && !state.cards[w.id]);
-    $('c-word').textContent = ruFirst ? w.ru : w.en;
+    $('c-word').textContent = ruFirst ? w.ru : Core.label(w);
     $('c-word').className = 'headword';
     $('c-word').removeAttribute('role');
     $('c-word').removeAttribute('tabindex');
-    $('c-ru').textContent = ruFirst ? w.en : w.ru;
+    $('c-ru').textContent = ruFirst ? Core.label(w) : w.ru;
     $('c-irr').hidden = !w.irr;
     $('c-irr').innerHTML = w.irr ? irrLine(w) : '';
     $('c-note').hidden = !w.note;
@@ -348,7 +348,7 @@
   function useHint() {
     if (!session || !session.type || session.typed) return;
     session.hintUsed = true;
-    $('type-mask').textContent = Core.answerHint(current().en);
+    $('type-mask').textContent = Core.answerHint(Core.sayText(current()));
     $('type-mask').hidden = false;
     $('type-input').focus();
   }
@@ -378,7 +378,7 @@
     }
     var g = res === 'ok' ? (session.hintUsed ? 2 : 3) : res === 'typo' ? 2 : 1;
     session.typed = { res: res, grade: g, at: Date.now() };
-    var en = '<b>' + escapeHtml(w.en) + '</b>';
+    var en = '<b>' + escapeHtml(Core.label(w)) + '</b>';
     $('type-input').readOnly = true; // не disabled: так клавиатура на телефоне не закрывается между карточками
     $('type-input').placeholder = giveUp ? 'не знаю' : '';
     $('type-input').className = 'type-input is-' + res + (giveUp ? ' gave-up' : '');
@@ -743,7 +743,7 @@
       var w = byId[id], st = wordStatus(w);
       return '<li><button class="dict-row lv-' + w.lvl + '" type="button" data-id="' + escapeHtml(id) + '">' +
         '<span class="lvl">' + levelLabel(w.lvl) + '</span>' +
-        '<span class="d-main"><span class="d-en">' + escapeHtml(w.en) + '</span><span class="d-ru">' + escapeHtml(w.ru) + '</span></span>' +
+        '<span class="d-main"><span class="d-en">' + escapeHtml(Core.label(w)) + '</span><span class="d-ru">' + escapeHtml(w.ru) + '</span></span>' +
         '<span class="d-status st-' + st[0] + '">' + st[1] + '</span></button></li>';
     }).join('');
   }
@@ -752,7 +752,7 @@
   function openWordSheet(id) {
     var w = byId[id];
     if (!w) return;
-    openSheet(w.en, wordSheetHtml(w), false);
+    openSheet(Core.label(w), wordSheetHtml(w), false);
     sheetWordId = id;
   }
 
@@ -774,7 +774,7 @@
     }
     var html = '<div class="ws-meta lv-' + w.lvl + '"><span class="lvl">' + levelLabel(w.lvl) + '</span>' +
       '<span class="pos">' + (POS[w.pos] || '') + '</span>' +
-      '<button class="speak" type="button" data-say="' + escapeHtml(w.en) + '">' + $('speak-btn').innerHTML + '</button></div>' +
+      '<button class="speak" type="button" data-say="' + escapeHtml(Core.sayText(w)) + '">' + $('speak-btn').innerHTML + '</button></div>' +
       '<p class="ws-ru">' + escapeHtml(w.ru) + '</p>' +
       (w.irr ? '<p class="irr">' + irrLine(w) + '</p>' : '') +
       '<div class="ws-status st-' + st[0] + '"><p>' + status + '</p>' + action + '</div>';
@@ -1048,7 +1048,7 @@
     else if (a === 'check-backup') checkBackup();
     else if (a === 'apply-backup') applyBackup();
   };
-  $('speak-btn').onclick = function () { if (session) speak(byId[session.queue[0]].en); };
+  $('speak-btn').onclick = function () { if (session) speak(Core.sayText(byId[session.queue[0]])); };
   $('quit-btn').onclick = quitSession;
   Array.prototype.forEach.call(document.querySelectorAll('#grades .grade'), function (b) {
     b.onclick = function () { grade(Number(b.getAttribute('data-g'))); };

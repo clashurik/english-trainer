@@ -356,4 +356,14 @@ test('очередь: добавленные из словаря — в само
   assert.deepEqual(Core.mixQueue(q.due, q.fresh.slice(q.priority.length), q.priority), ['p', 'a', 'b']);
 });
 
+test('show: естественная форма слова принимается и показывается', () => {
+  const lot = WORDS.find(w => w.id === 'lot');
+  assert.equal(lot.show, 'a lot / a lot of');
+  assert.doesNotMatch(lot.ru, /[a-z]/i, 'ответ не должен быть в переводе');
+  for (const a of ['lot', 'a lot', 'a lot of', 'A LOT OF']) assert.equal(Core.checkAnswer(a, lot), 'ok', a);
+  assert.equal(Core.label(lot), 'a lot / a lot of');
+  assert.equal(Core.sayText(lot), 'a lot');
+  assert.equal(Core.label({ en: 'decide' }), 'decide');
+});
+
 console.log(`\nВсе тесты пройдены: ${passed}`);

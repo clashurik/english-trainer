@@ -1401,7 +1401,7 @@
   },
   {
     "en": "better",
-    "ru": "лучше; лучший (сравн. ст. от good/well)",
+    "ru": "лучше; лучший (сравн. ст. от «хороший», «хорошо»)",
     "pos": "adj",
     "lvl": "A1",
     "ex": [
@@ -2351,7 +2351,7 @@
   },
   {
     "en": "lot",
-    "ru": "много (a lot, a lot of)",
+    "ru": "много",
     "pos": "n",
     "lvl": "A1",
     "ex": [
@@ -2375,7 +2375,9 @@
         "pl",
         "lots of = a lot of"
       ]
-    ]
+    ],
+    "show": "a lot / a lot of",
+    "note": "a lot — «много» само по себе (Thanks a lot); a lot of + сущ.: a lot of time, a lot of friends"
   },
   {
     "en": "idea",

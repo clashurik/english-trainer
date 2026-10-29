@@ -389,7 +389,8 @@
   function checkAnswer(input, w, synonyms, known) {
     var a = normalizeAnswer(input);
     if (!a) return 'empty';
-    if (matchesTarget(a, w.en)) return 'ok';
+    var targets = [w.en].concat(showVariants(w));
+    for (var t = 0; t < targets.length; t++) if (matchesTarget(a, targets[t])) return 'ok';
     var alts = (synonyms || []).map(function (x) { return normalizeAnswer(x); });
     if (alts.indexOf(a) !== -1) return 'alt';
     if (known && known[a]) return 'wrong';
@@ -398,6 +399,12 @@
     if (limit && editDistance(a, target) <= limit) return 'typo';
     return 'wrong';
   }
+
+  // Поле show: как показывать слово, если en в одиночку звучит неестественно (lot → a lot / a lot of).
+  // Варианты через « / » — все принимаются как верный ответ; прогресс по-прежнему привязан к en.
+  function showVariants(w) { return w && w.show ? String(w.show).split(' / ') : []; }
+  function label(w) { return w && w.show ? w.show : w.en; }
+  function sayText(w) { return showVariants(w)[0] || w.en; }
 
   // Подсказка: первая буква каждого слова, остальные буквы — подчёркивания. look after → l___ a____
   function answerHint(en) {
@@ -501,6 +508,8 @@
     normalizeAnswer: normalizeAnswer,
     editDistance: editDistance,
     checkAnswer: checkAnswer,
+    label: label,
+    sayText: sayText,
     answerHint: answerHint,
     searchWords: searchWords,
     makeBackup: makeBackup,
